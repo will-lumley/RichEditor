@@ -11,6 +11,14 @@ import AppKit
 
 extension NSAttributedString
 {
+    /**
+     Determines the attributes for the whole complete NSAttributedString
+     - returns: The attributes, in the form of a dictionary, for the whole NSAttributedString
+     */
+    public var attributes: [NSAttributedString.Key: Any] {
+        return self.attributes(at: 0, longestEffectiveRange: nil, in: self.string.fullRange)
+    }
+    
     //MARK: - Basic Attribute Fetching
     /**
      Collects all the types of the attribute that we're after
@@ -20,7 +28,7 @@ extension NSAttributedString
     fileprivate func all(of attribute: NSAttributedString.Key) -> [Any]
     {
         var allValues = [Any]()
-        let fullRange = self.string.fullRange()
+        let fullRange = self.string.fullRange
         let options   = NSAttributedString.EnumerationOptions.longestEffectiveRangeNotRequired
         
         self.enumerateAttribute(attribute, in: fullRange, options: options, using: {(valueOpt, range, stop) in
@@ -39,7 +47,7 @@ extension NSAttributedString
     public func allFonts() -> [NSFont]
     {
         var fonts = [NSFont]()
-        self.enumerateAttribute(NSAttributedString.Key.font, in: self.string.fullRange(), options: .longestEffectiveRangeNotRequired, using: {(value, range, stop) in
+        self.enumerateAttribute(NSAttributedString.Key.font, in: self.string.fullRange, options: .longestEffectiveRangeNotRequired, using: {(value, range, stop) in
             let font = value as! NSFont
             fonts.append(font)
         })
@@ -54,7 +62,7 @@ extension NSAttributedString
     public func allTextColours() -> [NSColor]
     {
         var colours = [NSColor]()
-        self.enumerateAttribute(.foregroundColor, in: self.string.fullRange(), options: .longestEffectiveRangeNotRequired, using: {(value, range, finished) in
+        self.enumerateAttribute(.foregroundColor, in: self.string.fullRange, options: .longestEffectiveRangeNotRequired, using: {(value, range, finished) in
             if value != nil {
                 if let colour = value as? NSColor {
                     colours.append(colour)
@@ -73,7 +81,7 @@ extension NSAttributedString
     public func allHighlightColours() -> [NSColor]
     {
         var colours = [NSColor]()
-        self.enumerateAttribute(.backgroundColor, in: self.string.fullRange(), options: .longestEffectiveRangeNotRequired, using: {(value, range, finished) in
+        self.enumerateAttribute(.backgroundColor, in: self.string.fullRange, options: .longestEffectiveRangeNotRequired, using: {(value, range, finished) in
             if value != nil {
                 if let colour = value as? NSColor {
                     colours.append(colour)
@@ -96,7 +104,7 @@ extension NSAttributedString
     public func allAttachments() -> [NSTextAttachment]
     {
         var attachments = [NSTextAttachment]()
-        self.enumerateAttribute(.attachment, in: self.string.fullRange(), options: .longestEffectiveRangeNotRequired, using: {(value, range, finished) in
+        self.enumerateAttribute(.attachment, in: self.string.fullRange, options: .longestEffectiveRangeNotRequired, using: {(value, range, finished) in
             if value != nil {
                 if let attachment = value as? NSTextAttachment {
                     attachments.append(attachment)
@@ -107,15 +115,6 @@ extension NSAttributedString
         return attachments
     }
     
-    /**
-     Determines the attributes for the whole complete NSAttributedString
-     - returns: The attributes, in the form of a dictionary, for the whole NSAttributedString
-     */
-    public func attributes() -> [NSAttributedString.Key: Any]
-    {
-        return self.attributes(at: 0, longestEffectiveRange: nil, in: self.string.fullRange())
-    }
-
     //MARK: - Attribute Checking
     /**
      Iterates over every font that exists within this NSAttributedString, and checks if any of the fonts contain the desired NSFontTraitMask
@@ -166,7 +165,7 @@ extension NSAttributedString
         var atParts   : Bool?
         var notAtParts: Bool?
         
-        self.enumerateAttribute(attribute, in: self.string.fullRange(), options: .longestEffectiveRangeNotRequired, using: {(valueOpt, range, stop) in
+        self.enumerateAttribute(attribute, in: self.string.fullRange, options: .longestEffectiveRangeNotRequired, using: {(valueOpt, range, stop) in
             
             if let value = valueOpt as? NSNumber {
                 //If we have a `none` enum value

@@ -11,6 +11,11 @@ import AppKit
 
 extension URL
 {
+    public var icon: NSImage {
+        let icon = NSWorkspace.shared.icon(forFile: self.path)
+        return icon
+    }
+    
     public func textAttachment() -> NSTextAttachment
     {
         //var data: Data?
@@ -26,12 +31,6 @@ extension URL
         
         let attachment = NSTextAttachment(fileWrapper: fileWrapper)
         return attachment
-    }
-    
-    public func icon() -> NSImage
-    {
-        let icon = NSWorkspace.shared.icon(forFile: self.path)
-        return icon
     }
 }
 

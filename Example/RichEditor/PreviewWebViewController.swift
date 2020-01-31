@@ -16,6 +16,7 @@ class PreviewWebViewController: NSViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.webView.navigationDelegate = self
     }
 }
 
@@ -30,5 +31,10 @@ extension PreviewWebViewController: WKNavigationDelegate
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error)
     {
         print("WKWebView Error: \(error)")
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void)
+    {
+        decisionHandler(.allow)
     }
 }

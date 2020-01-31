@@ -25,12 +25,20 @@ public class RichEditor: NSView
     public fileprivate(set) lazy var scrollview    = NSScrollView()
     /*------------------------------------------------------------*/
     
-    ///The FontInfo that contains information of the 'relevant' text
-    fileprivate var selectedTextFontInfo: FontStyling?
+    ///The FontStyling that contains information of the 'relevant' text
+    fileprivate var selectedTextFontStyling: FontStyling?
     {
         didSet {
-            self.richEditorDelegate?.fontStylingChanged(self.fontStyling())
+            self.richEditorDelegate?.fontStylingChanged(self.fontStyling)
         }
+    }
+    
+    /**
+     Returns the FontStyling object that was derived from the selected text, or the future text if nothing is selected
+     - returns: The FontStyling object for the relevant text
+     */
+    public var fontStyling: FontStyling {
+        return self.selectedTextFontStyling ?? FontStyling(typingAttributes: self.textView.typingAttributes)
     }
     
     ///The delegate which will notify the listener of significant events
@@ -63,7 +71,7 @@ public class RichEditor: NSView
         self.textView.textStorage?.delegate = self
         self.textView.layoutManager?.defaultAttachmentScaling = NSImageScaling.scaleProportionallyDown
         
-        self.selectedTextFontInfo = nil
+        self.selectedTextFontStyling = nil
     }
 }
 
@@ -106,19 +114,19 @@ extension RichEditor
     public func apply(textColour: NSColor)
     {
         let colourAttr = [NSAttributedString.Key.foregroundColor: textColour]
-        self.add(attributes: colourAttr, onlyHighlightedText: self.textView.hasSelectedText())
+        self.add(attributes: colourAttr, onlyHighlightedText: self.textView.hasSelectedText)
     }
     
     public func apply(highlightColour: NSColor)
     {
         let colourAttr = [NSAttributedString.Key.backgroundColor: highlightColour]
-        self.add(attributes: colourAttr, onlyHighlightedText: self.textView.hasSelectedText())
+        self.add(attributes: colourAttr, onlyHighlightedText: self.textView.hasSelectedText)
     }
     
     public func apply(font: NSFont)
     {
         let fontAttr = [NSAttributedString.Key.font: font]
-        self.add(attributes: fontAttr, onlyHighlightedText: self.textView.hasSelectedText())
+        self.add(attributes: fontAttr, onlyHighlightedText: self.textView.hasSelectedText)
     }
     
     public func startBulletPoints()
@@ -157,7 +165,7 @@ extension RichEditor
     public func insert(link: String, with name: String, at position: Int?)
     {
         let attrString = NSMutableAttributedString(string: name)
-        attrString.addAttribute(NSAttributedString.Key.link, value: link, range: name.fullRange())
+        attrString.addAttribute(NSAttributedString.Key.link, value: link, range: name.fullRange)
         
         let insertionPosition = position ?? self.textView.selectedRange().location
         self.textView.textStorage!.insert(attrString, at: insertionPosition)
@@ -217,7 +225,7 @@ extension RichEditor
         let attrStr = self.textView.attributedString()
         let documentAttributes = [NSAttributedString.DocumentAttributeKey.documentType: NSAttributedString.DocumentType.html]
         
-        let htmlData = try attrStr.data(from: attrStr.string.fullRange(), documentAttributes: documentAttributes)
+        let htmlData = try attrStr.data(from: attrStr.string.fullRange, documentAttributes: documentAttributes)
         if let htmlString = String(data:htmlData, encoding:String.Encoding.utf8) {
             //print("HTML: \(htmlString)")
             return htmlString
@@ -225,17 +233,8 @@ extension RichEditor
         
         return nil
     }
-        
-    //MARK: -
-    /**
-     Returns the FontInfo object that was derived from the selected text, or the future text if nothing is selected
-     - returns: The FontInfo object for the relevant text
-     */
-    public func fontStyling() -> FontStyling
-    {
-        return self.selectedTextFontInfo ?? FontStyling(typingAttributes: self.textView.typingAttributes)
-    }
     
+    //MARK: -
     /**
      Returns the NSFont object that was derived from the selected text, or the future text if nothing is selected
      - returns: The NSFont object for the relevant text
@@ -243,7 +242,7 @@ extension RichEditor
     public func currentFont() -> NSFont
     {
         //If we have highlighted text, we'll analyse the font of the highlighted text
-        if self.textView.hasSelectedText() {
+        if self.textView.hasSelectedText {
             let range = self.textView.selectedRange()
             
             //Create an attributed string out of ONLY the highlighted text
@@ -285,11 +284,11 @@ extension RichEditor
         let currentFont = self.currentFont()
         var newFont     = currentFont
         
-        let fontInfo = self.fontStyling()
-        let fontInfoTrait = fontInfo.fontTraitFor(nsFontTraitMask: fontTrait)
+        let fontStyling = self.fontStyling
+        let fontStylingTrait = fontStyling.fontTraitFor(nsFontTraitMask: fontTrait)
         
         print("\nOldFont: \(currentFont)")
-        switch (fontInfoTrait) {
+        switch (fontStylingTrait) {
             //If we're ONLY bold at the moment, let's make it unbold
             case .hasTrait:
                 newFont = NSFontManager.shared.convert(currentFont, toNotHaveTrait: fontTrait)
@@ -305,9 +304,9 @@ extension RichEditor
         print("NewFont: \(newFont)\n")
         
         let updatedFontAttr = [NSAttributedString.Key.font: newFont]
-        self.add(attributes: updatedFontAttr, onlyHighlightedText: self.textView.hasSelectedText())
+        self.add(attributes: updatedFontAttr, onlyHighlightedText: self.textView.hasSelectedText)
         
-        self.richEditorDelegate?.fontStylingChanged(self.fontStyling())
+        self.richEditorDelegate?.fontStylingChanged(self.fontStyling)
     }
     
     /**
@@ -323,7 +322,7 @@ extension RichEditor
     */
     fileprivate func toggleTextView(with attribute: NSAttributedString.Key, negativeValue: Any, positiveValue: Any)
     {
-        let trait = self.fontStyling().trait(with: attribute)
+        let trait = self.fontStyling.trait(with: attribute)
         
         var newAttr = [NSAttributedString.Key: Any]()
         switch (trait) {
@@ -337,8 +336,8 @@ extension RichEditor
                 newAttr = [attribute: positiveValue]
         }
         
-        self.add(attributes: newAttr, onlyHighlightedText: self.textView.hasSelectedText())
-        self.richEditorDelegate?.fontStylingChanged(self.fontStyling())
+        self.add(attributes: newAttr, onlyHighlightedText: self.textView.hasSelectedText)
+        self.richEditorDelegate?.fontStylingChanged(self.fontStyling)
     }
     
     /**
@@ -362,8 +361,8 @@ extension RichEditor
                 return
             }
             
-            //Ensure the UI is updated with the new FontInfo state's
-            self.selectedTextFontInfo = FontStyling(attributedString: attr)
+            //Ensure the UI is updated with the new FontStyling state's
+            self.selectedTextFontStyling = FontStyling(attributedString: attr)
         }
         
         //If we're modifying all 'future' text
@@ -378,7 +377,7 @@ extension RichEditor
             self.textView.typingAttributes = typingAttributes
         }
         
-        self.richEditorDelegate?.fontStylingChanged(self.fontStyling())
+        self.richEditorDelegate?.fontStylingChanged(self.fontStyling)
     }
 }
 
@@ -418,7 +417,7 @@ extension RichEditor: NSTextViewDelegate
         let isSelected    = selectedRange.length > 0
         
         if !isSelected {
-            self.selectedTextFontInfo = nil
+            self.selectedTextFontStyling = nil
             return
         }
         
@@ -427,6 +426,6 @@ extension RichEditor: NSTextViewDelegate
             return
         }
         
-        self.selectedTextFontInfo = FontStyling(attributedString: attr)
+        self.selectedTextFontStyling = FontStyling(attributedString: attr)
     }
 }

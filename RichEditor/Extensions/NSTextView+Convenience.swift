@@ -15,8 +15,7 @@ extension NSTextView
      Determines if the user has selected (ie. highlighted) any text
      - returns: A boolean value indicative of if any text is selected
     */
-    public func hasSelectedText() -> Bool
-    {
+    public var hasSelectedText: Bool {
         return self.selectedRange().length > 0
     }
     
@@ -61,7 +60,7 @@ extension NSTextView
             return false
         }
         
-        let fullRange = self.string.fullRange()
+        let fullRange = self.string.fullRange
         textStorage.replaceCharacters(in: fullRange, with: attributedString)
         
         return true

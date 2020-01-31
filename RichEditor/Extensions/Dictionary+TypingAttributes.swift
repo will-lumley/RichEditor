@@ -11,14 +11,12 @@ import AppKit
 
 extension Dictionary where Key == NSAttributedString.Key
 {
-    public func isUnderlined() -> Bool
-    {
+    public var isUnderlined : Bool {
         guard let rawUnderlineStyle = self[NSAttributedString.Key.underlineStyle] as? NSNumber else {
             return false
         }
         
-        let underlineStyle = NSUnderlineStyle(rawValue: rawUnderlineStyle.intValue)
-        return underlineStyle != []
+        return rawUnderlineStyle.intValue != 0
     }
     
     /**

@@ -11,10 +11,10 @@ import Foundation
 extension CGFloat
 {
     /**
+     Removes the decimal point if the value is equal to 0
      StackOverflow: https://stackoverflow.com/a/33996219
     */
-    public var cleanValue: String
-    {
+    public var cleanValue: String {
         return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(Float(self))
     }
 }

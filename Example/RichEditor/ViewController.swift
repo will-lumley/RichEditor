@@ -147,13 +147,15 @@ extension ViewController: RichEditorDelegate
             print("Error creating HTML from NSAttributedString: \(error)")
         }
         
-        guard let html = htmlOpt else {
+        guard var html = htmlOpt else {
             print("HTML from NSAttributedString was nil")
             return
         }
         
+        html = html.replacingOccurrences(of: "\n", with: "")
+        
         //Parse the HTML into a WebView and display the contents
-        self.previewWebViewController?.webView.loadHTMLString(html, baseURL: nil)
+        self.previewWebViewController?.webView.loadHTMLString("Hello there", baseURL: Bundle.main.bundleURL)
         
         //Assign the raw HTML text so we can see the actual HTML content
         self.previewTextViewController?.previewTextView.string = html
@@ -171,7 +173,7 @@ extension ViewController
 {
     fileprivate func configureTextActionButtonsUI()
     {
-        let fontStyling = self.richEditor.fontStyling()
+        let fontStyling = self.richEditor.fontStyling
         
         //Configure the Bold UI
         switch (fontStyling.boldTrait()) {
@@ -184,7 +186,7 @@ extension ViewController
             case .both:
                 self.boldButton.title = "Bold*"
         }
-     
+        
         //Configure the Italic UI
         switch (fontStyling.italicsTrait()) {
             case .hasTrait:
