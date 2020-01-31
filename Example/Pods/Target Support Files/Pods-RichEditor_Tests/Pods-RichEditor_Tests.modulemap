@@ -1,0 +1,6 @@
+framework module Pods_RichEditor_Tests {
+  umbrella header "Pods-RichEditor_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
