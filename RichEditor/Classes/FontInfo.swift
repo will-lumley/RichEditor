@@ -18,22 +18,22 @@ public enum FontTrait
 
 public struct FontStyling
 {
-    fileprivate(set) var isBold  : Bool
-    fileprivate(set) var isUnbold: Bool
+    public fileprivate(set) var isBold  : Bool
+    public fileprivate(set) var isUnbold: Bool
     
-    fileprivate(set) var isItalic  : Bool
-    fileprivate(set) var isUnitalic: Bool
+    public fileprivate(set) var isItalic  : Bool
+    public fileprivate(set) var isUnitalic: Bool
     
-    fileprivate(set) var isUnderline  : Bool
-    fileprivate(set) var isUnunderline: Bool
+    public fileprivate(set) var isUnderline  : Bool
+    public fileprivate(set) var isUnunderline: Bool
 
-    fileprivate(set) var isStrikethrough  : Bool
-    fileprivate(set) var isUnstrikethrough: Bool
+    public fileprivate(set) var isStrikethrough  : Bool
+    public fileprivate(set) var isUnstrikethrough: Bool
     
-    public var fonts: [NSFont]
+    public fileprivate(set) var fonts: [NSFont]
     
-    fileprivate(set) var textColours     : [NSColor]
-    fileprivate(set) var highlightColours: [NSColor]
+    public fileprivate(set) var textColours     : [NSColor]
+    public fileprivate(set) var highlightColours: [NSColor]
     
     //MARK: - FontStyling
     init(attributedString: NSAttributedString)

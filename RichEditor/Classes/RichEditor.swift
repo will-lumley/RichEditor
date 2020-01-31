@@ -100,7 +100,7 @@ extension RichEditor
     */
     public func toggleStrikethrough(_ style: NSUnderlineStyle)
     {
-        self.toggleTextView(with: .strikethroughStyle, negativeValue: [], positiveValue: style.rawValue)
+        self.toggleTextView(with: .strikethroughStyle, negativeValue: 0, positiveValue: style.rawValue)
     }
     
     public func apply(textColour: NSColor)
@@ -123,15 +123,25 @@ extension RichEditor
     
     public func startBulletPoints()
     {
-        let markerFormat = NSTextList.MarkerFormat.circle
+        /*
+         NSAttributedString
+            NSAttributedStringParagraphStyle
+                NSTextList
+        */
         
+        //Create a text list (the representation of our bullet points)
+        let textList = NSTextList(markerFormat: NSTextList.MarkerFormat.circle, options: 0)
+        textList.startingItemNumber = 1
+        
+        //Create a new paragraph style, and apply our bullet points to it
         let paragraph = NSMutableParagraphStyle()
-        let textList = NSTextList(markerFormat: markerFormat, options: 0)
         paragraph.textLists = [textList]
         
-        
+        //Create attributes with our paragraph style (which in turn has the bullet point style within it)
         let attributes = [NSAttributedString.Key.paragraphStyle: paragraph]
-        let attrStr = NSAttributedString(string: "\t \(textList.marker(forItemNumber: 1)) \t", attributes: attributes)
+        
+        //Create an attributed string with our attributes
+        let attrStr = NSAttributedString(string: "\(textList.marker(forItemNumber: 1))", attributes: attributes)
         print("attrStr: \(attrStr)")
         
         self.textView.textStorage?.append(attrStr)

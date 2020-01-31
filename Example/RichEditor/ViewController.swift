@@ -59,8 +59,8 @@ class ViewController: NSViewController
         //self.highlightColourButton.delegate = self
         
         self.richEditor.richEditorDelegate = self
-        self.richEditor.textView.string      = "The quick brown fox jumped over the lazy dog."
-        self.richEditor.textView.importsGraphics = false
+        //self.richEditor.textView.string      = "The quick brown fox jumped over the lazy dog."
+        //self.richEditor.textView.importsGraphics = false
         
         self.boldButton.title    = "Bold"
         self.italicsButton.title = "Italic"
@@ -115,6 +115,16 @@ extension ViewController
     @IBAction func bulletPointButtonTapped(_ sender: Any)
     {
         self.richEditor.startBulletPoints()
+    }
+    
+    @IBAction func fontFamiliesButtonClicked(_ sender: Any)
+    {
+        self.applyFont()
+    }
+    
+    @IBAction func fontSizeButtonClicked(_ sender: Any)
+    {
+        self.applyFont()
     }
 }
 
@@ -258,7 +268,7 @@ extension ViewController
             case 2:
                 self.fontFamiliesPopUpButton.title = fonts[0].displayName ?? fonts[0].fontName
                 self.fontSizePopUpButton.title     = "\(fonts[0].pointSize.cleanValue)"
-
+                
             default:()
         }
         

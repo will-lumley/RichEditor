@@ -933,7 +933,7 @@
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WEQ-WJ-f7n">
-                                <rect key="frame" x="330" y="17" width="77" height="25"/>
+                                <rect key="frame" x="330" y="17" width="133" height="25"/>
                                 <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="bZK-Gj-bzz" id="hJL-5E-wtV">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -945,9 +945,12 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="fontSizeButtonClicked:" target="XfG-lQ-9wD" id="fYH-wt-d5g"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2TD-f1-KDO">
-                                <rect key="frame" x="330" y="48" width="77" height="25"/>
+                                <rect key="frame" x="330" y="48" width="133" height="25"/>
                                 <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="g9S-tO-bKO" id="b0u-rL-FT7">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -959,6 +962,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="fontFamiliesButtonClicked:" target="XfG-lQ-9wD" id="Gs5-re-MX6"/>
+                                </connections>
                             </popUpButton>
                         </subviews>
                         <constraints>
@@ -974,6 +980,7 @@
                             <constraint firstItem="8C3-1o-3ew" firstAttribute="leading" secondItem="L49-fB-LKQ" secondAttribute="trailing" constant="12" id="MlL-DF-vuM"/>
                             <constraint firstItem="bZM-4M-eHU" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="width" id="NsI-OH-iuf"/>
                             <constraint firstItem="zqy-5i-TH9" firstAttribute="leading" secondItem="eC2-9g-rzk" secondAttribute="trailing" constant="13" id="Okd-u6-Xc2"/>
+                            <constraint firstAttribute="trailing" secondItem="2TD-f1-KDO" secondAttribute="trailing" constant="20" id="PGO-QB-O67"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="L49-fB-LKQ" secondAttribute="trailing" constant="20" symbolic="YES" id="TTL-4N-7Kb"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Yw6-TR-flc" secondAttribute="trailing" constant="20" symbolic="YES" id="Tbd-Wf-BZD"/>
                             <constraint firstItem="L49-fB-LKQ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="UiP-Ex-ean"/>
@@ -988,6 +995,7 @@
                             <constraint firstAttribute="bottom" secondItem="L49-fB-LKQ" secondAttribute="bottom" constant="20" id="gZG-wJ-gNC"/>
                             <constraint firstItem="8C3-1o-3ew" firstAttribute="width" secondItem="L49-fB-LKQ" secondAttribute="width" id="ggM-2T-Gcq"/>
                             <constraint firstItem="Yw6-TR-flc" firstAttribute="top" secondItem="BvU-02-wa4" secondAttribute="bottom" constant="12" id="hLo-rQ-Q1x"/>
+                            <constraint firstAttribute="trailing" secondItem="WEQ-WJ-f7n" secondAttribute="trailing" constant="20" id="hLv-SM-gBk"/>
                             <constraint firstAttribute="bottom" secondItem="WEQ-WJ-f7n" secondAttribute="bottom" constant="20" id="hMC-Fc-9eP"/>
                             <constraint firstItem="GUl-NE-N4S" firstAttribute="leading" secondItem="Tgz-Mf-VQK" secondAttribute="trailing" constant="16" id="i4o-NO-Rmg"/>
                             <constraint firstItem="2TD-f1-KDO" firstAttribute="leading" secondItem="GUl-NE-N4S" secondAttribute="trailing" constant="8" id="irf-Ci-Jbe"/>
