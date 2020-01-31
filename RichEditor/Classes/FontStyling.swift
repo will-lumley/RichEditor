@@ -130,7 +130,7 @@ public struct FontStyling
         if self.isBold && !self.isUnbold {
             return FontTrait.hasTrait
         }
-//            
+        
         //If we're ONLY unbold
         else if !self.isBold && self.isUnbold {
             return FontTrait.hasNoTrait
