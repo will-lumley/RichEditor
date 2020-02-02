@@ -62,6 +62,9 @@ class ViewController: NSViewController
         //self.richEditor.textView.string      = "The quick brown fox jumped over the lazy dog."
         //self.richEditor.textView.importsGraphics = false
         
+        self.textColourTextField.delegate = self
+        self.highlightColourTextField.delegate = self
+        
         self.boldButton.title    = "Bold"
         self.italicsButton.title = "Italic"
         
@@ -73,7 +76,28 @@ class ViewController: NSViewController
     {
         
     }
+}
 
+extension ViewController: NSTextFieldDelegate
+{
+    func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool
+    {
+        if (commandSelector == #selector(NSResponder.insertNewline(_:))) {
+            switch control {
+            case self.textColourTextField:
+                let colour = NSColor(hex: self.textColourTextField.stringValue)
+                
+            case self.highlightColourTextField:
+                let colour = NSColor(hex: self.highlightColourTextField.stringValue)
+                
+                
+            default:()
+            }
+            return true
+        }
+        
+        return false
+    }
 }
 
 //MARK: - Actions
@@ -224,38 +248,34 @@ extension ViewController
         }
         
         //Configure the TextColour UI
-        /*
-        let textColours = fontInfo.textColours
+        let textColours = fontStyling.textColours
         switch (textColours.count) {
             case 0:
-                self.textColourButton.color = NSColor.black
+                self.textColourTextField.textColor = NSColor.white
             
             case 1:
-                self.textColourButton.color = textColours[0]
+                self.textColourTextField.textColor = textColours[0]
             
             case 2:
-                self.textColourButton.color = NSColor.gray
+                self.textColourTextField.textColor = NSColor.gray
             
             default:()
         }
-        */
         
         //Configure the HighlightColour UI
-        /*
-        let highlightColours = fontInfo.highlightColours
+        let highlightColours = fontStyling.highlightColours
         switch (highlightColours.count) {
             case 0:
-                self.highlightColourButton.color = NSColor.white
+                self.highlightColourTextField.textColor = NSColor.white
                 
             case 1:
-                self.highlightColourButton.color = highlightColours[0]
+                self.highlightColourTextField.textColor = highlightColours[0]
             
             case 2:
-                self.highlightColourButton.color = NSColor.gray
+                self.highlightColourTextField.textColor = NSColor.gray
             
             default:()
         }
-         */
         
         //Configure the Fonts UI
         let fonts = fontStyling.fonts

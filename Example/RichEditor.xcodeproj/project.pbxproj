@@ -12,6 +12,7 @@
 		BEAD32C623E26B4C00C0D828 /* PreviewTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD32C523E26B4C00C0D828 /* PreviewTextViewController.swift */; };
 		BEAD32C823E26B6100C0D828 /* PreviewWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD32C723E26B6100C0D828 /* PreviewWebViewController.swift */; };
 		BED9CA6D23E27D0E00714B5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CA6B23E27D0E00714B5B /* ViewController.swift */; };
+		BEE976A123E3FAFA006BC308 /* NSColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE976A023E3FAFA006BC308 /* NSColor+Hex.swift */; };
 		ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67B20348A760038D96B /* AppDelegate.swift */; };
 		ED83F68020348A760038D96B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED83F67F20348A760038D96B /* Assets.xcassets */; };
 		ED83F68320348A760038D96B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED83F68120348A760038D96B /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		BEAD32C523E26B4C00C0D828 /* PreviewTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTextViewController.swift; sourceTree = "<group>"; };
 		BEAD32C723E26B6100C0D828 /* PreviewWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewWebViewController.swift; sourceTree = "<group>"; };
 		BED9CA6B23E27D0E00714B5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BEE976A023E3FAFA006BC308 /* NSColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Hex.swift"; sourceTree = "<group>"; };
 		C73677B2B489A20313B4D707 /* Pods-RichEditor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichEditor_Tests.debug.xcconfig"; path = "Target Support Files/Pods-RichEditor_Tests/Pods-RichEditor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DBD3A55C6AA72A4EB1EDE641 /* Pods-RichEditor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichEditor_Example.release.xcconfig"; path = "Target Support Files/Pods-RichEditor_Example/Pods-RichEditor_Example.release.xcconfig"; sourceTree = "<group>"; };
 		ED83F67820348A760038D96B /* RichEditor_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RichEditor_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 				BED9CA6B23E27D0E00714B5B /* ViewController.swift */,
 				BEAD32C523E26B4C00C0D828 /* PreviewTextViewController.swift */,
 				BEAD32C723E26B6100C0D828 /* PreviewWebViewController.swift */,
+				BEE976A023E3FAFA006BC308 /* NSColor+Hex.swift */,
 				ED83F67F20348A760038D96B /* Assets.xcassets */,
 				ED83F68120348A760038D96B /* Main.storyboard */,
 				ED83F68420348A760038D96B /* Info.plist */,
@@ -315,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BED9CA6D23E27D0E00714B5B /* ViewController.swift in Sources */,
+				BEE976A123E3FAFA006BC308 /* NSColor+Hex.swift in Sources */,
 				BEAD32C823E26B6100C0D828 /* PreviewWebViewController.swift in Sources */,
 				BEAD32C623E26B4C00C0D828 /* PreviewTextViewController.swift in Sources */,
 				ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */,
