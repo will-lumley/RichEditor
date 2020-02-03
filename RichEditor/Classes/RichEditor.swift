@@ -146,10 +146,13 @@ extension RichEditor
         paragraph.textLists = [textList]
         
         //Create attributes with our paragraph style (which in turn has the bullet point style within it)
-        let attributes = [NSAttributedString.Key.paragraphStyle: paragraph]
+        var typingAttributes = self.textView.typingAttributes
+        typingAttributes[NSAttributedString.Key.paragraphStyle] = paragraph
         
-        //Create an attributed string with our attributes
-        let attrStr = NSAttributedString(string: "\(textList.marker(forItemNumber: 1))", attributes: attributes)
+        //Create an attributed string with the attributes already present in our 'future' text
+        //Put a \n before the bullet point, so that the bullet point is in it's own line
+        //Put a \t afte the bullet point so there's some space between the bullet point and the text
+        let attrStr = NSAttributedString(string: "\n\(textList.marker(forItemNumber: 1))\t", attributes: typingAttributes)
         print("attrStr: \(attrStr)")
         
         self.textView.textStorage?.append(attrStr)
@@ -234,7 +237,6 @@ extension RichEditor
         return nil
     }
     
-    //MARK: -
     /**
      Returns the NSFont object that was derived from the selected text, or the future text if nothing is selected
      - returns: The NSFont object for the relevant text
@@ -393,6 +395,24 @@ extension RichEditor: NSTextStorageDelegate
 //MARK: - NSTextViewDelegate
 extension RichEditor: NSTextViewDelegate
 {
+    public func textView(_ textView: NSTextView, shouldChangeTextIn affectedCharRange: NSRange, replacementString: String?) -> Bool
+    {
+        //Get all the lines of the text
+        //Get the line of text that we're on
+        //See if the text in the line of text that we're on has a bullet point in it
+        
+        //        NSInteger insertionPoint = [[[myTextView selectedRanges] objectAtIndex:0] rangeValue].location;
+        
+        //guard let currentLocation = textView.selectedRanges.first?.rangeValue.location else { return true }
+        print("***")
+        textView.string.enumerateSubstrings(in: textView.string.startIndex..<textView.string.endIndex, options: .byLines) {(substring, substringRange, _, _) in
+            print("SubString: \(substring)")
+        }
+        print("***")
+        
+        return true
+    }
+    
     /*
     func textView(_ textView: NSTextView, urlForContentsOf textAttachment: NSTextAttachment, at charIndex: Int) -> URL?
     {
