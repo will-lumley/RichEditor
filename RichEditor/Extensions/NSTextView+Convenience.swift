@@ -42,7 +42,7 @@ extension NSTextView
         }
         
         //We've created the NSAttributedString from the HTML, let's apply it
-        return self.set(attrFromHTML)
+        return self.set(attributedString: attrFromHTML)
     }
     
     /**
@@ -53,7 +53,7 @@ extension NSTextView
      - returns: A boolean value indicative of if the setting of the NSAttributedString
      was successful
     */
-    public func set(_ attributedString: NSAttributedString) -> Bool
+    public func set(attributedString: NSAttributedString) -> Bool
     {
         guard let textStorage = self.textStorage else {
             print("Error setting NSAttributedString, TextStorage is nil.")
@@ -90,5 +90,55 @@ extension NSTextView
             
             print("")
         }
+    }
+    
+    /**
+     Calculates which line number (using a 0 based index) our caret is on, the range of this line (in comparison to the whole string), and the string that makes up that line of text.
+     Will return nil if there is no caret present, and a portion of text is highlighted instead.
+     
+     A pain point of this function is that it cannot return the current line number when it's found, but rather
+     has to wait for every single line to be iterated through first. This is because the enumerateSubstrings() function
+     on the String is not an actual loop, and as such we cannot return or break within it.
+     
+     - returns: The line number that the caret is on, the range of our line, and the string that makes up that line of text
+     */
+    func currentLine() -> (Int?, NSRange?, String?)
+    {
+        //Bail out if the user has selected text
+        if self.hasSelectedText {
+            return (nil, nil, nil)
+        }
+        
+        //The line number that we're currently iterating on
+        var lineNumber = 0
+        
+        //The line number & line of text that we believe the caret to be on
+        var selectedLineNumber: Int?
+        var selectedLineRange : NSRange?
+        var selectedLineOfText: String?
+
+        //Iterate over every line in our TextView
+        self.string.enumerateSubstrings(in: self.string.startIndex..<self.string.endIndex, options: .byLines) {(substring, substringRange, _, _) in
+            //The range of this current line
+            let range = NSRange(substringRange, in: self.string)
+
+            //Calculate the start location of our line and the end location of our line, in context to our TextView.string as a whole
+            let startOfLine = range.location
+            let endOfLine   = range.location + range.length
+            
+            let caretLocation = self.selectedRange().location
+            
+            //If the CaretLocation is between the start of this line, and the end of this line, we can assume that the caret is on this line
+            if caretLocation >= startOfLine && caretLocation <= endOfLine {
+                //Mark the line number
+                selectedLineNumber = lineNumber
+                selectedLineOfText = substring
+                selectedLineRange  = range
+            }
+            
+            lineNumber += 1
+        }
+        
+        return (selectedLineNumber, selectedLineRange, selectedLineOfText)
     }
 }

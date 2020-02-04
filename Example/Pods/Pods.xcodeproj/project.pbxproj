@@ -20,6 +20,7 @@
 		9BF3F9198BD94616E0C42F0699D95AFE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
 		A8836C9983F0524A5E4B072BE09FC94F /* Dictionary+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = A251AEAB57C4F0623E305D7D2E8532AC /* Dictionary+Convenience.swift */; };
 		B047CCC24055F178CA45836F188DC624 /* URL+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB0AA13D264AE2AC3F8842D4551C3FA /* URL+Images.swift */; };
+		BE2B170523E8E5B60069DA0B /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2B170423E8E5B60069DA0B /* String+Lines.swift */; };
 		BECFB61D23E3EEE700544CD5 /* FontStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECFB61C23E3EECD00544CD5 /* FontStyling.swift */; };
 		C45D099150C6AD0684B37FC07F26ADFF /* Pods-RichEditor_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B26BDF036DCC80E19475FB78017414B /* Pods-RichEditor_Tests-dummy.m */; };
 		CB7ACBA6C79C31828BBC3E446C3019D2 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE033E35858AB3ED75D20E3EAB4DC0E0 /* String+Convenience.swift */; };
@@ -78,6 +79,7 @@
 		9F170FC9A00FB0FA29EE483E899CD96F /* Pods-RichEditor_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RichEditor_Tests.modulemap"; sourceTree = "<group>"; };
 		A251AEAB57C4F0623E305D7D2E8532AC /* Dictionary+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+Convenience.swift"; sourceTree = "<group>"; };
 		AD0EA0312AC6030E860747A25DC571C6 /* RichEditor+Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "RichEditor+Stack.swift"; sourceTree = "<group>"; };
+		BE2B170423E8E5B60069DA0B /* String+Lines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Lines.swift"; sourceTree = "<group>"; };
 		BECFB61C23E3EECD00544CD5 /* FontStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyling.swift; sourceTree = "<group>"; };
 		C2BAE0C9C417B1A9DD0B78201E8BA424 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C699BBD208ED791C1AEFF10837E2E44D /* Pods-RichEditor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RichEditor_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				6F00A72D1E8405B7D893897CC7CA91B9 /* NSMenu+Convenience.swift */,
 				F5F00060F0CDEB413150FD7A56B6FE4B /* NSTextView+Convenience.swift */,
 				CE033E35858AB3ED75D20E3EAB4DC0E0 /* String+Convenience.swift */,
+				BE2B170423E8E5B60069DA0B /* String+Lines.swift */,
 				2EB0AA13D264AE2AC3F8842D4551C3FA /* URL+Images.swift */,
 			);
 			name = Extensions;
@@ -368,7 +371,7 @@
 				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					83FFF657196094B71F147D25444AC5E8 = {
-						LastSwiftMigration = 1130;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -441,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2B170523E8E5B60069DA0B /* String+Lines.swift in Sources */,
 				EE28395F3119EB766AD91F469011ED9E /* Pods-RichEditor_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -115,6 +115,33 @@ extension NSAttributedString
         return attachments
     }
     
+    /**
+     Finds the NSTextList at a given range
+     - parameter range: The NSRange that we'll search for the NSTextList in
+     - returns: An NSTextList, if one exists at the given range
+     */
+    public func textList(at searchRange: NSRange) -> NSTextList?
+    {
+        var textList: NSTextList?
+        
+        self.enumerateAttribute(.paragraphStyle, in: self.string.fullRange, options: .longestEffectiveRangeNotRequired, using: {(value, range, finished) in
+            if value != nil {
+                if let paragraphStyle = value as? NSParagraphStyle {
+                    
+                    //TODO: Improve search to see if this textlist is the one we're after
+                    if paragraphStyle.textLists.count >= 1 {
+                        textList = paragraphStyle.textLists[0]
+                        
+                        print("TextList Range: \(range)")
+                        print("Search   Range: \(searchRange)")
+                    }
+                }
+            }
+        })
+        
+        return textList
+    }
+    
     //MARK: - Attribute Checking
     /**
      Iterates over every font that exists within this NSAttributedString, and checks if any of the fonts contain the desired NSFontTraitMask

@@ -33,6 +33,9 @@ public class RichEditor: NSView
         }
     }
     
+    ///The marker that will be used for bullet points
+    fileprivate var bulletPointMarker = NSTextList.MarkerFormat.circle
+    
     /**
      Returns the FontStyling object that was derived from the selected text, or the future text if nothing is selected
      - returns: The FontStyling object for the relevant text
@@ -138,7 +141,7 @@ extension RichEditor
         */
         
         //Create a text list (the representation of our bullet points)
-        let textList = NSTextList(markerFormat: NSTextList.MarkerFormat.circle, options: 0)
+        let textList = NSTextList(markerFormat: self.bulletPointMarker, options: 0)
         textList.startingItemNumber = 1
         
         //Create a new paragraph style, and apply our bullet points to it
@@ -152,7 +155,7 @@ extension RichEditor
         //Create an attributed string with the attributes already present in our 'future' text
         //Put a \n before the bullet point, so that the bullet point is in it's own line
         //Put a \t afte the bullet point so there's some space between the bullet point and the text
-        let attrStr = NSAttributedString(string: "\n\(textList.marker(forItemNumber: 1))\t", attributes: typingAttributes)
+        let attrStr = NSAttributedString(string: "\n\t\(textList.marker(forItemNumber: 1))  ", attributes: typingAttributes)
         print("attrStr: \(attrStr)")
         
         self.textView.textStorage?.append(attrStr)
@@ -399,16 +402,32 @@ extension RichEditor: NSTextViewDelegate
     {
         //Get all the lines of the text
         //Get the line of text that we're on
-        //See if the text in the line of text that we're on has a bullet point in it
         
-        //        NSInteger insertionPoint = [[[myTextView selectedRanges] objectAtIndex:0] rangeValue].location;
+        guard let newString = replacementString else { return true }
         
-        //guard let currentLocation = textView.selectedRanges.first?.rangeValue.location else { return true }
-        print("***")
-        textView.string.enumerateSubstrings(in: textView.string.startIndex..<textView.string.endIndex, options: .byLines) {(substring, substringRange, _, _) in
-            print("SubString: \(substring)")
+        //If the user just hit enter/newline
+        if newString == "\n" {
+            let currentLine = textView.currentLine()
+            
+            //If the line that we just hit enter on contains a bullet point marker
+            //TODO: Check for all decimal point markers
+            guard var currentLineRange = currentLine.1 else { return true }
+            guard let currentLineStr   = currentLine.2 else { return true }
+            if currentLineStr.contains("◦") {
+                currentLineRange.length = currentLineRange.length + 2
+                
+                let attributedStr = NSMutableAttributedString(attributedString: textView.attributedString())
+                
+                //Add another bullet point to this list of bullet points
+                guard let textList = textView.attributedString().textList(at: affectedCharRange) else { return true }
+                
+                //Get the current line, and replace it with the current line AND a newline with a new bullet point ready to go
+                let newLine = NSAttributedString(string: "\(currentLineStr)\n\(textList.marker(forItemNumber: 2))", attributes: attributedStr.attributes)
+                attributedStr.replaceCharacters(in: currentLineRange, with: newLine)
+                
+                return false
+            }
         }
-        print("***")
         
         return true
     }
