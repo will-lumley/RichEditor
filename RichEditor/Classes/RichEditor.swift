@@ -140,9 +140,20 @@ extension RichEditor
         let currentLineStr   = currentLine.lineString
         let currentLineRange = currentLine.lineRange
         
-        //Get the line in our TextView that our caret is on, and prepend a bulletpoint to it
-        let bulletPointStr = "\(RichEditor.bulletPointMarker) \(currentLineStr)"
-        self.textView.replaceCharacters(in: currentLineRange, with: bulletPointStr)
+        //If our current line already has a bullet point, remove it
+        if currentLineStr.isBulletPoint {
+            //Get the line in our TextView that our caret is on, and remove our bulletpoint
+            var noBulletPointStr = currentLineStr.replacingOccurrences(of: "\(RichEditor.bulletPointMarker) ", with: "")
+            noBulletPointStr = currentLineStr.replacingOccurrences(of: RichEditor.bulletPointMarker, with: "")
+
+            self.textView.replaceCharacters(in: currentLineRange, with: noBulletPointStr)
+        }
+        //If our current line doesn't already have a bullet point appended to it, prepend one
+        else {
+            //Get the line in our TextView that our caret is on, and prepend a bulletpoint to it
+            let bulletPointStr = "\(RichEditor.bulletPointMarker) \(currentLineStr)"
+            self.textView.replaceCharacters(in: currentLineRange, with: bulletPointStr)
+        }
     }
     
     /**
@@ -395,7 +406,7 @@ extension RichEditor: NSTextViewDelegate
             
             //If the line we're currently on is prefixed with a bullet point, append a bullet point to the next line
             let currentLineStr = currentLine.lineString
-            if currentLineStr.hasPrefix(RichEditor.bulletPointMarker) {
+            if currentLineStr.isBulletPoint {
                 
                 let currentLineRange = currentLine.lineRange
                 
