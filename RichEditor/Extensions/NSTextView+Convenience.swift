@@ -19,6 +19,10 @@ extension NSTextView
         return self.selectedRange().length > 0
     }
     
+    public var caretLocation: Int {
+        return self.selectedRange().location
+    }
+    
     /**
      Replaces the current NSString/NSAttributedString that is currently within
      the NSTextView and replaces it with the provided HTML string.
@@ -53,6 +57,7 @@ extension NSTextView
      - returns: A boolean value indicative of if the setting of the NSAttributedString
      was successful
     */
+    @discardableResult
     public func set(attributedString: NSAttributedString) -> Bool
     {
         guard let textStorage = self.textStorage else {
@@ -102,21 +107,18 @@ extension NSTextView
      
      - returns: The line number that the caret is on, the range of our line, and the string that makes up that line of text
      */
-    func currentLine() -> (Int?, NSRange?, String?)
+    func currentLine() -> (lineNumber: Int, lineRange: NSRange, lineString: String)
     {
-        //Bail out if the user has selected text
-        if self.hasSelectedText {
-            return (nil, nil, nil)
-        }
-        
         //The line number that we're currently iterating on
         var lineNumber = 0
         
         //The line number & line of text that we believe the caret to be on
-        var selectedLineNumber: Int?
-        var selectedLineRange : NSRange?
-        var selectedLineOfText: String?
-
+        var selectedLineNumber = 0
+        var selectedLineRange  = NSRange(location: 0, length: 0)
+        var selectedLineOfText = ""
+        
+        var foundSelectedLine = false
+        
         //Iterate over every line in our TextView
         self.string.enumerateSubstrings(in: self.string.startIndex..<self.string.endIndex, options: .byLines) {(substring, substringRange, _, _) in
             //The range of this current line
@@ -126,19 +128,34 @@ extension NSTextView
             let startOfLine = range.location
             let endOfLine   = range.location + range.length
             
-            let caretLocation = self.selectedRange().location
-            
             //If the CaretLocation is between the start of this line, and the end of this line, we can assume that the caret is on this line
-            if caretLocation >= startOfLine && caretLocation <= endOfLine {
+            if self.caretLocation >= startOfLine && self.caretLocation <= endOfLine {
                 //Mark the line number
                 selectedLineNumber = lineNumber
-                selectedLineOfText = substring
+                selectedLineOfText = substring ?? ""
                 selectedLineRange  = range
+                
+                foundSelectedLine = true
             }
             
             lineNumber += 1
         }
         
+        //If we're not at the starting point, and we didn't find a current line, then we're at the end of our TextView
+        if self.caretLocation > 0 && !foundSelectedLine {
+            selectedLineNumber = lineNumber
+            selectedLineOfText = ""
+            selectedLineRange  = NSRange(location: self.caretLocation, length: 0)
+        }
+        
         return (selectedLineNumber, selectedLineRange, selectedLineOfText)
+    }
+    
+    public func append(_ string: String)
+    {
+        let textViewText = NSMutableAttributedString(attributedString: self.attributedString())
+        textViewText.append(NSAttributedString(string: string, attributes: self.typingAttributes))
+        
+        self.set(attributedString: textViewText)
     }
 }

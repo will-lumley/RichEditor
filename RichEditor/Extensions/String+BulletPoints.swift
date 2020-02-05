@@ -9,6 +9,10 @@ import Foundation
 
 extension String
 {
+    public var isBulletPoint: Bool {
+        return self.hasPrefix(RichEditor.bulletPointMarker)
+    }
+    
     /**
      Returns an array of strings that is made up of all the "lines" in this string.
      - returns: An array of strings that is derived from this string, using a newline as a delimiter
