@@ -28,8 +28,13 @@ class ViewController: NSViewController
     @IBOutlet weak var fontFamiliesPopUpButton: NSPopUpButton!
     @IBOutlet weak var fontSizePopUpButton: NSPopUpButton!
     
+    ///This window displays the HTML, that was sourced from the RichEditor.html() function
     fileprivate var previewTextViewController : PreviewTextViewController?
+    
+    ///This window displays the NSAttributedString, that was sourced from HTML
     fileprivate var previewTextViewController2: PreviewTextViewController?
+    
+    ///This window displays the HTML from the RawHTML
     fileprivate var previewWebViewController: PreviewWebViewController?
     
     //MARK: - NSViewController
@@ -39,9 +44,9 @@ class ViewController: NSViewController
         
         self.configureUI()
         
-        self.openPreviewTextWindow()
-        self.openPreviewWebWindow()
-        self.openPreviewTextWindow2()
+        //self.openPreviewTextWindow()
+        //self.openPreviewWebWindow()
+        //self.openPreviewTextWindow2()
     }
     
     override func viewDidAppear()
