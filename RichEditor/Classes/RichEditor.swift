@@ -34,7 +34,7 @@ public class RichEditor: NSView
     }
     
     ///The marker that will be used for bullet points
-    fileprivate var bulletPointMarker = NSTextList.MarkerFormat.circle
+    internal static var bulletPointMarker = "•\u{00A0}" //NSTextList.MarkerFormat.circle
     
     /**
      Returns the FontStyling object that was derived from the selected text, or the future text if nothing is selected
@@ -134,31 +134,15 @@ extension RichEditor
     
     public func startBulletPoints()
     {
-        /*
-         NSAttributedString
-            NSAttributedStringParagraphStyle
-                NSTextList
-        */
+        let currentLine = self.textView.currentLine()
         
-        //Create a text list (the representation of our bullet points)
-        let textList = NSTextList(markerFormat: self.bulletPointMarker, options: 0)
-        textList.startingItemNumber = 1
+        //Get the string that makes up our current string, and find out where it sits in our TextView
+        let currentLineStr   = currentLine.lineString
+        let currentLineRange = currentLine.lineRange
         
-        //Create a new paragraph style, and apply our bullet points to it
-        let paragraph = NSMutableParagraphStyle()
-        paragraph.textLists = [textList]
-        
-        //Create attributes with our paragraph style (which in turn has the bullet point style within it)
-        var typingAttributes = self.textView.typingAttributes
-        typingAttributes[NSAttributedString.Key.paragraphStyle] = paragraph
-        
-        //Create an attributed string with the attributes already present in our 'future' text
-        //Put a \n before the bullet point, so that the bullet point is in it's own line
-        //Put a \t afte the bullet point so there's some space between the bullet point and the text
-        let attrStr = NSAttributedString(string: "\n\t\(textList.marker(forItemNumber: 1))  ", attributes: typingAttributes)
-        print("attrStr: \(attrStr)")
-        
-        self.textView.textStorage?.append(attrStr)
+        //Get the line in our TextView that our caret is on, and prepend a bulletpoint to it
+        let bulletPointStr = "\(RichEditor.bulletPointMarker) \(currentLineStr)"
+        self.textView.replaceCharacters(in: currentLineRange, with: bulletPointStr)
     }
     
     /**
@@ -409,21 +393,22 @@ extension RichEditor: NSTextViewDelegate
         if newString == "\n" {
             let currentLine = textView.currentLine()
             
-            //If the line that we just hit enter on contains a bullet point marker
-            //TODO: Check for all decimal point markers
-            guard var currentLineRange = currentLine.1 else { return true }
-            guard let currentLineStr   = currentLine.2 else { return true }
-            if currentLineStr.contains("◦") {
-                currentLineRange.length = currentLineRange.length + 2
+            //If the line we're currently on is prefixed with a bullet point, append a bullet point to the next line
+            let currentLineStr = currentLine.lineString
+            if currentLineStr.hasPrefix(RichEditor.bulletPointMarker) {
                 
-                let attributedStr = NSMutableAttributedString(attributedString: textView.attributedString())
+                let currentLineRange = currentLine.lineRange
                 
-                //Add another bullet point to this list of bullet points
-                guard let textList = textView.attributedString().textList(at: affectedCharRange) else { return true }
-                
-                //Get the current line, and replace it with the current line AND a newline with a new bullet point ready to go
-                let newLine = NSAttributedString(string: "\(currentLineStr)\n\(textList.marker(forItemNumber: 2))", attributes: attributedStr.attributes)
-                attributedStr.replaceCharacters(in: currentLineRange, with: newLine)
+                //If our current line is just an empty bullet point line, remove the bullet point and turn it into a regular line
+                if currentLineStr == RichEditor.bulletPointMarker {
+                    self.textView.replaceCharacters(in: currentLineRange, with: "")
+                }
+                    
+                //If our current line is a full bullet point line, append a brand spanking new bullet point line below our current line for our user
+                else {
+                    let bulletPointStr = "\(currentLineStr)\n\(RichEditor.bulletPointMarker)"
+                    self.textView.replaceCharacters(in: currentLineRange, with: bulletPointStr)
+                }
                 
                 return false
             }
