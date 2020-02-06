@@ -21,7 +21,7 @@ public class RichEditor: NSView
     public fileprivate(set) lazy var textStorage   = NSTextStorage()
     public fileprivate(set) lazy var layoutManager = NSLayoutManager()
     public fileprivate(set) lazy var textContainer = NSTextContainer()
-    public fileprivate(set) lazy var textView      = NSTextView(frame: CGRect(), textContainer: self.textContainer)
+    public fileprivate(set) lazy var textView      = RichTextView(frame: CGRect(), textContainer: self.textContainer)
     public fileprivate(set) lazy var scrollview    = NSScrollView()
     /*------------------------------------------------------------*/
     
@@ -414,7 +414,7 @@ extension RichEditor: NSTextViewDelegate
                 if currentLineStr == RichEditor.bulletPointMarker {
                     self.textView.replaceCharacters(in: currentLineRange, with: "")
                 }
-                    
+                
                 //If our current line is a full bullet point line, append a brand spanking new bullet point line below our current line for our user
                 else {
                     let bulletPointStr = "\(currentLineStr)\n\(RichEditor.bulletPointMarker)"

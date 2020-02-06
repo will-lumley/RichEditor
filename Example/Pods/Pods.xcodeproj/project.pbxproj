@@ -21,6 +21,7 @@
 		A8836C9983F0524A5E4B072BE09FC94F /* Dictionary+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = A251AEAB57C4F0623E305D7D2E8532AC /* Dictionary+Convenience.swift */; };
 		B047CCC24055F178CA45836F188DC624 /* URL+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB0AA13D264AE2AC3F8842D4551C3FA /* URL+Images.swift */; };
 		BE01E19623EA675A006448BE /* String+BulletPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE01E19523EA675A006448BE /* String+BulletPoints.swift */; };
+		BE8DA31B23EC05BF003FD3B9 /* RichTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DA31A23EC05BF003FD3B9 /* RichTextView.swift */; };
 		BECFB61D23E3EEE700544CD5 /* FontStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECFB61C23E3EECD00544CD5 /* FontStyling.swift */; };
 		C45D099150C6AD0684B37FC07F26ADFF /* Pods-RichEditor_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B26BDF036DCC80E19475FB78017414B /* Pods-RichEditor_Tests-dummy.m */; };
 		CB7ACBA6C79C31828BBC3E446C3019D2 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE033E35858AB3ED75D20E3EAB4DC0E0 /* String+Convenience.swift */; };
@@ -80,6 +81,7 @@
 		A251AEAB57C4F0623E305D7D2E8532AC /* Dictionary+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+Convenience.swift"; sourceTree = "<group>"; };
 		AD0EA0312AC6030E860747A25DC571C6 /* RichEditor+Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "RichEditor+Stack.swift"; sourceTree = "<group>"; };
 		BE01E19523EA675A006448BE /* String+BulletPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+BulletPoints.swift"; sourceTree = "<group>"; };
+		BE8DA31A23EC05BF003FD3B9 /* RichTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextView.swift; sourceTree = "<group>"; };
 		BECFB61C23E3EECD00544CD5 /* FontStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyling.swift; sourceTree = "<group>"; };
 		C2BAE0C9C417B1A9DD0B78201E8BA424 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C699BBD208ED791C1AEFF10837E2E44D /* Pods-RichEditor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RichEditor_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				BECFB61C23E3EECD00544CD5 /* FontStyling.swift */,
 				FD461F686F69A1BFB0A2C5813F28AC93 /* RichEditor.swift */,
 				AD0EA0312AC6030E860747A25DC571C6 /* RichEditor+Stack.swift */,
+				BE8DA31A23EC05BF003FD3B9 /* RichTextView.swift */,
 			);
 			name = Classes;
 			path = RichEditor/Classes;
@@ -435,6 +438,7 @@
 				18B9CEEDC03524F19A7AEA7C02AC7CCC /* RichEditor+Stack.swift in Sources */,
 				3CA198A87B67998867951D1AF37ADA6C /* RichEditor-dummy.m in Sources */,
 				1BA7597F4A23D7C273ACB71FA65DBC79 /* RichEditor.swift in Sources */,
+				BE8DA31B23EC05BF003FD3B9 /* RichTextView.swift in Sources */,
 				CB7ACBA6C79C31828BBC3E446C3019D2 /* String+Convenience.swift in Sources */,
 				B047CCC24055F178CA45836F188DC624 /* URL+Images.swift in Sources */,
 				BE01E19623EA675A006448BE /* String+BulletPoints.swift in Sources */,
