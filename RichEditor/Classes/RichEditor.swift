@@ -21,7 +21,7 @@ public class RichEditor: NSView
     public fileprivate(set) lazy var textStorage   = NSTextStorage()
     public fileprivate(set) lazy var layoutManager = NSLayoutManager()
     public fileprivate(set) lazy var textContainer = NSTextContainer()
-    public fileprivate(set) lazy var textView      = RichTextView(frame: CGRect(), textContainer: self.textContainer)
+    public fileprivate(set) lazy var textView      = RichTextView(frame: CGRect(), textContainer: self.textContainer, delegate: self)
     public fileprivate(set) lazy var scrollview    = NSScrollView()
     /*------------------------------------------------------------*/
     
@@ -462,5 +462,21 @@ extension RichEditor: NSTextViewDelegate
         }
         
         self.selectedTextFontStyling = FontStyling(attributedString: attr)
+    }
+}
+
+extension RichEditor: KeyboardShortcutDelegate
+{
+    public func commandPressed(character: CommandShortcut)
+    {
+        switch character {
+        case .b:
+            self.toggleBold()
+        case .i:
+            self.toggleItalic()
+        case .u:
+            self.toggleUnderline(.single)
+        default:()
+        }
     }
 }
