@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="15505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -880,7 +880,7 @@
                                     <action selector="linkButtonTapped:" target="XfG-lQ-9wD" id="nx2-kB-gcm"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eC2-9g-rzk">
+                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eC2-9g-rzk">
                                 <rect key="frame" x="122" y="79" width="105" height="32"/>
                                 <buttonCell key="cell" type="push" title="Add Image" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ia8-A3-4fJ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -901,7 +901,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GUl-NE-N4S">
-                                <rect key="frame" x="231" y="46" width="99" height="32"/>
+                                <rect key="frame" x="287" y="46" width="99" height="32"/>
                                 <buttonCell key="cell" type="push" title="Bullet" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="djn-HZ-adS">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -910,17 +910,6 @@
                                     <action selector="bulletPointButtonTapped:" target="XfG-lQ-9wD" id="XJc-ua-yTO"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tgz-Mf-VQK">
-                                <rect key="frame" x="128" y="53" width="93" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Qo9-qI-PtO"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="BiM-Io-Ppu">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zqy-5i-TH9">
                                 <rect key="frame" x="234" y="86" width="94" height="21"/>
                                 <constraints>
@@ -950,7 +939,7 @@
                                 </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2TD-f1-KDO">
-                                <rect key="frame" x="330" y="48" width="133" height="25"/>
+                                <rect key="frame" x="386" y="48" width="77" height="25"/>
                                 <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="g9S-tO-bKO" id="b0u-rL-FT7">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -966,6 +955,14 @@
                                     <action selector="fontFamiliesButtonClicked:" target="XfG-lQ-9wD" id="Gs5-re-MX6"/>
                                 </connections>
                             </popUpButton>
+                            <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="359-lf-6bv">
+                                <rect key="frame" x="128" y="50" width="93" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="GUt-pp-8qX"/>
+                                    <constraint firstAttribute="width" constant="93" id="vaM-zc-3oz"/>
+                                </constraints>
+                                <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </colorWell>
                         </subviews>
                         <constraints>
                             <constraint firstItem="GUl-NE-N4S" firstAttribute="width" secondItem="L49-fB-LKQ" secondAttribute="width" multiplier="0.90625" id="1BT-0V-sb2"/>
@@ -986,25 +983,22 @@
                             <constraint firstItem="L49-fB-LKQ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="UiP-Ex-ean"/>
                             <constraint firstItem="GUl-NE-N4S" firstAttribute="top" secondItem="zqy-5i-TH9" secondAttribute="bottom" constant="12" id="XHK-mC-Z74"/>
                             <constraint firstItem="eC2-9g-rzk" firstAttribute="width" secondItem="L49-fB-LKQ" secondAttribute="width" multiplier="0.643678" constant="31" id="Z6q-z9-n8x"/>
+                            <constraint firstItem="359-lf-6bv" firstAttribute="leading" secondItem="Yw6-TR-flc" secondAttribute="trailing" constant="12" id="bRV-lF-wG9"/>
                             <constraint firstItem="4XQ-gh-qAk" firstAttribute="width" secondItem="8C3-1o-3ew" secondAttribute="width" multiplier="0.907216" id="bUT-gD-wG1"/>
-                            <constraint firstItem="Tgz-Mf-VQK" firstAttribute="width" secondItem="8C3-1o-3ew" secondAttribute="width" multiplier="0.958763" id="bbK-b6-vL1"/>
-                            <constraint firstItem="Tgz-Mf-VQK" firstAttribute="top" secondItem="eC2-9g-rzk" secondAttribute="bottom" constant="12" id="cnj-fL-VkX"/>
                             <constraint firstItem="Yw6-TR-flc" firstAttribute="leading" secondItem="L49-fB-LKQ" secondAttribute="leading" id="dvn-A3-G5e"/>
                             <constraint firstItem="BvU-02-wa4" firstAttribute="width" secondItem="L49-fB-LKQ" secondAttribute="width" id="ePl-r4-fvY"/>
-                            <constraint firstItem="Tgz-Mf-VQK" firstAttribute="leading" secondItem="Yw6-TR-flc" secondAttribute="trailing" constant="12" id="eZc-pG-Gwi"/>
                             <constraint firstAttribute="bottom" secondItem="L49-fB-LKQ" secondAttribute="bottom" constant="20" id="gZG-wJ-gNC"/>
                             <constraint firstItem="8C3-1o-3ew" firstAttribute="width" secondItem="L49-fB-LKQ" secondAttribute="width" id="ggM-2T-Gcq"/>
                             <constraint firstItem="Yw6-TR-flc" firstAttribute="top" secondItem="BvU-02-wa4" secondAttribute="bottom" constant="12" id="hLo-rQ-Q1x"/>
                             <constraint firstAttribute="trailing" secondItem="WEQ-WJ-f7n" secondAttribute="trailing" constant="20" id="hLv-SM-gBk"/>
                             <constraint firstAttribute="bottom" secondItem="WEQ-WJ-f7n" secondAttribute="bottom" constant="20" id="hMC-Fc-9eP"/>
-                            <constraint firstItem="GUl-NE-N4S" firstAttribute="leading" secondItem="Tgz-Mf-VQK" secondAttribute="trailing" constant="16" id="i4o-NO-Rmg"/>
                             <constraint firstItem="2TD-f1-KDO" firstAttribute="leading" secondItem="GUl-NE-N4S" secondAttribute="trailing" constant="8" id="irf-Ci-Jbe"/>
                             <constraint firstAttribute="bottom" secondItem="8C3-1o-3ew" secondAttribute="bottom" constant="20" id="kzO-yf-hbZ"/>
                             <constraint firstItem="zqy-5i-TH9" firstAttribute="width" secondItem="L49-fB-LKQ" secondAttribute="width" multiplier="0.96875" id="p5c-v9-RzG"/>
+                            <constraint firstItem="8C3-1o-3ew" firstAttribute="top" secondItem="359-lf-6bv" secondAttribute="bottom" constant="9" id="qRI-RC-k7m"/>
                             <constraint firstItem="Yw6-TR-flc" firstAttribute="width" secondItem="L49-fB-LKQ" secondAttribute="width" id="rRf-fl-J0T"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BvU-02-wa4" secondAttribute="trailing" constant="20" symbolic="YES" id="sPz-1o-iEa"/>
                             <constraint firstAttribute="bottom" secondItem="4XQ-gh-qAk" secondAttribute="bottom" constant="20" id="saZ-ah-XKY"/>
-                            <constraint firstItem="8C3-1o-3ew" firstAttribute="top" secondItem="Tgz-Mf-VQK" secondAttribute="bottom" constant="12" id="urY-xD-eO0"/>
                             <constraint firstItem="WEQ-WJ-f7n" firstAttribute="top" secondItem="2TD-f1-KDO" secondAttribute="bottom" constant="10" id="vgj-dX-aPb"/>
                         </constraints>
                     </view>
@@ -1019,7 +1013,7 @@
                         <outlet property="italicsButton" destination="Yw6-TR-flc" id="e4i-iD-eSm"/>
                         <outlet property="richEditor" destination="bZM-4M-eHU" id="O1T-lP-75p"/>
                         <outlet property="strikeButton" destination="4XQ-gh-qAk" id="iRg-vq-6R7"/>
-                        <outlet property="textColourTextField" destination="Tgz-Mf-VQK" id="Xhv-Qb-0fC"/>
+                        <outlet property="textColorWell" destination="359-lf-6bv" id="Tz0-Z1-0A5"/>
                         <outlet property="underlineButton" destination="L49-fB-LKQ" id="ZGy-FF-UQg"/>
                     </connections>
                 </viewController>

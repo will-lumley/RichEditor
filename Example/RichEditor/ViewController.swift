@@ -18,7 +18,7 @@ class ViewController: NSViewController
     @IBOutlet weak var underlineButton: NSButton!
     
     @IBOutlet var imageButton: NSButton!
-    @IBOutlet var textColourTextField: NSTextField!
+    @IBOutlet var textColorWell: NSColorWell!
     @IBOutlet var addLinkButton: NSButton!
     
     @IBOutlet var highlightColourTextField: NSTextField!
@@ -38,6 +38,11 @@ class ViewController: NSViewController
     fileprivate var previewWebViewController: PreviewWebViewController?
     
     //MARK: - NSViewController
+    deinit
+    {
+        self.textColorWell.removeObserver(self, forKeyPath: "color")
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -67,8 +72,8 @@ class ViewController: NSViewController
         //self.richEditor.textView.string      = "The quick brown fox jumped over the lazy dog."
         //self.richEditor.textView.importsGraphics = false
         
-        self.textColourTextField.delegate = self
-        self.highlightColourTextField.delegate = self
+        self.textColorWell.addObserver(self, forKeyPath: "color", options: [.new, .old], context: nil)
+        //self.addObserver(self.textColorWell, forKeyPath: "color", options: [], context: nil)
         
         self.boldButton.title    = "Bold"
         self.italicsButton.title = "Italic"
@@ -77,31 +82,14 @@ class ViewController: NSViewController
         self.fontSizePopUpButton.menu     = NSMenu.fontSizesMenu(nil)
     }
     
-    fileprivate func setupKeyboardShortcuts()
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)
     {
+        print("KeyPath: \(keyPath)")
+        print("Object: \(object)")
+        print("Change: \(change)")
+        print("Context: \(context)")
         
-    }
-}
-
-extension ViewController: NSTextFieldDelegate
-{
-    func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool
-    {
-        if (commandSelector == #selector(NSResponder.insertNewline(_:))) {
-            switch control {
-            case self.textColourTextField:
-                let colour = NSColor(hex: self.textColourTextField.stringValue)
-                
-            case self.highlightColourTextField:
-                let colour = NSColor(hex: self.highlightColourTextField.stringValue)
-                
-                
-            default:()
-            }
-            return true
-        }
-        
-        return false
+        super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
     }
 }
 
@@ -256,13 +244,13 @@ extension ViewController
         let textColours = fontStyling.textColours
         switch (textColours.count) {
             case 0:
-                self.textColourTextField.textColor = NSColor.white
+                self.textColorWell.color = NSColor.white
             
             case 1:
-                self.textColourTextField.textColor = textColours[0]
+                self.textColorWell.color = textColours[0]
             
             case 2:
-                self.textColourTextField.textColor = NSColor.gray
+                self.textColorWell.color = NSColor.gray
             
             default:()
         }
