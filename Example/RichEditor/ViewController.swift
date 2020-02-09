@@ -84,12 +84,10 @@ class ViewController: NSViewController
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)
     {
-        print("KeyPath: \(keyPath)")
-        print("Object: \(object)")
-        print("Change: \(change)")
-        print("Context: \(context)")
-        
-        super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+        //If our NSColorWell changed it's colour
+        if object as? NSColorWell == self.textColorWell && keyPath == "color" {
+            self.richEditor.apply(textColour: self.textColorWell.color)
+        }
     }
 }
 
