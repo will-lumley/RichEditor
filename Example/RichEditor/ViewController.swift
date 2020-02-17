@@ -86,7 +86,14 @@ class ViewController: NSViewController
     {
         //If our NSColorWell changed it's colour
         if object as? NSColorWell == self.textColorWell && keyPath == "color" {
-            self.richEditor.apply(textColour: self.textColorWell.color)
+            guard let old = change?[.oldKey] as? NSColor else { return }
+            guard let new = change?[.newKey] as? NSColor else { return }
+            
+            let colourHasChanged = old != new
+            
+            if colourHasChanged {
+                self.richEditor.apply(textColour: self.textColorWell.color)
+            }
         }
     }
 }
