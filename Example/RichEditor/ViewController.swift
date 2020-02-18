@@ -21,7 +21,8 @@ class ViewController: NSViewController
     @IBOutlet var textColorWell: NSColorWell!
     @IBOutlet var addLinkButton: NSButton!
     
-    @IBOutlet var highlightColourTextField: NSTextField!
+    
+    @IBOutlet weak var highlightColorWell: NSColorWell!
     @IBOutlet var strikeButton: NSButton!
     @IBOutlet weak var bulletPointButton: NSButton!
     
@@ -72,8 +73,11 @@ class ViewController: NSViewController
         //self.richEditor.textView.string      = "The quick brown fox jumped over the lazy dog."
         //self.richEditor.textView.importsGraphics = false
         
+        self.textColorWell.color = self.richEditor.textView.textColor ?? NSColor.white
+        self.highlightColorWell.color = NSColor.clear
+        
         self.textColorWell.addObserver(self, forKeyPath: "color", options: [.new, .old], context: nil)
-        //self.addObserver(self.textColorWell, forKeyPath: "color", options: [], context: nil)
+        self.highlightColorWell.addObserver(self, forKeyPath: "color", options: [.new, .old], context: nil)
         
         self.boldButton.title    = "Bold"
         self.italicsButton.title = "Italic"
@@ -84,7 +88,7 @@ class ViewController: NSViewController
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)
     {
-        //If our NSColorWell changed it's colour
+        //If our TextColorWell changed it's colour
         if object as? NSColorWell == self.textColorWell && keyPath == "color" {
             guard let old = change?[.oldKey] as? NSColor else { return }
             guard let new = change?[.newKey] as? NSColor else { return }
@@ -93,6 +97,18 @@ class ViewController: NSViewController
             
             if colourHasChanged {
                 self.richEditor.apply(textColour: self.textColorWell.color)
+            }
+        }
+        
+        //If our HighlightColorWell changed it's colour
+        else if object as? NSColorWell == self.highlightColorWell && keyPath == "color" {
+            guard let old = change?[.oldKey] as? NSColor else { return }
+            guard let new = change?[.newKey] as? NSColor else { return }
+            
+            let colourHasChanged = old != new
+            
+            if colourHasChanged {
+                self.richEditor.apply(highlightColour: self.highlightColorWell.color)
             }
         }
     }
@@ -264,13 +280,13 @@ extension ViewController
         let highlightColours = fontStyling.highlightColours
         switch (highlightColours.count) {
             case 0:
-                self.highlightColourTextField.textColor = NSColor.white
+                self.highlightColorWell.color = NSColor.white
                 
             case 1:
-                self.highlightColourTextField.textColor = highlightColours[0]
+                self.highlightColorWell.color = highlightColours[0]
             
             case 2:
-                self.highlightColourTextField.textColor = NSColor.gray
+                self.highlightColorWell.color = NSColor.gray
             
             default:()
         }

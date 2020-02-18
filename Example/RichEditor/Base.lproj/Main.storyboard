@@ -880,7 +880,7 @@
                                     <action selector="linkButtonTapped:" target="XfG-lQ-9wD" id="nx2-kB-gcm"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eC2-9g-rzk">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eC2-9g-rzk">
                                 <rect key="frame" x="122" y="79" width="105" height="32"/>
                                 <buttonCell key="cell" type="push" title="Add Image" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ia8-A3-4fJ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -900,29 +900,8 @@
                                     <action selector="strikeButtonTapped:" target="XfG-lQ-9wD" id="tpQ-bG-tU0"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GUl-NE-N4S">
-                                <rect key="frame" x="287" y="46" width="99" height="32"/>
-                                <buttonCell key="cell" type="push" title="Bullet" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="djn-HZ-adS">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="bulletPointButtonTapped:" target="XfG-lQ-9wD" id="XJc-ua-yTO"/>
-                                </connections>
-                            </button>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zqy-5i-TH9">
-                                <rect key="frame" x="234" y="86" width="94" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="qIK-Bi-MEx"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="xZ7-dP-7Hd">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WEQ-WJ-f7n">
-                                <rect key="frame" x="330" y="17" width="133" height="25"/>
+                                <rect key="frame" x="386" y="17" width="77" height="25"/>
                                 <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="bZK-Gj-bzz" id="hJL-5E-wtV">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -963,25 +942,44 @@
                                 </constraints>
                                 <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </colorWell>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GUl-NE-N4S">
+                                <rect key="frame" x="231" y="46" width="99" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="Xs2-z3-nJG"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Bullet" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="djn-HZ-adS">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="bulletPointButtonTapped:" target="XfG-lQ-9wD" id="XJc-ua-yTO"/>
+                                </connections>
+                            </button>
+                            <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="H8C-Nj-orm">
+                                <rect key="frame" x="234" y="86" width="93" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="ikN-4Q-CRS"/>
+                                    <constraint firstAttribute="height" constant="23" id="oDI-Yi-wBh"/>
+                                </constraints>
+                                <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </colorWell>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="GUl-NE-N4S" firstAttribute="width" secondItem="L49-fB-LKQ" secondAttribute="width" multiplier="0.90625" id="1BT-0V-sb2"/>
                             <constraint firstItem="L49-fB-LKQ" firstAttribute="top" secondItem="Yw6-TR-flc" secondAttribute="bottom" constant="12" id="2VR-l1-NeY"/>
                             <constraint firstItem="BvU-02-wa4" firstAttribute="leading" secondItem="Yw6-TR-flc" secondAttribute="leading" id="4ky-wm-xbx"/>
                             <constraint firstItem="4XQ-gh-qAk" firstAttribute="leading" secondItem="8C3-1o-3ew" secondAttribute="trailing" constant="12" id="5mP-5f-dkK"/>
                             <constraint firstItem="4XQ-gh-qAk" firstAttribute="top" secondItem="GUl-NE-N4S" secondAttribute="bottom" constant="12" id="GMF-WL-viM"/>
                             <constraint firstItem="bZM-4M-eHU" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="IM1-NY-bzC"/>
-                            <constraint firstItem="WEQ-WJ-f7n" firstAttribute="leading" secondItem="4XQ-gh-qAk" secondAttribute="trailing" constant="8" id="IaU-hP-InQ"/>
                             <constraint firstItem="bZM-4M-eHU" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="KaD-Hz-CQc"/>
                             <constraint firstItem="eC2-9g-rzk" firstAttribute="leading" secondItem="BvU-02-wa4" secondAttribute="trailing" constant="12" id="LcI-Y4-8b5"/>
                             <constraint firstItem="8C3-1o-3ew" firstAttribute="leading" secondItem="L49-fB-LKQ" secondAttribute="trailing" constant="12" id="MlL-DF-vuM"/>
                             <constraint firstItem="bZM-4M-eHU" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="width" id="NsI-OH-iuf"/>
-                            <constraint firstItem="zqy-5i-TH9" firstAttribute="leading" secondItem="eC2-9g-rzk" secondAttribute="trailing" constant="13" id="Okd-u6-Xc2"/>
                             <constraint firstAttribute="trailing" secondItem="2TD-f1-KDO" secondAttribute="trailing" constant="20" id="PGO-QB-O67"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="L49-fB-LKQ" secondAttribute="trailing" constant="20" symbolic="YES" id="TTL-4N-7Kb"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Yw6-TR-flc" secondAttribute="trailing" constant="20" symbolic="YES" id="Tbd-Wf-BZD"/>
                             <constraint firstItem="L49-fB-LKQ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="UiP-Ex-ean"/>
-                            <constraint firstItem="GUl-NE-N4S" firstAttribute="top" secondItem="zqy-5i-TH9" secondAttribute="bottom" constant="12" id="XHK-mC-Z74"/>
+                            <constraint firstItem="GUl-NE-N4S" firstAttribute="leading" secondItem="359-lf-6bv" secondAttribute="trailing" constant="16" id="WBb-Jj-7jO"/>
+                            <constraint firstItem="GUl-NE-N4S" firstAttribute="top" secondItem="H8C-Nj-orm" secondAttribute="bottom" constant="12" id="XkB-f7-FyH"/>
                             <constraint firstItem="eC2-9g-rzk" firstAttribute="width" secondItem="L49-fB-LKQ" secondAttribute="width" multiplier="0.643678" constant="31" id="Z6q-z9-n8x"/>
                             <constraint firstItem="359-lf-6bv" firstAttribute="leading" secondItem="Yw6-TR-flc" secondAttribute="trailing" constant="12" id="bRV-lF-wG9"/>
                             <constraint firstItem="4XQ-gh-qAk" firstAttribute="width" secondItem="8C3-1o-3ew" secondAttribute="width" multiplier="0.907216" id="bUT-gD-wG1"/>
@@ -992,14 +990,14 @@
                             <constraint firstItem="Yw6-TR-flc" firstAttribute="top" secondItem="BvU-02-wa4" secondAttribute="bottom" constant="12" id="hLo-rQ-Q1x"/>
                             <constraint firstAttribute="trailing" secondItem="WEQ-WJ-f7n" secondAttribute="trailing" constant="20" id="hLv-SM-gBk"/>
                             <constraint firstAttribute="bottom" secondItem="WEQ-WJ-f7n" secondAttribute="bottom" constant="20" id="hMC-Fc-9eP"/>
-                            <constraint firstItem="2TD-f1-KDO" firstAttribute="leading" secondItem="GUl-NE-N4S" secondAttribute="trailing" constant="8" id="irf-Ci-Jbe"/>
                             <constraint firstAttribute="bottom" secondItem="8C3-1o-3ew" secondAttribute="bottom" constant="20" id="kzO-yf-hbZ"/>
-                            <constraint firstItem="zqy-5i-TH9" firstAttribute="width" secondItem="L49-fB-LKQ" secondAttribute="width" multiplier="0.96875" id="p5c-v9-RzG"/>
+                            <constraint firstItem="H8C-Nj-orm" firstAttribute="leading" secondItem="eC2-9g-rzk" secondAttribute="trailing" constant="13" id="mZ6-PX-JRx"/>
                             <constraint firstItem="8C3-1o-3ew" firstAttribute="top" secondItem="359-lf-6bv" secondAttribute="bottom" constant="9" id="qRI-RC-k7m"/>
                             <constraint firstItem="Yw6-TR-flc" firstAttribute="width" secondItem="L49-fB-LKQ" secondAttribute="width" id="rRf-fl-J0T"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BvU-02-wa4" secondAttribute="trailing" constant="20" symbolic="YES" id="sPz-1o-iEa"/>
                             <constraint firstAttribute="bottom" secondItem="4XQ-gh-qAk" secondAttribute="bottom" constant="20" id="saZ-ah-XKY"/>
                             <constraint firstItem="WEQ-WJ-f7n" firstAttribute="top" secondItem="2TD-f1-KDO" secondAttribute="bottom" constant="10" id="vgj-dX-aPb"/>
+                            <constraint firstItem="eC2-9g-rzk" firstAttribute="baseline" secondItem="BvU-02-wa4" secondAttribute="baseline" id="xpc-L8-kDd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1008,7 +1006,7 @@
                         <outlet property="bulletPointButton" destination="GUl-NE-N4S" id="i3w-O0-UyH"/>
                         <outlet property="fontFamiliesPopUpButton" destination="2TD-f1-KDO" id="vyv-ts-lKI"/>
                         <outlet property="fontSizePopUpButton" destination="WEQ-WJ-f7n" id="riz-fT-f7N"/>
-                        <outlet property="highlightColourTextField" destination="zqy-5i-TH9" id="eK2-lg-2N6"/>
+                        <outlet property="highlightColorWell" destination="H8C-Nj-orm" id="AIr-mq-gmx"/>
                         <outlet property="imageButton" destination="eC2-9g-rzk" id="7Vg-l5-Yd8"/>
                         <outlet property="italicsButton" destination="Yw6-TR-flc" id="e4i-iD-eSm"/>
                         <outlet property="richEditor" destination="bZM-4M-eHU" id="O1T-lP-75p"/>
