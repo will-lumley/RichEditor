@@ -19,33 +19,11 @@ extension NSAttributedString
         return self.attributes(at: 0, longestEffectiveRange: nil, in: self.string.fullRange)
     }
     
-    //MARK: - Basic Attribute Fetching
-    /**
-     Collects all the types of the attribute that we're after
-     - parameter attribute: The NSAttributedString.Key values we're searching for
-     - returns: An array of all the values that correlated with the provided attribute key
-    */
-    fileprivate func all(of attribute: NSAttributedString.Key) -> [Any]
-    {
-        var allValues = [Any]()
-        let fullRange = self.string.fullRange
-        let options   = NSAttributedString.EnumerationOptions.longestEffectiveRangeNotRequired
-        
-        self.enumerateAttribute(attribute, in: fullRange, options: options, using: {(valueOpt, range, stop) in
-            if let value = valueOpt {
-                allValues.append(value)
-            }
-        })
-        
-        return allValues
-    }
-    
     /**
      Calculates all the various fonts that exist within this NSAttributedString
      - returns: All NSFonts that are used in this NSAttributedString
     */
-    public func allFonts() -> [NSFont]
-    {
+    var allFonts: [NSFont] {
         var fonts = [NSFont]()
         self.enumerateAttribute(NSAttributedString.Key.font, in: self.string.fullRange, options: .longestEffectiveRangeNotRequired, using: {(value, range, stop) in
             let font = value as! NSFont
@@ -59,8 +37,7 @@ extension NSAttributedString
      Calculates all the text colours that are used in this attributed string
      - returns: An array of NSColors, representing all the text colours in this attributed string
      */
-    public func allTextColours() -> [NSColor]
-    {
+    var allTextColours: [NSColor] {
         var colours = [NSColor]()
         self.enumerateAttribute(.foregroundColor, in: self.string.fullRange, options: .longestEffectiveRangeNotRequired, using: {(value, range, finished) in
             if value != nil {
@@ -78,8 +55,7 @@ extension NSAttributedString
         return colours
     }
     
-    public func allHighlightColours() -> [NSColor]
-    {
+    var allHighlightColours: [NSColor] {
         var colours = [NSColor]()
         self.enumerateAttribute(.backgroundColor, in: self.string.fullRange, options: .longestEffectiveRangeNotRequired, using: {(value, range, finished) in
             if value != nil {
@@ -101,8 +77,7 @@ extension NSAttributedString
      Calculates all the NSTextAttachments that are contained in this attributed string
      - returns: An array of NSTextAttachments, representing all the attachments in this attributed string
      */
-    public func allAttachments() -> [NSTextAttachment]
-    {
+    var allAttachments: [NSTextAttachment] {
         var attachments = [NSTextAttachment]()
         self.enumerateAttribute(.attachment, in: self.string.fullRange, options: .longestEffectiveRangeNotRequired, using: {(value, range, finished) in
             if value != nil {
@@ -113,6 +88,27 @@ extension NSAttributedString
         })
         
         return attachments
+    }
+    
+    //MARK: - Basic Attribute Fetching
+    /**
+     Collects all the types of the attribute that we're after
+     - parameter attribute: The NSAttributedString.Key values we're searching for
+     - returns: An array of all the values that correlated with the provided attribute key
+    */
+    fileprivate func all(of attribute: NSAttributedString.Key) -> [Any]
+    {
+        var allValues = [Any]()
+        let fullRange = self.string.fullRange
+        let options   = NSAttributedString.EnumerationOptions.longestEffectiveRangeNotRequired
+        
+        self.enumerateAttribute(attribute, in: fullRange, options: options, using: {(valueOpt, range, stop) in
+            if let value = valueOpt {
+                allValues.append(value)
+            }
+        })
+        
+        return allValues
     }
     
     //MARK: - Attribute Checking

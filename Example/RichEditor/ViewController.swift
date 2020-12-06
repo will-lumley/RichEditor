@@ -30,13 +30,13 @@ class ViewController: NSViewController
     @IBOutlet weak var fontSizePopUpButton: NSPopUpButton!
     
     ///This window displays the HTML, that was sourced from the RichEditor.html() function
-    fileprivate var previewTextViewController : PreviewTextViewController?
+    private var previewTextViewController : PreviewTextViewController?
     
     ///This window displays the NSAttributedString, that was sourced from HTML
-    fileprivate var previewTextViewController2: PreviewTextViewController?
+    private var previewTextViewController2: PreviewTextViewController?
     
     ///This window displays the HTML from the RawHTML
-    fileprivate var previewWebViewController: PreviewWebViewController?
+    private var previewWebViewController: PreviewWebViewController?
     
     //MARK: - NSViewController
     deinit
@@ -64,7 +64,7 @@ class ViewController: NSViewController
         }
     }
     
-    fileprivate func configureUI()
+    private func configureUI()
     {
         //self.textColourButton.delegate = self
         //self.highlightColourButton.delegate = self
@@ -209,12 +209,12 @@ extension ViewController: RichEditorDelegate
 //MARK: - Functions
 extension ViewController
 {
-    fileprivate func configureTextActionButtonsUI()
+    private func configureTextActionButtonsUI()
     {
         let fontStyling = self.richEditor.fontStyling
         
         //Configure the Bold UI
-        switch (fontStyling.boldTrait()) {
+        switch (fontStyling.boldTrait) {
             case .hasTrait:
                 self.boldButton.title = "Unbold"
             
@@ -226,7 +226,7 @@ extension ViewController
         }
         
         //Configure the Italic UI
-        switch (fontStyling.italicsTrait()) {
+        switch (fontStyling.italicsTrait) {
             case .hasTrait:
                 self.italicsButton.title = "Unitalic"
             
@@ -238,7 +238,7 @@ extension ViewController
         }
         
         //Configure the Underline UI
-        switch (fontStyling.underlineTrait()) {
+        switch (fontStyling.underlineTrait) {
             case .hasTrait:
                 self.underlineButton.title = "Un-underline"
             
@@ -250,7 +250,7 @@ extension ViewController
         }
         
         //Configure the Strikethrough UI
-        switch (fontStyling.strikethroughTrait()) {
+        switch (fontStyling.strikethroughTrait) {
             case .hasTrait:
                 self.strikeButton.title = "Un-strikethrough"
                 
@@ -310,7 +310,7 @@ extension ViewController
         
     }
     
-    fileprivate func openPreviewTextWindow()
+    private func openPreviewTextWindow()
     {
         let storyboardID = NSStoryboard.SceneIdentifier("PreviewWindowController")
         let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
@@ -320,7 +320,7 @@ extension ViewController
         self.previewTextViewController = previewWindowController.contentViewController as? PreviewTextViewController
     }
 
-    fileprivate func openPreviewWebWindow()
+    private func openPreviewWebWindow()
     {
         let storyboardID = NSStoryboard.SceneIdentifier("PreviewWebWindowController")
         let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
@@ -330,7 +330,7 @@ extension ViewController
         self.previewWebViewController = previewWindowController.contentViewController as? PreviewWebViewController
     }
     
-    fileprivate func openPreviewTextWindow2()
+    private func openPreviewTextWindow2()
     {
         let storyboardID = NSStoryboard.SceneIdentifier("PreviewWindowController")
         let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
@@ -344,7 +344,7 @@ extension ViewController
      Grabs the selected font title and the selected font size, creates an instance of NSFont from them
      and applies it to the RichTextView
     */
-    fileprivate func applyFont()
+    private func applyFont()
     {
         guard let selectedFontNameMenuItem = self.fontFamiliesPopUpButton.selectedItem else {
             return

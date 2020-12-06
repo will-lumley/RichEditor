@@ -35,10 +35,85 @@ public struct FontStyling
     public fileprivate(set) var textColours     : [NSColor]
     public fileprivate(set) var highlightColours: [NSColor]
     
+    public var boldTrait: FontTrait {
+        //If we're ONLY bold
+        if self.isBold && !self.isUnbold {
+            return FontTrait.hasTrait
+        }
+        
+        //If we're ONLY unbold
+        else if !self.isBold && self.isUnbold {
+            return FontTrait.hasNoTrait
+        }
+            
+        //If we're BOTH bold and unbold
+        else if self.isBold && self.isUnbold {
+            return FontTrait.both
+        }
+        
+        fatalError("Failed to reach conclusion for BoldTrait, for FontStyling: \(self)")
+    }
+
+    public var italicsTrait: FontTrait {
+        //If we're ONLY italic
+        if self.isItalic && !self.isUnitalic {
+            return FontTrait.hasTrait
+        }
+            
+        //If we're ONLY unitalic
+        else if !self.isItalic && self.isUnitalic {
+            return FontTrait.hasNoTrait
+        }
+            
+        //If we're BOTH italic and unitalic
+        else if self.isItalic && self.isUnitalic {
+            return FontTrait.both
+        }
+        
+        fatalError("Failed to reach conclusion for ItalicTrait, for FontStyling: \(self)")
+    }
+
+    public var underlineTrait: FontTrait {
+        //If we're ONLY underline
+        if self.isUnderline && !self.isUnunderline {
+            return FontTrait.hasTrait
+        }
+            
+        //If we're ONLY un-underline
+        else if !self.isUnderline && self.isUnunderline {
+            return FontTrait.hasNoTrait
+        }
+        
+        //If we're BOTH underline and un-underline
+        else if self.isUnderline && self.isUnunderline {
+            return FontTrait.both
+        }
+        
+        fatalError("Failed to reach conclusion for UnderlineTrait, for FontStyling: \(self)")
+    }
+    
+    public var strikethroughTrait: FontTrait {
+        //If we're ONLY strikethrough
+        if self.isStrikethrough && !self.isUnstrikethrough {
+            return FontTrait.hasTrait
+        }
+            
+        //If we're ONLY un-strikethrough
+        else if !self.isStrikethrough && self.isUnstrikethrough {
+            return FontTrait.hasNoTrait
+        }
+            
+        //If we're BOTH strikethrough and un-strikethrough
+        else if self.isStrikethrough && self.isUnstrikethrough {
+            return FontTrait.both
+        }
+        
+        fatalError("Failed to reach conclusion for StrikethroughTrait, for FontStyling: \(self)")
+    }
+    
     //MARK: - FontStyling
-    init(attributedString: NSAttributedString)
-    {
-        self.textColours = attributedString.allTextColours()
+    init(attributedString: NSAttributedString) {
+        self.textColours = attributedString.allTextColours
         
         self.isBold   = attributedString.contains(trait: .boldFontMask)
         self.isUnbold = attributedString.doesNotContain(trait: .boldFontMask)
@@ -58,14 +133,13 @@ public struct FontStyling
         self.isStrikethrough   = strikethroughQualities.atParts
         self.isUnstrikethrough = strikethroughQualities.notAtParts
         
-        self.textColours      = attributedString.allTextColours()
-        self.highlightColours = attributedString.allHighlightColours()
+        self.textColours      = attributedString.allTextColours
+        self.highlightColours = attributedString.allHighlightColours
         
-        self.fonts = attributedString.allFonts()
+        self.fonts = attributedString.allFonts
     }
     
-    init(typingAttributes: [NSAttributedString.Key: Any])
-    {
+    init(typingAttributes: [NSAttributedString.Key: Any]) {
         let font = typingAttributes[NSAttributedString.Key.font] as! NSFont
         
         self.isBold   = font.contains(trait: .boldFontMask)
@@ -110,111 +184,30 @@ public struct FontStyling
      - parameter nsFontTraitMask: The NSFontTraitMask that we need to match to a FontTrait enum
      - returns: A FontTrait enum that will correlate with the NSFontTraitMask
     */
-    public func fontTraitFor(nsFontTraitMask: NSFontTraitMask) -> FontTrait
-    {
+    public func fontTraitFor(nsFontTraitMask: NSFontTraitMask) -> FontTrait {
         switch (nsFontTraitMask) {
             case .boldFontMask:
-                return self.boldTrait()
+                return self.boldTrait
             
             case .italicFontMask:
-                return self.italicsTrait()
+                return self.italicsTrait
             
             default:
                 fatalError("Failed to reach conclusion for determining correlating FontTrait and NSFontTraitMask. NSFontTraitMask: \(nsFontTraitMask)")
         }
     }
     
-    public func boldTrait() -> FontTrait
-    {
-        //If we're ONLY bold
-        if self.isBold && !self.isUnbold {
-            return FontTrait.hasTrait
-        }
-        
-        //If we're ONLY unbold
-        else if !self.isBold && self.isUnbold {
-            return FontTrait.hasNoTrait
-        }
-            
-        //If we're BOTH bold and unbold
-        else if self.isBold && self.isUnbold {
-            return FontTrait.both
-        }
-        
-        fatalError("Failed to reach conclusion for BoldTrait, for FontStyling: \(self)")
-    }
-
-    public func italicsTrait() -> FontTrait
-    {
-        //If we're ONLY italic
-        if self.isItalic && !self.isUnitalic {
-            return FontTrait.hasTrait
-        }
-            
-        //If we're ONLY unitalic
-        else if !self.isItalic && self.isUnitalic {
-            return FontTrait.hasNoTrait
-        }
-            
-        //If we're BOTH italic and unitalic
-        else if self.isItalic && self.isUnitalic {
-            return FontTrait.both
-        }
-        
-        fatalError("Failed to reach conclusion for ItalicTrait, for FontStyling: \(self)")
-    }
-
-    public func underlineTrait() -> FontTrait
-    {
-        //If we're ONLY underline
-        if self.isUnderline && !self.isUnunderline {
-            return FontTrait.hasTrait
-        }
-            
-        //If we're ONLY un-underline
-        else if !self.isUnderline && self.isUnunderline {
-            return FontTrait.hasNoTrait
-        }
-        
-        //If we're BOTH underline and un-underline
-        else if self.isUnderline && self.isUnunderline {
-            return FontTrait.both
-        }
-        
-        fatalError("Failed to reach conclusion for UnderlineTrait, for FontStyling: \(self)")
-    }
-    
-    public func strikethroughTrait() -> FontTrait
-    {
-        //If we're ONLY strikethrough
-        if self.isStrikethrough && !self.isUnstrikethrough {
-            return FontTrait.hasTrait
-        }
-            
-        //If we're ONLY un-strikethrough
-        else if !self.isStrikethrough && self.isUnstrikethrough {
-            return FontTrait.hasNoTrait
-        }
-            
-        //If we're BOTH strikethrough and un-strikethrough
-        else if self.isStrikethrough && self.isUnstrikethrough {
-            return FontTrait.both
-        }
-        
-        fatalError("Failed to reach conclusion for StrikethroughTrait, for FontStyling: \(self)")
-    }
-    
-    public func trait(with key: NSAttributedString.Key) -> FontTrait
-    {
+    public func trait(with key: NSAttributedString.Key) -> FontTrait {
         switch (key) {
             case .strikethroughStyle:
-                return self.strikethroughTrait()
+                return self.strikethroughTrait
             
             case .underlineStyle:
-                return self.underlineTrait()
+                return self.underlineTrait
             
             default:
                 fatalError("NSAttributedString.Key has not been accounted for in FontTrait determination: \(key).")
         }
     }
+
 }

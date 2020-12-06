@@ -48,6 +48,13 @@ public class RichTextView: NSTextView
         super.init(frame: frameRect)
     }
     
+    fileprivate func setup()
+    {
+        if #available(OSX 10.14, *) {
+            self.usesAdaptiveColorMappingForDarkAppearance = true
+        }
+    }
+    
     override public func performKeyEquivalent(with event: NSEvent) -> Bool
     {
         //Only process our event if it's a keydown event
