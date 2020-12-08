@@ -24,6 +24,7 @@
 		90A50D1687A3A559F874FAA916AE1DD7 /* String+BulletPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF02483AC606AA7820349786DBF2254 /* String+BulletPoints.swift */; };
 		94CEE51779C852F26F3337870292D67E /* RichEditor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DA4EBB36575E4E9B814A8FCCA85F9 /* RichEditor-dummy.m */; };
 		9A254BED5778147A73492444EBA6C921 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
+		BE836326257DE1D10009F365 /* RichEditorToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE836325257DE1D10009F365 /* RichEditorToolbar.swift */; };
 		BE858C64257D2272000A363C /* RichEditor+BulletPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE858C63257D2272000A363C /* RichEditor+BulletPoints.swift */; };
 		BE858C6C257D234D000A363C /* RichEditor+Attachments.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE858C6B257D234D000A363C /* RichEditor+Attachments.swift */; };
 		BE858C71257D23A9000A363C /* RichEditor+KeyboardShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE858C70257D23A9000A363C /* RichEditor+KeyboardShortcuts.swift */; };
@@ -86,6 +87,7 @@
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F170FC9A00FB0FA29EE483E899CD96F /* Pods-RichEditor_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RichEditor_Tests.modulemap"; sourceTree = "<group>"; };
 		BCD7588E60EAAF63ECDC95F5C77F0EC3 /* RichEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RichEditor.debug.xcconfig; sourceTree = "<group>"; };
+		BE836325257DE1D10009F365 /* RichEditorToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichEditorToolbar.swift; sourceTree = "<group>"; };
 		BE858C63257D2272000A363C /* RichEditor+BulletPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RichEditor+BulletPoints.swift"; sourceTree = "<group>"; };
 		BE858C6B257D234D000A363C /* RichEditor+Attachments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RichEditor+Attachments.swift"; sourceTree = "<group>"; };
 		BE858C70257D23A9000A363C /* RichEditor+KeyboardShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RichEditor+KeyboardShortcuts.swift"; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				6094D6B615760AE64B312B7DD1B41D80 /* FontStyling.swift */,
+				BE836325257DE1D10009F365 /* RichEditorToolbar.swift */,
 				DA9E72101047C7CD34D5282BD1C77BDC /* RichTextView.swift */,
 				C678D5BB4BA43C96C60AF8BCA0610913 /* RichEditor */,
 			);
@@ -483,6 +486,7 @@
 				30D9C51F34FFBC23A8FB97DCA0640231 /* RichEditor.swift in Sources */,
 				5C9E64FF8A167B25946A584A1070C2BE /* RichTextView.swift in Sources */,
 				90A50D1687A3A559F874FAA916AE1DD7 /* String+BulletPoints.swift in Sources */,
+				BE836326257DE1D10009F365 /* RichEditorToolbar.swift in Sources */,
 				D8033D0D61D7DF6DD501BEF6C02FC8C9 /* String+Convenience.swift in Sources */,
 				BE858C71257D23A9000A363C /* RichEditor+KeyboardShortcuts.swift in Sources */,
 				4C40196C7E0F65E5D455CA5772A775A3 /* URL+Images.swift in Sources */,

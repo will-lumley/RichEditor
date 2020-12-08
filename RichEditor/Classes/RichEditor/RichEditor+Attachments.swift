@@ -41,7 +41,7 @@ extension RichEditor {
         
         //Iterate over every URL and create a NSTextAttachment from it
         for url in urls {
-            let attachment = url.textAttachment()
+            let attachment = url.textAttachment
             let attachmentAttrStr = NSAttributedString(attachment: attachment)
             
             self.textView.textStorage?.append(attachmentAttrStr)

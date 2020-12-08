@@ -114,4 +114,5 @@ extension RichEditor {
         
         self.richEditorDelegate?.fontStylingChanged(self.fontStyling)
     }
+
 }

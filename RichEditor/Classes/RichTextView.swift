@@ -7,8 +7,7 @@
 
 import Foundation
 
-public enum CommandShortcut: String
-{
+public enum CommandShortcut: String {
     case b = "b"
     case i = "i"
     case u = "u"
@@ -16,48 +15,44 @@ public enum CommandShortcut: String
     case minus = "-"
 }
 
-public protocol KeyboardShortcutDelegate
-{
+public protocol KeyboardShortcutDelegate {
     func commandPressed(character: CommandShortcut)
 }
 
-public class RichTextView: NSTextView
-{
-    //MARK: - Properties
-    public fileprivate(set) var keyboardShortcutDelegate: KeyboardShortcutDelegate?
-    
-    //MARK: - NSTextView
-    init(frame frameRect: NSRect, textContainer container: NSTextContainer?, delegate: KeyboardShortcutDelegate)
-    {
+public class RichTextView: NSTextView {
+
+    // MARK: - Properties
+
+    /// Allows the RichEditor to be aware of keyboard presses
+    public private(set) var keyboardShortcutDelegate: KeyboardShortcutDelegate?
+
+    // MARK: - NSTextView
+
+    init(frame frameRect: NSRect, textContainer container: NSTextContainer?, delegate: KeyboardShortcutDelegate) {
         self.keyboardShortcutDelegate = delegate
         super.init(frame: frameRect, textContainer: container)
     }
     
-    override init(frame frameRect: NSRect, textContainer container: NSTextContainer?)
-    {
+    override init(frame frameRect: NSRect, textContainer container: NSTextContainer?) {
         super.init(frame: frameRect, textContainer: container)
     }
     
-    required init?(coder: NSCoder)
-    {
+    required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
-    override init(frame frameRect: NSRect)
-    {
+    override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
     }
     
-    fileprivate func setup()
-    {
+    fileprivate func setup() {
         if #available(OSX 10.14, *) {
             self.usesAdaptiveColorMappingForDarkAppearance = true
         }
     }
     
-    override public func performKeyEquivalent(with event: NSEvent) -> Bool
-    {
-        //Only process our event if it's a keydown event
+    override public func performKeyEquivalent(with event: NSEvent) -> Bool {
+        // Only process our event if it's a keydown event
         if event.type != .keyDown {
             return super.performKeyEquivalent(with: event)
         }

@@ -11,10 +11,7 @@ import AppKit
 
 extension String
 {
-    /**
-     Conveniently creates an NSRange that covers the very start of this string, to the very end of this string
-     - returns: The NSRange object representative of the whole string
-    */
+    /// Conveniently creates an NSRange that covers the very start of this string, to the very end of this string
     public var fullRange: NSRange {
         return NSRange(location: 0, length: self.count)
     }

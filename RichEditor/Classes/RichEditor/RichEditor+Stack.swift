@@ -12,14 +12,13 @@ import AppKit
 /**
  StackOverflow: https://stackoverflow.com/a/45947994
 */
-extension RichEditor
-{
+extension RichEditor {
+
     /**
      Creates and configures the NSTextView, NSTextContainer, NSTextStorage and NSLayoutManager objects
      - parameter isHorizontalScrollingEnabled: If true, the NSTextView will allow horizontal scrolling
     */
-    internal func configureTextView(isHorizontalScrollingEnabled: Bool)
-    {
+    internal func configureTextView(isHorizontalScrollingEnabled: Bool) {
         self.textStorage.addLayoutManager(self.layoutManager)
         self.layoutManager.addTextContainer(self.textContainer)
         
@@ -55,26 +54,5 @@ extension RichEditor
         self.scrollview.hasHorizontalScroller = isHorizontalScrollingEnabled
         self.scrollview.documentView = self.textView
     }
-    
-    /**
-     Uses programmatical AutoLayout to pin the NSTextView to its parent NSScrollView
-    */
-    internal func configureTextViewLayout()
-    {
-        self.scrollview.translatesAutoresizingMaskIntoConstraints = false
-        
-        let horizontalPinning = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|",
-                                                               options: .directionLeadingToTrailing,
-                                                               metrics: nil,
-                                                               views: ["subview": self.scrollview])
-        
-        let verticalPinning = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|",
-                                                             options: .directionLeadingToTrailing,
-                                                             metrics: nil,
-                                                             views: ["subview": self.scrollview])
-        
-        self.addConstraints(horizontalPinning)
-        self.addConstraints(verticalPinning)
-    }
-}
 
+}

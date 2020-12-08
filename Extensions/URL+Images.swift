@@ -16,8 +16,7 @@ extension URL
         return icon
     }
     
-    public func textAttachment() -> NSTextAttachment
-    {
+    public var textAttachment: NSTextAttachment {
         //var data: Data?
         var fileWrapper: FileWrapper?
         

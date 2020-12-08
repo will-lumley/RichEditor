@@ -9,15 +9,13 @@
 import Foundation
 import AppKit
 
-public enum FontTrait
-{
+public enum FontTrait {
     case hasTrait
     case hasNoTrait
     case both
 }
 
-public struct FontStyling
-{
+public struct FontStyling {
     public fileprivate(set) var isBold  : Bool
     public fileprivate(set) var isUnbold: Bool
     
@@ -178,7 +176,7 @@ public struct FontStyling
         //print("Typing Attributes: \(typingAttributes)")
     }
     
-    //MARK: - Functions
+    // MARK: - Functions
     /**
      Given an NSFontTraitMask, matches the correlating FontTrait enum that correlates with the provided argument
      - parameter nsFontTraitMask: The NSFontTraitMask that we need to match to a FontTrait enum

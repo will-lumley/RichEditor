@@ -8,14 +8,15 @@
 import Foundation
 import AppKit
 
-public protocol RichEditorDelegate
-{
+public protocol RichEditorDelegate {
     func fontStylingChanged(_ fontStyling: FontStyling)
     func richEditorTextChanged(_ richEditor: RichEditor)
 }
 
-public class RichEditor: NSView
-{
+public class RichEditor: NSView {
+
+    // MARK: - Properties
+
     //The NSTextView stack
     /*------------------------------------------------------------*/
     public private(set) lazy var textStorage   = NSTextStorage()
@@ -42,6 +43,9 @@ public class RichEditor: NSView
     
     /// The delegate which will notify the listener of significant events
     public var richEditorDelegate: RichEditorDelegate?
+
+    /// The toolbar object, allowing for users to easily apply styling to their text
+    private let toolbar = RichEditorToolbar()
 
     /// Returns the NSFont object that was derived from the selected text, or the future text if nothing is selected
     public var currentFont: NSFont {
@@ -70,8 +74,9 @@ public class RichEditor: NSView
             return font
         }
     }
-    
+
     // MARK: - NSView
+
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         self.setup()
@@ -85,17 +90,52 @@ public class RichEditor: NSView
     /**
      Perform the initial setup operations to get a functional NSTextView running
     */
-    fileprivate func setup() {
+    private func setup() {
         self.textView.delegate = self
         
         self.addSubview(self.scrollview)
         self.configureTextView(isHorizontalScrollingEnabled: false)
+
         self.configureTextViewLayout()
-        
+        //self.configureToolbarLayout()
+
         self.textView.textStorage?.delegate = self
         self.textView.layoutManager?.defaultAttachmentScaling = NSImageScaling.scaleProportionallyDown
         
         self.selectedTextFontStyling = nil
+    }
+
+    /**
+     Uses programmatical AutoLayout to pin the NSTextView to its parent NSScrollView
+    */
+    internal func configureTextViewLayout() {
+        self.scrollview.translatesAutoresizingMaskIntoConstraints = false
+        
+        let horizontalPinning = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|",
+                                                               options: .directionLeadingToTrailing,
+                                                               metrics: nil,
+                                                               views: ["subview": self.scrollview])
+        
+        let verticalPinning = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|",
+                                                             options: .directionLeadingToTrailing,
+                                                             metrics: nil,
+                                                             views: ["subview": self.scrollview])
+        
+        self.addConstraints(horizontalPinning)
+        self.addConstraints(verticalPinning)
+    }
+
+    internal func configureToolbarLayout() {
+        self.toolbar.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(self.toolbar)
+
+        let constraints = [
+            self.toolbar.widthAnchor.constraint(equalTo: self.scrollview.widthAnchor),
+            self.toolbar.widthAnchor.constraint(equalToConstant: 110),
+            self.toolbar.heightAnchor.constraint(equalToConstant: 35)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
     }
 
     /**
@@ -108,8 +148,10 @@ public class RichEditor: NSView
     */
     public func html() throws -> String? {
         let attrStr = self.textView.attributedString()
-        let documentAttributes = [NSAttributedString.DocumentAttributeKey.documentType: NSAttributedString.DocumentType.html]
-        
+        let documentAttributes = [
+            NSAttributedString.DocumentAttributeKey.documentType: NSAttributedString.DocumentType.html
+        ]
+
         let htmlData = try attrStr.data(from: attrStr.string.fullRange, documentAttributes: documentAttributes)
         if let htmlString = String(data:htmlData, encoding:String.Encoding.utf8) {
             //print("HTML: \(htmlString)")

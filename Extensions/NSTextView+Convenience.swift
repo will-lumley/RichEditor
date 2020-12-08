@@ -17,14 +17,12 @@ extension NSTextView {
         let lineString: String
     }
     
-    /**
-     Determines if the user has selected (ie. highlighted) any text
-     - returns: A boolean value indicative of if any text is selected
-    */
+    /// Determines if the user has selected (ie. highlighted) any text
     public var hasSelectedText: Bool {
         return self.selectedRange().length > 0
     }
-    
+
+    /// The location of our caret within the textview
     public var caretLocation: Int {
         return self.selectedRange().location
     }
@@ -91,8 +89,7 @@ extension NSTextView {
      - returns: A boolean value indicative of if the conversion and setting of
      the HTML string was successful
      */
-    public func set(html: String) -> Bool
-    {
+    public func set(html: String) -> Bool {
         guard let htmlData = html.data(using: .utf8) else {
             print("Error creating NSAttributedString, HTML data is nil.")
             return false
@@ -111,14 +108,11 @@ extension NSTextView {
     /**
      Replaces the current NSString/NSAttributedString that is currently within
      the NSTextView and replaces it with the provided NSAttributedString
-     - parameter attributedString: The NSAttributedString we wish to populate
-     our NSTextView with
-     - returns: A boolean value indicative of if the setting of the NSAttributedString
-     was successful
+     - parameter attributedString: The NSAttributedString we wish to populate our NSTextView with
+     - returns: A boolean value indicative of if the setting of the NSAttributedString was successful
     */
     @discardableResult
-    public func set(attributedString: NSAttributedString) -> Bool
-    {
+    public func set(attributedString: NSAttributedString) -> Bool {
         guard let textStorage = self.textStorage else {
             print("Error setting NSAttributedString, TextStorage is nil.")
             return false
@@ -130,8 +124,7 @@ extension NSTextView {
         return true
     }
     
-    public func iterateThroughAllAttachments()
-    {
+    public func iterateThroughAllAttachments() {
         let attachments = self.attributedString().allAttachments
         for attachment in attachments {
             guard let fileWrapper = attachment.fileWrapper else {
@@ -156,8 +149,7 @@ extension NSTextView {
         }
     }
         
-    public func append(_ string: String)
-    {
+    public func append(_ string: String) {
         let textViewText = NSMutableAttributedString(attributedString: self.attributedString())
         textViewText.append(NSAttributedString(string: string, attributes: self.typingAttributes))
         

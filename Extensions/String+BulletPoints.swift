@@ -13,12 +13,8 @@ extension String
         return self.hasPrefix(RichEditor.bulletPointMarker)
     }
     
-    /**
-     Returns an array of strings that is made up of all the "lines" in this string.
-     - returns: An array of strings that is derived from this string, using a newline as a delimiter
-     */
-    func lines() -> [String]
-    {
+    /// Returns an array of strings that is made up of all the "lines" in this string.
+    public var lines: [String] {
         var lines = [String]()
         
         self.enumerateSubstrings(in: self.startIndex..<self.endIndex, options: .byLines) {(substring, substringRange, _, _) in
