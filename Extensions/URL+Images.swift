@@ -9,14 +9,14 @@
 import Foundation
 import AppKit
 
-extension URL
-{
-    public var icon: NSImage {
+public extension URL {
+
+    var icon: NSImage {
         let icon = NSWorkspace.shared.icon(forFile: self.path)
         return icon
     }
     
-    public var textAttachment: NSTextAttachment {
+    var textAttachment: NSTextAttachment {
         //var data: Data?
         var fileWrapper: FileWrapper?
         
@@ -31,5 +31,5 @@ extension URL
         let attachment = NSTextAttachment(fileWrapper: fileWrapper)
         return attachment
     }
-}
 
+}

@@ -8,7 +8,7 @@
 import Foundation
 import AppKit
 
-//MARK: - NSTextView Stack
+// MARK: - NSTextView Stack
 /**
  StackOverflow: https://stackoverflow.com/a/45947994
 */

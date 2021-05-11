@@ -26,10 +26,11 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Will Lumley' => 'will@lumley.io' }
   s.source           = { :git => 'https://github.com/Will Lumley/RichEditor.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform = :osx
   s.osx.deployment_target = "10.13"
 
   s.source_files = 'RichEditor/**/*'
+
+  s.dependency 'macColorPicker', '~> 1.2.1'
 end

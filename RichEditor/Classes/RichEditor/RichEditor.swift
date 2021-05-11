@@ -162,7 +162,7 @@ public class RichEditor: NSView {
     }
 }
 
-//MARK: - NSTextStorage Delegate
+// MARK: - NSTextStorage Delegate
 extension RichEditor: NSTextStorageDelegate {
 
     public func textStorage(_ textStorage: NSTextStorage, didProcessEditing editedMask: NSTextStorageEditActions, range editedRange: NSRange, changeInLength delta: Int) {

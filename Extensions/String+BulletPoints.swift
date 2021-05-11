@@ -7,14 +7,14 @@
 
 import Foundation
 
-extension String
-{
-    public var isBulletPoint: Bool {
+public extension String {
+
+    var isBulletPoint: Bool {
         return self.hasPrefix(RichEditor.bulletPointMarker)
     }
     
     /// Returns an array of strings that is made up of all the "lines" in this string.
-    public var lines: [String] {
+    var lines: [String] {
         var lines = [String]()
         
         self.enumerateSubstrings(in: self.startIndex..<self.endIndex, options: .byLines) {(substring, substringRange, _, _) in
@@ -24,5 +24,6 @@ extension String
         }
         
         return lines
-    }    
+    }
+
 }

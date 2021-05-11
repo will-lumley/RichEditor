@@ -29,16 +29,17 @@ class ViewController: NSViewController
     @IBOutlet weak var fontFamiliesPopUpButton: NSPopUpButton!
     @IBOutlet weak var fontSizePopUpButton: NSPopUpButton!
     
-    ///This window displays the HTML, that was sourced from the RichEditor.html() function
+    /// This window displays the HTML, that was sourced from the RichEditor.html() function
     private var previewTextViewController : PreviewTextViewController?
     
-    ///This window displays the NSAttributedString, that was sourced from HTML
+    /// This window displays the NSAttributedString, that was sourced from HTML
     private var previewTextViewController2: PreviewTextViewController?
     
-    ///This window displays the HTML from the RawHTML
+    /// This window displays the HTML from the RawHTML
     private var previewWebViewController: PreviewWebViewController?
     
-    //MARK: - NSViewController
+    // MARK: - NSViewController
+
     deinit
     {
         self.textColorWell.removeObserver(self, forKeyPath: "color")
@@ -58,10 +59,7 @@ class ViewController: NSViewController
     override func viewDidAppear()
     {
         super.viewDidAppear()
-        
-        if let window = self.view.window {
-            window.title = "1. Rich Editor"
-        }
+        self.view.window?.title = "1. Rich Editor"
     }
     
     private func configureUI()
@@ -114,7 +112,7 @@ class ViewController: NSViewController
     }
 }
 
-//MARK: - Actions
+// MARK: - Actions
 extension ViewController
 {
     @IBAction func boldButtonTapped(_ sender: Any)
@@ -166,7 +164,7 @@ extension ViewController
     }
 }
 
-//MARK: - RichEditorDelegate
+// MARK: - RichEditorDelegate
 extension ViewController: RichEditorDelegate
 {
     func fontStylingChanged(_ fontStyling: FontStyling)
@@ -206,7 +204,7 @@ extension ViewController: RichEditorDelegate
     
 }
 
-//MARK: - Functions
+// MARK: - Functions
 extension ViewController
 {
     private func configureTextActionButtonsUI()

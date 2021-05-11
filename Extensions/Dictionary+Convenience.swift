@@ -9,15 +9,13 @@
 import Foundation
 import AppKit
 
-extension Dictionary
-{
+extension Dictionary {
     /**
      Merges the provided dictionary into this one. If the newDict and this dictionary have identical keys,
      the newDict's key/value pair overwrite the original one
      - parameter newDict: The dictionary which we'd like to merge
     */
-    mutating func merge(newDict: Dictionary)
-    {
+    mutating func merge(newDict: Dictionary) {
         for (key, value) in newDict {
             self[key] = value
         }

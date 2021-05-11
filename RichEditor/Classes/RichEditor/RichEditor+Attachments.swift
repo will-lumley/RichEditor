@@ -7,9 +7,9 @@
 
 import Foundation
 
-extension RichEditor {
+public extension RichEditor {
 
-    public func promptUserForAttachments(windowForModal: NSWindow?) {
+    func promptUserForAttachments(windowForModal: NSWindow?) {
         let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = true
         openPanel.canChooseDirectories    = false
@@ -34,7 +34,7 @@ extension RichEditor {
         }
     }
     
-    public func insertAttachments(at urls: [URL]) {
+    func insertAttachments(at urls: [URL]) {
         self.textView.layoutManager?.defaultAttachmentScaling = NSImageScaling.scaleProportionallyDown
         
         print("Inserting attachments at URLs: \(urls)")

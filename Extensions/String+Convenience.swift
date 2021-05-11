@@ -9,10 +9,11 @@
 import Foundation
 import AppKit
 
-extension String
-{
+public extension String {
+
     /// Conveniently creates an NSRange that covers the very start of this string, to the very end of this string
-    public var fullRange: NSRange {
+    var fullRange: NSRange {
         return NSRange(location: 0, length: self.count)
     }
+
 }

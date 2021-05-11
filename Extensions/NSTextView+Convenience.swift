@@ -9,7 +9,7 @@
 import Foundation
 import AppKit
 
-extension NSTextView {
+public extension NSTextView {
 
     struct LineInfo {
         let lineNumber: Int
@@ -18,12 +18,12 @@ extension NSTextView {
     }
     
     /// Determines if the user has selected (ie. highlighted) any text
-    public var hasSelectedText: Bool {
+    var hasSelectedText: Bool {
         return self.selectedRange().length > 0
     }
 
     /// The location of our caret within the textview
-    public var caretLocation: Int {
+    var caretLocation: Int {
         return self.selectedRange().location
     }
     
@@ -59,7 +59,7 @@ extension NSTextView {
             
             //If the CaretLocation is between the start of this line, and the end of this line, we can assume that the caret is on this line
             if self.caretLocation >= startOfLine && self.caretLocation <= endOfLine {
-                //Mark the line number
+                // MARK the line number
                 selectedLineNumber = lineNumber
                 selectedLineOfText = substring ?? ""
                 selectedLineRange  = range
@@ -89,7 +89,7 @@ extension NSTextView {
      - returns: A boolean value indicative of if the conversion and setting of
      the HTML string was successful
      */
-    public func set(html: String) -> Bool {
+    func set(html: String) -> Bool {
         guard let htmlData = html.data(using: .utf8) else {
             print("Error creating NSAttributedString, HTML data is nil.")
             return false
@@ -112,7 +112,7 @@ extension NSTextView {
      - returns: A boolean value indicative of if the setting of the NSAttributedString was successful
     */
     @discardableResult
-    public func set(attributedString: NSAttributedString) -> Bool {
+    func set(attributedString: NSAttributedString) -> Bool {
         guard let textStorage = self.textStorage else {
             print("Error setting NSAttributedString, TextStorage is nil.")
             return false
@@ -124,7 +124,7 @@ extension NSTextView {
         return true
     }
     
-    public func iterateThroughAllAttachments() {
+    func iterateThroughAllAttachments() {
         let attachments = self.attributedString().allAttachments
         for attachment in attachments {
             guard let fileWrapper = attachment.fileWrapper else {
@@ -149,7 +149,7 @@ extension NSTextView {
         }
     }
         
-    public func append(_ string: String) {
+    func append(_ string: String) {
         let textViewText = NSMutableAttributedString(attributedString: self.attributedString())
         textViewText.append(NSAttributedString(string: string, attributes: self.typingAttributes))
         

@@ -109,7 +109,8 @@ public struct FontStyling {
         fatalError("Failed to reach conclusion for StrikethroughTrait, for FontStyling: \(self)")
     }
     
-    //MARK: - FontStyling
+    // MARK: - FontStyling
+    
     init(attributedString: NSAttributedString) {
         self.textColours = attributedString.allTextColours
         

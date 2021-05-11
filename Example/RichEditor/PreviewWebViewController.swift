@@ -20,7 +20,7 @@ class PreviewWebViewController: NSViewController
     }
 }
 
-//MARK: - WKNavigation Delegate
+// MARK: - WKNavigation Delegate
 extension PreviewWebViewController: WKNavigationDelegate
 {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!)

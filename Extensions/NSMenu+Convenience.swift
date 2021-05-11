@@ -9,10 +9,9 @@
 import Foundation
 import AppKit
 
-extension NSMenu
-{
-    public static func fontsMenu(_ title: String?) -> NSMenu
-    {
+public extension NSMenu {
+
+    static func fontsMenu(_ title: String?) -> NSMenu {
         let menu = NSMenu(title: title ?? "Select a Font Family")
         
         let allFontFamilyNames = NSFontManager.shared.availableFontFamilies
@@ -31,8 +30,7 @@ extension NSMenu
         return menu
     }
     
-    public static func fontSizesMenu(_ title: String?) -> NSMenu
-    {
+    static func fontSizesMenu(_ title: String?) -> NSMenu {
         let menu = NSMenu(title: title ?? "Select a Font Size")
         
         let allFontSizes = ["9", "10", "11", "12", "13", "14", "18", "24", "36", "48", "64", "72", "96", "144", "288"]
@@ -50,4 +48,5 @@ extension NSMenu
         
         return menu
     }
+
 }

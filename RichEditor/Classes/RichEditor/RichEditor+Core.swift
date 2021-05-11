@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension RichEditor {
+internal extension RichEditor {
 
     /**
      Toggles a certain font trait (bold, italic, etc) for the RichTextView.
@@ -16,7 +16,7 @@ extension RichEditor {
      
      - parameter trait: This is the trait that you want the font to adhere to
     */
-    internal func toggleTextView(with fontTrait: NSFontTraitMask) {
+    func toggleTextView(with fontTrait: NSFontTraitMask) {
         //Get the current font, and make a 'new' version of it, with the traits provided to us
         let currentFont = self.currentFont
         var newFont     = currentFont
@@ -57,7 +57,7 @@ extension RichEditor {
      - parameter positiveValue: This is the 'on' value for the attribute. If `attribute` was
      NSUnderlineStyle, then the positive would be NSUnderlineStyle.styleSingle.rawValue
     */
-    internal func toggleTextView(with attribute: NSAttributedString.Key, negativeValue: Any, positiveValue: Any) {
+    func toggleTextView(with attribute: NSAttributedString.Key, negativeValue: Any, positiveValue: Any) {
         let trait = self.fontStyling.trait(with: attribute)
         
         var newAttr = [NSAttributedString.Key: Any]()
@@ -84,7 +84,7 @@ extension RichEditor {
      - parameter onlyHighlightedText: If true, the attributes will be applied to only the highlighted
      text. If false, the attributes will be applied to all 'future' text
     */
-    internal func add(attributes: [NSAttributedString.Key: Any], onlyHighlightedText: Bool) {
+    func add(attributes: [NSAttributedString.Key: Any], onlyHighlightedText: Bool) {
         //If we're only modifying the text that's highlighted
         if onlyHighlightedText {
             let selectedRange = self.textView.selectedRange()

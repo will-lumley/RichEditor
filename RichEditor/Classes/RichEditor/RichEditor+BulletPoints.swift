@@ -7,9 +7,9 @@
 
 import Foundation
 
-extension RichEditor {
+public extension RichEditor {
 
-    public func startBulletPoints() {
+    func startBulletPoints() {
         let currentLine = self.textView.currentLine
         
         //Get the string that makes up our current string, and find out where it sits in our TextView

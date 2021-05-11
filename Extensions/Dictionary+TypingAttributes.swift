@@ -9,8 +9,8 @@
 import Foundation
 import AppKit
 
-extension Dictionary where Key == NSAttributedString.Key
-{
+extension Dictionary where Key == NSAttributedString.Key {
+
     public var isUnderlined : Bool {
         guard let rawUnderlineStyle = self[NSAttributedString.Key.underlineStyle] as? NSNumber else {
             return false
@@ -35,5 +35,5 @@ extension Dictionary where Key == NSAttributedString.Key
         
         return !isNegativeAttr(rawAttr.intValue)
     }
-}
 
+}

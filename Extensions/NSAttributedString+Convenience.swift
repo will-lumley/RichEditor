@@ -9,13 +9,12 @@
 import Foundation
 import AppKit
 
-extension NSAttributedString
-{
+public extension NSAttributedString {
     /**
      Determines the attributes for the whole complete NSAttributedString
      - returns: The attributes, in the form of a dictionary, for the whole NSAttributedString
      */
-    public var attributes: [NSAttributedString.Key: Any] {
+    var attributes: [NSAttributedString.Key: Any] {
         return self.attributes(at: 0, longestEffectiveRange: nil, in: self.string.fullRange)
     }
     
@@ -90,14 +89,13 @@ extension NSAttributedString
         return attachments
     }
     
-    //MARK: - Basic Attribute Fetching
+    // MARK: - Basic Attribute Fetching
     /**
      Collects all the types of the attribute that we're after
      - parameter attribute: The NSAttributedString.Key values we're searching for
      - returns: An array of all the values that correlated with the provided attribute key
     */
-    fileprivate func all(of attribute: NSAttributedString.Key) -> [Any]
-    {
+    fileprivate func all(of attribute: NSAttributedString.Key) -> [Any] {
         var allValues = [Any]()
         let fullRange = self.string.fullRange
         let options   = NSAttributedString.EnumerationOptions.longestEffectiveRangeNotRequired
@@ -111,13 +109,12 @@ extension NSAttributedString
         return allValues
     }
     
-    //MARK: - Attribute Checking
+    // MARK: - Attribute Checking
     /**
      Iterates over every font that exists within this NSAttributedString, and checks if any of the fonts contain the desired NSFontTraitMask
      - returns: A boolean value, indicative of if this contains our desired trait
     */
-    public func contains(trait: NSFontTraitMask) -> Bool
-    {
+    func contains(trait: NSFontTraitMask) -> Bool {
         let allFonts = self.all(of: NSAttributedString.Key.font) as! [NSFont]
         for font in allFonts {
             if font.contains(trait: trait) {
@@ -132,8 +129,7 @@ extension NSAttributedString
      Iterates over every font that exists within this NSAttributedString, and checks if any of the fonts contain the desired NSFontTraitMask
      - returns: A boolean value, indicative of if our desired trait could not be found
      */
-    public func doesNotContain(trait: NSFontTraitMask) -> Bool
-    {
+    func doesNotContain(trait: NSFontTraitMask) -> Bool {
         let allFonts = self.all(of: NSAttributedString.Key.font) as! [NSFont]
         for font in allFonts {
             if !font.contains(trait: trait) {
@@ -156,8 +152,7 @@ extension NSAttributedString
      The two arguments are not mutually exclusive since a string can have an attribute at some parts and
      not have the same attributes at other parts.
     */
-    public func check(attribute: NSAttributedString.Key, isNegativeAttr: (_ rawAttrValue: Int) -> Bool) -> (atParts: Bool, notAtParts: Bool)
-    {
+    func check(attribute: NSAttributedString.Key, isNegativeAttr: (_ rawAttrValue: Int) -> Bool) -> (atParts: Bool, notAtParts: Bool) {
         var atParts   : Bool?
         var notAtParts: Bool?
         
@@ -197,4 +192,5 @@ extension NSAttributedString
         
         return (atParts!, notAtParts!)
     }
+
 }
