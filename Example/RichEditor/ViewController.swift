@@ -8,6 +8,7 @@
 
 import AppKit
 import RichEditor
+import macColorPicker
 
 class ViewController: NSViewController
 {
@@ -22,7 +23,7 @@ class ViewController: NSViewController
     @IBOutlet var addLinkButton: NSButton!
     
     
-    @IBOutlet weak var highlightColorWell: NSColorWell!
+    @IBOutlet weak var highlightColorPicker: ColorPicker!
     @IBOutlet var strikeButton: NSButton!
     @IBOutlet weak var bulletPointButton: NSButton!
     
@@ -72,10 +73,10 @@ class ViewController: NSViewController
         //self.richEditor.textView.importsGraphics = false
         
         self.textColorWell.color = self.richEditor.textView.textColor ?? NSColor.white
-        self.highlightColorWell.color = NSColor.clear
-        
         self.textColorWell.addObserver(self, forKeyPath: "color", options: [.new, .old], context: nil)
-        self.highlightColorWell.addObserver(self, forKeyPath: "color", options: [.new, .old], context: nil)
+        
+        self.highlightColorPicker.selectedColor = .clear
+        self.highlightColorPicker.delegate = self
         
         self.boldButton.title    = "Bold"
         self.italicsButton.title = "Italic"
@@ -97,83 +98,70 @@ class ViewController: NSViewController
                 self.richEditor.apply(textColour: self.textColorWell.color)
             }
         }
-        
-        //If our HighlightColorWell changed it's colour
-        else if object as? NSColorWell == self.highlightColorWell && keyPath == "color" {
-            guard let old = change?[.oldKey] as? NSColor else { return }
-            guard let new = change?[.newKey] as? NSColor else { return }
-            
-            let colourHasChanged = old != new
-            
-            if colourHasChanged {
-                self.richEditor.apply(highlightColour: self.highlightColorWell.color)
-            }
-        }
     }
 }
 
 // MARK: - Actions
-extension ViewController
-{
-    @IBAction func boldButtonTapped(_ sender: Any)
-    {
+extension ViewController {
+
+    @IBAction
+    func boldButtonTapped(_ sender: Any) {
         self.richEditor.toggleBold()
     }
     
-    @IBAction func italicButtonTapped(_ sender: Any)
-    {
+    @IBAction
+    func italicButtonTapped(_ sender: Any) {
         self.richEditor.toggleItalic()
     }
     
-    @IBAction func underlineButtonTapped(_ sender: Any)
-    {
+    @IBAction
+    func underlineButtonTapped(_ sender: Any) {
         self.richEditor.toggleUnderline(.single)
     }
     
-    @IBAction func linkButtonTapped(_ sender: Any)
-    {
+    @IBAction
+    func linkButtonTapped(_ sender: Any) {
         let name = "Google"
         let url  = "https://google.com"
         
         self.richEditor.insert(link: url, with: name, at: nil)
     }
     
-    @IBAction func addImageButtonTapped(_ sender: Any)
-    {
+    @IBAction
+    func addImageButtonTapped(_ sender: Any) {
         self.richEditor.promptUserForAttachments(windowForModal: self.view.window)
     }
     
-    @IBAction func strikeButtonTapped(_ sender: Any)
-    {
+    @IBAction
+    func strikeButtonTapped(_ sender: Any) {
         self.richEditor.toggleStrikethrough(.single)
     }
     
-    @IBAction func bulletPointButtonTapped(_ sender: Any)
-    {
+    @IBAction
+    func bulletPointButtonTapped(_ sender: Any) {
         self.richEditor.startBulletPoints()
     }
     
-    @IBAction func fontFamiliesButtonClicked(_ sender: Any)
-    {
+    @IBAction
+    func fontFamiliesButtonClicked(_ sender: Any) {
         self.applyFont()
     }
     
-    @IBAction func fontSizeButtonClicked(_ sender: Any)
-    {
+    @IBAction
+    func fontSizeButtonClicked(_ sender: Any) {
         self.applyFont()
     }
+
 }
 
 // MARK: - RichEditorDelegate
-extension ViewController: RichEditorDelegate
-{
-    func fontStylingChanged(_ fontStyling: FontStyling)
-    {
+extension ViewController: RichEditorDelegate {
+
+    func fontStylingChanged(_ fontStyling: FontStyling) {
         self.configureTextActionButtonsUI()
     }
     
-    func richEditorTextChanged(_ richEditor: RichEditor)
-    {
+    func richEditorTextChanged(_ richEditor: RichEditor) {
         var htmlOpt: String?
         
         do {
@@ -200,15 +188,13 @@ extension ViewController: RichEditorDelegate
         _ = self.previewTextViewController2?.previewTextView.set(html: html)
 
     }
-    
-    
+
 }
 
 // MARK: - Functions
-extension ViewController
-{
-    private func configureTextActionButtonsUI()
-    {
+private extension ViewController {
+
+    func configureTextActionButtonsUI() {
         let fontStyling = self.richEditor.fontStyling
         
         //Configure the Bold UI
@@ -278,13 +264,13 @@ extension ViewController
         let highlightColours = fontStyling.highlightColours
         switch (highlightColours.count) {
             case 0:
-                self.highlightColorWell.color = NSColor.white
+                self.highlightColorPicker.selectedColor = NSColor.white
                 
             case 1:
-                self.highlightColorWell.color = highlightColours[0]
+                self.highlightColorPicker.selectedColor = highlightColours[0]
             
             case 2:
-                self.highlightColorWell.color = NSColor.gray
+                self.highlightColorPicker.selectedColor = NSColor.gray
             
             default:()
         }
@@ -308,8 +294,7 @@ extension ViewController
         
     }
     
-    private func openPreviewTextWindow()
-    {
+    func openPreviewTextWindow() {
         let storyboardID = NSStoryboard.SceneIdentifier("PreviewWindowController")
         let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
         previewWindowController.window?.title = "2. Raw HTML"
@@ -318,8 +303,7 @@ extension ViewController
         self.previewTextViewController = previewWindowController.contentViewController as? PreviewTextViewController
     }
 
-    private func openPreviewWebWindow()
-    {
+    func openPreviewWebWindow() {
         let storyboardID = NSStoryboard.SceneIdentifier("PreviewWebWindowController")
         let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
         previewWindowController.window?.title = "3. Parsed HTML"
@@ -328,8 +312,7 @@ extension ViewController
         self.previewWebViewController = previewWindowController.contentViewController as? PreviewWebViewController
     }
     
-    private func openPreviewTextWindow2()
-    {
+    func openPreviewTextWindow2() {
         let storyboardID = NSStoryboard.SceneIdentifier("PreviewWindowController")
         let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
         previewWindowController.window?.title = "4. Text From HTML"
@@ -342,8 +325,7 @@ extension ViewController
      Grabs the selected font title and the selected font size, creates an instance of NSFont from them
      and applies it to the RichTextView
     */
-    private func applyFont()
-    {
+    func applyFont() {
         guard let selectedFontNameMenuItem = self.fontFamiliesPopUpButton.selectedItem else {
             return
         }
@@ -361,16 +343,22 @@ extension ViewController
         
         self.richEditor.apply(font: font)
     }
+
 }
 
-/*
-        switch (sender) {
-            case self.textColourButton:
-                self.richTextView.apply(textColour: color)
-            
-            case self.highlightColourButton:
-                self.richTextView.apply(highlightColour: color)
-            
-            default:()
-        }
-*/
+// MARK: - ColorPickerDelegate
+extension ViewController: ColorPickerDelegate {
+
+    func willOpenColorPicker() {
+        
+    }
+
+    func didOpenColorPicker() {
+        
+    }
+
+    func didSelectColor(_ color: NSColor) {
+        self.richEditor.apply(highlightColour: color)
+    }
+
+}

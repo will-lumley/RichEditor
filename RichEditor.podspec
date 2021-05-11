@@ -7,30 +7,25 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'RichEditor'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of RichEditor.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.name         = 'RichEditor'
+  s.version      = "1.0.0"
+  s.summary      = "Summary"
+  s.homepage     = "https://github.com/will-lumley/RichEditor.git"
+  s.license      = { :type => 'MIT', :file => 'LICENSE.txt' }
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    Description
                        DESC
 
-  s.homepage         = 'https://github.com/Will Lumley/RichEditor'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Will Lumley' => 'will@lumley.io' }
-  s.source           = { :git => 'https://github.com/Will Lumley/RichEditor.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/will-lumley/RichEditor.git', :tag => s.version.to_s }
 
-  s.platform = :osx
-  s.osx.deployment_target = "10.13"
+  s.platform              = :osx
+  s.osx.deployment_target = "10.12"
 
-  s.source_files = 'RichEditor/**/*'
+  s.swift_version         = '5.0'
 
+  s.source       = { :git => "https://github.com/will-lumley/RichEditor.git", :tag => s.version.to_s }
+  s.source_files = 'Sources/**/*/*'
   s.dependency 'macColorPicker', '~> 1.2.1'
 end
