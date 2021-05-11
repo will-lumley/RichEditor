@@ -1,0 +1,6 @@
+framework module macColorPicker {
+  umbrella header "macColorPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

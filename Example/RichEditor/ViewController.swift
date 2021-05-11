@@ -116,7 +116,7 @@ extension ViewController {
     
     @IBAction
     func underlineButtonTapped(_ sender: Any) {
-        self.richEditor.toggleUnderline(.single)
+        self.richEditor.toggleUnderline(.styleSingle)
     }
     
     @IBAction
@@ -134,7 +134,7 @@ extension ViewController {
     
     @IBAction
     func strikeButtonTapped(_ sender: Any) {
-        self.richEditor.toggleStrikethrough(.single)
+        self.richEditor.toggleStrikethrough(.styleSingle)
     }
     
     @IBAction
