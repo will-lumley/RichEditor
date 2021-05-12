@@ -8,12 +8,10 @@
 
 import Cocoa
 
-class PreviewTextViewController: NSViewController
-{
+class PreviewTextViewController: NSViewController {
     @IBOutlet var previewTextView: NSTextView!
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         self.previewTextView.isEditable = false
     }

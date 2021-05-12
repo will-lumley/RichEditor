@@ -120,9 +120,9 @@
 			children = (
 				BEEE9CA5264A937D00B8620C /* NSColor+Hex.swift */,
 				ED83F67B20348A760038D96B /* AppDelegate.swift */,
+				BEEE9CA7264A937D00B8620C /* ViewController.swift */,
 				BEEE9CA8264A937D00B8620C /* PreviewWebViewController.swift */,
 				BEEE9CA6264A937D00B8620C /* PreviewTextViewController.swift */,
-				BEEE9CA7264A937D00B8620C /* ViewController.swift */,
 				ED83F67F20348A760038D96B /* Assets.xcassets */,
 				ED83F68120348A760038D96B /* Main.storyboard */,
 				ED83F68420348A760038D96B /* Info.plist */,

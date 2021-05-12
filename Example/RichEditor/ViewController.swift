@@ -31,7 +31,7 @@ class ViewController: NSViewController
     @IBOutlet weak var fontSizePopUpButton: NSPopUpButton!
     
     /// This window displays the HTML, that was sourced from the RichEditor.html() function
-    private var previewTextViewController : PreviewTextViewController?
+    private var previewTextViewController: PreviewTextViewController?
     
     /// This window displays the NSAttributedString, that was sourced from HTML
     private var previewTextViewController2: PreviewTextViewController?
@@ -41,25 +41,22 @@ class ViewController: NSViewController
     
     // MARK: - NSViewController
 
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         self.configureUI()
         
-        //self.openPreviewTextWindow()
-        //self.openPreviewWebWindow()
-        //self.openPreviewTextWindow2()
+        self.openPreviewTextWindow()
+        self.openPreviewWebWindow()
+        self.openPreviewTextWindow2()
     }
     
-    override func viewDidAppear()
-    {
+    override func viewDidAppear() {
         super.viewDidAppear()
         self.view.window?.title = "1. Rich Editor"
     }
     
-    private func configureUI()
-    {
+    private func configureUI() {
         //self.textColourButton.delegate = self
         //self.highlightColourButton.delegate = self
         
@@ -79,6 +76,34 @@ class ViewController: NSViewController
         self.fontFamiliesPopUpButton.menu = NSMenu.fontsMenu(nil)
         self.fontSizePopUpButton.menu     = NSMenu.fontSizesMenu(nil)
     }
+
+    func openPreviewTextWindow() {
+        let storyboardID = NSStoryboard.SceneIdentifier("PreviewWindowController")
+        let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
+        previewWindowController.window?.title = "2. Raw HTML"
+        previewWindowController.showWindow(self)
+        
+        self.previewTextViewController = previewWindowController.contentViewController as? PreviewTextViewController
+    }
+
+    func openPreviewWebWindow() {
+        let storyboardID = NSStoryboard.SceneIdentifier("PreviewWebWindowController")
+        let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
+        previewWindowController.window?.title = "3. Parsed HTML"
+        previewWindowController.showWindow(self)
+        
+        self.previewWebViewController = previewWindowController.contentViewController as? PreviewWebViewController
+    }
+    
+    func openPreviewTextWindow2() {
+        let storyboardID = NSStoryboard.SceneIdentifier("PreviewWindowController")
+        let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
+        previewWindowController.window?.title = "4. NSAttributedString From HTML"
+        previewWindowController.showWindow(self)
+        
+        self.previewTextViewController2 = previewWindowController.contentViewController as? PreviewTextViewController
+    }
+
 }
 
 // MARK: - Actions
@@ -158,20 +183,21 @@ extension ViewController: RichEditorDelegate {
         
         html = html.replacingOccurrences(of: "\n", with: "")
         
-        //Parse the HTML into a WebView and display the contents
-        self.previewWebViewController?.webView.loadHTMLString("Hello there", baseURL: Bundle.main.bundleURL)
+        // Parse the HTML into a WebView and display the contents
+        self.previewWebViewController?.webView.loadHTMLString(html, baseURL: Bundle.main.bundleURL) // 3. Parsed HTML
         
-        //Assign the raw HTML text so we can see the actual HTML content
-        self.previewTextViewController?.previewTextView.string = html
+        // Assign the raw HTML text so we can see the actual HTML content
+        self.previewTextViewController?.previewTextView.string = html // 2. Raw HTML
         
-        //Convert the HTML text back into an NSAttributedString and have it displayed
-        _ = self.previewTextViewController2?.previewTextView.set(html: html)
+        // Convert the HTML text back into an NSAttributedString and have it displayed
+        _ = self.previewTextViewController2?.previewTextView.set(html: html) // 4. NSAttributedString From HTML
 
     }
 
 }
 
 // MARK: - Functions
+
 private extension ViewController {
 
     func configureTextActionButtonsUI() {
@@ -272,33 +298,6 @@ private extension ViewController {
             default:()
         }
         
-    }
-    
-    func openPreviewTextWindow() {
-        let storyboardID = NSStoryboard.SceneIdentifier("PreviewWindowController")
-        let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
-        previewWindowController.window?.title = "2. Raw HTML"
-        previewWindowController.showWindow(self)
-        
-        self.previewTextViewController = previewWindowController.contentViewController as? PreviewTextViewController
-    }
-
-    func openPreviewWebWindow() {
-        let storyboardID = NSStoryboard.SceneIdentifier("PreviewWebWindowController")
-        let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
-        previewWindowController.window?.title = "3. Parsed HTML"
-        previewWindowController.showWindow(self)
-        
-        self.previewWebViewController = previewWindowController.contentViewController as? PreviewWebViewController
-    }
-    
-    func openPreviewTextWindow2() {
-        let storyboardID = NSStoryboard.SceneIdentifier("PreviewWindowController")
-        let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
-        previewWindowController.window?.title = "4. Text From HTML"
-        previewWindowController.showWindow(self)
-        
-        self.previewTextViewController2 = previewWindowController.contentViewController as? PreviewTextViewController
     }
     
     /**

@@ -9,32 +9,30 @@
 import Cocoa
 import WebKit
 
-class PreviewWebViewController: NSViewController
-{
+class PreviewWebViewController: NSViewController {
+
     @IBOutlet weak var webView: WKWebView!
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         self.webView.navigationDelegate = self
     }
 }
 
 // MARK: - WKNavigation Delegate
-extension PreviewWebViewController: WKNavigationDelegate
-{
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!)
-    {
+
+extension PreviewWebViewController: WKNavigationDelegate {
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("WKWebView did finish loading: \(String(describing: navigation))")
     }
     
-    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error)
-    {
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         print("WKWebView Error: \(error)")
     }
     
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void)
-    {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         decisionHandler(.allow)
     }
+
 }
