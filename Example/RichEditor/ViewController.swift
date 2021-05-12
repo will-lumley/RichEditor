@@ -19,7 +19,7 @@ class ViewController: NSViewController
     @IBOutlet weak var underlineButton: NSButton!
     
     @IBOutlet var imageButton: NSButton!
-    @IBOutlet var textColorWell: NSColorWell!
+    @IBOutlet weak var textColorPicker: ColorPicker!
     @IBOutlet var addLinkButton: NSButton!
     
     
@@ -41,11 +41,6 @@ class ViewController: NSViewController
     
     // MARK: - NSViewController
 
-    deinit
-    {
-        self.textColorWell.removeObserver(self, forKeyPath: "color")
-    }
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -71,33 +66,18 @@ class ViewController: NSViewController
         self.richEditor.richEditorDelegate = self
         //self.richEditor.textView.string      = "The quick brown fox jumped over the lazy dog."
         //self.richEditor.textView.importsGraphics = false
-        
-        self.textColorWell.color = self.richEditor.textView.textColor ?? NSColor.white
-        self.textColorWell.addObserver(self, forKeyPath: "color", options: [.new, .old], context: nil)
-        
+                
+        self.textColorPicker.selectedColor = .clear
+        self.textColorPicker.delegate = self
+
         self.highlightColorPicker.selectedColor = .clear
         self.highlightColorPicker.delegate = self
-        
+
         self.boldButton.title    = "Bold"
         self.italicsButton.title = "Italic"
         
         self.fontFamiliesPopUpButton.menu = NSMenu.fontsMenu(nil)
         self.fontSizePopUpButton.menu     = NSMenu.fontSizesMenu(nil)
-    }
-    
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)
-    {
-        //If our TextColorWell changed it's colour
-        if object as? NSColorWell == self.textColorWell && keyPath == "color" {
-            guard let old = change?[.oldKey] as? NSColor else { return }
-            guard let new = change?[.newKey] as? NSColor else { return }
-            
-            let colourHasChanged = old != new
-            
-            if colourHasChanged {
-                self.richEditor.apply(textColour: self.textColorWell.color)
-            }
-        }
     }
 }
 
@@ -249,13 +229,13 @@ private extension ViewController {
         let textColours = fontStyling.textColours
         switch (textColours.count) {
             case 0:
-                self.textColorWell.color = NSColor.white
+                self.textColorPicker.selectedColor = NSColor.white
             
             case 1:
-                self.textColorWell.color = textColours[0]
+                self.textColorPicker.selectedColor = textColours[0]
             
             case 2:
-                self.textColorWell.color = NSColor.gray
+                self.textColorPicker.selectedColor = NSColor.gray
             
             default:()
         }
@@ -349,16 +329,14 @@ private extension ViewController {
 // MARK: - ColorPickerDelegate
 extension ViewController: ColorPickerDelegate {
 
-    func willOpenColorPicker() {
-        
-    }
-
-    func didOpenColorPicker() {
-        
-    }
-
-    func didSelectColor(_ color: NSColor) {
-        self.richEditor.apply(highlightColour: color)
+    func didSelectColor(_ sender: ColorPicker, color: NSColor) {
+        switch sender {
+        case self.textColorPicker:
+            self.richEditor.apply(textColour: color)
+        case self.highlightColorPicker:
+            self.richEditor.apply(highlightColour: color)
+        default:()
+        }
     }
 
 }
