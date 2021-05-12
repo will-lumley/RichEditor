@@ -23,7 +23,7 @@
   "source_files": "Sources/**/*/*",
   "dependencies": {
     "macColorPicker": [
-      "~> 1.2.1"
+      "~> 1.2.2"
     ]
   },
   "swift_version": "5.0"

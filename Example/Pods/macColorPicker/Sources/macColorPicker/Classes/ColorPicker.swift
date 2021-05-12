@@ -9,10 +9,17 @@
 import AppKit
 
 /// This protocol is used to allow communication from the ColorPicker to the developers project
-public protocol ColorPickerDelegate {
-    func willOpenColorPicker()
-    func didOpenColorPicker()
-    func didSelectColor(_ color: NSColor)
+@objc public protocol ColorPickerDelegate {
+    
+    @objc
+    optional func willOpenColorPicker(_ sender: ColorPicker)
+
+    @objc
+    optional func didOpenColorPicker(_ sender: ColorPicker)
+
+    @objc
+    optional func didSelectColor(_ sender: ColorPicker, color: NSColor)
+
 }
 
 @IBDesignable open class ColorPicker: NSView {
@@ -32,7 +39,6 @@ public protocol ColorPickerDelegate {
             }
 
             self.colorPickerViewController.selectedColor = newValue
-            self.delegate?.didSelectColor(newValue)
 
             if let animationDuration = self.animationDuration {
                 let backgroundColorAnimation = CABasicAnimation(keyPath: "backgroundColor")
@@ -171,13 +177,13 @@ public protocol ColorPickerDelegate {
             self.popover.animates = true
         }
 
-        self.delegate?.willOpenColorPicker()
+        self.delegate?.willOpenColorPicker?(self)
 
         if self.window != nil {
             self.popover.show(relativeTo: self.bounds, of: self, preferredEdge: self.preferredOpeningEdge)
         }
 
-        self.delegate?.didOpenColorPicker()
+        self.delegate?.didOpenColorPicker?(self)
     }
     
     private func setup() {
@@ -197,6 +203,7 @@ extension ColorPicker: ColorPickerViewControllerDelegate {
 
     func didSelectColor(_ color: NSColor) {
         self.selectedColor = color
+        self.delegate?.didSelectColor?(self, color: color)
 
         if self.dismissUponColorSelect {
             self.popover.close()

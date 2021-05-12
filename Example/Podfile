@@ -1,4 +1,5 @@
 use_frameworks!
+platform :osx, '10.12'
 
 target 'RichEditor_Example' do
   pod 'RichEditor', :path => '../'

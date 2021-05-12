@@ -27,6 +27,6 @@ Pod::Spec.new do |s|
     s.source       = { :git => "https://github.com/will-lumley/RichEditor.git", :tag => s.version.to_s }
     
     s.source_files = 'Sources/**/*/*'
+    s.dependency 'macColorPicker', '~> 1.2.2'
     
-    s.dependency 'macColorPicker', '~> 1.2.1'
 end

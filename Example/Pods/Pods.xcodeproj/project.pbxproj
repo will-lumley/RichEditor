@@ -83,9 +83,8 @@
 		08ABAF33D489C33F355835530993B4EC /* RichEditor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RichEditor-prefix.pch"; sourceTree = "<group>"; };
 		09976142F5FA03FEFDE008740067A034 /* Pods-RichEditor_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RichEditor_Tests-Info.plist"; sourceTree = "<group>"; };
 		0DA5CBB531A36D4145FFA13CCDEA7F9F /* Pods-RichEditor_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RichEditor_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		14BB93DCB939D01D13C7DCCD3D7FB608 /* RichEditor.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = RichEditor.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1A38B56B3B49A8DC0714C03FEFC01F1C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		1FD5CFB4DEA79C5DE4D08C770B193D79 /* macColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = macColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FD5CFB4DEA79C5DE4D08C770B193D79 /* macColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = macColorPicker.framework; path = macColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2168F8B7DB4A93C65C73705E9A7D299C /* Pods-RichEditor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RichEditor_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		25BE06D325122C34421C623FB860A24D /* RichEditor+Styling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "RichEditor+Styling.swift"; sourceTree = "<group>"; };
 		2684C158B6E8E6E5728AEEBAF9368BE1 /* Pods-RichEditor_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RichEditor_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -93,7 +92,7 @@
 		32B0DA79E5632EBC96B9B618F14557D1 /* Pods-RichEditor_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RichEditor_Example-Info.plist"; sourceTree = "<group>"; };
 		3868E16119807BA0124CBDBC03DAD023 /* NSColor+Colors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSColor+Colors.swift"; path = "Sources/macColorPicker/Extensions/NSColor+Colors.swift"; sourceTree = "<group>"; };
 		3D767A69823551B38E4BFA4AFA0F13E2 /* RichEditor+Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "RichEditor+Stack.swift"; sourceTree = "<group>"; };
-		3ECEA4E695D78C7DB4E540A8D2E8A5F0 /* Pods_RichEditor_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichEditor_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ECEA4E695D78C7DB4E540A8D2E8A5F0 /* Pods_RichEditor_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RichEditor_Example.framework; path = "Pods-RichEditor_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		403624DA2C3E97BAF8EC57DDC23654FF /* NSMenu+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSMenu+Convenience.swift"; sourceTree = "<group>"; };
 		43FC95E9C3BF0A2B36B536F13D491430 /* String+BulletPoints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+BulletPoints.swift"; sourceTree = "<group>"; };
 		4B26BDF036DCC80E19475FB78017414B /* Pods-RichEditor_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RichEditor_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -105,20 +104,20 @@
 		592FA809714B9C165E2D57BD82352999 /* Dictionary+TypingAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+TypingAttributes.swift"; sourceTree = "<group>"; };
 		59F69B63BDDCA09A017AEABEE4574414 /* Pods-RichEditor_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RichEditor_Tests-umbrella.h"; sourceTree = "<group>"; };
 		66E99CB7D4A55E4E59D23B541F36C1F2 /* CGFloat+Formatting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CGFloat+Formatting.swift"; sourceTree = "<group>"; };
+		6BAAA67A1B3CDEDE7F6A83293467D46D /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
 		6D0019F27D1BE954929CA4BCF107B362 /* RichEditor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RichEditor.modulemap; sourceTree = "<group>"; };
 		6D7913DD23B7BEB2B2CF175DC971BC13 /* macColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "macColorPicker-prefix.pch"; sourceTree = "<group>"; };
 		70C449C8BAA1BBA9DAAF4999DA9E7094 /* Pods-RichEditor_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RichEditor_Example-frameworks.sh"; sourceTree = "<group>"; };
 		747806D04CAEE2035CBFD644E9446504 /* String+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Convenience.swift"; sourceTree = "<group>"; };
 		764B80A8AE349546CE760340FD1F3AD1 /* RichEditor+BulletPoints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "RichEditor+BulletPoints.swift"; sourceTree = "<group>"; };
-		785E7F5721CA363ABC49BE29448B218C /* Pods_RichEditor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichEditor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B067538E808577DF12F7C47A923CC2D /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		785E7F5721CA363ABC49BE29448B218C /* Pods_RichEditor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RichEditor_Tests.framework; path = "Pods-RichEditor_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BFBDE6D24B494E62C00614AAE6BB74F /* RichEditor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RichEditor-umbrella.h"; sourceTree = "<group>"; };
 		7F647C6F2168E17006342170D27C7B27 /* RichEditor+Core.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "RichEditor+Core.swift"; sourceTree = "<group>"; };
 		7FB963BCDC31B91DB39EB2A77FA1AC90 /* macColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "macColorPicker-dummy.m"; sourceTree = "<group>"; };
 		89D4B75832E5505005D78EC6A3C3159F /* RichEditorToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RichEditorToolbar.swift; sourceTree = "<group>"; };
 		8D3DC6B5661A9963CFAFB81A6EFF6C06 /* Pods-RichEditor_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RichEditor_Example-dummy.m"; sourceTree = "<group>"; };
-		9B89DEEF181DD4430EBDE56F18C6F196 /* RichEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RichEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B89DEEF181DD4430EBDE56F18C6F196 /* RichEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RichEditor.framework; path = RichEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DA21E7651EC44B383DE8910C32CC20A /* macColorPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = macColorPicker.release.xcconfig; sourceTree = "<group>"; };
 		9F170FC9A00FB0FA29EE483E899CD96F /* Pods-RichEditor_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RichEditor_Tests.modulemap"; sourceTree = "<group>"; };
 		A3CDF3EDA89ED106EE3BC23DAE54F09D /* URL+Images.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "URL+Images.swift"; sourceTree = "<group>"; };
@@ -129,15 +128,16 @@
 		B83B61E721FFFFFE6748D61AE778F246 /* RichEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RichEditor.release.xcconfig; sourceTree = "<group>"; };
 		BA3A79A5B9D766EF8C3F85A62D32491D /* RichEditor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RichEditor-dummy.m"; sourceTree = "<group>"; };
 		BEB6706D1A481333D2C20233668816E7 /* RichEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RichEditor.swift; sourceTree = "<group>"; };
+		C0A24DA3DA78F329F1E7F4AB98A7E606 /* RichEditor.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = RichEditor.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C1061A068ACB3AB2574AD233294C3A1C /* ColorPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPicker.swift; path = Sources/macColorPicker/Classes/ColorPicker.swift; sourceTree = "<group>"; };
 		C642B882737FE904B865DA52D7AF95D4 /* macColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = macColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C699BBD208ED791C1AEFF10837E2E44D /* Pods-RichEditor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RichEditor_Example.release.xcconfig"; sourceTree = "<group>"; };
-		CA0C99DCCE915259530F64BC318D4FB9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CA8180738F431CEC7545D3D3B12595BD /* Pods-RichEditor_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RichEditor_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CC03DBB85F1BC4C13418DCFFF338D429 /* ColorButtonCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorButtonCell.swift; path = Sources/macColorPicker/Classes/ColorButtonCell.swift; sourceTree = "<group>"; };
 		D18502E295F130AFDDECBBEAE3DCF70D /* Pods-RichEditor_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RichEditor_Example.modulemap"; sourceTree = "<group>"; };
 		DE47ED19BA7BB5FBD7289C2B763A5EBD /* NSAttributedString+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Convenience.swift"; sourceTree = "<group>"; };
 		E10DD47687DE1480F8014B0A489A7C44 /* ColorCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorCell.swift; path = Sources/macColorPicker/Classes/ColorCell.swift; sourceTree = "<group>"; };
+		E4D7207467D414C3C8DE4E69EDB797E7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		E75872E2F593B8B6339782EE7E3C5A69 /* Pods-RichEditor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RichEditor_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E8106D1D188223552F59379805F4CFAD /* NSTextView+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSTextView+Convenience.swift"; sourceTree = "<group>"; };
 		E8F783775AA4694D8A66A72FCB80C49B /* NSFont+Traits.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSFont+Traits.swift"; sourceTree = "<group>"; };
@@ -210,16 +210,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1F022465F7C890E7C2D7B482D371D874 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				7B067538E808577DF12F7C47A923CC2D /* LICENSE.txt */,
-				CA0C99DCCE915259530F64BC318D4FB9 /* README.md */,
-				14BB93DCB939D01D13C7DCCD3D7FB608 /* RichEditor.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		26097B89D94B3CC1A3C8479461A018C3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +228,16 @@
 				1A38B56B3B49A8DC0714C03FEFC01F1C /* Cocoa.framework */,
 			);
 			name = "OS X";
+			sourceTree = "<group>";
+		};
+		4631ABBE467FB8E1C33D19E5FCC2C17E /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				6BAAA67A1B3CDEDE7F6A83293467D46D /* LICENSE.txt */,
+				E4D7207467D414C3C8DE4E69EDB797E7 /* README.md */,
+				C0A24DA3DA78F329F1E7F4AB98A7E606 /* RichEditor.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		57D68F0C7C994B4DB1BE902188297282 /* Products */ = {
@@ -281,7 +281,7 @@
 			children = (
 				26097B89D94B3CC1A3C8479461A018C3 /* Classes */,
 				85574EFCE00F68579158A4428FB48FB4 /* Extensions */,
-				1F022465F7C890E7C2D7B482D371D874 /* Pod */,
+				4631ABBE467FB8E1C33D19E5FCC2C17E /* Pod */,
 				0216354E12408EF79FB08D49A14DD935 /* Support Files */,
 			);
 			name = RichEditor;
@@ -358,6 +358,7 @@
 				3D767A69823551B38E4BFA4AFA0F13E2 /* RichEditor+Stack.swift */,
 				25BE06D325122C34421C623FB860A24D /* RichEditor+Styling.swift */,
 			);
+			name = RichEditor;
 			path = RichEditor;
 			sourceTree = "<group>";
 		};
@@ -371,6 +372,7 @@
 				3868E16119807BA0124CBDBC03DAD023 /* NSColor+Colors.swift */,
 				9E7EF176AC0E3213125DE7B9EA8B4FAC /* Support Files */,
 			);
+			name = macColorPicker;
 			path = macColorPicker;
 			sourceTree = "<group>";
 		};
@@ -658,40 +660,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		01BE9F988EC13F615112C7C9844230A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C699BBD208ED791C1AEFF10837E2E44D /* Pods-RichEditor_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RichEditor_Example/Pods-RichEditor_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MODULEMAP_FILE = "Target Support Files/Pods-RichEditor_Example/Pods-RichEditor_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		23267695695265995B83AA31BA7B9E76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9DA21E7651EC44B383DE8910C32CC20A /* macColorPicker.release.xcconfig */;
@@ -724,7 +692,7 @@
 			};
 			name = Release;
 		};
-		45830918BF36AF21133972CA10DD039F /* Debug */ = {
+		528E3F1A0C7E6659C24D577842BBEAE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E75872E2F593B8B6339782EE7E3C5A69 /* Pods-RichEditor_Example.debug.xcconfig */;
 			buildSettings = {
@@ -744,7 +712,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MODULEMAP_FILE = "Target Support Files/Pods-RichEditor_Example/Pods-RichEditor_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -758,73 +726,7 @@
 			};
 			name = Debug;
 		};
-		71423772C80B57099B74355EDFBAB837 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2821DDFF7B5468DF2DACC7C4DE258F9 /* macColorPicker.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/macColorPicker/macColorPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/macColorPicker/macColorPicker-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MODULEMAP_FILE = "Target Support Files/macColorPicker/macColorPicker.modulemap";
-				PRODUCT_MODULE_NAME = macColorPicker;
-				PRODUCT_NAME = macColorPicker;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		74EAAAC8E659A2ED904EE4A4B7D3F0AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2168F8B7DB4A93C65C73705E9A7D299C /* Pods-RichEditor_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RichEditor_Tests/Pods-RichEditor_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MODULEMAP_FILE = "Target Support Files/Pods-RichEditor_Tests/Pods-RichEditor_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7599BD86FD28576C20F8B9B6B5ACBEC9 /* Debug */ = {
+		5E5046922B2BADEB6AE175DCA2A5C450 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -877,7 +779,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -890,9 +792,41 @@
 			};
 			name = Debug;
 		};
-		BB3A0B2F3A2BAAE151452811B3C66F77 /* Debug */ = {
+		71423772C80B57099B74355EDFBAB837 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CA10B9349BA650D24EC7F70C0FBB86A /* Pods-RichEditor_Tests.debug.xcconfig */;
+			baseConfigurationReference = B2821DDFF7B5468DF2DACC7C4DE258F9 /* macColorPicker.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/macColorPicker/macColorPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/macColorPicker/macColorPicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/macColorPicker/macColorPicker.modulemap";
+				PRODUCT_MODULE_NAME = macColorPicker;
+				PRODUCT_NAME = macColorPicker;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		72C33893184FCC51554AB9912598ADC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2168F8B7DB4A93C65C73705E9A7D299C /* Pods-RichEditor_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -910,7 +844,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MODULEMAP_FILE = "Target Support Files/Pods-RichEditor_Tests/Pods-RichEditor_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -922,9 +856,75 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
+			name = Release;
+		};
+		B99D188A0A43F21CBB0749587D6E1842 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C699BBD208ED791C1AEFF10837E2E44D /* Pods-RichEditor_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RichEditor_Example/Pods-RichEditor_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-RichEditor_Example/Pods-RichEditor_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C61730C463230F24AECA1614188EEB17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29F293F791477C36A962306A3FBC5C14 /* RichEditor.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RichEditor/RichEditor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RichEditor/RichEditor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/RichEditor/RichEditor.modulemap";
+				PRODUCT_MODULE_NAME = RichEditor;
+				PRODUCT_NAME = RichEditor;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
 			name = Debug;
 		};
-		C0AB89DB0533D8E2B9201FA6579824B7 /* Release */ = {
+		D256BAA9A69C64A728E66C27D53FDD4B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -974,21 +974,23 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		C61730C463230F24AECA1614188EEB17 /* Debug */ = {
+		F057D804207582DCF387C0147A4CA0E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29F293F791477C36A962306A3FBC5C14 /* RichEditor.debug.xcconfig */;
+			baseConfigurationReference = 4CA10B9349BA650D24EC7F70C0FBB86A /* Pods-RichEditor_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1000,18 +1002,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RichEditor/RichEditor-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RichEditor/RichEditor-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-RichEditor_Tests/Pods-RichEditor_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MODULEMAP_FILE = "Target Support Files/RichEditor/RichEditor.modulemap";
-				PRODUCT_MODULE_NAME = RichEditor;
-				PRODUCT_NAME = RichEditor;
+				MODULEMAP_FILE = "Target Support Files/Pods-RichEditor_Tests/Pods-RichEditor_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1064,8 +1067,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7599BD86FD28576C20F8B9B6B5ACBEC9 /* Debug */,
-				C0AB89DB0533D8E2B9201FA6579824B7 /* Release */,
+				5E5046922B2BADEB6AE175DCA2A5C450 /* Debug */,
+				D256BAA9A69C64A728E66C27D53FDD4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1073,8 +1076,8 @@
 		67446F36A5D0635C480765F07981DC82 /* Build configuration list for PBXNativeTarget "Pods-RichEditor_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB3A0B2F3A2BAAE151452811B3C66F77 /* Debug */,
-				74EAAAC8E659A2ED904EE4A4B7D3F0AD /* Release */,
+				F057D804207582DCF387C0147A4CA0E3 /* Debug */,
+				72C33893184FCC51554AB9912598ADC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1091,8 +1094,8 @@
 		BAE93F20B27766BB76528958FE1381F6 /* Build configuration list for PBXNativeTarget "Pods-RichEditor_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				45830918BF36AF21133972CA10DD039F /* Debug */,
-				01BE9F988EC13F615112C7C9844230A4 /* Release */,
+				528E3F1A0C7E6659C24D577842BBEAE1 /* Debug */,
+				B99D188A0A43F21CBB0749587D6E1842 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

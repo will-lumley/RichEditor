@@ -69,7 +69,7 @@ extension RichEditor: NSTextViewDelegate {
         
         return true
     }
-    
+
     /*
     func textView(_ textView: NSTextView, urlForContentsOf textAttachment: NSTextAttachment, at charIndex: Int) -> URL?
     {
