@@ -73,12 +73,12 @@ class ViewController: NSViewController
         self.boldButton.title    = "Bold"
         self.italicsButton.title = "Italic"
         
-        self.fontFamiliesPopUpButton.menu = NSMenu.fontsMenu(nil)
-        self.fontSizePopUpButton.menu     = NSMenu.fontSizesMenu(nil)
+        self.fontFamiliesPopUpButton.menu = NSMenu.fontsMenu()
+        self.fontSizePopUpButton.menu     = NSMenu.fontSizesMenu()
     }
 
     func openPreviewTextWindow() {
-        let storyboardID = NSStoryboard.SceneIdentifier("PreviewWindowController")
+        let storyboardID = "PreviewWindowController"
         let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
         previewWindowController.window?.title = "2. Raw HTML"
         previewWindowController.showWindow(self)
@@ -87,7 +87,7 @@ class ViewController: NSViewController
     }
 
     func openPreviewWebWindow() {
-        let storyboardID = NSStoryboard.SceneIdentifier("PreviewWebWindowController")
+        let storyboardID = "PreviewWebWindowController"
         let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
         previewWindowController.window?.title = "3. Parsed HTML"
         previewWindowController.showWindow(self)
@@ -96,7 +96,7 @@ class ViewController: NSViewController
     }
     
     func openPreviewTextWindow2() {
-        let storyboardID = NSStoryboard.SceneIdentifier("PreviewWindowController")
+        let storyboardID = "PreviewWindowController"
         let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
         previewWindowController.window?.title = "4. NSAttributedString From HTML"
         previewWindowController.showWindow(self)
@@ -121,7 +121,7 @@ extension ViewController {
     
     @IBAction
     func underlineButtonTapped(_ sender: Any) {
-        self.richEditor.toggleUnderline(.styleSingle)
+        self.richEditor.toggleUnderline(NSUnderlineStyle.single)
     }
     
     @IBAction
@@ -139,7 +139,7 @@ extension ViewController {
     
     @IBAction
     func strikeButtonTapped(_ sender: Any) {
-        self.richEditor.toggleStrikethrough(.styleSingle)
+        self.richEditor.toggleStrikethrough(NSUnderlineStyle.single)
     }
     
     @IBAction

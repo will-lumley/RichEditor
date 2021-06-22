@@ -29,4 +29,9 @@ Pod::Spec.new do |s|
     s.source_files = 'Sources/**/*/*'
     s.dependency 'macColorPicker', '~> 1.2.2'
     
+    s.subspec 'Resources' do |resources|
+        resources.resource_bundle = {
+          'Resources' => ['Resources/**/*.png']
+        }
+    end
 end

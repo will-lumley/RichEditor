@@ -9,8 +9,10 @@ import Foundation
 import AppKit
 
 public protocol RichEditorDelegate {
+
     func fontStylingChanged(_ fontStyling: FontStyling)
     func richEditorTextChanged(_ richEditor: RichEditor)
+
 }
 
 public class RichEditor: NSView {
@@ -30,9 +32,10 @@ public class RichEditor: NSView {
     internal var selectedTextFontStyling: FontStyling? {
         didSet {
             self.richEditorDelegate?.fontStylingChanged(self.fontStyling)
+            self.toolbarRichEditorDelegate?.fontStylingChanged(self.fontStyling)
         }
     }
-    
+
     /// The marker that will be used for bullet points
     internal static var bulletPointMarker = "•\u{00A0}" //NSTextList.MarkerFormat.circle
     
@@ -45,10 +48,14 @@ public class RichEditor: NSView {
     public var richEditorDelegate: RichEditorDelegate?
 
     /// The toolbar object, allowing for users to easily apply styling to their text
-    private let toolbar = RichEditorToolbar()
+    internal var toolbar: RichEditorToolbar?
+
+    /// The delegate which will notify the listener of significant events
+    private var toolbarRichEditorDelegate: RichEditorDelegate?
 
     /// Returns the NSFont object that was derived from the selected text, or the future text if nothing is selected
     public var currentFont: NSFont {
+
         //If we have highlighted text, we'll analyse the font of the highlighted text
         if self.textView.hasSelectedText {
             let range = self.textView.selectedRange()
@@ -93,49 +100,59 @@ public class RichEditor: NSView {
     private func setup() {
         self.textView.delegate = self
         
-        self.addSubview(self.scrollview)
         self.configureTextView(isHorizontalScrollingEnabled: false)
 
+        self.configureToolbar()
         self.configureTextViewLayout()
-        //self.configureToolbarLayout()
 
         self.textView.textStorage?.delegate = self
         self.textView.layoutManager?.defaultAttachmentScaling = NSImageScaling.scaleProportionallyDown
-        
+
         self.selectedTextFontStyling = nil
     }
 
-    /**
-     Uses programmatical AutoLayout to pin the NSTextView to its parent NSScrollView
-    */
-    internal func configureTextViewLayout() {
-        self.scrollview.translatesAutoresizingMaskIntoConstraints = false
-        
-        let horizontalPinning = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|",
-                                                               options: .directionLeadingToTrailing,
-                                                               metrics: nil,
-                                                               views: ["subview": self.scrollview])
-        
-        let verticalPinning = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|",
-                                                             options: .directionLeadingToTrailing,
-                                                             metrics: nil,
-                                                             views: ["subview": self.scrollview])
-        
-        self.addConstraints(horizontalPinning)
-        self.addConstraints(verticalPinning)
+    internal func configureToolbar() {
+        self.toolbar = RichEditorToolbar(richEditor: self)
+        self.toolbarRichEditorDelegate = self.toolbar
+
+        guard let toolbar = self.toolbar else {
+            return
+        }
+
+        toolbar.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(toolbar)
+
+        toolbar.wantsLayer = true
+        toolbar.layer?.backgroundColor = NSColor.clear.cgColor
+
+        NSLayoutConstraint.activate([
+            toolbar.topAnchor.constraint(equalTo: self.topAnchor),
+            toolbar.widthAnchor.constraint(equalTo: self.widthAnchor),
+            toolbar.heightAnchor.constraint(equalToConstant: 35)
+        ])
     }
 
-    internal func configureToolbarLayout() {
-        self.toolbar.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(self.toolbar)
+    internal func configureTextViewLayout() {
+        self.scrollview.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(self.scrollview)
 
-        let constraints = [
-            self.toolbar.widthAnchor.constraint(equalTo: self.scrollview.widthAnchor),
-            self.toolbar.widthAnchor.constraint(equalToConstant: 110),
-            self.toolbar.heightAnchor.constraint(equalToConstant: 35)
-        ]
+        // If there is a toolbar, attach our scroll view to the bottom our toolbar
+        if let toolbar = self.toolbar {
+            NSLayoutConstraint.activate([
+                self.scrollview.widthAnchor.constraint(equalTo: self.widthAnchor),
+                self.scrollview.topAnchor.constraint(equalTo: toolbar.bottomAnchor, constant: 5),
+                self.scrollview.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            ])
+        }
 
-        NSLayoutConstraint.activate(constraints)
+        // If there is NOT a toolbar, attach our scroll view to the bottom of our view
+        else {
+            NSLayoutConstraint.activate([
+                self.scrollview.widthAnchor.constraint(equalTo: self.widthAnchor),
+                self.scrollview.topAnchor.constraint(equalTo: self.topAnchor),
+                self.scrollview.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            ])
+        }
     }
 
     /**

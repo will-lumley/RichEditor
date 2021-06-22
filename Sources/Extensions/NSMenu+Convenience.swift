@@ -11,8 +11,8 @@ import AppKit
 
 public extension NSMenu {
 
-    static func fontsMenu(_ title: String?) -> NSMenu {
-        let menu = NSMenu(title: title ?? "Select a Font Family")
+    static func fontsMenu(with title: String = "Select a Font Family") -> NSMenu {
+        let menu = NSMenu(title: title)
         
         let allFontFamilyNames = NSFontManager.shared.availableFontFamilies
         for fontName in allFontFamilyNames {
@@ -30,8 +30,8 @@ public extension NSMenu {
         return menu
     }
     
-    static func fontSizesMenu(_ title: String?) -> NSMenu {
-        let menu = NSMenu(title: title ?? "Select a Font Size")
+    static func fontSizesMenu(with title: String = "Select a Font Size") -> NSMenu {
+        let menu = NSMenu(title: title)
         
         let allFontSizes = ["9", "10", "11", "12", "13", "14", "18", "24", "36", "48", "64", "72", "96", "144", "288"]
         for fontSize in allFontSizes {

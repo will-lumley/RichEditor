@@ -2,6 +2,9 @@ PODS:
   - macColorPicker (1.2.2)
   - RichEditor (0.0.1):
     - macColorPicker (~> 1.2.2)
+    - RichEditor/Resources (= 0.0.1)
+  - RichEditor/Resources (0.0.1):
+    - macColorPicker (~> 1.2.2)
 
 DEPENDENCIES:
   - RichEditor (from `../`)
@@ -16,7 +19,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   macColorPicker: f663a72285ff039df6bc0fb1da4fdb969a3cd667
-  RichEditor: a1c155a068fb0b3a7796a6fe90b2b4d460e4b0ad
+  RichEditor: 9de9319e1239ae47a922f904bc9691da05287802
 
 PODFILE CHECKSUM: a428811ac97cf5df591a9b243f8d3c164c25f0c7
 

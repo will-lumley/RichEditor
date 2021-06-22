@@ -26,5 +26,15 @@
       "~> 1.2.2"
     ]
   },
+  "subspecs": [
+    {
+      "name": "Resources",
+      "resource_bundles": {
+        "Resources": [
+          "Resources/**/*.png"
+        ]
+      }
+    }
+  ],
   "swift_version": "5.0"
 }
