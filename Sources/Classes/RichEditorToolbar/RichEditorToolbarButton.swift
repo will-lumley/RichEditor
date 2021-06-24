@@ -14,6 +14,7 @@ class RichEditorToolbarButton: NSButton {
     init(image: String) {
         super.init(frame: .zero)
         self.image = NSImage.podImage(named: image)
+        self.alternateImage = NSImage.podImage(named: image)
 
         self.setup()
     }
@@ -22,8 +23,13 @@ class RichEditorToolbarButton: NSButton {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
+    }
+
     private func setup() {
         self.isBordered = false
+        self.isTransparent = false
 
         self.wantsLayer = true
         self.layer?.backgroundColor = NSColor.clear.cgColor

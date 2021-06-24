@@ -26,10 +26,26 @@ internal extension RichEditorToolbar {
         ])
     }
 
-    func setupBoldButton() {
-        //self.boldButton.image = NSImage.podImage(named: "white-weight-bold")
-//        self.boldButton.title = "b"
+    func setupWeightButtons() {
         self.contentStackView.addArrangedSubview(self.boldButton)
+        self.contentStackView.addArrangedSubview(self.italicButton)
+        self.contentStackView.addArrangedSubview(self.underlineButton)
+
+        self.boldButton.target = self
+        self.boldButton.action = #selector(boldButtonClicked(_:))
+
+        self.italicButton.target = self
+        self.italicButton.action = #selector(italicButtonClicked(_:))
+
+        self.underlineButton.target = self
+        self.underlineButton.action = #selector(underlineButtonClicked(_:))
+    }
+
+    func setupAlignButtons() {
+        self.contentStackView.addArrangedSubview(self.alignLeftButton)
+        self.contentStackView.addArrangedSubview(self.alignCentreButton)
+        self.contentStackView.addArrangedSubview(self.alignRightButton)
+        self.contentStackView.addArrangedSubview(self.alignJustifyButton)
     }
 
 }

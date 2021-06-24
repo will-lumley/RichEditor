@@ -44,6 +44,7 @@ internal extension RichEditor {
         self.add(attributes: updatedFontAttr, onlyHighlightedText: self.textView.hasSelectedText)
         
         self.richEditorDelegate?.fontStylingChanged(self.fontStyling)
+        self.toolbarRichEditorDelegate?.fontStylingChanged(self.fontStyling)
     }
     
     /**
@@ -74,6 +75,7 @@ internal extension RichEditor {
         
         self.add(attributes: newAttr, onlyHighlightedText: self.textView.hasSelectedText)
         self.richEditorDelegate?.fontStylingChanged(self.fontStyling)
+        self.toolbarRichEditorDelegate?.fontStylingChanged(self.fontStyling)
     }
     
     /**
@@ -113,6 +115,7 @@ internal extension RichEditor {
         }
         
         self.richEditorDelegate?.fontStylingChanged(self.fontStyling)
+        self.toolbarRichEditorDelegate?.fontStylingChanged(self.fontStyling)
     }
 
 }

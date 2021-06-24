@@ -46,9 +46,9 @@ class ViewController: NSViewController
         
         self.configureUI()
         
-        self.openPreviewTextWindow()
-        self.openPreviewWebWindow()
-        self.openPreviewTextWindow2()
+//        self.openPreviewTextWindow()
+//        self.openPreviewWebWindow()
+//        self.openPreviewTextWindow2()
     }
     
     override func viewDidAppear() {

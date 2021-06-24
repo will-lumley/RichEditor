@@ -51,7 +51,7 @@ public class RichEditor: NSView {
     internal var toolbar: RichEditorToolbar?
 
     /// The delegate which will notify the listener of significant events
-    private var toolbarRichEditorDelegate: RichEditorDelegate?
+    internal var toolbarRichEditorDelegate: RichEditorDelegate?
 
     /// Returns the NSFont object that was derived from the selected text, or the future text if nothing is selected
     public var currentFont: NSFont {

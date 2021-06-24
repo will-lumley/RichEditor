@@ -19,6 +19,13 @@ class RichEditorToolbar: NSView {
     internal let fontSizePopUpButton = NSPopUpButton(frame: .zero)
 
     internal let boldButton = RichEditorToolbarButton(image: "white-weight-bold")
+    internal let italicButton = RichEditorToolbarButton(image: "white-weight-italic")
+    internal let underlineButton = RichEditorToolbarButton(image: "white-weight-underline")
+
+    internal let alignLeftButton = RichEditorToolbarButton(image: "white-align-left")
+    internal let alignRightButton = RichEditorToolbarButton(image: "white-align-right")
+    internal let alignCentreButton = RichEditorToolbarButton(image: "white-align-centre")
+    internal let alignJustifyButton = RichEditorToolbarButton(image: "white-align-justify")
 
     // MARK: - NSView
     init(richEditor: RichEditor) {
@@ -40,7 +47,7 @@ class RichEditorToolbar: NSView {
 
     private func setupUI() {
         self.contentStackView.alignment = .centerY
-        self.contentStackView.spacing = 4
+        self.contentStackView.spacing = 8
         self.contentStackView.distribution = .gravityAreas
 
 //        self.contentStackView.wantsLayer = true
@@ -58,17 +65,14 @@ class RichEditorToolbar: NSView {
 
         self.setupFontUI()
         self.contentStackView.addSeperatorView()
-        self.setupBoldButton()
+        self.setupWeightButtons()
+        self.contentStackView.addSeperatorView()
+        self.setupAlignButtons()
+        self.contentStackView.addSeperatorView()
     }
 
     private func setup() {
-        self.fontFamiliesPopUpButton.menu = NSMenu.fontsMenu()
-        self.fontFamiliesPopUpButton.target = self
-        self.fontFamiliesPopUpButton.action = #selector(fontFamiliesButtonClicked(_:))
 
-        self.fontSizePopUpButton.menu = NSMenu.fontSizesMenu()
-        self.fontSizePopUpButton.target = self
-        self.fontSizePopUpButton.action = #selector(fontSizeButtonClicked(_:))
     }
 }
 
@@ -100,9 +104,20 @@ internal extension RichEditorToolbar {
     }
 
     @objc
-    func boldButtonClicked(_ sender: NSButton) {
+    func boldButtonClicked(_ sender: RichEditorToolbarButton) {
         self.richEditor.toggleBold()
     }
+
+    @objc
+    func italicButtonClicked(_ sender: RichEditorToolbarButton) {
+        self.richEditor.toggleItalic()
+    }
+
+    @objc
+    func underlineButtonClicked(_ sender: RichEditorToolbarButton) {
+        self.richEditor.toggleUnderline(.single)
+    }
+
 
 }
 
