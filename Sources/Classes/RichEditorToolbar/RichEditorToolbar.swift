@@ -6,6 +6,7 @@
 //
 
 import AppKit
+import macColorPicker
 
 class RichEditorToolbar: NSView {
 
@@ -26,6 +27,14 @@ class RichEditorToolbar: NSView {
     internal let alignRightButton = RichEditorToolbarButton(image: "white-align-right")
     internal let alignCentreButton = RichEditorToolbarButton(image: "white-align-centre")
     internal let alignJustifyButton = RichEditorToolbarButton(image: "white-align-justify")
+
+    internal let textColorButton = ColorPicker(frame: .zero)
+    internal let highlightColorButton = ColorPicker(frame: .zero)
+
+    internal let linkButton = RichEditorToolbarButton(image: "white-text-link")
+    internal let listButton = RichEditorToolbarButton(image: "white-text-list")
+    internal let strikethroughButton = RichEditorToolbarButton(image: "white-text-strikethrough")
+    internal let addImageButton = RichEditorToolbarButton(image: "white-text-image")
 
     // MARK: - NSView
     init(richEditor: RichEditor) {
@@ -68,6 +77,10 @@ class RichEditorToolbar: NSView {
         self.setupWeightButtons()
         self.contentStackView.addSeperatorView()
         self.setupAlignButtons()
+        self.contentStackView.addSeperatorView()
+        self.setupColorButtons()
+        self.contentStackView.addSeperatorView()
+        self.setupCustomTextActionButtons()
         self.contentStackView.addSeperatorView()
     }
 
@@ -118,6 +131,54 @@ internal extension RichEditorToolbar {
         self.richEditor.toggleUnderline(.single)
     }
 
+    @objc
+    func linkButtonClicked(_ sender: RichEditorToolbarButton) {
+        let nameTextField = NSTextField(frame: NSRect(x: 0, y: 28, width: 200, height: 20))
+        nameTextField.placeholderString = "Link Name"
+        
+        let urlTextField = NSTextField(frame: NSRect(x: 0, y: 0, width: 200, height: 20))
+        urlTextField.placeholderString = "Link URL"
+
+        let textFieldView = NSView(frame: NSRect(x: 0, y: 0, width: 200, height: 48))
+        textFieldView.addSubview(nameTextField)
+        textFieldView.addSubview(urlTextField)
+
+        let alert = NSAlert()
+        alert.messageText = "Please provide the link name and the link URL"
+        alert.addButton(withTitle: "Add Link")
+        alert.addButton(withTitle: "Cancel")
+        alert.accessoryView = textFieldView
+
+        alert.window.initialFirstResponder = nameTextField
+        nameTextField.nextKeyView = urlTextField
+
+        let selectedButton = alert.runModal()
+
+        switch selectedButton.rawValue {
+        case 1000:
+            let name = nameTextField.stringValue
+            let url = urlTextField.stringValue
+
+            self.richEditor.insert(link: url, with: name)
+        default:
+            print("Unknown raw value selected: \(selectedButton)")
+        }
+    }
+
+    @objc
+    func listButtonClicked(_ sender: RichEditorToolbarButton) {
+        self.richEditor.startBulletPoints()
+    }
+
+    @objc
+    func strikethroughButtonClicked(_ sender: RichEditorToolbarButton) {
+        self.richEditor.toggleStrikethrough(.single)
+    }
+
+    @objc
+    func addImageButtonClicked(_ sender: RichEditorToolbarButton) {
+        self.richEditor.promptUserForAttachments(windowForModal: self.window)
+    }
 
 }
 
@@ -197,34 +258,34 @@ private extension RichEditorToolbar {
 //        }
 //
 //        //Configure the TextColour UI
-//        let textColours = fontStyling.textColours
-//        switch (textColours.count) {
-//            case 0:
-//                self.textColorPicker.selectedColor = NSColor.white
-//
-//            case 1:
-//                self.textColorPicker.selectedColor = textColours[0]
-//
-//            case 2:
-//                self.textColorPicker.selectedColor = NSColor.gray
-//
-//            default:()
-//        }
-//
-//        //Configure the HighlightColour UI
-//        let highlightColours = fontStyling.highlightColours
-//        switch (highlightColours.count) {
-//            case 0:
-//                self.highlightColorPicker.selectedColor = NSColor.white
-//
-//            case 1:
-//                self.highlightColorPicker.selectedColor = highlightColours[0]
-//
-//            case 2:
-//                self.highlightColorPicker.selectedColor = NSColor.gray
-//
-//            default:()
-//        }
+        let textColours = fontStyling.textColours
+        switch (textColours.count) {
+            case 0:
+                self.textColorButton.selectedColor = NSColor.white
+
+            case 1:
+                self.textColorButton.selectedColor = textColours[0]
+
+            case 2:
+                self.textColorButton.selectedColor = NSColor.gray
+
+            default:()
+        }
+
+        //Configure the HighlightColour UI
+        let highlightColours = fontStyling.highlightColours
+        switch (highlightColours.count) {
+            case 0:
+                self.highlightColorButton.selectedColor = NSColor.white
+
+            case 1:
+                self.highlightColorButton.selectedColor = highlightColours[0]
+
+            case 2:
+                self.highlightColorButton.selectedColor = NSColor.gray
+
+            default:()
+        }
         
         //Configure the Fonts UI
         let fonts = fontStyling.fonts
@@ -262,6 +323,22 @@ private extension NSStackView {
         NSLayoutConstraint.activate([
             seperator.widthAnchor.constraint(equalToConstant: 1)
         ])
+    }
+
+}
+
+// MARK: - ColorPickerDelegate
+
+extension RichEditorToolbar: ColorPickerDelegate {
+
+    func didSelectColor(_ sender: ColorPicker, color: NSColor) {
+        switch sender {
+        case self.textColorButton:
+            self.richEditor.apply(textColour: color)
+        case self.highlightColorButton:
+            self.richEditor.apply(highlightColour: color)
+        default:()
+        }
     }
 
 }

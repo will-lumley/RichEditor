@@ -27,7 +27,7 @@ public extension URL {
         catch let error {
             print("Failed to create Data or FileWrapper object from URL: \(self), error: \(error)")
         }
-        
+
         let attachment = NSTextAttachment(fileWrapper: fileWrapper)
         return attachment
     }

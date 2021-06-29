@@ -48,4 +48,38 @@ internal extension RichEditorToolbar {
         self.contentStackView.addArrangedSubview(self.alignJustifyButton)
     }
 
+    func setupColorButtons() {
+        self.contentStackView.addArrangedSubview(self.textColorButton)
+        self.contentStackView.addArrangedSubview(self.highlightColorButton)
+
+        self.textColorButton.delegate = self
+        self.highlightColorButton.delegate = self
+
+        NSLayoutConstraint.activate([
+            self.textColorButton.widthAnchor.constraint(equalToConstant: 24),
+            self.textColorButton.heightAnchor.constraint(equalToConstant: 24),
+
+            self.highlightColorButton.widthAnchor.constraint(equalToConstant: 24),
+            self.highlightColorButton.heightAnchor.constraint(equalToConstant: 24),
+        ])
+    }
+
+    func setupCustomTextActionButtons() {
+        self.contentStackView.addArrangedSubview(self.linkButton)
+        self.contentStackView.addArrangedSubview(self.listButton)
+        self.contentStackView.addArrangedSubview(self.strikethroughButton)
+        self.contentStackView.addArrangedSubview(self.addImageButton)
+
+        self.linkButton.target = self
+        self.linkButton.action = #selector(linkButtonClicked(_:))
+
+        self.listButton.target = self
+        self.listButton.action = #selector(listButtonClicked(_:))
+
+        self.strikethroughButton.target = self
+        self.strikethroughButton.action = #selector(strikethroughButtonClicked(_:))
+
+        self.addImageButton.target = self
+        self.addImageButton.action = #selector(addImageButtonClicked(_:))
+    }
 }

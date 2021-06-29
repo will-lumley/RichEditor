@@ -16,7 +16,7 @@ public extension RichEditor {
      - parameter position: The location of the NSTextView's string where the link will be
      inserted. If nil, the cursors position is used instead.
      */
-    func insert(link: String, with name: String, at position: Int?) {
+    func insert(link: String, with name: String, at position: Int? = nil) {
         let attrString = NSMutableAttributedString(string: name)
         attrString.addAttribute(NSAttributedString.Key.link, value: link, range: name.fullRange)
         

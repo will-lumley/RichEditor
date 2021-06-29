@@ -24,11 +24,11 @@ class PreviewWebViewController: NSViewController {
 extension PreviewWebViewController: WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        print("WKWebView did finish loading: \(String(describing: navigation))")
+        //print("WKWebView did finish loading: \(String(describing: navigation))")
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        print("WKWebView Error: \(error)")
+        //print("WKWebView Error: \(error)")
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
