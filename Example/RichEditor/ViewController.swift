@@ -65,27 +65,11 @@ extension ViewController: RichEditorDelegate {
     }
     
     func richEditorTextChanged(_ richEditor: RichEditor) {
-        var htmlOpt: String?
-        
-        do {
-            htmlOpt = try richEditor.html()
-        }
-        catch let error {
-            print("Error creating HTML from NSAttributedString: \(error)")
-        }
-        
-        guard var html = htmlOpt else {
-            print("HTML from NSAttributedString was nil")
-            return
-        }
-        
-        html = html.replacingOccurrences(of: "\n", with: "")
-        
         // Parse the HTML into a WebView and display the contents
-        self.previewWebViewController?.webView.loadHTMLString(html, baseURL: Bundle.main.bundleURL) // 3. Parsed HTML
+        self.previewWebViewController?.display(richEditor: richEditor)
         
         // Assign the raw HTML text so we can see the actual HTML content
-        self.previewTextViewController?.previewTextView.string = html // 2. Raw HTML
+        self.previewTextViewController?.display(richEditor: richEditor)
     }
 
 }

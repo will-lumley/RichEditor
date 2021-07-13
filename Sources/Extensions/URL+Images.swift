@@ -32,4 +32,20 @@ public extension URL {
         return attachment
     }
 
+    var imageType: NSBitmapImageRep.FileType {
+        switch self.pathExtension.uppercased() {
+        case "JPG", "JPEG":
+            return .jpeg
+        case "PNG":
+            return .png
+        case "TIFF":
+            return .tiff
+        case "GIF":
+            return .gif
+        case "BMP":
+            return .bmp
+        default:
+            return .png
+        }
+    }
 }
