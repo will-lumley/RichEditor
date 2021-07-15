@@ -65,7 +65,6 @@
 		B9482CE18F3294516C4833E0698F5008 /* RichEditor+KeyboardShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB83AB3D4F79E03519C61A151B0248B4 /* RichEditor+KeyboardShortcuts.swift */; };
 		BA69B1382FA50655050A575230E5242C /* RichEditor+Attachments.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD921E504D2785B7C9DAD6CA194F7CDE /* RichEditor+Attachments.swift */; };
 		BED9D0C7F752B41A4FE194C22E13769E /* white-align-right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E485CD6C5B5D134FC71B15D3FC3099 /* white-align-right@3x.png */; };
-		BEE67908269D21B30073CA71 /* NSImage+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE67907269D21B30073CA71 /* NSImage+Base64.swift */; };
 		BFDD749A1F3BAACD54D962D00EEC709F /* white-align-right@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6007EBBECC8C7069519B41A8AD4810 /* white-align-right@1x.png */; };
 		C02A01E2813899059C6794AA3124C2E2 /* white-align-left@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C32C0121058A4E1255B9E0AD332EF0 /* white-align-left@1x.png */; };
 		C59D276EC696515AED51B237A4A3C0CA /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10DD47687DE1480F8014B0A489A7C44 /* ColorCell.swift */; };
@@ -204,7 +203,6 @@
 		B5E3CEB834E808976160307ED8CA2F36 /* RichEditorToolbar+UI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "RichEditorToolbar+UI.swift"; sourceTree = "<group>"; };
 		BB83AB3D4F79E03519C61A151B0248B4 /* RichEditor+KeyboardShortcuts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "RichEditor+KeyboardShortcuts.swift"; sourceTree = "<group>"; };
 		BB96BC0107AB887BB99075092930967B /* RichEditor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RichEditor-umbrella.h"; sourceTree = "<group>"; };
-		BEE67907269D21B30073CA71 /* NSImage+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Base64.swift"; sourceTree = "<group>"; };
 		C0200506836C0F7178C42D5F02E4F3B2 /* RichEditorToolbarButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RichEditorToolbarButton.swift; sourceTree = "<group>"; };
 		C1061A068ACB3AB2574AD233294C3A1C /* ColorPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPicker.swift; path = Sources/macColorPicker/Classes/ColorPicker.swift; sourceTree = "<group>"; };
 		C5DE8878811AB0B471AAE5A977CC43C3 /* white-weight-italic@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "white-weight-italic@3x.png"; path = "Resources/white-weight-italic@3x.png"; sourceTree = "<group>"; };
@@ -312,7 +310,6 @@
 				E13432B784E17203538AB8B2628CDD19 /* Dictionary+TypingAttributes.swift */,
 				726AFE7A5782FAFDC702666BEC2576C2 /* NSAttributedString+Convenience.swift */,
 				4D22A1CB54FD376F2567CF91215CDA4E /* NSFont+Traits.swift */,
-				BEE67907269D21B30073CA71 /* NSImage+Base64.swift */,
 				4A95428A0705CF5C9B3609D18C8E1EF1 /* NSImage+Pods.swift */,
 				E3D1C12FE33D61B14210E5712ADC72F8 /* NSMenu+Convenience.swift */,
 				7CE5539884C58F68379435BBFB54E69F /* NSTextView+Convenience.swift */,
@@ -844,7 +841,6 @@
 				E40C0965896F3BB378BD0995F379127E /* String+BulletPoints.swift in Sources */,
 				82DF9A9221BCD4FC92699C9C9BC07E41 /* String+Convenience.swift in Sources */,
 				CAA583DCD62313C749E2082147603188 /* URL+Images.swift in Sources */,
-				BEE67908269D21B30073CA71 /* NSImage+Base64.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

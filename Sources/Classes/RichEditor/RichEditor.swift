@@ -82,10 +82,6 @@ public class RichEditor: NSView {
         }
     }
 
-    /// This is where our image attachments will be stored.
-    /// The key is the filename, and the value is a base 64 encoded image.
-    internal var imageAttachments = [String: String]()
-
     // MARK: - NSView
 
     override init(frame frameRect: NSRect) {
@@ -180,38 +176,11 @@ public class RichEditor: NSView {
             // Iterate over each attachment, and replace each "file://" component with the image
             let allAttachments = self.textView.attributedString().allAttachments
             for attachment in allAttachments {
-                //----------------------------------------------------------------------------------------\\
-                /*
                 guard let imageID = attachment.fileWrapper?.filename else {
                     continue
                 }
 
-                guard let cachesURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-                    continue
-                }
-                let directoryURL = cachesURL.appendingPathComponent("com.lumley.richeditor")
-
-                let imageURL = directoryURL.appendingPathComponent(imageID)
-                let imageURLStr = imageURL.absoluteString
-                print("ImageURLStr: \(imageURLStr)")
-
-                 htmlString = htmlString.replacingOccurrences(of: "file:///\(imageID)", with: imageURLStr)
-                */
-                //----------------------------------------------------------------------------------------\\
-
-
-                //----------------------------------------------------------------------------------------\\
-                ///*
-                guard let imageID = attachment.fileWrapper?.filename else {
-                    continue
-                }
-
-                guard let base64Str = self.imageAttachments[imageID] else {
-                    continue
-                }
-                htmlString = htmlString.replacingOccurrences(of: "file:///\(imageID)", with: base64Str)
-                //*/
-                //----------------------------------------------------------------------------------------\\
+                 htmlString = htmlString.replacingOccurrences(of: "file:///\(imageID)", with: imageID)
             }
 
             print("HTML: \(htmlString)")

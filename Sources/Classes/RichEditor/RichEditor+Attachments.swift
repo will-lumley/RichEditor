@@ -9,6 +9,22 @@ import Foundation
 
 public extension RichEditor {
 
+    static var attachmentsDirectory: URL {
+        // Get the documents directory
+        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            fatalError()
+        }
+
+        // Create our own subdirectory within the documents directory
+        let directoryURL = documentDirectory.appendingPathComponent("com.lumley.richeditor")
+
+        // Create the directory, if it doesn't exist
+        if FileManager.default.fileExists(atPath: directoryURL.path) == false {
+            try! FileManager.default.createDirectory(at: directoryURL, withIntermediateDirectories: true, attributes: nil)
+        }
+
+        return directoryURL
+    }
     func promptUserForAttachments(windowForModal: NSWindow?) {
         let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = true
@@ -42,39 +58,19 @@ public extension RichEditor {
         //Iterate over every URL and create a NSTextAttachment from it
         for url in urls {
 
-            //Get a copy of the data and insert it into our Caches folder
+            //Get a copy of the data and insert it into our attachments folder
             /*----------------------------------------------------------------*/
             let imageID = "\(UUID().uuidString).\(url.pathExtension)"
-
-            guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-                continue
-            }
-            let directoryURL = documentDirectory.appendingPathComponent("com.lumley.richeditor")
-
-            try! FileManager.default.createDirectory(at: directoryURL, withIntermediateDirectories: true, attributes: nil)
+            let directoryURL = RichEditor.attachmentsDirectory
 
             let imageData = try! Data(contentsOf: url)
             let imageURL = directoryURL.appendingPathComponent(imageID)
 
             try! imageData.write(to: imageURL)
-
-            //Create and store a base64 encoded copy of our image for our HTML output
-            let image = NSImage(data: imageData)
-            guard let base64Str = image?.base64String(for: imageURL.imageType) else {
-                continue
-            }
-            self.imageAttachments[imageID] = base64Str
             /*----------------------------------------------------------------*/
 
             let attachment = imageURL.textAttachment
             let attachmentAttrStr = NSAttributedString(attachment: attachment)
-
-            print("")
-            print("ImageID: \(imageID)")
-            print("DirectoryURL: \(directoryURL)")
-            print("ImageURL: \(imageURL)")
-            print("Attachment: \(attachment)")
-            print("")
 
             self.textView.textStorage?.append(attachmentAttrStr)
         }

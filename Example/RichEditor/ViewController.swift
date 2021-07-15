@@ -13,21 +13,15 @@ import macColorPicker
 class ViewController: NSViewController
 {
     @IBOutlet weak var richEditor: RichEditor!
-    
-    /// This window displays the HTML, that was sourced from the RichEditor.html() function
-    private var previewTextViewController: PreviewTextViewController?
-    
-    /// This window displays the HTML from the RawHTML
-    private var previewWebViewController: PreviewWebViewController?
-    
+
+    private var previewViewController: PreviewViewController?
+
     // MARK: - NSViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.openPreviewTextWindow()
-        self.openPreviewWebWindow()
-        
+        self.openPreviewWindow()
         self.richEditor.richEditorDelegate = self
     }
     
@@ -36,22 +30,13 @@ class ViewController: NSViewController
         self.view.window?.title = "1. Rich Editor"
     }
     
-    func openPreviewTextWindow() {
-        let storyboardID = "PreviewWindowController"
-        let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
-        previewWindowController.window?.title = "2. Raw HTML"
+    func openPreviewWindow() {
+        let previewWindowController = self.storyboard!.instantiateController(withIdentifier: "PreviewWindowController") as! NSWindowController
+        previewWindowController.window?.title = "Preview"
         previewWindowController.showWindow(self)
         
-        self.previewTextViewController = previewWindowController.contentViewController as? PreviewTextViewController
-    }
-
-    func openPreviewWebWindow() {
-        let storyboardID = "PreviewWebWindowController"
-        let previewWindowController = self.storyboard!.instantiateController(withIdentifier: storyboardID) as! NSWindowController
-        previewWindowController.window?.title = "3. Parsed HTML"
-        previewWindowController.showWindow(self)
-        
-        self.previewWebViewController = previewWindowController.contentViewController as? PreviewWebViewController
+        self.previewViewController = previewWindowController.contentViewController as? PreviewViewController
+        self.previewViewController?.richEditor = self.richEditor
     }
 
 }
@@ -66,10 +51,10 @@ extension ViewController: RichEditorDelegate {
     
     func richEditorTextChanged(_ richEditor: RichEditor) {
         // Parse the HTML into a WebView and display the contents
-        self.previewWebViewController?.display(richEditor: richEditor)
-        
-        // Assign the raw HTML text so we can see the actual HTML content
-        self.previewTextViewController?.display(richEditor: richEditor)
+//        self.previewWebViewController?.display(richEditor: richEditor)
+//
+//        // Assign the raw HTML text so we can see the actual HTML content
+//        self.previewTextViewController?.display(richEditor: richEditor)
     }
 
 }

@@ -9,10 +9,9 @@
 /* Begin PBXBuildFile section */
 		0B3290AD32EEE398E61FD980 /* Pods_RichEditor_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68092981D0F6EFC91D7403 /* Pods_RichEditor_Tests.framework */; };
 		28DFC7C113D213B946368760 /* Pods_RichEditor_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA3EB33AE9DACA9BF9D4793 /* Pods_RichEditor_Example.framework */; };
+		BEE6790A269D5A710073CA71 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE67909269D59B00073CA71 /* PreviewViewController.swift */; };
 		BEEE9CA9264A937D00B8620C /* NSColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE9CA5264A937D00B8620C /* NSColor+Hex.swift */; };
-		BEEE9CAA264A937D00B8620C /* PreviewTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE9CA6264A937D00B8620C /* PreviewTextViewController.swift */; };
 		BEEE9CAB264A937D00B8620C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE9CA7264A937D00B8620C /* ViewController.swift */; };
-		BEEE9CAC264A937D00B8620C /* PreviewWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE9CA8264A937D00B8620C /* PreviewWebViewController.swift */; };
 		ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67B20348A760038D96B /* AppDelegate.swift */; };
 		ED83F68020348A760038D96B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED83F67F20348A760038D96B /* Assets.xcassets */; };
 		ED83F68320348A760038D96B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED83F68120348A760038D96B /* Main.storyboard */; };
@@ -37,10 +36,9 @@
 		7EC4DC5AAF3B012078EDAE47 /* Pods-RichEditor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichEditor_Tests.debug.xcconfig"; path = "Target Support Files/Pods-RichEditor_Tests/Pods-RichEditor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D8950587C61940BEAD9E33D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8E1AB52923CE42514E07F09D /* Pods-RichEditor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichEditor_Example.debug.xcconfig"; path = "Target Support Files/Pods-RichEditor_Example/Pods-RichEditor_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BEE67909269D59B00073CA71 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		BEEE9CA5264A937D00B8620C /* NSColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Hex.swift"; sourceTree = "<group>"; };
-		BEEE9CA6264A937D00B8620C /* PreviewTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewTextViewController.swift; sourceTree = "<group>"; };
 		BEEE9CA7264A937D00B8620C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BEEE9CA8264A937D00B8620C /* PreviewWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewWebViewController.swift; sourceTree = "<group>"; };
 		C92775AC108C55755EA0A03F /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
 		CB68092981D0F6EFC91D7403 /* Pods_RichEditor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichEditor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED83F67820348A760038D96B /* RichEditor_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RichEditor_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,8 +119,7 @@
 				BEEE9CA5264A937D00B8620C /* NSColor+Hex.swift */,
 				ED83F67B20348A760038D96B /* AppDelegate.swift */,
 				BEEE9CA7264A937D00B8620C /* ViewController.swift */,
-				BEEE9CA8264A937D00B8620C /* PreviewWebViewController.swift */,
-				BEEE9CA6264A937D00B8620C /* PreviewTextViewController.swift */,
+				BEE67909269D59B00073CA71 /* PreviewViewController.swift */,
 				ED83F67F20348A760038D96B /* Assets.xcassets */,
 				ED83F68120348A760038D96B /* Main.storyboard */,
 				ED83F68420348A760038D96B /* Info.plist */,
@@ -325,10 +322,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEEE9CAB264A937D00B8620C /* ViewController.swift in Sources */,
-				BEEE9CAA264A937D00B8620C /* PreviewTextViewController.swift in Sources */,
-				BEEE9CAC264A937D00B8620C /* PreviewWebViewController.swift in Sources */,
 				BEEE9CA9264A937D00B8620C /* NSColor+Hex.swift in Sources */,
 				ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */,
+				BEE6790A269D5A710073CA71 /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
