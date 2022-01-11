@@ -44,7 +44,7 @@ public extension RichEditor {
     */
     func apply(textColour: NSColor) {
         let colourAttr = [NSAttributedString.Key.foregroundColor: textColour]
-        self.add(attributes: colourAttr, onlyHighlightedText: self.textView.hasSelectedText)
+        self.add(attributes: colourAttr, textApplicationType: self.textView.hasSelectedText ? .selected : .future)
     }
     
     /**
@@ -52,7 +52,7 @@ public extension RichEditor {
     */
     func apply(highlightColour: NSColor) {
         let colourAttr = [NSAttributedString.Key.backgroundColor: highlightColour]
-        self.add(attributes: colourAttr, onlyHighlightedText: self.textView.hasSelectedText)
+        self.add(attributes: colourAttr, textApplicationType: self.textView.hasSelectedText ? .selected : .future)
     }
     
     /**
@@ -60,7 +60,7 @@ public extension RichEditor {
     */
     func apply(font: NSFont) {
         let fontAttr = [NSAttributedString.Key.font: font]
-        self.add(attributes: fontAttr, onlyHighlightedText: self.textView.hasSelectedText)
+        self.add(attributes: fontAttr, textApplicationType: self.textView.hasSelectedText ? .selected : .future)
     }
 
 }

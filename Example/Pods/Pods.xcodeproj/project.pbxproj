@@ -7,125 +7,125 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0ADD36781BFB2449A20FCD7AC5D2EAA6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A38B56B3B49A8DC0714C03FEFC01F1C /* Cocoa.framework */; };
-		0B3293B9D1902D756A39CF6991E379A5 /* RichEditor+Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B79B92C8E27DD88452641DC7C76E6A /* RichEditor+Stack.swift */; };
-		0C9B0EBA6C52BA64273A3F23690A5957 /* white-weight-italic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5DE8878811AB0B471AAE5A977CC43C3 /* white-weight-italic@3x.png */; };
-		11B67A860CB735ED2303A07BCBD6E249 /* RichEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F82F6E32DC0B945E6B594C4D58696BA /* RichEditor.swift */; };
-		16EDD85CCBA7004499D488A0CAFBFF90 /* white-align-justify@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A06FDCDAFEE5E0CAD92348E0D40F6E4 /* white-align-justify@3x.png */; };
-		1C6A431F496F7847DA0C9B5D31818622 /* white-text-strikethrough@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EED11911F465404DCF0B3D04A2F6FC4F /* white-text-strikethrough@3x.png */; };
-		25FCC0656A6A96A544129BB4A671E289 /* ColorButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC03DBB85F1BC4C13418DCFFF338D429 /* ColorButtonCell.swift */; };
-		267AA8A856BD54845DF4958E024D5208 /* white-weight-italic@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56B45B800429C085344D8217718AC1AE /* white-weight-italic@1x.png */; };
-		29C963F82D8DEE851B4EB5E620002015 /* CGFloat+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2236878A34A4E37C805B4B99AB278 /* CGFloat+Formatting.swift */; };
-		2C33F71CCBDBE7ABF153420F06E05489 /* white-align-justify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5799AAE59A5C2A68FBD72430533D1 /* white-align-justify@2x.png */; };
-		3C2983778A76D1D5732CF1A7689117C8 /* white-text-list@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2030E25D6E4444047555025D6520C64 /* white-text-list@3x.png */; };
-		3FDEA04F8528C51B771D664D0162E1E2 /* white-align-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B33F6816F04BD51B96344657C24A16CB /* white-align-left@2x.png */; };
-		5B5E46C07F7624C30752B8E2F9EC4ECF /* RichEditor+Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84FD842F230108268C885147AC7D714 /* RichEditor+Links.swift */; };
-		6215F91EBB39486D16D6B4F8F2DA590B /* white-text-strikethrough@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED54D8D391B716ECBC11C786C46EC227 /* white-text-strikethrough@2x.png */; };
-		695F9CD988F59A8CDC9345DC671579A3 /* white-text-highlight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BBA3CA7FE75FC3EBB78F30B0874B41 /* white-text-highlight@3x.png */; };
-		6AE8DADCCBC6CE4E14F199A03AF281D2 /* macColorPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C642B882737FE904B865DA52D7AF95D4 /* macColorPicker.framework */; };
-		6B16F7AB410D7C914DD2421F2316C79A /* Pods-RichEditor_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F81BA55F823E056CD3D3D28A8D5D20C1 /* Pods-RichEditor_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C3547D10C5836D1B712F2CCDF9FF212 /* white-text-image@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58E43C3E83B08CA7F9F522F505E6D93D /* white-text-image@3x.png */; };
-		6F8DFF8976BE2410CB56A6D7418B7238 /* white-text-link@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8CAD1678A6FC7821C662FC0119BE76B /* white-text-link@3x.png */; };
-		7045A8A37BD2F3FD5931BE093FCC3AB6 /* macColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB963BCDC31B91DB39EB2A77FA1AC90 /* macColorPicker-dummy.m */; };
-		72567DA2D36B54B9736D96DD420DE7D8 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D9F6770D697DD43BC5E3B73F72CC717C /* Resources.bundle */; };
-		777DAC69BE4D455675F92AE250150AC5 /* white-text-strikethrough@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC19226EFB5521CF6F5AA3B6C04AD1C /* white-text-strikethrough@1x.png */; };
-		79E2DF02E273DA397678B6A539A47CBF /* Pods-RichEditor_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B26BDF036DCC80E19475FB78017414B /* Pods-RichEditor_Tests-dummy.m */; };
-		7C5184258E6AD945FECC9E91C4E5AF12 /* FontStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B85F196C753901A9C3B0941523A53C5 /* FontStyling.swift */; };
-		815FCD9DE86ACD701E8E8FCC992D4FE0 /* white-text-color@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E740DDA6F28FC5304F1F9494DF6849B0 /* white-text-color@2x.png */; };
-		8206543E794BA13B988D10C168858044 /* NSTextView+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE5539884C58F68379435BBFB54E69F /* NSTextView+Convenience.swift */; };
-		82DF9A9221BCD4FC92699C9C9BC07E41 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BD3E1878368678ED870488AFFC67B6 /* String+Convenience.swift */; };
-		8388BFFAA5AD3B0684B63A734B328448 /* white-text-color@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5727AEAB22F2508AE902F704D8864E8A /* white-text-color@1x.png */; };
-		8445E9F2EC82ABF49526D7424BE2214A /* white-weight-underline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F92E2E2191B6930ED9C09A4FD53829A0 /* white-weight-underline@2x.png */; };
-		87425864BB9A2120298710FCC7172D14 /* RichEditorToolbar+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3CEB834E808976160307ED8CA2F36 /* RichEditorToolbar+UI.swift */; };
-		88756FA0E178517FE581CC2F845EAC8C /* NSColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868E16119807BA0124CBDBC03DAD023 /* NSColor+Colors.swift */; };
-		89AE14C0444DCC72401794025D91E787 /* white-weight-underline@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA1AA2580AA452604872C60EB56F781 /* white-weight-underline@1x.png */; };
-		8DA7001419EE885A8C74850C0530CB55 /* NSFont+Traits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D22A1CB54FD376F2567CF91215CDA4E /* NSFont+Traits.swift */; };
-		918D5314BF9EE34F136CF8C4BEBF0D3B /* RichEditorToolbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0200506836C0F7178C42D5F02E4F3B2 /* RichEditorToolbarButton.swift */; };
-		98CCEDEAB501273BF2689F4DE8A11640 /* white-align-justify@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 073EA462E6FDCE614FAB6866209F77CD /* white-align-justify@1x.png */; };
-		9A254BED5778147A73492444EBA6C921 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A38B56B3B49A8DC0714C03FEFC01F1C /* Cocoa.framework */; };
-		9A7A3B846DAD92530FF2D10F0036327A /* white-text-highlight@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6893B51FD67F48859028BF686A055399 /* white-text-highlight@1x.png */; };
-		9B7BD3E096FCE6993080084397F49D06 /* RichEditorToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D58C291D19D216AC9201CC09BFC1E4 /* RichEditorToolbar.swift */; };
-		9F4E7812DDCB08A4B99D4E3D74D38762 /* white-align-centre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4DCCC6D85091B731B317A69F02DF161 /* white-align-centre@2x.png */; };
-		9FC0E4F48F177D6F08BF1B449BFE07F0 /* white-text-image@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 068DFCECB1B82BFB7DA60CF6FF88D0BE /* white-text-image@1x.png */; };
-		A225662F166A7B785177684E67AB08DA /* white-weight-bold@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF07928E925D185DB4177CD08C9AEA /* white-weight-bold@1x.png */; };
-		A44B7B1D87822DE35964812D7BF7E6DC /* white-text-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0083676FDCF046CEF6C98A3F24BB1A /* white-text-list@2x.png */; };
-		A7DB8DE8189C612460E12A9ECC785AE3 /* white-weight-underline@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B10C245CC775F0A929CC6E02FB4330D4 /* white-weight-underline@3x.png */; };
-		A9E4A4A0A6B66985686F88274DA42B61 /* white-align-centre@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B24C5695A6C3E0D84EFE62F018C95A3 /* white-align-centre@3x.png */; };
-		A9F06715447173991093FFA26D586B5E /* RichTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1776071FFD0DB752C093E4E232650247 /* RichTextView.swift */; };
-		ABA8A97DE7DCE3EBABDAF882BFB434F1 /* NSAttributedString+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726AFE7A5782FAFDC702666BEC2576C2 /* NSAttributedString+Convenience.swift */; };
-		ADC766D6B17B91AF30065B8445DCA2FB /* RichEditor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB96BC0107AB887BB99075092930967B /* RichEditor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF6DA6BFF36E474F01B47204D1682EF0 /* RichEditor+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B10DEFDA5C5BF3AD6112B0E7470CF7B /* RichEditor+Styling.swift */; };
-		AFC53BDC86802B08CA50664A92B6B19F /* RichEditor+BulletPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7F6738D56C74A8D44402636A06904B /* RichEditor+BulletPoints.swift */; };
-		B0E5B69DEB4AF77938084C399EB0FA9F /* Dictionary+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A07EEB3DF90947DA1E9E1A5EEC666E /* Dictionary+Convenience.swift */; };
-		B37953F3C6D2E88296914F1D4CC7B9F9 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1061A068ACB3AB2574AD233294C3A1C /* ColorPicker.swift */; };
-		B39776CC59F8763FA6BFAEEFDAEBC2F5 /* white-weight-bold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8F3213D3F8E595E4774EED2FD6A0D3 /* white-weight-bold@2x.png */; };
-		B80F3D9DCC69B1E73C5BC47AB89699ED /* white-text-link@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F981BFA31F64B2257CDCDFAB721134D6 /* white-text-link@2x.png */; };
-		B8BAA5515C0132021348A81B59290E74 /* RichEditor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE0B50A9056F4E070490A2035B9E2D8 /* RichEditor-dummy.m */; };
-		B8F7714F2CB320130FEBDB85C31A4059 /* white-text-color@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 081F4C3C3052C7E99197C7D35079C1B3 /* white-text-color@3x.png */; };
-		B9482CE18F3294516C4833E0698F5008 /* RichEditor+KeyboardShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB83AB3D4F79E03519C61A151B0248B4 /* RichEditor+KeyboardShortcuts.swift */; };
-		BA69B1382FA50655050A575230E5242C /* RichEditor+Attachments.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD921E504D2785B7C9DAD6CA194F7CDE /* RichEditor+Attachments.swift */; };
-		BED9D0C7F752B41A4FE194C22E13769E /* white-align-right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E485CD6C5B5D134FC71B15D3FC3099 /* white-align-right@3x.png */; };
-		BFDD749A1F3BAACD54D962D00EEC709F /* white-align-right@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6007EBBECC8C7069519B41A8AD4810 /* white-align-right@1x.png */; };
-		C02A01E2813899059C6794AA3124C2E2 /* white-align-left@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C32C0121058A4E1255B9E0AD332EF0 /* white-align-left@1x.png */; };
-		C59D276EC696515AED51B237A4A3C0CA /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10DD47687DE1480F8014B0A489A7C44 /* ColorCell.swift */; };
-		C68DAC43090E7B215643E6858315B3DE /* macColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F7D0E34EB61E1711421EF8350D643189 /* macColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C81BF2CE99A329DE0838B2D88EDEA51A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A38B56B3B49A8DC0714C03FEFC01F1C /* Cocoa.framework */; };
-		C9A3AB180157C2F3B2A2197DCD6DB4B9 /* white-text-list@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73D1DE7E8F073AD5E4F0A7DDD51748B7 /* white-text-list@1x.png */; };
-		CAA583DCD62313C749E2082147603188 /* URL+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23AA29136EF4A408892AA52E67A7B79 /* URL+Images.swift */; };
-		CBE04C16842D56B8FCE489E8B2B5A272 /* Dictionary+TypingAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13432B784E17203538AB8B2628CDD19 /* Dictionary+TypingAttributes.swift */; };
-		D42CB326EC926335E7CAE62AD2EE93DE /* white-align-centre@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8984F2DB29201AC1C9B947BAED9304C1 /* white-align-centre@1x.png */; };
-		D44AD09B7EB5D90381F2543F37A4BB85 /* RichEditor+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A91064814B2C73E88894C08C5FF0F3B /* RichEditor+Core.swift */; };
-		D5205A9F753646E31D3F449D1C1E16DF /* white-align-right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A72177AB7112A345C66D2167AE5C66 /* white-align-right@2x.png */; };
-		D79A95196037648DE41235C68BDF394C /* NSImage+Pods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A95428A0705CF5C9B3609D18C8E1EF1 /* NSImage+Pods.swift */; };
-		D878A84AFB0B347FF84A29F13C9232FD /* white-text-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A5C402C1B1A021A2313A3FFF8063B4 /* white-text-image@2x.png */; };
-		D935BE133B83FDEA2FD077682DB62270 /* white-weight-bold@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F405569D2751B776719B95A4E1E4AD /* white-weight-bold@3x.png */; };
-		DB256655C188C7CB82794E71B3D7A665 /* Pods-RichEditor_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3DC6B5661A9963CFAFB81A6EFF6C06 /* Pods-RichEditor_Example-dummy.m */; };
-		DEA40D19E83FC26E4AFDBA1192B5D369 /* white-text-highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89DE1A7BC7BF7086F28B4EAFBFCA53F7 /* white-text-highlight@2x.png */; };
-		E40C0965896F3BB378BD0995F379127E /* String+BulletPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40026A300E3994F76F7654F4D9D735D /* String+BulletPoints.swift */; };
-		E492D56F3510EDECB8B77763192C527A /* white-align-left@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B2AF806B7CD76E5090E353090DBFD48 /* white-align-left@3x.png */; };
-		E94A4ED76BE495B89E3AE6C0147592B1 /* white-weight-italic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6492A293F74245CF662D2287ABE19B3 /* white-weight-italic@2x.png */; };
-		EA841A2166492D897C0256F520A466DF /* Pods-RichEditor_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 59F69B63BDDCA09A017AEABEE4574414 /* Pods-RichEditor_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F206F96A806F1B4AF8CD7DA8BEABD9ED /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A38B56B3B49A8DC0714C03FEFC01F1C /* Cocoa.framework */; };
-		F30A77A6391FBBDF0571746F478E8737 /* white-text-link@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 377E501D0BBFAE2663F0D22A692FB598 /* white-text-link@1x.png */; };
-		F6A0669DE0D7AA069F302C50F7BA2EDF /* NSMenu+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D1C12FE33D61B14210E5712ADC72F8 /* NSMenu+Convenience.swift */; };
-		FBB136BA8C36252BB1CC7381C770EB09 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70ECF050BE0F2240374B5F61BDCE19B /* ColorPickerViewController.swift */; };
+		0016758AEFF0DBA10936EC73336B1B33 /* NSTextView+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE5539884C58F68379435BBFB54E69F /* NSTextView+Convenience.swift */; };
+		0819F0A0FF320C8A285FF806EF3B8AE0 /* RichEditor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE0B50A9056F4E070490A2035B9E2D8 /* RichEditor-dummy.m */; };
+		08B7BD999ED4AFC3272177E542FCF652 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10DD47687DE1480F8014B0A489A7C44 /* ColorCell.swift */; };
+		0B941B5AD27ADE0EF09412D15B45D877 /* white-align-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B33F6816F04BD51B96344657C24A16CB /* white-align-left@2x.png */; };
+		0DA16ABF9D0B7B9858BAB5EE1C7E40C5 /* white-text-link@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8CAD1678A6FC7821C662FC0119BE76B /* white-text-link@3x.png */; };
+		11F05D3A3A3F4B71387931AF6FC4DADC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
+		12D5CBA5B454E939CE87B9AFBE3C8D8F /* white-text-image@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 068DFCECB1B82BFB7DA60CF6FF88D0BE /* white-text-image@1x.png */; };
+		1B017A295E3FDB1893640F3796EBA386 /* Dictionary+TypingAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13432B784E17203538AB8B2628CDD19 /* Dictionary+TypingAttributes.swift */; };
+		20C799FF769FADBAF19B1C9F28346DC5 /* white-weight-bold@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF07928E925D185DB4177CD08C9AEA /* white-weight-bold@1x.png */; };
+		22FFB81102198A2ACB893732D2828A73 /* String+BulletPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40026A300E3994F76F7654F4D9D735D /* String+BulletPoints.swift */; };
+		32F19AE0D10B7FC9AFE6A7F4B1CAA381 /* FontStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B85F196C753901A9C3B0941523A53C5 /* FontStyling.swift */; };
+		35DB55E7127BFDDB25542F39F5019758 /* white-text-highlight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BBA3CA7FE75FC3EBB78F30B0874B41 /* white-text-highlight@3x.png */; };
+		394A8E1D0587858EB9F1F80B34035BF6 /* white-text-highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89DE1A7BC7BF7086F28B4EAFBFCA53F7 /* white-text-highlight@2x.png */; };
+		395C50AFAE9D37A90F41B977E11AFDF1 /* RichEditor-Resources in Resources */ = {isa = PBXBuildFile; fileRef = D9F6770D697DD43BC5E3B73F72CC717C /* RichEditor-Resources */; };
+		3CF6F23BB788061DFF7C9C675ED02B53 /* white-weight-italic@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56B45B800429C085344D8217718AC1AE /* white-weight-italic@1x.png */; };
+		3F10AD7CBD6E68AF784B6ADB8558686E /* RichEditor+Attachments.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD921E504D2785B7C9DAD6CA194F7CDE /* RichEditor+Attachments.swift */; };
+		40AC8C58DF59AC84805BB9929767AA59 /* white-align-right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E485CD6C5B5D134FC71B15D3FC3099 /* white-align-right@3x.png */; };
+		41081564FEF4A646D9BC96D914791402 /* RichEditor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB96BC0107AB887BB99075092930967B /* RichEditor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		441FE13074F03CA338C79444BE068804 /* white-align-justify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F5799AAE59A5C2A68FBD72430533D1 /* white-align-justify@2x.png */; };
+		4507FE912B00DF0E63609323C4DF196F /* white-text-link@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F981BFA31F64B2257CDCDFAB721134D6 /* white-text-link@2x.png */; };
+		45B9DB83CF65D6EB2D7200AAEEBA1B94 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
+		45C6A44BB88ED4460BE23838BF372C23 /* RichEditor+BulletPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7F6738D56C74A8D44402636A06904B /* RichEditor+BulletPoints.swift */; };
+		496E75AA2621C25CBE6D37B2BD2CEA39 /* white-weight-italic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6492A293F74245CF662D2287ABE19B3 /* white-weight-italic@2x.png */; };
+		49C082CEB839633040BDB779F5C5E734 /* white-text-color@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 081F4C3C3052C7E99197C7D35079C1B3 /* white-text-color@3x.png */; };
+		4CB8289039DEF8EDA32534E69561CE3D /* RichEditorToolbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0200506836C0F7178C42D5F02E4F3B2 /* RichEditorToolbarButton.swift */; };
+		4E05B4AF555E2A3801A621A82C9F3B13 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
+		525D02C195F0D41785876C44B1E6FDD9 /* white-weight-bold@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F405569D2751B776719B95A4E1E4AD /* white-weight-bold@3x.png */; };
+		57CD0E4AE82B3247102D5216497DCE4D /* Pods-RichEditor_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3DC6B5661A9963CFAFB81A6EFF6C06 /* Pods-RichEditor_Example-dummy.m */; };
+		5D722520917F1F5E9B7C8D1DE5055070 /* macColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB963BCDC31B91DB39EB2A77FA1AC90 /* macColorPicker-dummy.m */; };
+		5E521C5E731FC8B6979D14A2C99B10A2 /* RichEditor+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A91064814B2C73E88894C08C5FF0F3B /* RichEditor+Core.swift */; };
+		603ED7848A86C8CC77C3612430966DB7 /* RichEditor+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B10DEFDA5C5BF3AD6112B0E7470CF7B /* RichEditor+Styling.swift */; };
+		6609969804C7E43F571986AA15103977 /* NSAttributedString+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726AFE7A5782FAFDC702666BEC2576C2 /* NSAttributedString+Convenience.swift */; };
+		66822A487B28BE29E72263B0C652981C /* Pods-RichEditor_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 59F69B63BDDCA09A017AEABEE4574414 /* Pods-RichEditor_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		675432F940850F53F622C4EDA5C38BF8 /* white-text-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0083676FDCF046CEF6C98A3F24BB1A /* white-text-list@2x.png */; };
+		6D703443D9CF361DCDCC96CEED303B80 /* Pods-RichEditor_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F81BA55F823E056CD3D3D28A8D5D20C1 /* Pods-RichEditor_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E04B8AB57720616E19FA0A0C1B81F8D /* URL+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23AA29136EF4A408892AA52E67A7B79 /* URL+Images.swift */; };
+		6FC690570390169671E827B6E17B0D36 /* RichEditor+KeyboardShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB83AB3D4F79E03519C61A151B0248B4 /* RichEditor+KeyboardShortcuts.swift */; };
+		72ED04F0B00D73E45E2BDE5928132087 /* NSImage+Pods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A95428A0705CF5C9B3609D18C8E1EF1 /* NSImage+Pods.swift */; };
+		7326DD087E5B199DA5C725F5B9C5153D /* white-weight-underline@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B10C245CC775F0A929CC6E02FB4330D4 /* white-weight-underline@3x.png */; };
+		77C1B3279FFFE3FBC138F6370D84DA44 /* white-align-justify@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 073EA462E6FDCE614FAB6866209F77CD /* white-align-justify@1x.png */; };
+		7931409EDD938EBBD067AB8B5A62DF38 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1061A068ACB3AB2574AD233294C3A1C /* ColorPicker.swift */; };
+		7DC5A9BBFA2987CA6B0A0B24702D8919 /* RichEditor+Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B79B92C8E27DD88452641DC7C76E6A /* RichEditor+Stack.swift */; };
+		7DDF1D44A42A3A5B9E6317064720CF2B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
+		82DC19714A965AFCF1BCD7F67ADEA8AB /* white-align-centre@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8984F2DB29201AC1C9B947BAED9304C1 /* white-align-centre@1x.png */; };
+		86005070BBAEB92E36991F89EC1B14E1 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70ECF050BE0F2240374B5F61BDCE19B /* ColorPickerViewController.swift */; };
+		876D5D1A10FCC939B9B245D1BA516B07 /* white-text-image@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58E43C3E83B08CA7F9F522F505E6D93D /* white-text-image@3x.png */; };
+		8F09F4596BB6987A634B586976F5A49D /* white-text-list@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2030E25D6E4444047555025D6520C64 /* white-text-list@3x.png */; };
+		97C4C1E2D11BDF8D7B0F9A1D14A69188 /* Dictionary+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A07EEB3DF90947DA1E9E1A5EEC666E /* Dictionary+Convenience.swift */; };
+		981E207E20D30E5EE6252F5171698AF9 /* white-weight-bold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8F3213D3F8E595E4774EED2FD6A0D3 /* white-weight-bold@2x.png */; };
+		98563956BB3E36A5A3A170AD737341B2 /* white-align-left@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B2AF806B7CD76E5090E353090DBFD48 /* white-align-left@3x.png */; };
+		A091ADED52C1ED0118DC9145C66F2E9D /* ColorButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC03DBB85F1BC4C13418DCFFF338D429 /* ColorButtonCell.swift */; };
+		A913577E4F5AE86EA23D1933FF3FC5AA /* NSMenu+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D1C12FE33D61B14210E5712ADC72F8 /* NSMenu+Convenience.swift */; };
+		AB920D640F14D264594D69F5ED43FC42 /* white-text-strikethrough@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC19226EFB5521CF6F5AA3B6C04AD1C /* white-text-strikethrough@1x.png */; };
+		AC0CE52C45FD5B4786F3AE4923EA3303 /* white-text-strikethrough@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED54D8D391B716ECBC11C786C46EC227 /* white-text-strikethrough@2x.png */; };
+		AC0EC0CED3B71905C73C8FF661E3AB3A /* macColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F7D0E34EB61E1711421EF8350D643189 /* macColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0E96AC62B35085120098C45BD8BD129 /* RichEditorToolbar+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3CEB834E808976160307ED8CA2F36 /* RichEditorToolbar+UI.swift */; };
+		B45BB33EA5B172911DB67AA53B13AE3D /* RichEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F82F6E32DC0B945E6B594C4D58696BA /* RichEditor.swift */; };
+		B79B73C00B35C873284560FE29718690 /* white-align-centre@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B24C5695A6C3E0D84EFE62F018C95A3 /* white-align-centre@3x.png */; };
+		BA48EF7C157D7066E294B8732C15BBFC /* white-text-color@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E740DDA6F28FC5304F1F9494DF6849B0 /* white-text-color@2x.png */; };
+		BECBBD5B278CFFE2009AC09C /* RichEditor+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECBBD5A278CFFE2009AC09C /* RichEditor+Alignment.swift */; };
+		C0B8A70F49A06CBA6D69196EF2AFD416 /* white-weight-underline@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA1AA2580AA452604872C60EB56F781 /* white-weight-underline@1x.png */; };
+		C25CB5AFEA05F7A780C838CB881997DC /* Pods-RichEditor_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B26BDF036DCC80E19475FB78017414B /* Pods-RichEditor_Tests-dummy.m */; };
+		C6E53506B268AD8B6475DC539209C692 /* white-text-strikethrough@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EED11911F465404DCF0B3D04A2F6FC4F /* white-text-strikethrough@3x.png */; };
+		C8C40B3C140B01A6640961A0E068A6C5 /* white-align-right@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6007EBBECC8C7069519B41A8AD4810 /* white-align-right@1x.png */; };
+		CE406B551BD303FB720C6E3D8A5D2864 /* white-text-color@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5727AEAB22F2508AE902F704D8864E8A /* white-text-color@1x.png */; };
+		D1AFE5688A496AD4DBF9384D2B6D7C68 /* NSColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868E16119807BA0124CBDBC03DAD023 /* NSColor+Colors.swift */; };
+		D66876ACC432ED1341E9C3F5038ACA16 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BD3E1878368678ED870488AFFC67B6 /* String+Convenience.swift */; };
+		D8B0640F883DACBFC9756C3942DDD52B /* CGFloat+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2236878A34A4E37C805B4B99AB278 /* CGFloat+Formatting.swift */; };
+		DA806D5FB0CBFF50E5D6E74354B01D7E /* white-text-highlight@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6893B51FD67F48859028BF686A055399 /* white-text-highlight@1x.png */; };
+		DBF8B5C457AF51CF0A0A6A9B99435931 /* RichEditor+Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84FD842F230108268C885147AC7D714 /* RichEditor+Links.swift */; };
+		DCFEB8928DEB10D0329182967E411898 /* white-text-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A5C402C1B1A021A2313A3FFF8063B4 /* white-text-image@2x.png */; };
+		DD2DC13ADEC1C4C1C4201D8C8D27BE3E /* white-text-list@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73D1DE7E8F073AD5E4F0A7DDD51748B7 /* white-text-list@1x.png */; };
+		E22E6D17B935A4CE069EC1D808C95D50 /* white-weight-underline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F92E2E2191B6930ED9C09A4FD53829A0 /* white-weight-underline@2x.png */; };
+		E8CA629B441642EB8B9FB84680802226 /* white-weight-italic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5DE8878811AB0B471AAE5A977CC43C3 /* white-weight-italic@3x.png */; };
+		EE303C57360C894807440FCAD364C772 /* white-text-link@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 377E501D0BBFAE2663F0D22A692FB598 /* white-text-link@1x.png */; };
+		F37809CFB711034C6B076459B50995D9 /* white-align-left@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C32C0121058A4E1255B9E0AD332EF0 /* white-align-left@1x.png */; };
+		F428F815A11946C2EB4F328C5E277A4D /* white-align-centre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4DCCC6D85091B731B317A69F02DF161 /* white-align-centre@2x.png */; };
+		F7295C4ED1782C94CA7EC3833A8F4DC3 /* RichTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1776071FFD0DB752C093E4E232650247 /* RichTextView.swift */; };
+		F7D831CFB8C5EA8A1AAB15E54918F44C /* NSFont+Traits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D22A1CB54FD376F2567CF91215CDA4E /* NSFont+Traits.swift */; };
+		FA945C8341CFFFF69594E0958150A20B /* white-align-right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A72177AB7112A345C66D2167AE5C66 /* white-align-right@2x.png */; };
+		FB51723FDA13E2E562CABA3F50952AA6 /* RichEditorToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D58C291D19D216AC9201CC09BFC1E4 /* RichEditorToolbar.swift */; };
+		FEDE3F3824A02F4D3D97E23613EE744E /* white-align-justify@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A06FDCDAFEE5E0CAD92348E0D40F6E4 /* white-align-justify@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		786D24F4FBE557B970E9F1AC7CD91B11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3A7991A4F982F77D548F259F9F856692;
-			remoteInfo = macColorPicker;
-		};
-		7F82C72F86DE334E8692060557E8507A /* PBXContainerItemProxy */ = {
+		5C54C5090C2F10F483F7A1EF0A9AD483 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 140B73012A871654F402406438E0C8B5;
 			remoteInfo = "RichEditor-Resources";
 		};
-		AA42D0FA9B790E25FE5E1FEAC59C6415 /* PBXContainerItemProxy */ = {
+		76D31588D8AC362F7F80C241C5D23CBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83FFF657196094B71F147D25444AC5E8;
+			remoteInfo = "Pods-RichEditor_Example";
+		};
+		7B745B11EC310A3F9F5986F363343D58 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 369E4AC0D183973D19A4522DC26B1027;
 			remoteInfo = RichEditor;
 		};
-		ABE92C38F2402ED9A3E226211C9CE4E6 /* PBXContainerItemProxy */ = {
+		9AF00696182296B4B2D0D6FCA7202176 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3A7991A4F982F77D548F259F9F856692;
 			remoteInfo = macColorPicker;
 		};
-		BCB7D6A30DA97645131F52619EC43977 /* PBXContainerItemProxy */ = {
+		AC12EC469B7A16D761E5B58FAD42594C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 83FFF657196094B71F147D25444AC5E8;
-			remoteInfo = "Pods-RichEditor_Example";
+			remoteGlobalIDString = 3A7991A4F982F77D548F259F9F856692;
+			remoteInfo = macColorPicker;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -140,8 +140,7 @@
 		0DA5CBB531A36D4145FFA13CCDEA7F9F /* Pods-RichEditor_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RichEditor_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		12A5C402C1B1A021A2313A3FFF8063B4 /* white-text-image@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "white-text-image@2x.png"; path = "Resources/white-text-image@2x.png"; sourceTree = "<group>"; };
 		1776071FFD0DB752C093E4E232650247 /* RichTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RichTextView.swift; sourceTree = "<group>"; };
-		1A38B56B3B49A8DC0714C03FEFC01F1C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		1FD5CFB4DEA79C5DE4D08C770B193D79 /* macColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = macColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FD5CFB4DEA79C5DE4D08C770B193D79 /* macColorPicker */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = macColorPicker; path = macColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2168F8B7DB4A93C65C73705E9A7D299C /* Pods-RichEditor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RichEditor_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		22F5799AAE59A5C2A68FBD72430533D1 /* white-align-justify@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "white-align-justify@2x.png"; path = "Resources/white-align-justify@2x.png"; sourceTree = "<group>"; };
 		2684C158B6E8E6E5728AEEBAF9368BE1 /* Pods-RichEditor_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RichEditor_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -154,7 +153,7 @@
 		3868E16119807BA0124CBDBC03DAD023 /* NSColor+Colors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSColor+Colors.swift"; path = "Sources/macColorPicker/Extensions/NSColor+Colors.swift"; sourceTree = "<group>"; };
 		3A91064814B2C73E88894C08C5FF0F3B /* RichEditor+Core.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "RichEditor+Core.swift"; sourceTree = "<group>"; };
 		3B24C5695A6C3E0D84EFE62F018C95A3 /* white-align-centre@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "white-align-centre@3x.png"; path = "Resources/white-align-centre@3x.png"; sourceTree = "<group>"; };
-		3ECEA4E695D78C7DB4E540A8D2E8A5F0 /* Pods_RichEditor_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichEditor_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ECEA4E695D78C7DB4E540A8D2E8A5F0 /* Pods-RichEditor_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-RichEditor_Example"; path = Pods_RichEditor_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A95428A0705CF5C9B3609D18C8E1EF1 /* NSImage+Pods.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSImage+Pods.swift"; sourceTree = "<group>"; };
 		4B10DEFDA5C5BF3AD6112B0E7470CF7B /* RichEditor+Styling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "RichEditor+Styling.swift"; sourceTree = "<group>"; };
 		4B26BDF036DCC80E19475FB78017414B /* Pods-RichEditor_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RichEditor_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -174,7 +173,7 @@
 		726AFE7A5782FAFDC702666BEC2576C2 /* NSAttributedString+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Convenience.swift"; sourceTree = "<group>"; };
 		73D1DE7E8F073AD5E4F0A7DDD51748B7 /* white-text-list@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "white-text-list@1x.png"; path = "Resources/white-text-list@1x.png"; sourceTree = "<group>"; };
 		74F405569D2751B776719B95A4E1E4AD /* white-weight-bold@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "white-weight-bold@3x.png"; path = "Resources/white-weight-bold@3x.png"; sourceTree = "<group>"; };
-		785E7F5721CA363ABC49BE29448B218C /* Pods_RichEditor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichEditor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		785E7F5721CA363ABC49BE29448B218C /* Pods-RichEditor_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-RichEditor_Tests"; path = Pods_RichEditor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE5539884C58F68379435BBFB54E69F /* NSTextView+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSTextView+Convenience.swift"; sourceTree = "<group>"; };
 		7FB963BCDC31B91DB39EB2A77FA1AC90 /* macColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "macColorPicker-dummy.m"; sourceTree = "<group>"; };
 		88C32C0121058A4E1255B9E0AD332EF0 /* white-align-left@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "white-align-left@1x.png"; path = "Resources/white-align-left@1x.png"; sourceTree = "<group>"; };
@@ -185,7 +184,7 @@
 		8F0083676FDCF046CEF6C98A3F24BB1A /* white-text-list@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "white-text-list@2x.png"; path = "Resources/white-text-list@2x.png"; sourceTree = "<group>"; };
 		8FA1AA2580AA452604872C60EB56F781 /* white-weight-underline@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "white-weight-underline@1x.png"; path = "Resources/white-weight-underline@1x.png"; sourceTree = "<group>"; };
 		9B85F196C753901A9C3B0941523A53C5 /* FontStyling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FontStyling.swift; sourceTree = "<group>"; };
-		9B89DEEF181DD4430EBDE56F18C6F196 /* RichEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RichEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B89DEEF181DD4430EBDE56F18C6F196 /* RichEditor */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RichEditor; path = RichEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DA21E7651EC44B383DE8910C32CC20A /* macColorPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = macColorPicker.release.xcconfig; sourceTree = "<group>"; };
 		9F170FC9A00FB0FA29EE483E899CD96F /* Pods-RichEditor_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RichEditor_Tests.modulemap"; sourceTree = "<group>"; };
@@ -203,10 +202,11 @@
 		B5E3CEB834E808976160307ED8CA2F36 /* RichEditorToolbar+UI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "RichEditorToolbar+UI.swift"; sourceTree = "<group>"; };
 		BB83AB3D4F79E03519C61A151B0248B4 /* RichEditor+KeyboardShortcuts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "RichEditor+KeyboardShortcuts.swift"; sourceTree = "<group>"; };
 		BB96BC0107AB887BB99075092930967B /* RichEditor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RichEditor-umbrella.h"; sourceTree = "<group>"; };
+		BECBBD5A278CFFE2009AC09C /* RichEditor+Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RichEditor+Alignment.swift"; sourceTree = "<group>"; };
 		C0200506836C0F7178C42D5F02E4F3B2 /* RichEditorToolbarButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RichEditorToolbarButton.swift; sourceTree = "<group>"; };
 		C1061A068ACB3AB2574AD233294C3A1C /* ColorPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPicker.swift; path = Sources/macColorPicker/Classes/ColorPicker.swift; sourceTree = "<group>"; };
+		C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		C5DE8878811AB0B471AAE5A977CC43C3 /* white-weight-italic@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "white-weight-italic@3x.png"; path = "Resources/white-weight-italic@3x.png"; sourceTree = "<group>"; };
-		C642B882737FE904B865DA52D7AF95D4 /* macColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = macColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C699BBD208ED791C1AEFF10837E2E44D /* Pods-RichEditor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RichEditor_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CA8180738F431CEC7545D3D3B12595BD /* Pods-RichEditor_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RichEditor_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CC03DBB85F1BC4C13418DCFFF338D429 /* ColorButtonCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorButtonCell.swift; path = Sources/macColorPicker/Classes/ColorButtonCell.swift; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 		D18502E295F130AFDDECBBEAE3DCF70D /* Pods-RichEditor_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RichEditor_Example.modulemap"; sourceTree = "<group>"; };
 		D4A72177AB7112A345C66D2167AE5C66 /* white-align-right@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "white-align-right@2x.png"; path = "Resources/white-align-right@2x.png"; sourceTree = "<group>"; };
 		D4C6144934D2FE7B1D2E0E832E4B6F84 /* RichEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RichEditor.release.xcconfig; sourceTree = "<group>"; };
-		D9F6770D697DD43BC5E3B73F72CC717C /* Resources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Resources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F6770D697DD43BC5E3B73F72CC717C /* RichEditor-Resources */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "RichEditor-Resources"; path = Resources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8F3213D3F8E595E4774EED2FD6A0D3 /* white-weight-bold@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "white-weight-bold@2x.png"; path = "Resources/white-weight-bold@2x.png"; sourceTree = "<group>"; };
 		DD7F6738D56C74A8D44402636A06904B /* RichEditor+BulletPoints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "RichEditor+BulletPoints.swift"; sourceTree = "<group>"; };
 		E10DD47687DE1480F8014B0A489A7C44 /* ColorCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorCell.swift; path = Sources/macColorPicker/Classes/ColorCell.swift; sourceTree = "<group>"; };
@@ -244,43 +244,42 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0F4D3B1A269F6876A7091BF57CF3A73F /* Frameworks */ = {
+		080999EB4582A347E0C9724A67F21652 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A254BED5778147A73492444EBA6C921 /* Cocoa.framework in Frameworks */,
+				7DDF1D44A42A3A5B9E6317064720CF2B /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		105979A544E270362D1CB01DD8B8CEE2 /* Frameworks */ = {
+		4EC034BE4B569540399E25D0E28595D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11F05D3A3A3F4B71387931AF6FC4DADC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74761EF15DF433C70C15676BF7302DB5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2324ADA7F7B9995061EE019C22E39870 /* Frameworks */ = {
+		AD955729A3D5A447E6A5E09035B01A5C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F206F96A806F1B4AF8CD7DA8BEABD9ED /* Cocoa.framework in Frameworks */,
+				45B9DB83CF65D6EB2D7200AAEEBA1B94 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3BA9BE2905A214C8C15E92DA49550E1 /* Frameworks */ = {
+		E3DDC00B5438D4BC0E7ECBF7C0C87BC7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ADD36781BFB2449A20FCD7AC5D2EAA6 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F18BF27D7301B88F0AD040E2CC61FB41 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C81BF2CE99A329DE0838B2D88EDEA51A /* Cocoa.framework in Frameworks */,
-				6AE8DADCCBC6CE4E14F199A03AF281D2 /* macColorPicker.framework in Frameworks */,
+				4E05B4AF555E2A3801A621A82C9F3B13 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				4F82F6E32DC0B945E6B594C4D58696BA /* RichEditor.swift */,
+				BECBBD5A278CFFE2009AC09C /* RichEditor+Alignment.swift */,
 				FD921E504D2785B7C9DAD6CA194F7CDE /* RichEditor+Attachments.swift */,
 				DD7F6738D56C74A8D44402636A06904B /* RichEditor+BulletPoints.swift */,
 				3A91064814B2C73E88894C08C5FF0F3B /* RichEditor+Core.swift */,
@@ -321,15 +321,6 @@
 			path = Sources/Extensions;
 			sourceTree = "<group>";
 		};
-		18FA473495B972393AD4F19133AB68AA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C642B882737FE904B865DA52D7AF95D4 /* macColorPicker.framework */,
-				3FAFDBB205B8409E4730FCAEB20850DB /* OS X */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		2AE48E4EACD6A2E5BAA3CE017D957729 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,12 +333,16 @@
 			path = Sources/Classes;
 			sourceTree = "<group>";
 		};
-		3FAFDBB205B8409E4730FCAEB20850DB /* OS X */ = {
+		2D6013D6A1DD04AF522A9534D3C08D8F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1A38B56B3B49A8DC0714C03FEFC01F1C /* Cocoa.framework */,
+				1FD5CFB4DEA79C5DE4D08C770B193D79 /* macColorPicker */,
+				3ECEA4E695D78C7DB4E540A8D2E8A5F0 /* Pods-RichEditor_Example */,
+				785E7F5721CA363ABC49BE29448B218C /* Pods-RichEditor_Tests */,
+				9B89DEEF181DD4430EBDE56F18C6F196 /* RichEditor */,
+				D9F6770D697DD43BC5E3B73F72CC717C /* RichEditor-Resources */,
 			);
-			name = "OS X";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		450FCDC99CB96480D2B851905BE833FC /* RichEditor */ = {
@@ -361,18 +356,6 @@
 			);
 			name = RichEditor;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		613A30CD71BB328FE121B8ABA83AD98B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1FD5CFB4DEA79C5DE4D08C770B193D79 /* macColorPicker.framework */,
-				3ECEA4E695D78C7DB4E540A8D2E8A5F0 /* Pods_RichEditor_Example.framework */,
-				785E7F5721CA363ABC49BE29448B218C /* Pods_RichEditor_Tests.framework */,
-				D9F6770D697DD43BC5E3B73F72CC717C /* Resources.bundle */,
-				9B89DEEF181DD4430EBDE56F18C6F196 /* RichEditor.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6607BBC731D3BE2475E5DB2B605A4EA5 /* Support Files */ = {
@@ -474,11 +457,27 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				81846FECFD3D56856D35FD5693050617 /* Development Pods */,
-				18FA473495B972393AD4F19133AB68AA /* Frameworks */,
+				E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */,
 				E79B749847ECD89CCBB173385B5BB52D /* Pods */,
-				613A30CD71BB328FE121B8ABA83AD98B /* Products */,
+				2D6013D6A1DD04AF522A9534D3C08D8F /* Products */,
 				7238F50B6F69AF8EF70D156F5FF1CD45 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2A8756CA1FF5258A0344D53C5C60EC1 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2A8756CA1FF5258A0344D53C5C60EC1 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */,
+			);
+			name = "OS X";
 			sourceTree = "<group>";
 		};
 		E4E3ED0D59C092560E72C63A6E2E3BC0 /* RichEditorToolbar */ = {
@@ -558,35 +557,35 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		30F690902315BBE83D1A9113439206C2 /* Headers */ = {
+		1EF3BBE9876DB0D66171235594A613E5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B16F7AB410D7C914DD2421F2316C79A /* Pods-RichEditor_Example-umbrella.h in Headers */,
+				66822A487B28BE29E72263B0C652981C /* Pods-RichEditor_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		698DD403D456C7AB15BD659553CE4D13 /* Headers */ = {
+		259B53227553670392773B8BA0C97F58 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C68DAC43090E7B215643E6858315B3DE /* macColorPicker-umbrella.h in Headers */,
+				6D703443D9CF361DCDCC96CEED303B80 /* Pods-RichEditor_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A397FF18B3138523FC29D14A172C204 /* Headers */ = {
+		3BCF4FFBA8C55AA01FFB2F367D876E35 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA841A2166492D897C0256F520A466DF /* Pods-RichEditor_Tests-umbrella.h in Headers */,
+				41081564FEF4A646D9BC96D914791402 /* RichEditor-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F323F35BFF850F10A6ED0F11DFC9C79C /* Headers */ = {
+		9F74E934ABF91CA11C102B7B199E0000 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC766D6B17B91AF30065B8445DCA2FB /* RichEditor-umbrella.h in Headers */,
+				AC0EC0CED3B71905C73C8FF661E3AB3A /* macColorPicker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,49 +594,49 @@
 /* Begin PBXNativeTarget section */
 		140B73012A871654F402406438E0C8B5 /* RichEditor-Resources */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4D6EFD86BF2CAFC321D757EC5F92F59 /* Build configuration list for PBXNativeTarget "RichEditor-Resources" */;
+			buildConfigurationList = 48EA95BE2F2AA1B5A088C27DFB4503DA /* Build configuration list for PBXNativeTarget "RichEditor-Resources" */;
 			buildPhases = (
-				08401723A5B18830E73D0AED0E4373D1 /* Sources */,
-				105979A544E270362D1CB01DD8B8CEE2 /* Frameworks */,
-				CBA8854C36D96F38ACD5DC1D374920D2 /* Resources */,
+				133E5E82FBB7D7CFCD86004288ADD4EC /* Sources */,
+				74761EF15DF433C70C15676BF7302DB5 /* Frameworks */,
+				9DD534EC693A8CEAB3C56C60BE91D0EA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "RichEditor-Resources";
-			productName = "RichEditor-Resources";
-			productReference = D9F6770D697DD43BC5E3B73F72CC717C /* Resources.bundle */;
+			productName = Resources;
+			productReference = D9F6770D697DD43BC5E3B73F72CC717C /* RichEditor-Resources */;
 			productType = "com.apple.product-type.bundle";
 		};
 		369E4AC0D183973D19A4522DC26B1027 /* RichEditor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A46F9159AABDB07B8B36EE882F8B604A /* Build configuration list for PBXNativeTarget "RichEditor" */;
+			buildConfigurationList = FEB488984D0F2BB4E87B0165B48CD2D6 /* Build configuration list for PBXNativeTarget "RichEditor" */;
 			buildPhases = (
-				F323F35BFF850F10A6ED0F11DFC9C79C /* Headers */,
-				8136F8794EDE89BB59435776702C304A /* Sources */,
-				F18BF27D7301B88F0AD040E2CC61FB41 /* Frameworks */,
-				E64D22B6B14909E5F72430CEAD3AB381 /* Resources */,
+				3BCF4FFBA8C55AA01FFB2F367D876E35 /* Headers */,
+				39DD64A89813AD85F4925171E75296B1 /* Sources */,
+				E3DDC00B5438D4BC0E7ECBF7C0C87BC7 /* Frameworks */,
+				2FA5078F0EE2080731B764462DBDA9BB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				48F0094FF8A6A6C7C6E7801AAF533864 /* PBXTargetDependency */,
-				FE66CB06D840A4407EAFC23BD94B7EB9 /* PBXTargetDependency */,
+				95F3AF1D34D9F0AFD663B89C5DFDE94D /* PBXTargetDependency */,
+				9BF1B716177D1E171F91209AF2F0BBA9 /* PBXTargetDependency */,
 			);
 			name = RichEditor;
 			productName = RichEditor;
-			productReference = 9B89DEEF181DD4430EBDE56F18C6F196 /* RichEditor.framework */;
+			productReference = 9B89DEEF181DD4430EBDE56F18C6F196 /* RichEditor */;
 			productType = "com.apple.product-type.framework";
 		};
 		3A7991A4F982F77D548F259F9F856692 /* macColorPicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D9FC9B283804E4F6DA9C5D8FF84AA7B6 /* Build configuration list for PBXNativeTarget "macColorPicker" */;
+			buildConfigurationList = 53360A6C0F835CC06A23447834BB9CB5 /* Build configuration list for PBXNativeTarget "macColorPicker" */;
 			buildPhases = (
-				698DD403D456C7AB15BD659553CE4D13 /* Headers */,
-				CD419C5B8D3F48009B44DEEE03E46727 /* Sources */,
-				B3BA9BE2905A214C8C15E92DA49550E1 /* Frameworks */,
-				B964BE8FD0EFEE78A52FD46BBCC2175F /* Resources */,
+				9F74E934ABF91CA11C102B7B199E0000 /* Headers */,
+				1738B9EC95840F99CB7C42C06FF0342B /* Sources */,
+				4EC034BE4B569540399E25D0E28595D9 /* Frameworks */,
+				73C615BC07223543770A675E960138D4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -645,46 +644,46 @@
 			);
 			name = macColorPicker;
 			productName = macColorPicker;
-			productReference = 1FD5CFB4DEA79C5DE4D08C770B193D79 /* macColorPicker.framework */;
+			productReference = 1FD5CFB4DEA79C5DE4D08C770B193D79 /* macColorPicker */;
 			productType = "com.apple.product-type.framework";
 		};
 		83FFF657196094B71F147D25444AC5E8 /* Pods-RichEditor_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BAE93F20B27766BB76528958FE1381F6 /* Build configuration list for PBXNativeTarget "Pods-RichEditor_Example" */;
+			buildConfigurationList = D9CC522158F4BADB0CB162CEB1FB09F0 /* Build configuration list for PBXNativeTarget "Pods-RichEditor_Example" */;
 			buildPhases = (
-				30F690902315BBE83D1A9113439206C2 /* Headers */,
-				A7B0A2F01BAE044A81AD32BAB70EACC8 /* Sources */,
-				2324ADA7F7B9995061EE019C22E39870 /* Frameworks */,
-				A8889A8E16DF17B3DB5DC96D68958181 /* Resources */,
+				259B53227553670392773B8BA0C97F58 /* Headers */,
+				DE7FED0FE6A6C30F771BD99696578B77 /* Sources */,
+				AD955729A3D5A447E6A5E09035B01A5C /* Frameworks */,
+				AF0C08478C080A163BAC0961DA80A927 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				03E9F34B8F20D167795BDE58AD6E307E /* PBXTargetDependency */,
-				ED4BFE0049D90B8120334A1C633F0D82 /* PBXTargetDependency */,
+				21954FFFCC8E66A1BC5CB43EE5FD158C /* PBXTargetDependency */,
+				88A32528A5AAE41F0656BE2A9FDDDEC1 /* PBXTargetDependency */,
 			);
 			name = "Pods-RichEditor_Example";
-			productName = "Pods-RichEditor_Example";
-			productReference = 3ECEA4E695D78C7DB4E540A8D2E8A5F0 /* Pods_RichEditor_Example.framework */;
+			productName = Pods_RichEditor_Example;
+			productReference = 3ECEA4E695D78C7DB4E540A8D2E8A5F0 /* Pods-RichEditor_Example */;
 			productType = "com.apple.product-type.framework";
 		};
 		B4E954A1D15CD0CAF78A93E224D871A8 /* Pods-RichEditor_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 67446F36A5D0635C480765F07981DC82 /* Build configuration list for PBXNativeTarget "Pods-RichEditor_Tests" */;
+			buildConfigurationList = D8176CDD159AB9D0A9C174B9465BC656 /* Build configuration list for PBXNativeTarget "Pods-RichEditor_Tests" */;
 			buildPhases = (
-				8A397FF18B3138523FC29D14A172C204 /* Headers */,
-				3402377A2B71E4DA4812BD8F85B61841 /* Sources */,
-				0F4D3B1A269F6876A7091BF57CF3A73F /* Frameworks */,
-				D6560009BD65CF324D9D950ED1837EE2 /* Resources */,
+				1EF3BBE9876DB0D66171235594A613E5 /* Headers */,
+				194B0B1625243F680283E22396FA4B9A /* Sources */,
+				080999EB4582A347E0C9724A67F21652 /* Frameworks */,
+				158BF62E5EAFB18D803E53144346AB43 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4FA3CA25073E6F9083ACBDACE9240F64 /* PBXTargetDependency */,
+				D8C8C57FFE335360DC6703F741C3AB33 /* PBXTargetDependency */,
 			);
 			name = "Pods-RichEditor_Tests";
-			productName = "Pods-RichEditor_Tests";
-			productReference = 785E7F5721CA363ABC49BE29448B218C /* Pods_RichEditor_Tests.framework */;
+			productName = Pods_RichEditor_Tests;
+			productReference = 785E7F5721CA363ABC49BE29448B218C /* Pods-RichEditor_Tests */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -693,19 +692,19 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1250;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 613A30CD71BB328FE121B8ABA83AD98B /* Products */;
+			productRefGroup = 2D6013D6A1DD04AF522A9534D3C08D8F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -719,192 +718,194 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A8889A8E16DF17B3DB5DC96D68958181 /* Resources */ = {
+		158BF62E5EAFB18D803E53144346AB43 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B964BE8FD0EFEE78A52FD46BBCC2175F /* Resources */ = {
+		2FA5078F0EE2080731B764462DBDA9BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				395C50AFAE9D37A90F41B977E11AFDF1 /* RichEditor-Resources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73C615BC07223543770A675E960138D4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CBA8854C36D96F38ACD5DC1D374920D2 /* Resources */ = {
+		9DD534EC693A8CEAB3C56C60BE91D0EA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D42CB326EC926335E7CAE62AD2EE93DE /* white-align-centre@1x.png in Resources */,
-				9F4E7812DDCB08A4B99D4E3D74D38762 /* white-align-centre@2x.png in Resources */,
-				A9E4A4A0A6B66985686F88274DA42B61 /* white-align-centre@3x.png in Resources */,
-				98CCEDEAB501273BF2689F4DE8A11640 /* white-align-justify@1x.png in Resources */,
-				2C33F71CCBDBE7ABF153420F06E05489 /* white-align-justify@2x.png in Resources */,
-				16EDD85CCBA7004499D488A0CAFBFF90 /* white-align-justify@3x.png in Resources */,
-				C02A01E2813899059C6794AA3124C2E2 /* white-align-left@1x.png in Resources */,
-				3FDEA04F8528C51B771D664D0162E1E2 /* white-align-left@2x.png in Resources */,
-				E492D56F3510EDECB8B77763192C527A /* white-align-left@3x.png in Resources */,
-				BFDD749A1F3BAACD54D962D00EEC709F /* white-align-right@1x.png in Resources */,
-				D5205A9F753646E31D3F449D1C1E16DF /* white-align-right@2x.png in Resources */,
-				BED9D0C7F752B41A4FE194C22E13769E /* white-align-right@3x.png in Resources */,
-				8388BFFAA5AD3B0684B63A734B328448 /* white-text-color@1x.png in Resources */,
-				815FCD9DE86ACD701E8E8FCC992D4FE0 /* white-text-color@2x.png in Resources */,
-				B8F7714F2CB320130FEBDB85C31A4059 /* white-text-color@3x.png in Resources */,
-				9A7A3B846DAD92530FF2D10F0036327A /* white-text-highlight@1x.png in Resources */,
-				DEA40D19E83FC26E4AFDBA1192B5D369 /* white-text-highlight@2x.png in Resources */,
-				695F9CD988F59A8CDC9345DC671579A3 /* white-text-highlight@3x.png in Resources */,
-				9FC0E4F48F177D6F08BF1B449BFE07F0 /* white-text-image@1x.png in Resources */,
-				D878A84AFB0B347FF84A29F13C9232FD /* white-text-image@2x.png in Resources */,
-				6C3547D10C5836D1B712F2CCDF9FF212 /* white-text-image@3x.png in Resources */,
-				F30A77A6391FBBDF0571746F478E8737 /* white-text-link@1x.png in Resources */,
-				B80F3D9DCC69B1E73C5BC47AB89699ED /* white-text-link@2x.png in Resources */,
-				6F8DFF8976BE2410CB56A6D7418B7238 /* white-text-link@3x.png in Resources */,
-				C9A3AB180157C2F3B2A2197DCD6DB4B9 /* white-text-list@1x.png in Resources */,
-				A44B7B1D87822DE35964812D7BF7E6DC /* white-text-list@2x.png in Resources */,
-				3C2983778A76D1D5732CF1A7689117C8 /* white-text-list@3x.png in Resources */,
-				777DAC69BE4D455675F92AE250150AC5 /* white-text-strikethrough@1x.png in Resources */,
-				6215F91EBB39486D16D6B4F8F2DA590B /* white-text-strikethrough@2x.png in Resources */,
-				1C6A431F496F7847DA0C9B5D31818622 /* white-text-strikethrough@3x.png in Resources */,
-				A225662F166A7B785177684E67AB08DA /* white-weight-bold@1x.png in Resources */,
-				B39776CC59F8763FA6BFAEEFDAEBC2F5 /* white-weight-bold@2x.png in Resources */,
-				D935BE133B83FDEA2FD077682DB62270 /* white-weight-bold@3x.png in Resources */,
-				267AA8A856BD54845DF4958E024D5208 /* white-weight-italic@1x.png in Resources */,
-				E94A4ED76BE495B89E3AE6C0147592B1 /* white-weight-italic@2x.png in Resources */,
-				0C9B0EBA6C52BA64273A3F23690A5957 /* white-weight-italic@3x.png in Resources */,
-				89AE14C0444DCC72401794025D91E787 /* white-weight-underline@1x.png in Resources */,
-				8445E9F2EC82ABF49526D7424BE2214A /* white-weight-underline@2x.png in Resources */,
-				A7DB8DE8189C612460E12A9ECC785AE3 /* white-weight-underline@3x.png in Resources */,
+				82DC19714A965AFCF1BCD7F67ADEA8AB /* white-align-centre@1x.png in Resources */,
+				F428F815A11946C2EB4F328C5E277A4D /* white-align-centre@2x.png in Resources */,
+				B79B73C00B35C873284560FE29718690 /* white-align-centre@3x.png in Resources */,
+				77C1B3279FFFE3FBC138F6370D84DA44 /* white-align-justify@1x.png in Resources */,
+				441FE13074F03CA338C79444BE068804 /* white-align-justify@2x.png in Resources */,
+				FEDE3F3824A02F4D3D97E23613EE744E /* white-align-justify@3x.png in Resources */,
+				F37809CFB711034C6B076459B50995D9 /* white-align-left@1x.png in Resources */,
+				0B941B5AD27ADE0EF09412D15B45D877 /* white-align-left@2x.png in Resources */,
+				98563956BB3E36A5A3A170AD737341B2 /* white-align-left@3x.png in Resources */,
+				C8C40B3C140B01A6640961A0E068A6C5 /* white-align-right@1x.png in Resources */,
+				FA945C8341CFFFF69594E0958150A20B /* white-align-right@2x.png in Resources */,
+				40AC8C58DF59AC84805BB9929767AA59 /* white-align-right@3x.png in Resources */,
+				CE406B551BD303FB720C6E3D8A5D2864 /* white-text-color@1x.png in Resources */,
+				BA48EF7C157D7066E294B8732C15BBFC /* white-text-color@2x.png in Resources */,
+				49C082CEB839633040BDB779F5C5E734 /* white-text-color@3x.png in Resources */,
+				DA806D5FB0CBFF50E5D6E74354B01D7E /* white-text-highlight@1x.png in Resources */,
+				394A8E1D0587858EB9F1F80B34035BF6 /* white-text-highlight@2x.png in Resources */,
+				35DB55E7127BFDDB25542F39F5019758 /* white-text-highlight@3x.png in Resources */,
+				12D5CBA5B454E939CE87B9AFBE3C8D8F /* white-text-image@1x.png in Resources */,
+				DCFEB8928DEB10D0329182967E411898 /* white-text-image@2x.png in Resources */,
+				876D5D1A10FCC939B9B245D1BA516B07 /* white-text-image@3x.png in Resources */,
+				EE303C57360C894807440FCAD364C772 /* white-text-link@1x.png in Resources */,
+				4507FE912B00DF0E63609323C4DF196F /* white-text-link@2x.png in Resources */,
+				0DA16ABF9D0B7B9858BAB5EE1C7E40C5 /* white-text-link@3x.png in Resources */,
+				DD2DC13ADEC1C4C1C4201D8C8D27BE3E /* white-text-list@1x.png in Resources */,
+				675432F940850F53F622C4EDA5C38BF8 /* white-text-list@2x.png in Resources */,
+				8F09F4596BB6987A634B586976F5A49D /* white-text-list@3x.png in Resources */,
+				AB920D640F14D264594D69F5ED43FC42 /* white-text-strikethrough@1x.png in Resources */,
+				AC0CE52C45FD5B4786F3AE4923EA3303 /* white-text-strikethrough@2x.png in Resources */,
+				C6E53506B268AD8B6475DC539209C692 /* white-text-strikethrough@3x.png in Resources */,
+				20C799FF769FADBAF19B1C9F28346DC5 /* white-weight-bold@1x.png in Resources */,
+				981E207E20D30E5EE6252F5171698AF9 /* white-weight-bold@2x.png in Resources */,
+				525D02C195F0D41785876C44B1E6FDD9 /* white-weight-bold@3x.png in Resources */,
+				3CF6F23BB788061DFF7C9C675ED02B53 /* white-weight-italic@1x.png in Resources */,
+				496E75AA2621C25CBE6D37B2BD2CEA39 /* white-weight-italic@2x.png in Resources */,
+				E8CA629B441642EB8B9FB84680802226 /* white-weight-italic@3x.png in Resources */,
+				C0B8A70F49A06CBA6D69196EF2AFD416 /* white-weight-underline@1x.png in Resources */,
+				E22E6D17B935A4CE069EC1D808C95D50 /* white-weight-underline@2x.png in Resources */,
+				7326DD087E5B199DA5C725F5B9C5153D /* white-weight-underline@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D6560009BD65CF324D9D950ED1837EE2 /* Resources */ = {
+		AF0C08478C080A163BAC0961DA80A927 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E64D22B6B14909E5F72430CEAD3AB381 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				72567DA2D36B54B9736D96DD420DE7D8 /* Resources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		08401723A5B18830E73D0AED0E4373D1 /* Sources */ = {
+		133E5E82FBB7D7CFCD86004288ADD4EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3402377A2B71E4DA4812BD8F85B61841 /* Sources */ = {
+		1738B9EC95840F99CB7C42C06FF0342B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79E2DF02E273DA397678B6A539A47CBF /* Pods-RichEditor_Tests-dummy.m in Sources */,
+				A091ADED52C1ED0118DC9145C66F2E9D /* ColorButtonCell.swift in Sources */,
+				08B7BD999ED4AFC3272177E542FCF652 /* ColorCell.swift in Sources */,
+				7931409EDD938EBBD067AB8B5A62DF38 /* ColorPicker.swift in Sources */,
+				86005070BBAEB92E36991F89EC1B14E1 /* ColorPickerViewController.swift in Sources */,
+				5D722520917F1F5E9B7C8D1DE5055070 /* macColorPicker-dummy.m in Sources */,
+				D1AFE5688A496AD4DBF9384D2B6D7C68 /* NSColor+Colors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8136F8794EDE89BB59435776702C304A /* Sources */ = {
+		194B0B1625243F680283E22396FA4B9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29C963F82D8DEE851B4EB5E620002015 /* CGFloat+Formatting.swift in Sources */,
-				B0E5B69DEB4AF77938084C399EB0FA9F /* Dictionary+Convenience.swift in Sources */,
-				CBE04C16842D56B8FCE489E8B2B5A272 /* Dictionary+TypingAttributes.swift in Sources */,
-				7C5184258E6AD945FECC9E91C4E5AF12 /* FontStyling.swift in Sources */,
-				ABA8A97DE7DCE3EBABDAF882BFB434F1 /* NSAttributedString+Convenience.swift in Sources */,
-				8DA7001419EE885A8C74850C0530CB55 /* NSFont+Traits.swift in Sources */,
-				D79A95196037648DE41235C68BDF394C /* NSImage+Pods.swift in Sources */,
-				F6A0669DE0D7AA069F302C50F7BA2EDF /* NSMenu+Convenience.swift in Sources */,
-				8206543E794BA13B988D10C168858044 /* NSTextView+Convenience.swift in Sources */,
-				BA69B1382FA50655050A575230E5242C /* RichEditor+Attachments.swift in Sources */,
-				AFC53BDC86802B08CA50664A92B6B19F /* RichEditor+BulletPoints.swift in Sources */,
-				D44AD09B7EB5D90381F2543F37A4BB85 /* RichEditor+Core.swift in Sources */,
-				B9482CE18F3294516C4833E0698F5008 /* RichEditor+KeyboardShortcuts.swift in Sources */,
-				5B5E46C07F7624C30752B8E2F9EC4ECF /* RichEditor+Links.swift in Sources */,
-				0B3293B9D1902D756A39CF6991E379A5 /* RichEditor+Stack.swift in Sources */,
-				AF6DA6BFF36E474F01B47204D1682EF0 /* RichEditor+Styling.swift in Sources */,
-				B8BAA5515C0132021348A81B59290E74 /* RichEditor-dummy.m in Sources */,
-				11B67A860CB735ED2303A07BCBD6E249 /* RichEditor.swift in Sources */,
-				87425864BB9A2120298710FCC7172D14 /* RichEditorToolbar+UI.swift in Sources */,
-				9B7BD3E096FCE6993080084397F49D06 /* RichEditorToolbar.swift in Sources */,
-				918D5314BF9EE34F136CF8C4BEBF0D3B /* RichEditorToolbarButton.swift in Sources */,
-				A9F06715447173991093FFA26D586B5E /* RichTextView.swift in Sources */,
-				E40C0965896F3BB378BD0995F379127E /* String+BulletPoints.swift in Sources */,
-				82DF9A9221BCD4FC92699C9C9BC07E41 /* String+Convenience.swift in Sources */,
-				CAA583DCD62313C749E2082147603188 /* URL+Images.swift in Sources */,
+				C25CB5AFEA05F7A780C838CB881997DC /* Pods-RichEditor_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7B0A2F01BAE044A81AD32BAB70EACC8 /* Sources */ = {
+		39DD64A89813AD85F4925171E75296B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB256655C188C7CB82794E71B3D7A665 /* Pods-RichEditor_Example-dummy.m in Sources */,
+				D8B0640F883DACBFC9756C3942DDD52B /* CGFloat+Formatting.swift in Sources */,
+				97C4C1E2D11BDF8D7B0F9A1D14A69188 /* Dictionary+Convenience.swift in Sources */,
+				1B017A295E3FDB1893640F3796EBA386 /* Dictionary+TypingAttributes.swift in Sources */,
+				32F19AE0D10B7FC9AFE6A7F4B1CAA381 /* FontStyling.swift in Sources */,
+				6609969804C7E43F571986AA15103977 /* NSAttributedString+Convenience.swift in Sources */,
+				F7D831CFB8C5EA8A1AAB15E54918F44C /* NSFont+Traits.swift in Sources */,
+				72ED04F0B00D73E45E2BDE5928132087 /* NSImage+Pods.swift in Sources */,
+				A913577E4F5AE86EA23D1933FF3FC5AA /* NSMenu+Convenience.swift in Sources */,
+				0016758AEFF0DBA10936EC73336B1B33 /* NSTextView+Convenience.swift in Sources */,
+				B45BB33EA5B172911DB67AA53B13AE3D /* RichEditor.swift in Sources */,
+				3F10AD7CBD6E68AF784B6ADB8558686E /* RichEditor+Attachments.swift in Sources */,
+				45C6A44BB88ED4460BE23838BF372C23 /* RichEditor+BulletPoints.swift in Sources */,
+				BECBBD5B278CFFE2009AC09C /* RichEditor+Alignment.swift in Sources */,
+				5E521C5E731FC8B6979D14A2C99B10A2 /* RichEditor+Core.swift in Sources */,
+				6FC690570390169671E827B6E17B0D36 /* RichEditor+KeyboardShortcuts.swift in Sources */,
+				DBF8B5C457AF51CF0A0A6A9B99435931 /* RichEditor+Links.swift in Sources */,
+				7DC5A9BBFA2987CA6B0A0B24702D8919 /* RichEditor+Stack.swift in Sources */,
+				603ED7848A86C8CC77C3612430966DB7 /* RichEditor+Styling.swift in Sources */,
+				0819F0A0FF320C8A285FF806EF3B8AE0 /* RichEditor-dummy.m in Sources */,
+				FB51723FDA13E2E562CABA3F50952AA6 /* RichEditorToolbar.swift in Sources */,
+				B0E96AC62B35085120098C45BD8BD129 /* RichEditorToolbar+UI.swift in Sources */,
+				4CB8289039DEF8EDA32534E69561CE3D /* RichEditorToolbarButton.swift in Sources */,
+				F7295C4ED1782C94CA7EC3833A8F4DC3 /* RichTextView.swift in Sources */,
+				22FFB81102198A2ACB893732D2828A73 /* String+BulletPoints.swift in Sources */,
+				D66876ACC432ED1341E9C3F5038ACA16 /* String+Convenience.swift in Sources */,
+				6E04B8AB57720616E19FA0A0C1B81F8D /* URL+Images.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD419C5B8D3F48009B44DEEE03E46727 /* Sources */ = {
+		DE7FED0FE6A6C30F771BD99696578B77 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25FCC0656A6A96A544129BB4A671E289 /* ColorButtonCell.swift in Sources */,
-				C59D276EC696515AED51B237A4A3C0CA /* ColorCell.swift in Sources */,
-				B37953F3C6D2E88296914F1D4CC7B9F9 /* ColorPicker.swift in Sources */,
-				FBB136BA8C36252BB1CC7381C770EB09 /* ColorPickerViewController.swift in Sources */,
-				7045A8A37BD2F3FD5931BE093FCC3AB6 /* macColorPicker-dummy.m in Sources */,
-				88756FA0E178517FE581CC2F845EAC8C /* NSColor+Colors.swift in Sources */,
+				57CD0E4AE82B3247102D5216497DCE4D /* Pods-RichEditor_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		03E9F34B8F20D167795BDE58AD6E307E /* PBXTargetDependency */ = {
+		21954FFFCC8E66A1BC5CB43EE5FD158C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RichEditor;
 			target = 369E4AC0D183973D19A4522DC26B1027 /* RichEditor */;
-			targetProxy = AA42D0FA9B790E25FE5E1FEAC59C6415 /* PBXContainerItemProxy */;
+			targetProxy = 7B745B11EC310A3F9F5986F363343D58 /* PBXContainerItemProxy */;
 		};
-		48F0094FF8A6A6C7C6E7801AAF533864 /* PBXTargetDependency */ = {
+		88A32528A5AAE41F0656BE2A9FDDDEC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = macColorPicker;
+			target = 3A7991A4F982F77D548F259F9F856692 /* macColorPicker */;
+			targetProxy = AC12EC469B7A16D761E5B58FAD42594C /* PBXContainerItemProxy */;
+		};
+		95F3AF1D34D9F0AFD663B89C5DFDE94D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "RichEditor-Resources";
 			target = 140B73012A871654F402406438E0C8B5 /* RichEditor-Resources */;
-			targetProxy = 7F82C72F86DE334E8692060557E8507A /* PBXContainerItemProxy */;
+			targetProxy = 5C54C5090C2F10F483F7A1EF0A9AD483 /* PBXContainerItemProxy */;
 		};
-		4FA3CA25073E6F9083ACBDACE9240F64 /* PBXTargetDependency */ = {
+		9BF1B716177D1E171F91209AF2F0BBA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = macColorPicker;
+			target = 3A7991A4F982F77D548F259F9F856692 /* macColorPicker */;
+			targetProxy = 9AF00696182296B4B2D0D6FCA7202176 /* PBXContainerItemProxy */;
+		};
+		D8C8C57FFE335360DC6703F741C3AB33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-RichEditor_Example";
 			target = 83FFF657196094B71F147D25444AC5E8 /* Pods-RichEditor_Example */;
-			targetProxy = BCB7D6A30DA97645131F52619EC43977 /* PBXContainerItemProxy */;
-		};
-		ED4BFE0049D90B8120334A1C633F0D82 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = macColorPicker;
-			target = 3A7991A4F982F77D548F259F9F856692 /* macColorPicker */;
-			targetProxy = 786D24F4FBE557B970E9F1AC7CD91B11 /* PBXContainerItemProxy */;
-		};
-		FE66CB06D840A4407EAFC23BD94B7EB9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = macColorPicker;
-			target = 3A7991A4F982F77D548F259F9F856692 /* macColorPicker */;
-			targetProxy = ABE92C38F2402ED9A3E226211C9CE4E6 /* PBXContainerItemProxy */;
+			targetProxy = 76D31588D8AC362F7F80C241C5D23CBD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		223F08B1AD7EDD5ABA19C8CEC9EBB68C /* Release */ = {
+		1CD28FDDBB5884CA99E9D567C932D7D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9DA21E7651EC44B383DE8910C32CC20A /* macColorPicker.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -932,9 +933,9 @@
 			};
 			name = Release;
 		};
-		47436BBE8D5C3AC4C0DE323E3CB3E3CD /* Release */ = {
+		22E60322396CF6E7EA5AEE66C6E5AA66 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4C6144934D2FE7B1D2E0E832E4B6F84 /* RichEditor.release.xcconfig */;
+			baseConfigurationReference = F4FF0D250C92E8C09317833480F3EAA6 /* RichEditor.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RichEditor";
@@ -947,13 +948,14 @@
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
+			name = Debug;
 		};
-		528E3F1A0C7E6659C24D577842BBEAE1 /* Debug */ = {
+		341A05520B42CAE86686FA19F968EB1C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E75872E2F593B8B6339782EE7E3C5A69 /* Pods-RichEditor_Example.debug.xcconfig */;
+			baseConfigurationReference = C699BBD208ED791C1AEFF10837E2E44D /* Pods-RichEditor_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -977,6 +979,106 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3D05894B75747743948516CDB801392F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2168F8B7DB4A93C65C73705E9A7D299C /* Pods-RichEditor_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RichEditor_Tests/Pods-RichEditor_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-RichEditor_Tests/Pods-RichEditor_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		53C476F84E1573300A9B4B8032AB73B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E75872E2F593B8B6339782EE7E3C5A69 /* Pods-RichEditor_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RichEditor_Example/Pods-RichEditor_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-RichEditor_Example/Pods-RichEditor_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5E0BFA1DCB85E5004052C018B425750F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4FF0D250C92E8C09317833480F3EAA6 /* RichEditor.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RichEditor/RichEditor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RichEditor/RichEditor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/RichEditor/RichEditor.modulemap";
+				PRODUCT_MODULE_NAME = RichEditor;
+				PRODUCT_NAME = RichEditor;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1048,74 +1150,28 @@
 			};
 			name = Debug;
 		};
-		6A22180950C5E03FEE3A4F8AFADAF2D0 /* Release */ = {
+		894CEC940E1E5599126560CF46E4ADCF /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D4C6144934D2FE7B1D2E0E832E4B6F84 /* RichEditor.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RichEditor/RichEditor-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RichEditor/RichEditor-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RichEditor";
+				IBSC_MODULE = RichEditor;
+				INFOPLIST_FILE = "Target Support Files/RichEditor/ResourceBundle-Resources-RichEditor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MODULEMAP_FILE = "Target Support Files/RichEditor/RichEditor.modulemap";
-				PRODUCT_MODULE_NAME = RichEditor;
-				PRODUCT_NAME = RichEditor;
+				PRODUCT_NAME = Resources;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
-		72C33893184FCC51554AB9912598ADC5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2168F8B7DB4A93C65C73705E9A7D299C /* Pods-RichEditor_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RichEditor_Tests/Pods-RichEditor_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MODULEMAP_FILE = "Target Support Files/Pods-RichEditor_Tests/Pods-RichEditor_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		822909F74A0CBB10664AABAE0F04F29C /* Debug */ = {
+		C0D7DE2162AD411D4E0D4BFCADBFAA8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B2821DDFF7B5468DF2DACC7C4DE258F9 /* macColorPicker.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1142,39 +1198,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		B99D188A0A43F21CBB0749587D6E1842 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C699BBD208ED791C1AEFF10837E2E44D /* Pods-RichEditor_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RichEditor_Example/Pods-RichEditor_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MODULEMAP_FILE = "Target Support Files/Pods-RichEditor_Example/Pods-RichEditor_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		D256BAA9A69C64A728E66C27D53FDD4B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1237,59 +1260,12 @@
 			};
 			name = Release;
 		};
-		D3DD72F1C946C4BA11E183E3DC1BA11C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4FF0D250C92E8C09317833480F3EAA6 /* RichEditor.debug.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RichEditor";
-				IBSC_MODULE = RichEditor;
-				INFOPLIST_FILE = "Target Support Files/RichEditor/ResourceBundle-Resources-RichEditor-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_NAME = Resources;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		EE124C782A7E5DD7FCB3A00C4CB9E893 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4FF0D250C92E8C09317833480F3EAA6 /* RichEditor.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RichEditor/RichEditor-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RichEditor/RichEditor-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MODULEMAP_FILE = "Target Support Files/RichEditor/RichEditor.modulemap";
-				PRODUCT_MODULE_NAME = RichEditor;
-				PRODUCT_NAME = RichEditor;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F057D804207582DCF387C0147A4CA0E3 /* Debug */ = {
+		E525A24CA4A1079DB871A61010AFE037 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4CA10B9349BA650D24EC7F70C0FBB86A /* Pods-RichEditor_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1318,6 +1294,38 @@
 			};
 			name = Debug;
 		};
+		EF6660026B36990B53E4BAE1113AC063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4C6144934D2FE7B1D2E0E832E4B6F84 /* RichEditor.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RichEditor/RichEditor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RichEditor/RichEditor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/RichEditor/RichEditor.modulemap";
+				PRODUCT_MODULE_NAME = RichEditor;
+				PRODUCT_NAME = RichEditor;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1330,47 +1338,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		67446F36A5D0635C480765F07981DC82 /* Build configuration list for PBXNativeTarget "Pods-RichEditor_Tests" */ = {
+		48EA95BE2F2AA1B5A088C27DFB4503DA /* Build configuration list for PBXNativeTarget "RichEditor-Resources" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F057D804207582DCF387C0147A4CA0E3 /* Debug */,
-				72C33893184FCC51554AB9912598ADC5 /* Release */,
+				22E60322396CF6E7EA5AEE66C6E5AA66 /* Debug */,
+				894CEC940E1E5599126560CF46E4ADCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A46F9159AABDB07B8B36EE882F8B604A /* Build configuration list for PBXNativeTarget "RichEditor" */ = {
+		53360A6C0F835CC06A23447834BB9CB5 /* Build configuration list for PBXNativeTarget "macColorPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE124C782A7E5DD7FCB3A00C4CB9E893 /* Debug */,
-				6A22180950C5E03FEE3A4F8AFADAF2D0 /* Release */,
+				C0D7DE2162AD411D4E0D4BFCADBFAA8D /* Debug */,
+				1CD28FDDBB5884CA99E9D567C932D7D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BAE93F20B27766BB76528958FE1381F6 /* Build configuration list for PBXNativeTarget "Pods-RichEditor_Example" */ = {
+		D8176CDD159AB9D0A9C174B9465BC656 /* Build configuration list for PBXNativeTarget "Pods-RichEditor_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				528E3F1A0C7E6659C24D577842BBEAE1 /* Debug */,
-				B99D188A0A43F21CBB0749587D6E1842 /* Release */,
+				E525A24CA4A1079DB871A61010AFE037 /* Debug */,
+				3D05894B75747743948516CDB801392F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D9FC9B283804E4F6DA9C5D8FF84AA7B6 /* Build configuration list for PBXNativeTarget "macColorPicker" */ = {
+		D9CC522158F4BADB0CB162CEB1FB09F0 /* Build configuration list for PBXNativeTarget "Pods-RichEditor_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				822909F74A0CBB10664AABAE0F04F29C /* Debug */,
-				223F08B1AD7EDD5ABA19C8CEC9EBB68C /* Release */,
+				53C476F84E1573300A9B4B8032AB73B9 /* Debug */,
+				341A05520B42CAE86686FA19F968EB1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4D6EFD86BF2CAFC321D757EC5F92F59 /* Build configuration list for PBXNativeTarget "RichEditor-Resources" */ = {
+		FEB488984D0F2BB4E87B0165B48CD2D6 /* Build configuration list for PBXNativeTarget "RichEditor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D3DD72F1C946C4BA11E183E3DC1BA11C /* Debug */,
-				47436BBE8D5C3AC4C0DE323E3CB3E3CD /* Release */,
+				5E0BFA1DCB85E5004052C018B425750F /* Debug */,
+				EF6660026B36990B53E4BAE1113AC063 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

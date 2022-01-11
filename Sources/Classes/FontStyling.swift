@@ -196,7 +196,7 @@ public struct FontStyling {
         }
     }
     
-    public func trait(with key: NSAttributedString.Key) -> FontTrait {
+    public func trait(with key: NSAttributedString.Key) -> FontTrait? {
         switch (key) {
             case .strikethroughStyle:
                 return self.strikethroughTrait
@@ -205,7 +205,7 @@ public struct FontStyling {
                 return self.underlineTrait
             
             default:
-                fatalError("NSAttributedString.Key has not been accounted for in FontTrait determination: \(key).")
+                return nil
         }
     }
 

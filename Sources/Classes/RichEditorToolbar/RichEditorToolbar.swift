@@ -132,6 +132,26 @@ internal extension RichEditorToolbar {
     }
 
     @objc
+    func alignLeftButtonClicked(_ sender: RichEditorToolbarButton) {
+        self.richEditor.toggleAlignment(with: .left)
+    }
+
+    @objc
+    func alignCentreButtonClicked(_ sender: RichEditorToolbarButton) {
+        self.richEditor.toggleAlignment(with: .center)
+    }
+
+    @objc
+    func alignRightButtonClicked(_ sender: RichEditorToolbarButton) {
+        self.richEditor.toggleAlignment(with: .right)
+    }
+
+    @objc
+    func alignJustifyButtonClicked(_ sender: RichEditorToolbarButton) {
+        self.richEditor.toggleAlignment(with: .justified)
+    }
+
+    @objc
     func linkButtonClicked(_ sender: RichEditorToolbarButton) {
         let nameTextField = NSTextField(frame: NSRect(x: 0, y: 28, width: 200, height: 20))
         nameTextField.placeholderString = "Link Name"

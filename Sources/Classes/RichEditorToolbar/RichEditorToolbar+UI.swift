@@ -46,6 +46,18 @@ internal extension RichEditorToolbar {
         self.contentStackView.addArrangedSubview(self.alignCentreButton)
         self.contentStackView.addArrangedSubview(self.alignRightButton)
         self.contentStackView.addArrangedSubview(self.alignJustifyButton)
+
+        self.alignLeftButton.target = self
+        self.alignLeftButton.action = #selector(alignLeftButtonClicked(_:))
+
+        self.alignCentreButton.target = self
+        self.alignCentreButton.action = #selector(alignCentreButtonClicked(_:))
+
+        self.alignRightButton.target = self
+        self.alignRightButton.action = #selector(alignRightButtonClicked(_:))
+
+        self.alignJustifyButton.target = self
+        self.alignJustifyButton.action = #selector(alignJustifyButtonClicked(_:))
     }
 
     func setupColorButtons() {
