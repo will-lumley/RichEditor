@@ -63,4 +63,21 @@ public extension RichEditor {
         self.add(attributes: fontAttr, textApplicationType: self.textView.hasSelectedText ? .selected : .future)
     }
 
+    /**
+     Applies the font for the selected text, or the future text if no text is selected
+    */
+    func apply(alignment: NSTextAlignment) {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = alignment
+
+        let paragraphStyleAttr = [NSAttributedString.Key.paragraphStyle: paragraphStyle]
+
+        // Apply this alignment to the paragraph the user is in, or the paragraph the user is highlighting
+        let paragraphRange = self.textView.string.nsString.paragraphRange(for: self.textView.selectedRange())
+
+        // Apply the text alignment to the current paragraph, and future paragraphs
+        self.add(attributes: paragraphStyleAttr, textApplicationType: .range(range: paragraphRange))
+        self.add(attributes: paragraphStyleAttr, textApplicationType: .future)
+    }
+
 }

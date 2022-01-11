@@ -21,14 +21,14 @@ public class RichEditor: NSView {
 
     //The NSTextView stack
     /*------------------------------------------------------------*/
-    public private(set) lazy var textStorage   = NSTextStorage()
+    public private(set) lazy var textStorage = NSTextStorage()
     public private(set) lazy var layoutManager = NSLayoutManager()
     public private(set) lazy var textContainer = NSTextContainer()
-    public private(set) lazy var textView      = RichTextView(frame: CGRect(), textContainer: self.textContainer, delegate: self)
-    public private(set) lazy var scrollview    = NSScrollView()
+    public private(set) lazy var textView = RichTextView(frame: CGRect(), textContainer: self.textContainer, delegate: self)
+    public private(set) lazy var scrollview = NSScrollView()
     /*------------------------------------------------------------*/
     
-    ///The FontStyling that contains information of the 'relevant' text
+    /// The FontStyling that contains information of the 'relevant' text
     internal var selectedTextFontStyling: FontStyling? {
         didSet {
             self.richEditorDelegate?.fontStylingChanged(self.fontStyling)

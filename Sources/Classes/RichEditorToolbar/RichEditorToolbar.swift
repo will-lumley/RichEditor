@@ -133,22 +133,22 @@ internal extension RichEditorToolbar {
 
     @objc
     func alignLeftButtonClicked(_ sender: RichEditorToolbarButton) {
-        self.richEditor.toggleAlignment(with: .left)
+        self.richEditor.apply(alignment: .left)
     }
 
     @objc
     func alignCentreButtonClicked(_ sender: RichEditorToolbarButton) {
-        self.richEditor.toggleAlignment(with: .center)
+        self.richEditor.apply(alignment: .center)
     }
 
     @objc
     func alignRightButtonClicked(_ sender: RichEditorToolbarButton) {
-        self.richEditor.toggleAlignment(with: .right)
+        self.richEditor.apply(alignment: .right)
     }
 
     @objc
     func alignJustifyButtonClicked(_ sender: RichEditorToolbarButton) {
-        self.richEditor.toggleAlignment(with: .justified)
+        self.richEditor.apply(alignment: .justified)
     }
 
     @objc

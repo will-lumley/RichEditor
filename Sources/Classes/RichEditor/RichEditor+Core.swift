@@ -44,7 +44,7 @@ internal extension RichEditor {
             case .both:
                 newFont = NSFontManager.shared.convert(currentFont, toHaveTrait: fontTrait)
         }
-        print("NewFont: \(newFont)")
+        print("NewFont: \(newFont)\n")
 
         let updatedFontAttr = [NSAttributedString.Key.font: newFont]
         self.add(attributes: updatedFontAttr, textApplicationType: self.textView.hasSelectedText ? .selected : .future)
@@ -63,36 +63,32 @@ internal extension RichEditor {
      NSUnderlineStyle, then the negativeValue would be NSUnderlineStyle.styleNone.rawValue
      - parameter positiveValue: This is the 'on' value for the attribute. If `attribute` was
      NSUnderlineStyle, then the positive would be NSUnderlineStyle.styleSingle.rawValue
+     - parameter range: This is a property that allows users to override the default range that the attribute will be applied to, and to choose their own custom range.
     */
-    func toggleTextView(with attribute: NSAttributedString.Key, negativeValue: Any, positiveValue: Any) {
-        // If this attribute is a font trait
-        if let fontTrait = self.fontStyling.trait(with: attribute) {
-            var newAttr = [NSAttributedString.Key: Any]()
-            switch (fontTrait) {
-                case .hasTrait:
-                    newAttr = [attribute: negativeValue]
-                
-                case .hasNoTrait:
-                    newAttr = [attribute: positiveValue]
-                
-                case .both:
-                    newAttr = [attribute: positiveValue]
-            }
+    func toggleTextView(with attribute: NSAttributedString.Key, negativeValue: Any, positiveValue: Any, range: NSRange? = nil) {
+        let fontTrait = self.fontStyling.trait(with: attribute)
 
-            let applicationType = self.textView.hasSelectedText ? TextApplicationType.selected : TextApplicationType.future
-            self.add(attributes: newAttr, textApplicationType: applicationType)
+        var newAttr = [NSAttributedString.Key: Any]()
+        switch (fontTrait) {
+            case .hasTrait:
+                newAttr = [attribute: negativeValue]
+            
+            case .hasNoTrait:
+                newAttr = [attribute: positiveValue]
+            
+            case .both:
+                newAttr = [attribute: positiveValue]
         }
 
-        // If this is a paragraph style
-        else if attribute == .paragraphStyle {
-            let paragraphRange = self.textView.string.nsString.paragraphRange(for: self.textView.selectedRange())
-            self.add(attributes: [attribute: positiveValue], textApplicationType: .range(range: paragraphRange))
+        // If the user has highlighted text, apply it to that range
+        // If the user has not highlighted text, apply it to all future text
+        // If the user has provided a range, use that instead
+        var type: TextApplicationType = self.textView.hasSelectedText ? .selected : .future
+        if let range = range {
+            type = .range(range: range)
         }
 
-        // If this is something else
-        else {
-            self.add(attributes: [attribute: positiveValue], textApplicationType: .future)
-        }
+        self.add(attributes: newAttr, textApplicationType: type)
 
         self.richEditorDelegate?.fontStylingChanged(self.fontStyling)
         self.toolbarRichEditorDelegate?.fontStylingChanged(self.fontStyling)
@@ -117,7 +113,7 @@ internal extension RichEditor {
             guard let attr = self.textView.attributedSubstring(forProposedRange: selectedRange, actualRange: nil) else {
                 return
             }
-            
+
             //Ensure the UI is updated with the new FontStyling state's
             self.selectedTextFontStyling = FontStyling(attributedString: attr)
 

@@ -31,7 +31,22 @@ public extension NSAttributedString {
         
         return fonts
     }
-    
+
+    /**
+     Calculates all the various text alignments that exist within this NSAttributedString
+     - returns: All NSTextAlignments that are used in this NSAttributedString
+    */
+    var allAlignments: [NSTextAlignment] {
+        var alignments = [NSTextAlignment]()
+        self.enumerateAttribute(NSAttributedString.Key.paragraphStyle, in: self.string.fullRange, options: .longestEffectiveRangeNotRequired, using: {(value, range, stop) in
+            let paragraphStyle = value as! NSParagraphStyle
+            let alignment = paragraphStyle.alignment
+            alignments.append(alignment)
+        })
+        
+        return alignments
+    }
+
     /**
      Calculates all the text colours that are used in this attributed string
      - returns: An array of NSColors, representing all the text colours in this attributed string

@@ -16,6 +16,7 @@ public enum FontTrait {
 }
 
 public struct FontStyling {
+
     public fileprivate(set) var isBold  : Bool
     public fileprivate(set) var isUnbold: Bool
     
@@ -29,7 +30,8 @@ public struct FontStyling {
     public fileprivate(set) var isUnstrikethrough: Bool
     
     public fileprivate(set) var fonts: [NSFont]
-    
+    public fileprivate(set) var alignments: [NSTextAlignment]
+
     public fileprivate(set) var textColours     : [NSColor]
     public fileprivate(set) var highlightColours: [NSColor]
     
@@ -136,6 +138,7 @@ public struct FontStyling {
         self.highlightColours = attributedString.allHighlightColours
         
         self.fonts = attributedString.allFonts
+        self.alignments = attributedString.allAlignments
     }
     
     init(typingAttributes: [NSAttributedString.Key: Any]) {
@@ -161,6 +164,7 @@ public struct FontStyling {
         self.highlightColours = []
         
         self.fonts = []
+        self.alignments = []
 
         if let textColour = typingAttributes[NSAttributedString.Key.foregroundColor] as? NSColor {
             self.textColours = [textColour]
@@ -172,6 +176,10 @@ public struct FontStyling {
 
         if let font = typingAttributes[NSAttributedString.Key.font] as? NSFont {
             self.fonts = [font]
+        }
+
+        if let paragraphStyle = typingAttributes[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle {
+            self.alignments = [paragraphStyle.alignment]
         }
 
         //print("Typing Attributes: \(typingAttributes)")
@@ -196,16 +204,19 @@ public struct FontStyling {
         }
     }
     
-    public func trait(with key: NSAttributedString.Key) -> FontTrait? {
+    public func trait(with key: NSAttributedString.Key) -> FontTrait {
         switch (key) {
-            case .strikethroughStyle:
-                return self.strikethroughTrait
+        case .strikethroughStyle:
+            return self.strikethroughTrait
+
+        case .underlineStyle:
+            return self.underlineTrait
+
+//        case .paragraphStyle:
+//            return self.alignments.last ?? NSTextAlignment.left
             
-            case .underlineStyle:
-                return self.underlineTrait
-            
-            default:
-                return nil
+        default:
+            fatalError("NSAttributedString.Key has not been accounted for in FontTrait determination: \(key).")
         }
     }
 
