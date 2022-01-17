@@ -10,7 +10,7 @@ import AppKit
 
 public protocol RichEditorDelegate {
 
-    func fontStylingChanged(_ fontStyling: FontStyling)
+    func fontStylingChanged(_ textStyling: TextStyling)
     func richEditorTextChanged(_ richEditor: RichEditor)
 
 }
@@ -28,20 +28,20 @@ public class RichEditor: NSView {
     public private(set) lazy var scrollview = NSScrollView()
     /*------------------------------------------------------------*/
     
-    /// The FontStyling that contains information of the 'relevant' text
-    internal var selectedTextFontStyling: FontStyling? {
+    /// The TextStyling that contains information of the 'relevant' text
+    internal var selectedTextFontStyling: TextStyling? {
         didSet {
-            self.richEditorDelegate?.fontStylingChanged(self.fontStyling)
-            self.toolbarRichEditorDelegate?.fontStylingChanged(self.fontStyling)
+            self.richEditorDelegate?.fontStylingChanged(self.textStyling)
+            self.toolbarRichEditorDelegate?.fontStylingChanged(self.textStyling)
         }
     }
 
     /// The marker that will be used for bullet points
     internal static var bulletPointMarker = "•\u{00A0}" //NSTextList.MarkerFormat.circle
     
-    /// Returns the FontStyling object that was derived from the selected text, or the future text if nothing is selected
-    public var fontStyling: FontStyling {
-        return self.selectedTextFontStyling ?? FontStyling(typingAttributes: self.textView.typingAttributes)
+    /// Returns the TextStyling object that was derived from the selected text, or the future text if nothing is selected
+    public var textStyling: TextStyling {
+        return self.selectedTextFontStyling ?? TextStyling(typingAttributes: self.textView.typingAttributes)
     }
     
     /// The delegate which will notify the listener of significant events
@@ -56,11 +56,11 @@ public class RichEditor: NSView {
     /// Returns the NSFont object that was derived from the selected text, or the future text if nothing is selected
     public var currentFont: NSFont {
 
-        //If we have highlighted text, we'll analyse the font of the highlighted text
+        // If we have highlighted text, we'll analyse the font of the highlighted text
         if self.textView.hasSelectedText {
             let range = self.textView.selectedRange()
             
-            //Create an attributed string out of ONLY the highlighted text
+            // Create an attributed string out of ONLY the highlighted text
             guard let attr = self.textView.attributedSubstring(forProposedRange: range, actualRange: nil) else {
                 fatalError("Failed to create AttributedString.")
             }

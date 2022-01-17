@@ -16,7 +16,9 @@ public enum CommandShortcut: String {
 }
 
 public protocol KeyboardShortcutDelegate {
-    func commandPressed(character: CommandShortcut)
+
+    func commandPressed(character: CommandShortcut) -> Bool
+
 }
 
 public class RichTextView: NSTextView {
@@ -62,11 +64,16 @@ public class RichTextView: NSTextView {
             return super.performKeyEquivalent(with: event)
         }
         
-        guard let characters = event.charactersIgnoringModifiers else { return super.performKeyEquivalent(with: event) }
-        guard let shortcut = CommandShortcut(rawValue: characters) else { return super.performKeyEquivalent(with: event) }
-        
-        self.keyboardShortcutDelegate?.commandPressed(character: shortcut)
-        
-        return super.performKeyEquivalent(with: event)
+        guard let characters = event.charactersIgnoringModifiers else {
+            return super.performKeyEquivalent(with: event)
+        }
+        guard let shortcut = CommandShortcut(rawValue: characters) else {
+            return super.performKeyEquivalent(with: event)
+        }
+        guard let delegate = self.keyboardShortcutDelegate else {
+            return super.performKeyEquivalent(with: event)
+        }
+
+        return delegate.commandPressed(character: shortcut)
     }
 }

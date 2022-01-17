@@ -1,5 +1,5 @@
 //
-//  FontStyling.swift
+//  TextStyling.swift
 //  RichEditor
 //
 //  Created by William Lumley on 20/3/18.
@@ -9,13 +9,7 @@
 import Foundation
 import AppKit
 
-public enum FontTrait {
-    case hasTrait
-    case hasNoTrait
-    case both
-}
-
-public struct FontStyling {
+public struct TextStyling {
 
     public fileprivate(set) var isBold  : Bool
     public fileprivate(set) var isUnbold: Bool
@@ -35,83 +29,83 @@ public struct FontStyling {
     public fileprivate(set) var textColours     : [NSColor]
     public fileprivate(set) var highlightColours: [NSColor]
     
-    public var boldTrait: FontTrait {
+    public var boldTrait: TextStyling.Trait {
         //If we're ONLY bold
         if self.isBold && !self.isUnbold {
-            return FontTrait.hasTrait
+            return .isTrait
         }
         
         //If we're ONLY unbold
         else if !self.isBold && self.isUnbold {
-            return FontTrait.hasNoTrait
+            return .isNotTrait
         }
             
         //If we're BOTH bold and unbold
         else if self.isBold && self.isUnbold {
-            return FontTrait.both
+            return .both
         }
         
-        fatalError("Failed to reach conclusion for BoldTrait, for FontStyling: \(self)")
+        fatalError("Failed to reach conclusion for BoldTrait, for TextStyling: \(self)")
     }
 
-    public var italicsTrait: FontTrait {
+    public var italicsTrait: TextStyling.Trait {
         //If we're ONLY italic
         if self.isItalic && !self.isUnitalic {
-            return FontTrait.hasTrait
+            return .isTrait
         }
             
         //If we're ONLY unitalic
         else if !self.isItalic && self.isUnitalic {
-            return FontTrait.hasNoTrait
+            return .isNotTrait
         }
             
         //If we're BOTH italic and unitalic
         else if self.isItalic && self.isUnitalic {
-            return FontTrait.both
+            return .both
         }
         
-        fatalError("Failed to reach conclusion for ItalicTrait, for FontStyling: \(self)")
+        fatalError("Failed to reach conclusion for ItalicTrait, for TextStyling: \(self)")
     }
 
-    public var underlineTrait: FontTrait {
+    public var underlineTrait: TextStyling.Trait {
         //If we're ONLY underline
         if self.isUnderline && !self.isUnunderline {
-            return FontTrait.hasTrait
+            return .isTrait
         }
             
         //If we're ONLY un-underline
         else if !self.isUnderline && self.isUnunderline {
-            return FontTrait.hasNoTrait
+            return .isNotTrait
         }
         
         //If we're BOTH underline and un-underline
         else if self.isUnderline && self.isUnunderline {
-            return FontTrait.both
+            return .both
         }
         
-        fatalError("Failed to reach conclusion for UnderlineTrait, for FontStyling: \(self)")
+        fatalError("Failed to reach conclusion for UnderlineTrait, for TextStyling: \(self)")
     }
     
-    public var strikethroughTrait: FontTrait {
+    public var strikethroughTrait: TextStyling.Trait {
         //If we're ONLY strikethrough
         if self.isStrikethrough && !self.isUnstrikethrough {
-            return FontTrait.hasTrait
+            return .isTrait
         }
             
         //If we're ONLY un-strikethrough
         else if !self.isStrikethrough && self.isUnstrikethrough {
-            return FontTrait.hasNoTrait
+            return .isNotTrait
         }
             
         //If we're BOTH strikethrough and un-strikethrough
         else if self.isStrikethrough && self.isUnstrikethrough {
-            return FontTrait.both
+            return .both
         }
         
-        fatalError("Failed to reach conclusion for StrikethroughTrait, for FontStyling: \(self)")
+        fatalError("Failed to reach conclusion for StrikethroughTrait, for TextStyling: \(self)")
     }
     
-    // MARK: - FontStyling
+    // MARK: - TextStyling
     
     init(attributedString: NSAttributedString) {
         self.textColours = attributedString.allTextColours
@@ -186,25 +180,24 @@ public struct FontStyling {
     }
     
     // MARK: - Functions
+    
     /**
-     Given an NSFontTraitMask, matches the correlating FontTrait enum that correlates with the provided argument
-     - parameter nsFontTraitMask: The NSFontTraitMask that we need to match to a FontTrait enum
-     - returns: A FontTrait enum that will correlate with the NSFontTraitMask
+     Given an NSFontTraitMask, matches the correlating Trait enum that correlates with the provided argument
+     - parameter nsFontTraitMask: The NSFontTraitMask that we need to match to a Trait enum
+     - returns: A Trait enum that will correlate with the NSFontTraitMask
     */
-    public func fontTraitFor(nsFontTraitMask: NSFontTraitMask) -> FontTrait {
+    public func fontTraitFor(nsFontTraitMask: NSFontTraitMask) -> TextStyling.Trait {
         switch (nsFontTraitMask) {
             case .boldFontMask:
                 return self.boldTrait
-            
             case .italicFontMask:
                 return self.italicsTrait
-            
             default:
-                fatalError("Failed to reach conclusion for determining correlating FontTrait and NSFontTraitMask. NSFontTraitMask: \(nsFontTraitMask)")
+                fatalError("Failed to reach conclusion for determining correlating Trait and NSFontTraitMask. NSFontTraitMask: \(nsFontTraitMask)")
         }
     }
-    
-    public func trait(with key: NSAttributedString.Key) -> FontTrait {
+
+    public func trait(with key: NSAttributedString.Key) -> TextStyling.Trait {
         switch (key) {
         case .strikethroughStyle:
             return self.strikethroughTrait
@@ -212,12 +205,19 @@ public struct FontStyling {
         case .underlineStyle:
             return self.underlineTrait
 
-//        case .paragraphStyle:
-//            return self.alignments.last ?? NSTextAlignment.left
-            
         default:
-            fatalError("NSAttributedString.Key has not been accounted for in FontTrait determination: \(key).")
+            fatalError("NSAttributedString.Key has not been accounted for in Trait determination: \(key).")
         }
+    }
+
+}
+
+public extension TextStyling {
+
+    enum Trait {
+        case isTrait
+        case isNotTrait
+        case both
     }
 
 }

@@ -102,7 +102,7 @@ extension RichEditor: NSTextViewDelegate {
             return
         }
         
-        self.selectedTextFontStyling = FontStyling(attributedString: attr)
+        self.selectedTextFontStyling = TextStyling(attributedString: attr)
     }
 
 }

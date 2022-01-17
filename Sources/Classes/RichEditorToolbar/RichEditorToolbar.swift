@@ -19,31 +19,31 @@ class RichEditorToolbar: NSView {
     internal let fontFamiliesPopUpButton = NSPopUpButton(frame: .zero)
     internal let fontSizePopUpButton = NSPopUpButton(frame: .zero)
 
-    internal let boldButton = RichEditorToolbarButton(image: "white-weight-bold")
-    internal let italicButton = RichEditorToolbarButton(image: "white-weight-italic")
-    internal let underlineButton = RichEditorToolbarButton(image: "white-weight-underline")
+    internal let boldButton = RichEditorToolbarButton(imageName: "white-weight-bold")
+    internal let italicButton = RichEditorToolbarButton(imageName: "white-weight-italic")
+    internal let underlineButton = RichEditorToolbarButton(imageName: "white-weight-underline")
 
-    internal let alignLeftButton = RichEditorToolbarButton(image: "white-align-left")
-    internal let alignRightButton = RichEditorToolbarButton(image: "white-align-right")
-    internal let alignCentreButton = RichEditorToolbarButton(image: "white-align-centre")
-    internal let alignJustifyButton = RichEditorToolbarButton(image: "white-align-justify")
+    internal let alignLeftButton = RichEditorToolbarButton(imageName: "white-align-left")
+    internal let alignRightButton = RichEditorToolbarButton(imageName: "white-align-right")
+    internal let alignCentreButton = RichEditorToolbarButton(imageName: "white-align-centre")
+    internal let alignJustifyButton = RichEditorToolbarButton(imageName: "white-align-justify")
 
     internal let textColorButton = ColorPicker(frame: .zero)
     internal let highlightColorButton = ColorPicker(frame: .zero)
 
-    internal let linkButton = RichEditorToolbarButton(image: "white-text-link")
-    internal let listButton = RichEditorToolbarButton(image: "white-text-list")
-    internal let strikethroughButton = RichEditorToolbarButton(image: "white-text-strikethrough")
-    internal let addImageButton = RichEditorToolbarButton(image: "white-text-image")
+    internal let linkButton = RichEditorToolbarButton(imageName: "white-text-link")
+    internal let listButton = RichEditorToolbarButton(imageName: "white-text-list")
+    internal let strikethroughButton = RichEditorToolbarButton(imageName: "white-text-strikethrough")
+    internal let addImageButton = RichEditorToolbarButton(imageName: "white-text-image")
 
     // MARK: - NSView
+
     init(richEditor: RichEditor) {
         self.richEditor = richEditor
 
         super.init(frame: .zero)
 
         self.setupUI()
-        self.setup()
     }
 
     override init(frame frameRect: NSRect) {
@@ -84,17 +84,14 @@ class RichEditorToolbar: NSView {
         self.contentStackView.addSeperatorView()
     }
 
-    private func setup() {
-
-    }
 }
 
 // MARK: - RichEditorDelegate
 
 extension RichEditorToolbar: RichEditorDelegate {
 
-    func fontStylingChanged(_ fontStyling: FontStyling) {
-        self.configureUI(with: fontStyling)
+    func fontStylingChanged(_ textStyling: TextStyling) {
+        self.configureUI(with: textStyling)
     }
     
     func richEditorTextChanged(_ richEditor: RichEditor) {
@@ -104,6 +101,7 @@ extension RichEditorToolbar: RichEditorDelegate {
 }
 
 // MARK: - Actions
+
 internal extension RichEditorToolbar {
 
     @objc
@@ -202,6 +200,55 @@ internal extension RichEditorToolbar {
 
 }
 
+// MARK: - ColorPickerDelegate
+
+extension RichEditorToolbar: ColorPickerDelegate {
+
+    func didSelectColor(_ sender: ColorPicker, color: NSColor) {
+        switch sender {
+        case self.textColorButton:
+            self.richEditor.apply(textColour: color)
+        case self.highlightColorButton:
+            self.richEditor.apply(highlightColour: color)
+        default:()
+        }
+    }
+
+}
+
+// MARK: - Private Extensions
+
+private extension RichEditorToolbar {
+
+    var toolbarButtons: [RichEditorToolbarButton] {
+        [
+            self.boldButton,
+            self.italicButton,
+            self.underlineButton,
+
+            self.alignLeftButton,
+            self.alignCentreButton,
+            self.alignRightButton,
+            self.alignJustifyButton,
+
+            self.linkButton,
+            self.listButton,
+            self.strikethroughButton,
+            self.addImageButton,
+        ]
+    }
+
+    var alignmentButtons: [RichEditorToolbarButton] {
+        [
+            self.alignLeftButton,
+            self.alignCentreButton,
+            self.alignRightButton,
+            self.alignJustifyButton,
+        ]
+    }
+
+}
+
 private extension RichEditorToolbar {
 
     /**
@@ -227,101 +274,70 @@ private extension RichEditorToolbar {
         self.richEditor.apply(font: font)
     }
 
-    func configureUI(with fontStyling: FontStyling) {
-        
-        //Configure the Bold UI
-//        switch (fontStyling.boldTrait) {
-//            case .hasTrait:
-//                self.boldButton.title = "Unbold"
-//
-//            case .hasNoTrait:
-//                self.boldButton.title = "Bold"
-//
-//            case .both:
-//                self.boldButton.title = "Bold*"
-//        }
-//
-//        //Configure the Italic UI
-//        switch (fontStyling.italicsTrait) {
-//            case .hasTrait:
-//                self.italicsButton.title = "Unitalic"
-//
-//            case .hasNoTrait:
-//                self.italicsButton.title = "Italic"
-//
-//            case .both:
-//                self.italicsButton.title = "Italic*"
-//        }
-//
-//        //Configure the Underline UI
-//        switch (fontStyling.underlineTrait) {
-//            case .hasTrait:
-//                self.underlineButton.title = "Un-underline"
-//
-//            case .hasNoTrait:
-//                self.underlineButton.title = "Underline"
-//
-//            case .both:
-//                self.underlineButton.title = "Underline*"
-//        }
-//
-//        //Configure the Strikethrough UI
-//        switch (fontStyling.strikethroughTrait) {
-//            case .hasTrait:
-//                self.strikeButton.title = "Un-strikethrough"
-//
-//            case .hasNoTrait:
-//                self.strikeButton.title = "Strikethrough"
-//
-//            case .both:
-//                self.strikeButton.title = "Strikethrough*"
-//        }
-//
-//        //Configure the TextColour UI
-        let textColours = fontStyling.textColours
+    func configureUI(with textStyling: TextStyling) {
+        self.boldButton.selected = textStyling.boldTrait != .isNotTrait
+        self.italicButton.selected = textStyling.italicsTrait != .isNotTrait
+        self.underlineButton.selected = textStyling.underlineTrait != .isNotTrait
+        self.strikethroughButton.selected = textStyling.strikethroughTrait != .isNotTrait
+
+        // Configure the TextColour UI
+        let textColours = textStyling.textColours
         switch (textColours.count) {
-            case 0:
-                self.textColorButton.selectedColor = NSColor.white
-
-            case 1:
-                self.textColorButton.selectedColor = textColours[0]
-
-            case 2:
-                self.textColorButton.selectedColor = NSColor.gray
-
-            default:()
+        case 0:
+            self.textColorButton.selectedColor = NSColor.white
+        case 1:
+            self.textColorButton.selectedColor = textColours[0]
+        case 2:
+            self.textColorButton.selectedColor = NSColor.gray
+        default:()
         }
 
-        //Configure the HighlightColour UI
-        let highlightColours = fontStyling.highlightColours
+        // Configure the HighlightColour UI
+        let highlightColours = textStyling.highlightColours
         switch (highlightColours.count) {
             case 0:
                 self.highlightColorButton.selectedColor = NSColor.white
-
             case 1:
                 self.highlightColorButton.selectedColor = highlightColours[0]
-
             case 2:
                 self.highlightColorButton.selectedColor = NSColor.gray
-
             default:()
         }
-        
-        //Configure the Fonts UI
-        let fonts = fontStyling.fonts
+
+        // Configure the Fonts UI
+        let fonts = textStyling.fonts
         switch (fonts.count) {
             case 0:
                 fatalError("Fonts count is somehow 0: \(fonts)")
-            
+
             case 1:
                 self.fontFamiliesPopUpButton.title = fonts[0].displayName ?? fonts[0].fontName
-                self.fontSizePopUpButton.title     = "\(fonts[0].pointSize.cleanValue)"
+                self.fontSizePopUpButton.title = "\(fonts[0].pointSize.cleanValue)"
 
             case 2:
                 self.fontFamiliesPopUpButton.title = fonts[0].displayName ?? fonts[0].fontName
-                self.fontSizePopUpButton.title     = "\(fonts[0].pointSize.cleanValue)"
+                self.fontSizePopUpButton.title = "\(fonts[0].pointSize.cleanValue)"
                 
             default:()
+        }
+
+        // Configure the Alignments UI
+        let alignments = textStyling.alignments
+
+        self.alignmentButtons.forEach { $0.selected = false }
+
+        for alignment in alignments {
+            switch alignment {
+            case .left:
+                self.alignLeftButton.selected = true
+            case .center:
+                self.alignCentreButton.selected = true
+            case .right:
+                self.alignRightButton.selected = true
+            case .justified:
+                self.alignJustifyButton.selected = true
+            default:()
+            }
         }
     }
 
@@ -343,22 +359,6 @@ private extension NSStackView {
         NSLayoutConstraint.activate([
             seperator.widthAnchor.constraint(equalToConstant: 1)
         ])
-    }
-
-}
-
-// MARK: - ColorPickerDelegate
-
-extension RichEditorToolbar: ColorPickerDelegate {
-
-    func didSelectColor(_ sender: ColorPicker, color: NSColor) {
-        switch sender {
-        case self.textColorButton:
-            self.richEditor.apply(textColour: color)
-        case self.highlightColorButton:
-            self.richEditor.apply(highlightColour: color)
-        default:()
-        }
     }
 
 }

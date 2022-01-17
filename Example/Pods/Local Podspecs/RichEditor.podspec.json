@@ -31,7 +31,8 @@
       "name": "Resources",
       "resource_bundles": {
         "Resources": [
-          "Resources/**/*.png"
+          "Resources/**/*.png",
+          "Resources/**/Assets.xcassets"
         ]
       }
     }

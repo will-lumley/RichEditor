@@ -27,19 +27,19 @@ internal extension RichEditor {
         let currentFont = self.currentFont
         var newFont     = currentFont
         
-        let fontStyling = self.fontStyling
-        let fontStylingTrait = fontStyling.fontTraitFor(nsFontTraitMask: fontTrait)
-        
+        let textStyling = self.textStyling
+        let textStylingTrait = textStyling.fontTraitFor(nsFontTraitMask: fontTrait)
+
         print("\nOldFont: \(currentFont)")
-        switch (fontStylingTrait) {
+        switch (textStylingTrait) {
             //If we're ONLY bold at the moment, let's make it unbold
-            case .hasTrait:
+            case .isTrait:
                 newFont = NSFontManager.shared.convert(currentFont, toNotHaveTrait: fontTrait)
             
             //If we're ONLY unbold at the moment, let's make it bold
-            case .hasNoTrait:
+            case .isNotTrait:
                 newFont = NSFontManager.shared.convert(currentFont, toHaveTrait: fontTrait)
-            
+
             //If we're BOTH bold and unbold, we'll make it bold
             case .both:
                 newFont = NSFontManager.shared.convert(currentFont, toHaveTrait: fontTrait)
@@ -49,8 +49,8 @@ internal extension RichEditor {
         let updatedFontAttr = [NSAttributedString.Key.font: newFont]
         self.add(attributes: updatedFontAttr, textApplicationType: self.textView.hasSelectedText ? .selected : .future)
 
-        self.richEditorDelegate?.fontStylingChanged(self.fontStyling)
-        self.toolbarRichEditorDelegate?.fontStylingChanged(self.fontStyling)
+        self.richEditorDelegate?.fontStylingChanged(self.textStyling)
+        self.toolbarRichEditorDelegate?.fontStylingChanged(self.textStyling)
     }
     
     /**
@@ -66,14 +66,14 @@ internal extension RichEditor {
      - parameter range: This is a property that allows users to override the default range that the attribute will be applied to, and to choose their own custom range.
     */
     func toggleTextView(with attribute: NSAttributedString.Key, negativeValue: Any, positiveValue: Any, range: NSRange? = nil) {
-        let fontTrait = self.fontStyling.trait(with: attribute)
+        let fontTrait = self.textStyling.trait(with: attribute)
 
         var newAttr = [NSAttributedString.Key: Any]()
         switch (fontTrait) {
-            case .hasTrait:
+            case .isTrait:
                 newAttr = [attribute: negativeValue]
             
-            case .hasNoTrait:
+            case .isNotTrait:
                 newAttr = [attribute: positiveValue]
             
             case .both:
@@ -90,10 +90,10 @@ internal extension RichEditor {
 
         self.add(attributes: newAttr, textApplicationType: type)
 
-        self.richEditorDelegate?.fontStylingChanged(self.fontStyling)
-        self.toolbarRichEditorDelegate?.fontStylingChanged(self.fontStyling)
+        self.richEditorDelegate?.fontStylingChanged(self.textStyling)
+        self.toolbarRichEditorDelegate?.fontStylingChanged(self.textStyling)
     }
-    
+
     /**
      Adds the provided NSAttributedString.Key attributes to the TextView. The attributes will either
      be applied to the text that is selected, or to all 'future' text. This is dependant on the
@@ -114,8 +114,8 @@ internal extension RichEditor {
                 return
             }
 
-            //Ensure the UI is updated with the new FontStyling state's
-            self.selectedTextFontStyling = FontStyling(attributedString: attr)
+            //Ensure the UI is updated with the new TextStyling state's
+            self.selectedTextFontStyling = TextStyling(attributedString: attr)
 
         case .range(let range):
             self.textStorage.addAttributes(attributes, range: range)
@@ -125,8 +125,8 @@ internal extension RichEditor {
                 return
             }
             
-            //Ensure the UI is updated with the new FontStyling state's
-            self.selectedTextFontStyling = FontStyling(attributedString: attr)
+            //Ensure the UI is updated with the new TextStyling state's
+            self.selectedTextFontStyling = TextStyling(attributedString: attr)
 
         case .future:
             //Get the existing TypingAttributes, and merge it into our new attributes dictionary
@@ -140,8 +140,8 @@ internal extension RichEditor {
 
         }
         
-        self.richEditorDelegate?.fontStylingChanged(self.fontStyling)
-        self.toolbarRichEditorDelegate?.fontStylingChanged(self.fontStyling)
+        self.richEditorDelegate?.fontStylingChanged(self.textStyling)
+        self.toolbarRichEditorDelegate?.fontStylingChanged(self.textStyling)
     }
 
 }

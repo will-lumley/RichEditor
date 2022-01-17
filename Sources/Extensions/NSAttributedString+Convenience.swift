@@ -10,6 +10,7 @@ import Foundation
 import AppKit
 
 public extension NSAttributedString {
+
     /**
      Determines the attributes for the whole complete NSAttributedString
      - returns: The attributes, in the form of a dictionary, for the whole NSAttributedString
@@ -110,7 +111,7 @@ public extension NSAttributedString {
      - parameter attribute: The NSAttributedString.Key values we're searching for
      - returns: An array of all the values that correlated with the provided attribute key
     */
-    fileprivate func all(of attribute: NSAttributedString.Key) -> [Any] {
+    private func all(of attribute: NSAttributedString.Key) -> [Any] {
         var allValues = [Any]()
         let fullRange = self.string.fullRange
         let options   = NSAttributedString.EnumerationOptions.longestEffectiveRangeNotRequired

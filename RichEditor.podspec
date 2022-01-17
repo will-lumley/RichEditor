@@ -31,7 +31,10 @@ Pod::Spec.new do |s|
     
     s.subspec 'Resources' do |resources|
         resources.resource_bundle = {
-          'Resources' => ['Resources/**/*.png']
+          'Resources' => [
+            'Resources/**/*.png',
+            'Resources/**/Assets.xcassets'
+          ]
         }
     end
 end

@@ -45,7 +45,7 @@ class ViewController: NSViewController
 
 extension ViewController: RichEditorDelegate {
 
-    func fontStylingChanged(_ fontStyling: FontStyling) {
+    func fontStylingChanged(_ textStyling: TextStyling) {
         
     }
     
