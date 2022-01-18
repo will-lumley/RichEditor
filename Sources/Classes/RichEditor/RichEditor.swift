@@ -1,6 +1,6 @@
 //
 //  RichEditor.swift
-//  Nimble
+//  RichEditor
 //
 //  Created by Will Lumley on 30/1/20.
 //
@@ -8,14 +8,16 @@
 import Foundation
 import AppKit
 
-public protocol RichEditorDelegate {
-
-    func fontStylingChanged(_ textStyling: TextStyling)
-    func richEditorTextChanged(_ richEditor: RichEditor)
-
-}
-
 public class RichEditor: NSView {
+
+    // MARK: - Types
+    enum CommandShortcut: String {
+        case b = "b"
+        case i = "i"
+        case u = "u"
+        case plus  = "+"
+        case minus = "-"
+    }
 
     // MARK: - Properties
 
@@ -27,7 +29,7 @@ public class RichEditor: NSView {
     public private(set) lazy var textView = RichTextView(frame: CGRect(), textContainer: self.textContainer, delegate: self)
     public private(set) lazy var scrollview = NSScrollView()
     /*------------------------------------------------------------*/
-    
+
     /// The TextStyling that contains information of the 'relevant' text
     internal var selectedTextFontStyling: TextStyling? {
         didSet {
@@ -38,7 +40,7 @@ public class RichEditor: NSView {
 
     /// The marker that will be used for bullet points
     internal static var bulletPointMarker = "•\u{00A0}" //NSTextList.MarkerFormat.circle
-    
+
     /// Returns the TextStyling object that was derived from the selected text, or the future text if nothing is selected
     public var textStyling: TextStyling {
         return self.selectedTextFontStyling ?? TextStyling(typingAttributes: self.textView.typingAttributes)
@@ -193,6 +195,7 @@ public class RichEditor: NSView {
 }
 
 // MARK: - NSTextStorage Delegate
+
 extension RichEditor: NSTextStorageDelegate {
 
     public func textStorage(_ textStorage: NSTextStorage, didProcessEditing editedMask: NSTextStorageEditActions, range editedRange: NSRange, changeInLength delta: Int) {

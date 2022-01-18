@@ -74,6 +74,7 @@
 		BC6729BE2276FA01B6C1CC774B6C3199 /* white-weight-italic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4DE7B1CE6724A53F7B7C7392665546C /* white-weight-italic@3x.png */; };
 		BE18C5292792B15100507D74 /* CIImage+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18C5282792B15100507D74 /* CIImage+Conversion.swift */; };
 		BE18C52B2795244000507D74 /* NSView+DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18C52A2795244000507D74 /* NSView+DarkMode.swift */; };
+		BE20442C2796324200D5D2EB /* RichEditorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE20442B2796324200D5D2EB /* RichEditorDelegate.swift */; };
 		BEEA2D072792A437006138D0 /* NSImage+Inversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA2D062792A437006138D0 /* NSImage+Inversion.swift */; };
 		BEEA2D092792AB50006138D0 /* NSImage+ColourOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA2D082792AB50006138D0 /* NSImage+ColourOverlay.swift */; };
 		BF21CFD6E5CBCB00C6D3D0749AA60C87 /* white-text-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BC475E09946AEC1391D142BA4952701 /* white-text-list@2x.png */; };
@@ -209,6 +210,7 @@
 		BB6C1D4F9354B6DE36A76F01845980A9 /* String+BulletPoints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+BulletPoints.swift"; sourceTree = "<group>"; };
 		BE18C5282792B15100507D74 /* CIImage+Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIImage+Conversion.swift"; sourceTree = "<group>"; };
 		BE18C52A2795244000507D74 /* NSView+DarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+DarkMode.swift"; sourceTree = "<group>"; };
+		BE20442B2796324200D5D2EB /* RichEditorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichEditorDelegate.swift; sourceTree = "<group>"; };
 		BEEA2D062792A437006138D0 /* NSImage+Inversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Inversion.swift"; sourceTree = "<group>"; };
 		BEEA2D082792AB50006138D0 /* NSImage+ColourOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+ColourOverlay.swift"; sourceTree = "<group>"; };
 		BFB16DBD14B7F8FF920411A674350E2D /* white-weight-underline@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "white-weight-underline@1x.png"; path = "Resources/white-weight-underline@1x.png"; sourceTree = "<group>"; };
@@ -426,8 +428,9 @@
 			isa = PBXGroup;
 			children = (
 				C7DC04DAFAABA007B81F79DEE10A0E3B /* RichEditor.swift */,
-				50CC273B7DFF4982DA6AFE68A8842F65 /* RichEditor+Attachments.swift */,
+				BE20442B2796324200D5D2EB /* RichEditorDelegate.swift */,
 				631142738BCFD353272FCB430BF69D98 /* RichEditor+BulletPoints.swift */,
+				50CC273B7DFF4982DA6AFE68A8842F65 /* RichEditor+Attachments.swift */,
 				6A412B6058D96DB862AD397B9F321E68 /* RichEditor+Core.swift */,
 				A01159E528E869E6C0236E01A3A3BEA6 /* RichEditor+KeyboardShortcuts.swift */,
 				D6064C29D5336DFD594D54B46EF72359 /* RichEditor+Links.swift */,
@@ -864,6 +867,7 @@
 				88C1CC6D3EC68B4D90D659AEF1E7AA25 /* RichEditor+Styling.swift in Sources */,
 				4ACBBF6EA187159EAA4BD032ADC6217E /* RichEditor-dummy.m in Sources */,
 				BE18C52B2795244000507D74 /* NSView+DarkMode.swift in Sources */,
+				BE20442C2796324200D5D2EB /* RichEditorDelegate.swift in Sources */,
 				43CCC1BBDFA0CF02EFBC739D2524EBEA /* RichEditorToolbar.swift in Sources */,
 				BEEA2D092792AB50006138D0 /* NSImage+ColourOverlay.swift in Sources */,
 				3137861C45458A12434ED6C8D339A95D /* RichEditorToolbar+UI.swift in Sources */,

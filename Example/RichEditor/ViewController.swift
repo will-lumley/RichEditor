@@ -10,8 +10,8 @@ import AppKit
 import RichEditor
 import macColorPicker
 
-class ViewController: NSViewController
-{
+class ViewController: NSViewController {
+
     @IBOutlet weak var richEditor: RichEditor!
 
     private var previewViewController: PreviewViewController?
@@ -20,7 +20,7 @@ class ViewController: NSViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.openPreviewWindow()
         self.richEditor.richEditorDelegate = self
     }
@@ -56,5 +56,5 @@ extension ViewController: RichEditorDelegate {
 //        // Assign the raw HTML text so we can see the actual HTML content
 //        self.previewTextViewController?.display(richEditor: richEditor)
     }
-
+    
 }

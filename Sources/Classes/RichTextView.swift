@@ -7,17 +7,9 @@
 
 import Foundation
 
-public enum CommandShortcut: String {
-    case b = "b"
-    case i = "i"
-    case u = "u"
-    case plus  = "+"
-    case minus = "-"
-}
+internal protocol KeyboardShortcutDelegate {
 
-public protocol KeyboardShortcutDelegate {
-
-    func commandPressed(character: CommandShortcut) -> Bool
+    func commandPressed(character: RichEditor.CommandShortcut) -> Bool
 
 }
 
@@ -26,7 +18,7 @@ public class RichTextView: NSTextView {
     // MARK: - Properties
 
     /// Allows the RichEditor to be aware of keyboard presses
-    public private(set) var keyboardShortcutDelegate: KeyboardShortcutDelegate?
+    internal private(set) var keyboardShortcutDelegate: KeyboardShortcutDelegate?
 
     // MARK: - NSTextView
 
@@ -67,9 +59,11 @@ public class RichTextView: NSTextView {
         guard let characters = event.charactersIgnoringModifiers else {
             return super.performKeyEquivalent(with: event)
         }
-        guard let shortcut = CommandShortcut(rawValue: characters) else {
+
+        guard let shortcut = RichEditor.CommandShortcut(rawValue: characters) else {
             return super.performKeyEquivalent(with: event)
         }
+
         guard let delegate = self.keyboardShortcutDelegate else {
             return super.performKeyEquivalent(with: event)
         }

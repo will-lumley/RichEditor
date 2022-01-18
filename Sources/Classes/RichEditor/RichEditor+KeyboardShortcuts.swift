@@ -9,7 +9,7 @@ import Foundation
 
 extension RichEditor: KeyboardShortcutDelegate {
 
-    public func commandPressed(character: CommandShortcut) -> Bool {
+    func commandPressed(character: RichEditor.CommandShortcut) -> Bool {
         switch character {
         case .b:
             self.toggleBold()
@@ -26,3 +26,4 @@ extension RichEditor: KeyboardShortcutDelegate {
     }
 
 }
+
