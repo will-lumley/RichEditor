@@ -16,11 +16,11 @@ public extension NSFont {
      StackOverflow: https://stackoverflow.com/a/38405084
      - returns: The NSFontTraitMask that will contain this font's traits
     */
-    var fontTraits: NSFontTraitMask {
+    private var fontTraits: NSFontTraitMask {
         let descriptor = self.fontDescriptor
         let symTraits  = descriptor.symbolicTraits
         let traitSet   = NSFontTraitMask(rawValue: UInt(symTraits.rawValue))
-        
+
         return traitSet
     }
     
@@ -30,6 +30,6 @@ public extension NSFont {
      - returns: A boolean value, indicative of if this contains our desired trait
     */
     func contains(trait: NSFontTraitMask) -> Bool {
-        return self.fontTraits.contains(trait)
+        self.fontTraits.contains(trait)
     }
 }

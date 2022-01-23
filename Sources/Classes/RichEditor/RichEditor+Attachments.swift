@@ -10,6 +10,7 @@ import Foundation
 public extension RichEditor {
 
     static var attachmentsDirectory: URL {
+
         // Get the documents directory
         guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
             fatalError()
@@ -25,6 +26,7 @@ public extension RichEditor {
 
         return directoryURL
     }
+
     func promptUserForAttachments(windowForModal: NSWindow?) {
         let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = true
@@ -49,12 +51,12 @@ public extension RichEditor {
             })
         }
     }
-    
+
     func insertAttachments(at urls: [URL]) {
-        self.textView.layoutManager?.defaultAttachmentScaling = NSImageScaling.scaleProportionallyDown
-        
+        self.textView.layoutManager?.defaultAttachmentScaling = .scaleProportionallyDown
+
         print("Inserting attachments at URLs: \(urls)")
-        
+
         //Iterate over every URL and create a NSTextAttachment from it
         for url in urls {
 

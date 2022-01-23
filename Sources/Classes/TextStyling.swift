@@ -116,15 +116,11 @@ public struct TextStyling {
         self.isItalic   = attributedString.contains(trait: .italicFontMask)
         self.isUnitalic = attributedString.doesNotContain(trait: .italicFontMask)
         
-        let underlineQualities = attributedString.check(attribute: NSAttributedString.Key.underlineStyle) {(rawValueAttr) -> Bool in
-            return rawValueAttr == 0
-        }
+        let underlineQualities = attributedString.check(attribute: NSAttributedString.Key.underlineStyle)
         self.isUnderline   = underlineQualities.atParts
         self.isUnunderline = underlineQualities.notAtParts
         
-        let strikethroughQualities = attributedString.check(attribute: NSAttributedString.Key.strikethroughStyle) {(rawValueAttr) -> Bool in
-            return rawValueAttr == 0
-        }
+        let strikethroughQualities = attributedString.check(attribute: NSAttributedString.Key.strikethroughStyle)
         self.isStrikethrough   = strikethroughQualities.atParts
         self.isUnstrikethrough = strikethroughQualities.notAtParts
         

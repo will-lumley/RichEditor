@@ -10,7 +10,7 @@ import Foundation
 public extension String {
 
     var isBulletPoint: Bool {
-        return self.hasPrefix(RichEditor.bulletPointMarker)
+        self.hasPrefix(RichEditor.bulletPointMarker)
     }
     
     /// Returns an array of strings that is made up of all the "lines" in this string.

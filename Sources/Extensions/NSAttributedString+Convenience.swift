@@ -105,28 +105,8 @@ public extension NSAttributedString {
         return attachments
     }
     
-    // MARK: - Basic Attribute Fetching
-
-    /**
-     Collects all the types of the attribute that we're after
-     - parameter attribute: The NSAttributedString.Key values we're searching for
-     - returns: An array of all the values that correlated with the provided attribute key
-    */
-    private func all(of attribute: NSAttributedString.Key) -> [Any] {
-        var allValues = [Any]()
-        let fullRange = self.string.fullRange
-        let options   = NSAttributedString.EnumerationOptions.longestEffectiveRangeNotRequired
-        
-        self.enumerateAttribute(attribute, in: fullRange, options: options, using: {(valueOpt, range, stop) in
-            if let value = valueOpt {
-                allValues.append(value)
-            }
-        })
-        
-        return allValues
-    }
-    
     // MARK: - Attribute Checking
+
     /**
      Iterates over every font that exists within this NSAttributedString, and checks if any of the fonts contain the desired NSFontTraitMask
      - returns: A boolean value, indicative of if this contains our desired trait
@@ -141,73 +121,97 @@ public extension NSAttributedString {
         
         return false
     }
-    
+
     /**
      Iterates over every font that exists within this NSAttributedString, and checks if any of the fonts contain the desired NSFontTraitMask
      - returns: A boolean value, indicative of if our desired trait could not be found
      */
     func doesNotContain(trait: NSFontTraitMask) -> Bool {
-        let allFonts = self.all(of: NSAttributedString.Key.font) as! [NSFont]
-        for font in allFonts {
-            if !font.contains(trait: trait) {
-                return true
-            }
-        }
-        
-        return false
+        contains(trait: trait) == false
     }
-    
+
     /**
-     Determines if this attributed string contains any parts that have the provided NSAttributedString.Key, and any
-     parts that do NOT have the provided NSAttributedString.Key
+     Determines if this attributed string contains any parts that have the provided NSAttributedString.Key, and any parts that do NOT have the provided NSAttributedString.Key
      - parameter key: The NSAttributedString.Key that we're looking for
-     - parameter isNegativeAttr: This takes the provided `rawAttrValue` and will check if it matches 'off' value for the attribute.
-     If `attribute` was NSUnderlineStyle, then the rawAttrValue would be checked against NSUnderlineStyle.styleNone.rawValue. If it
-     did, a `true` boolean value would be returned
+
      - returns: A tuple containing two arguments, atParts & notAtParts. atParts will be true if any part of this
      attributed string is present. notAtParts will be true if any part of this attributed string is NOT present.
      The two arguments are not mutually exclusive since a string can have an attribute at some parts and
      not have the same attributes at other parts.
     */
-    func check(attribute: NSAttributedString.Key, isNegativeAttr: (_ rawAttrValue: Int) -> Bool) -> (atParts: Bool, notAtParts: Bool) {
+    func check(attribute: NSAttributedString.Key) -> (atParts: Bool, notAtParts: Bool) {
         var atParts   : Bool?
         var notAtParts: Bool?
         
         self.enumerateAttribute(attribute, in: self.string.fullRange, options: .longestEffectiveRangeNotRequired, using: {(valueOpt, range, stop) in
-            
+
+            // If this can be an NSNumber
             if let value = valueOpt as? NSNumber {
-                //If we have a `none` enum value
-                if !isNegativeAttr(value.intValue) {
+                // If we have a `none` enum value (by checking with the provided closure)
+                if value.intValue != 0 {
                     atParts = true
                 }
                 
-                //If we don't have a `none` enum value
+                // If we don't have a `none` enum value
                 else {
                     notAtParts = true
                 }
             }
-            
+
+            else if let _ = valueOpt as? NSFont {
+                atParts = true
+            }
+
             else {
                 notAtParts = true
             }
         })
         
-        //If noUnderlineAtParts wasn't set and neither was underlineAtParts, then clearly we have no underline
+        // If noUnderlineAtParts wasn't set and neither was underlineAtParts, then clearly we have no underline
         if notAtParts == nil && atParts == nil {
             notAtParts = true
         }
         
-        //If noUnderlineAtParts wasn't set but underlineAtParts WAS, then clearly we only have underline
+        // If noUnderlineAtParts wasn't set but underlineAtParts WAS, then clearly we only have underline
         if notAtParts == nil && atParts != nil {
             notAtParts = false
         }
         
-        //If underlineAtParts wasn't set, then clearly we don't have any underline
+        // If underlineAtParts wasn't set, then clearly we don't have any underline
         if atParts == nil {
             atParts = false
         }
+
+        guard let atParts = atParts, let notAtParts = notAtParts else {
+            fatalError("`atParts` or `notAtParts` was nil.")
+        }
+
+        return (atParts, notAtParts)
+    }
+
+}
+
+// MARK: - Basic Attribute Fetching
+
+private extension NSAttributedString {
+
+    /**
+     Collects all the types of the attribute that we're after
+     - parameter attribute: The NSAttributedString.Key values we're searching for
+     - returns: An array of all the values that correlated with the provided attribute key
+    */
+    func all(of attribute: NSAttributedString.Key) -> [Any] {
+        var allValues = [Any]()
+        let fullRange = self.string.fullRange
+        let options   = NSAttributedString.EnumerationOptions.longestEffectiveRangeNotRequired
         
-        return (atParts!, notAtParts!)
+        self.enumerateAttribute(attribute, in: fullRange, options: options, using: {(valueOpt, range, stop) in
+            if let value = valueOpt {
+                allValues.append(value)
+            }
+        })
+        
+        return allValues
     }
 
 }
