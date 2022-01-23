@@ -75,6 +75,7 @@
 		BE18C5292792B15100507D74 /* CIImage+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18C5282792B15100507D74 /* CIImage+Conversion.swift */; };
 		BE18C52B2795244000507D74 /* NSView+DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18C52A2795244000507D74 /* NSView+DarkMode.swift */; };
 		BE20442C2796324200D5D2EB /* RichEditorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE20442B2796324200D5D2EB /* RichEditorDelegate.swift */; };
+		BE204473279A402B00D5D2EB /* Dictionary+Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF04F3AD974B7342BA4D97600153D5FD /* Dictionary+Merge.swift */; };
 		BEEA2D072792A437006138D0 /* NSImage+Inversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA2D062792A437006138D0 /* NSImage+Inversion.swift */; };
 		BEEA2D092792AB50006138D0 /* NSImage+ColourOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA2D082792AB50006138D0 /* NSImage+ColourOverlay.swift */; };
 		BF21CFD6E5CBCB00C6D3D0749AA60C87 /* white-text-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BC475E09946AEC1391D142BA4952701 /* white-text-list@2x.png */; };
@@ -86,7 +87,7 @@
 		E2F62B97272350B76377F940700D5791 /* NSFont+Traits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F893B228F091FDC8A912AD86B8D6A /* NSFont+Traits.swift */; };
 		E421FAAFD63B639F1CE74AA5DF07CD1A /* white-text-link@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0A3848D3DADB7B5DAE22B62E6694BA /* white-text-link@3x.png */; };
 		E647854ED2C03970BE55157F88FD4AE0 /* white-weight-italic@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C43AF407E325D22A2313F6CA4A29211 /* white-weight-italic@1x.png */; };
-		E6FBCAE62D1E55B751998B2CD70DCFE0 /* Dictionary+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF04F3AD974B7342BA4D97600153D5FD /* Dictionary+Convenience.swift */; };
+		E6FBCAE62D1E55B751998B2CD70DCFE0 /* Dictionary+Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF04F3AD974B7342BA4D97600153D5FD /* Dictionary+Merge.swift */; };
 		EAFF145E9DE93059837CD979A02FA8F7 /* RichEditor+BulletPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631142738BCFD353272FCB430BF69D98 /* RichEditor+BulletPoints.swift */; };
 		ED04F848799B6C2E26E3C9484E694F77 /* macColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F7D0E34EB61E1711421EF8350D643189 /* macColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDCA53E20ABFC7286B6960572E32213B /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C713AB588FDA6E15F3CE076E2298FE4 /* String+Convenience.swift */; };
@@ -201,7 +202,7 @@
 		A70ECF050BE0F2240374B5F61BDCE19B /* ColorPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPickerViewController.swift; path = Sources/macColorPicker/Classes/ColorPickerViewController.swift; sourceTree = "<group>"; };
 		ABF32B39C4212FCB61671D9F63E10FEE /* white-align-right@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "white-align-right@1x.png"; path = "Resources/white-align-right@1x.png"; sourceTree = "<group>"; };
 		ACE1D136B10ACD146F52C347A3EB9AC4 /* ResourceBundle-Resources-RichEditor-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Resources-RichEditor-Info.plist"; sourceTree = "<group>"; };
-		AF04F3AD974B7342BA4D97600153D5FD /* Dictionary+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+Convenience.swift"; sourceTree = "<group>"; };
+		AF04F3AD974B7342BA4D97600153D5FD /* Dictionary+Merge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+Merge.swift"; sourceTree = "<group>"; };
 		B2821DDFF7B5468DF2DACC7C4DE258F9 /* macColorPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = macColorPicker.debug.xcconfig; sourceTree = "<group>"; };
 		B499D878FECF0485E0C68D211D7CE753 /* RichEditorToolbar+UI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "RichEditorToolbar+UI.swift"; sourceTree = "<group>"; };
 		B4DE7B1CE6724A53F7B7C7392665546C /* white-weight-italic@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "white-weight-italic@3x.png"; path = "Resources/white-weight-italic@3x.png"; sourceTree = "<group>"; };
@@ -370,7 +371,7 @@
 			children = (
 				BE18C5282792B15100507D74 /* CIImage+Conversion.swift */,
 				FD2641D0FC0148A17E94CADC8AA2334D /* CGFloat+Formatting.swift */,
-				AF04F3AD974B7342BA4D97600153D5FD /* Dictionary+Convenience.swift */,
+				AF04F3AD974B7342BA4D97600153D5FD /* Dictionary+Merge.swift */,
 				CBAD58831C45645FD73B7FF4365A76AB /* Dictionary+TypingAttributes.swift */,
 				F5F42BFE1CBC3E0821E514691646D449 /* NSAttributedString+Convenience.swift */,
 				0A9F893B228F091FDC8A912AD86B8D6A /* NSFont+Traits.swift */,
@@ -812,6 +813,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE204473279A402B00D5D2EB /* Dictionary+Merge.swift in Sources */,
 				C25CB5AFEA05F7A780C838CB881997DC /* Pods-RichEditor_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -849,7 +851,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A75F7C8A1B6799103D846C7AA02ECCA1 /* CGFloat+Formatting.swift in Sources */,
-				E6FBCAE62D1E55B751998B2CD70DCFE0 /* Dictionary+Convenience.swift in Sources */,
+				E6FBCAE62D1E55B751998B2CD70DCFE0 /* Dictionary+Merge.swift in Sources */,
 				F3BE4DFBC0A56AFBBF023BBC3B550CC6 /* Dictionary+TypingAttributes.swift in Sources */,
 				659E341063526694BF23A44B20A7DE5E /* NSAttributedString+Convenience.swift in Sources */,
 				E2F62B97272350B76377F940700D5791 /* NSFont+Traits.swift in Sources */,

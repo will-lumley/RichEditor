@@ -132,7 +132,7 @@ internal extension RichEditor {
             //Get the existing TypingAttributes, and merge it into our new attributes dictionary
             var typingAttributes = self.textView.typingAttributes
             //print("Old TypingAttributes: \(typingAttributes)")
-            
+
             typingAttributes.merge(newDict: attributes)
             //print("New TypingAttributes: \(typingAttributes)\n")
             

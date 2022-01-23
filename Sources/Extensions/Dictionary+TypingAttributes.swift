@@ -3,7 +3,7 @@
 //  RichEditor
 //
 //  Created by William Lumley on 28/3/18.
-//  Copyright © 2018 Kampana. All rights reserved.
+//  Copyright © 2018 William Lumley. All rights reserved.
 //
 
 import Foundation
@@ -11,14 +11,6 @@ import AppKit
 
 extension Dictionary where Key == NSAttributedString.Key {
 
-    public var isUnderlined : Bool {
-        guard let rawUnderlineStyle = self[NSAttributedString.Key.underlineStyle] as? NSNumber else {
-            return false
-        }
-        
-        return rawUnderlineStyle.intValue != 0
-    }
-    
     /**
      Determines if this dictionary contains any parts that have the provided NSAttributedString.Key or not
      - parameter key: The NSAttributedString.Key that we're looking for
@@ -33,7 +25,7 @@ extension Dictionary where Key == NSAttributedString.Key {
             return false
         }
         
-        return !isNegativeAttr(rawAttr.intValue)
+        return isNegativeAttr(rawAttr.intValue) == false
     }
 
 }

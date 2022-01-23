@@ -3,7 +3,7 @@
 //  RichEditor
 //
 //  Created by William Lumley on 13/7/21.
-//  Copyright © 2021 CocoaPods. All rights reserved.
+//  Copyright © 2021 William Lumley. All rights reserved.
 //
 
 import Cocoa

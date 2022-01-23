@@ -3,7 +3,7 @@
 //  RichEditor_Example
 //
 //  Created by Will Lumley on 30/1/20.
-//  Copyright © 2020 CocoaPods. All rights reserved.
+//  Copyright © 2020 William Lumley. All rights reserved.
 //
 
 import AppKit

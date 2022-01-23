@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		0B3290AD32EEE398E61FD980 /* Pods_RichEditor_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68092981D0F6EFC91D7403 /* Pods_RichEditor_Tests.framework */; };
 		28DFC7C113D213B946368760 /* Pods_RichEditor_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA3EB33AE9DACA9BF9D4793 /* Pods_RichEditor_Example.framework */; };
+		BE6B1928279B92BE00049D21 /* DictionaryMergeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F68E20348A760038D96B /* DictionaryMergeTests.swift */; };
+		BE6B192B279B941A00049D21 /* CGFloatFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B1929279B934800049D21 /* CGFloatFormattingTests.swift */; };
+		BE6B192F279B949700049D21 /* DictionaryTypingAttributesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B192E279B949700049D21 /* DictionaryTypingAttributesTests.swift */; };
+		BE6B1931279B97D800049D21 /* NSAttributedStringConvenienceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B1930279B97D800049D21 /* NSAttributedStringConvenienceTests.swift */; };
 		BEE6790A269D5A710073CA71 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE67909269D59B00073CA71 /* PreviewViewController.swift */; };
 		BEEE9CA9264A937D00B8620C /* NSColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE9CA5264A937D00B8620C /* NSColor+Hex.swift */; };
 		BEEE9CAB264A937D00B8620C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE9CA7264A937D00B8620C /* ViewController.swift */; };
 		ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67B20348A760038D96B /* AppDelegate.swift */; };
 		ED83F68020348A760038D96B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED83F67F20348A760038D96B /* Assets.xcassets */; };
 		ED83F68320348A760038D96B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED83F68120348A760038D96B /* Main.storyboard */; };
-		ED83F68F20348A760038D96B /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F68E20348A760038D96B /* Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		7EC4DC5AAF3B012078EDAE47 /* Pods-RichEditor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichEditor_Tests.debug.xcconfig"; path = "Target Support Files/Pods-RichEditor_Tests/Pods-RichEditor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D8950587C61940BEAD9E33D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8E1AB52923CE42514E07F09D /* Pods-RichEditor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichEditor_Example.debug.xcconfig"; path = "Target Support Files/Pods-RichEditor_Example/Pods-RichEditor_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BE6B1929279B934800049D21 /* CGFloatFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatFormattingTests.swift; sourceTree = "<group>"; };
+		BE6B192E279B949700049D21 /* DictionaryTypingAttributesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTypingAttributesTests.swift; sourceTree = "<group>"; };
+		BE6B1930279B97D800049D21 /* NSAttributedStringConvenienceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringConvenienceTests.swift; sourceTree = "<group>"; };
 		BEE67909269D59B00073CA71 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		BEEE9CA5264A937D00B8620C /* NSColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Hex.swift"; sourceTree = "<group>"; };
 		BEEE9CA7264A937D00B8620C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +54,7 @@
 		ED83F68420348A760038D96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED83F68520348A760038D96B /* RichEditor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RichEditor.entitlements; sourceTree = "<group>"; };
 		ED83F68A20348A760038D96B /* RichEditor_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RichEditor_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED83F68E20348A760038D96B /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		ED83F68E20348A760038D96B /* DictionaryMergeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryMergeTests.swift; sourceTree = "<group>"; };
 		ED83F69020348A760038D96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,7 +137,10 @@
 		ED83F68D20348A760038D96B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				ED83F68E20348A760038D96B /* Tests.swift */,
+				ED83F68E20348A760038D96B /* DictionaryMergeTests.swift */,
+				BE6B1929279B934800049D21 /* CGFloatFormattingTests.swift */,
+				BE6B192E279B949700049D21 /* DictionaryTypingAttributesTests.swift */,
+				BE6B1930279B97D800049D21 /* NSAttributedStringConvenienceTests.swift */,
 				ED83F69020348A760038D96B /* Info.plist */,
 			);
 			path = Tests;
@@ -332,7 +341,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED83F68F20348A760038D96B /* Tests.swift in Sources */,
+				BE6B1928279B92BE00049D21 /* DictionaryMergeTests.swift in Sources */,
+				BE6B192B279B941A00049D21 /* CGFloatFormattingTests.swift in Sources */,
+				BE6B192F279B949700049D21 /* DictionaryTypingAttributesTests.swift in Sources */,
+				BE6B1931279B97D800049D21 /* NSAttributedStringConvenienceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,10 +528,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.RichEditor-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RichEditor_Example.app/Contents/MacOS/RichEditor_Example";
 			};
 			name = Debug;
 		};
@@ -533,10 +546,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.RichEditor-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RichEditor_Example.app/Contents/MacOS/RichEditor_Example";
 			};
 			name = Release;
 		};

@@ -3,15 +3,14 @@
 //  RichEditor_Example
 //
 //  Created by William Lumley on 31/1/20.
-//  Copyright © 2020 CocoaPods. All rights reserved.
+//  Copyright © 2020 William Lumley. All rights reserved.
 //
 
 import AppKit
 
-extension NSColor
-{
-    convenience init(hex: String)
-    {
+extension NSColor {
+
+    convenience init(hex: String) {
         let scanner = Scanner(string: hex)
         scanner.scanLocation = 0
         
@@ -30,4 +29,5 @@ extension NSColor
             alpha: 1
         )
     }
+
 }

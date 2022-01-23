@@ -11,6 +11,7 @@ import AppKit
 public class RichEditor: NSView {
 
     // MARK: - Types
+
     enum CommandShortcut: String {
         case b = "b"
         case i = "i"

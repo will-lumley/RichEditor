@@ -3,7 +3,7 @@
 //  RichEditor
 //
 //  Created by William Lumley on 2/4/18.
-//  Copyright © 2018 Kampana. All rights reserved.
+//  Copyright © 2018 William Lumley. All rights reserved.
 //
 
 import Foundation

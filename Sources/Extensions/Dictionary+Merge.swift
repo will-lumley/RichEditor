@@ -1,15 +1,16 @@
 //
-//  Dictionary+Generics.swift
+//  Dictionary+Merge.swift
 //  RichEditor
 //
 //  Created by William Lumley on 21/3/18.
-//  Copyright © 2018 Kampana. All rights reserved.
+//  Copyright © 2018 William Lumley. All rights reserved.
 //
 
 import Foundation
 import AppKit
 
-extension Dictionary {
+public extension Dictionary {
+
     /**
      Merges the provided dictionary into this one. If the newDict and this dictionary have identical keys,
      the newDict's key/value pair overwrite the original one
@@ -20,4 +21,5 @@ extension Dictionary {
             self[key] = value
         }
     }
+
 }

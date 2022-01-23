@@ -3,7 +3,7 @@
 //  RichEditor
 //
 //  Created by William Lumley on 20/3/18.
-//  Copyright © 2018 Kampana. All rights reserved.
+//  Copyright © 2018 William Lumley. All rights reserved.
 //
 
 import Foundation
@@ -11,24 +11,24 @@ import AppKit
 
 public struct TextStyling {
 
-    public fileprivate(set) var isBold  : Bool
-    public fileprivate(set) var isUnbold: Bool
+    public private(set) var isBold  : Bool
+    public private(set) var isUnbold: Bool
     
-    public fileprivate(set) var isItalic  : Bool
-    public fileprivate(set) var isUnitalic: Bool
+    public private(set) var isItalic  : Bool
+    public private(set) var isUnitalic: Bool
     
-    public fileprivate(set) var isUnderline  : Bool
-    public fileprivate(set) var isUnunderline: Bool
+    public private(set) var isUnderline  : Bool
+    public private(set) var isUnunderline: Bool
 
-    public fileprivate(set) var isStrikethrough  : Bool
-    public fileprivate(set) var isUnstrikethrough: Bool
+    public private(set) var isStrikethrough  : Bool
+    public private(set) var isUnstrikethrough: Bool
     
-    public fileprivate(set) var fonts: [NSFont]
-    public fileprivate(set) var alignments: [NSTextAlignment]
+    public private(set) var fonts: [NSFont]
+    public private(set) var alignments: [NSTextAlignment]
 
-    public fileprivate(set) var textColours     : [NSColor]
-    public fileprivate(set) var highlightColours: [NSColor]
-    
+    public private(set) var textColours     : [NSColor]
+    public private(set) var highlightColours: [NSColor]
+
     public var boldTrait: TextStyling.Trait {
         //If we're ONLY bold
         if self.isBold && !self.isUnbold {

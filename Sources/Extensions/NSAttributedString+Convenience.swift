@@ -3,7 +3,7 @@
 //  RichEditor
 //
 //  Created by William Lumley on 20/3/18.
-//  Copyright © 2018 Kampana. All rights reserved.
+//  Copyright © 2018 William Lumley. All rights reserved.
 //
 
 import Foundation
@@ -16,7 +16,7 @@ public extension NSAttributedString {
      - returns: The attributes, in the form of a dictionary, for the whole NSAttributedString
      */
     var attributes: [NSAttributedString.Key: Any] {
-        return self.attributes(at: 0, longestEffectiveRange: nil, in: self.string.fullRange)
+        self.attributes(at: 0, longestEffectiveRange: nil, in: self.string.fullRange)
     }
     
     /**
@@ -106,6 +106,7 @@ public extension NSAttributedString {
     }
     
     // MARK: - Basic Attribute Fetching
+
     /**
      Collects all the types of the attribute that we're after
      - parameter attribute: The NSAttributedString.Key values we're searching for
