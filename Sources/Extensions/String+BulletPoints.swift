@@ -10,7 +10,10 @@ import Foundation
 public extension String {
 
     var isBulletPoint: Bool {
-        self.hasPrefix(RichEditor.bulletPointMarker)
+        let nsStr = NSString(string: self)
+        let str = nsStr.replacingOccurrences(of: "\t", with: "")
+        
+        return str.hasPrefix(RichEditor.bulletPointMarker)        
     }
     
     /// Returns an array of strings that is made up of all the "lines" in this string.

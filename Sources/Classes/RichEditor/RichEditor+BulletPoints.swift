@@ -12,11 +12,11 @@ public extension RichEditor {
     func startBulletPoints() {
         let currentLine = self.textView.currentLine
         
-        //Get the string that makes up our current string, and find out where it sits in our TextView
+        // Get the string that makes up our current string, and find out where it sits in our TextView
         let currentLineStr   = currentLine.lineString
         let currentLineRange = currentLine.lineRange
         
-        //If our current line already has a bullet point, remove it
+        // If our current line already has a bullet point, remove it
         if currentLineStr.isBulletPoint {
             //Get the line in our TextView that our caret is on, and remove our bulletpoint
             var noBulletPointStr = currentLineStr.replacingOccurrences(of: "\(RichEditor.bulletPointMarker) ", with: "")
@@ -24,11 +24,15 @@ public extension RichEditor {
 
             self.textView.replaceCharacters(in: currentLineRange, with: noBulletPointStr)
         }
-        //If our current line doesn't already have a bullet point appended to it, prepend one
+        // If our current line doesn't already have a bullet point appended to it, prepend one
         else {
-            //Get the line in our TextView that our caret is on, and prepend a bulletpoint to it
+            // Get the line in our TextView that our caret is on, and prepend a bulletpoint to it
             let bulletPointStr = "\(RichEditor.bulletPointMarker) \(currentLineStr)"
             self.textView.replaceCharacters(in: currentLineRange, with: bulletPointStr)
+
+            // Handle:
+            // 1. If a line with *just* a bullet point exists and backspace is pressed, delete 1 tab
+            // 2. If a newline is pressed, make a newline with the same amount of bulletpoints
         }
     }
 
@@ -37,36 +41,48 @@ public extension RichEditor {
 extension RichEditor: NSTextViewDelegate {
 
     public func textView(_ textView: NSTextView, shouldChangeTextIn affectedCharRange: NSRange, replacementString: String?) -> Bool {
-        //Get all the lines of the text
-        //Get the line of text that we're on
-        
+
+        // Get all the lines of the text
+        // Get the line of text that we're on
+
         guard let newString = replacementString else { return true }
-        
-        //If the user just hit enter/newline
-        if newString == "\n" {
-            let currentLine = textView.currentLine
-            
-            //If the line we're currently on is prefixed with a bullet point, append a bullet point to the next line
-            let currentLineStr = currentLine.lineString
-            if currentLineStr.isBulletPoint {
-                
-                let currentLineRange = currentLine.lineRange
-                
-                //If our current line is just an empty bullet point line, remove the bullet point and turn it into a regular line
-                if currentLineStr == RichEditor.bulletPointMarker {
-                    self.textView.replaceCharacters(in: currentLineRange, with: "")
-                }
-                
-                //If our current line is a full bullet point line, append a brand spanking new bullet point line below our current line for our user
-                else {
-                    let bulletPointStr = "\(currentLineStr)\n\(RichEditor.bulletPointMarker)"
-                    self.textView.replaceCharacters(in: currentLineRange, with: bulletPointStr)
-                }
-                
-                return false
-            }
+
+        let currentLine = textView.currentLine
+
+        // If the line we're currently on is NOT prefixed with a bullet point, bail out
+        let currentLineStr = currentLine.lineString
+        if currentLineStr.isBulletPoint == false {
+            return true
         }
-        
+
+        let currentLineRange = currentLine.lineRange
+
+        // If the user just hit enter/newline
+        if newString == "\n" {
+            // The line we're currently on is prefixed with a bullet point, append a bullet point to the next line
+
+            // If our current line is just an empty bullet point line, remove the bullet point and turn it into a regular line
+            if currentLineStr == RichEditor.bulletPointMarker {
+                self.textView.replaceCharacters(in: currentLineRange, with: "")
+            }
+            
+            // If our current line is a full bullet point line, append a brand spanking new bullet point line below our current line for our user
+            else {
+                let bulletPointStr = "\(currentLineStr)\n\(RichEditor.bulletPointMarker)"
+                self.textView.replaceCharacters(in: currentLineRange, with: bulletPointStr)
+            }
+            
+            return false
+        }
+
+        // If the user just hit the tab button
+        else if newString == "\t" {
+            let bulletPointStr = "\t\(currentLineStr)"
+            self.textView.replaceCharacters(in: currentLineRange, with: bulletPointStr)
+
+            return false
+        }
+
         return true
     }
 

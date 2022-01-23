@@ -19,12 +19,12 @@ public extension NSTextView {
     
     /// Determines if the user has selected (ie. highlighted) any text
     var hasSelectedText: Bool {
-        return self.selectedRange().length > 0
+        self.selectedRange().length > 0
     }
 
     /// The location of our caret within the textview
     var caretLocation: Int {
-        return self.selectedRange().location
+        self.selectedRange().location
     }
     
     /**

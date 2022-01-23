@@ -44,7 +44,7 @@ public class RichEditor: NSView {
 
     /// Returns the TextStyling object that was derived from the selected text, or the future text if nothing is selected
     public var textStyling: TextStyling {
-        return self.selectedTextFontStyling ?? TextStyling(typingAttributes: self.textView.typingAttributes)
+        self.selectedTextFontStyling ?? TextStyling(typingAttributes: self.textView.typingAttributes)
     }
     
     /// The delegate which will notify the listener of significant events
