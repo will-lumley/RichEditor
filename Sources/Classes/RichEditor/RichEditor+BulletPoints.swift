@@ -29,10 +29,6 @@ public extension RichEditor {
             // Get the line in our TextView that our caret is on, and prepend a bulletpoint to it
             let bulletPointStr = "\(RichEditor.bulletPointMarker) \(currentLineStr)"
             self.textView.replaceCharacters(in: currentLineRange, with: bulletPointStr)
-
-            // Handle:
-            // 1. If a line with *just* a bullet point exists and backspace is pressed, delete 1 tab
-            // 2. If a newline is pressed, make a newline with the same amount of bulletpoints
         }
     }
 
@@ -41,6 +37,9 @@ public extension RichEditor {
 extension RichEditor: NSTextViewDelegate {
 
     public func textView(_ textView: NSTextView, shouldChangeTextIn affectedCharRange: NSRange, replacementString: String?) -> Bool {
+
+        // Handle:
+        // 1. If a line with *just* a bullet point exists and backspace is pressed, delete 1 tab
 
         // Get all the lines of the text
         // Get the line of text that we're on
@@ -52,6 +51,7 @@ extension RichEditor: NSTextViewDelegate {
         // If the line we're currently on is NOT prefixed with a bullet point, bail out
         let currentLineStr = currentLine.lineString
         if currentLineStr.isBulletPoint == false {
+            // We have decided we don't want to make any artificial changes, let the literal changes go through
             return true
         }
 
@@ -65,13 +65,21 @@ extension RichEditor: NSTextViewDelegate {
             if currentLineStr == RichEditor.bulletPointMarker {
                 self.textView.replaceCharacters(in: currentLineRange, with: "")
             }
-            
+
             // If our current line is a full bullet point line, append a brand spanking new bullet point line below our current line for our user
             else {
-                let bulletPointStr = "\(currentLineStr)\n\(RichEditor.bulletPointMarker)"
+
+                // We want to make sure that our newline has the same amount of starting tabs as our current line
+                var prependedTabs = ""
+                if currentLineStr.isPrefixedWithTab {
+                    prependedTabs = "\t".repeated(currentLineStr.prefixedStringCount(needle: "\t"))
+                }
+
+                let bulletPointStr = "\(currentLineStr)\n\(prependedTabs)\(RichEditor.bulletPointMarker)"
                 self.textView.replaceCharacters(in: currentLineRange, with: bulletPointStr)
             }
-            
+
+            // We've made the artificial changes to the string, don't let the literal change go through
             return false
         }
 
@@ -80,9 +88,42 @@ extension RichEditor: NSTextViewDelegate {
             let bulletPointStr = "\t\(currentLineStr)"
             self.textView.replaceCharacters(in: currentLineRange, with: bulletPointStr)
 
+            // We've made the artificial changes to the string, don't let the literal change go through
             return false
         }
 
+        // If the user just hit the backspace button
+        else if newString.isBackspace {
+            // If our line has any tabs prepended to it, delete one of them
+            if currentLineStr.isPrefixedWithTab {
+
+                // Get the CaretLocation of our caret relative to this current line
+                var caretLocation = currentLine.caretLocation
+
+                // Calculate how many bullet point & tabs exist in the start of this line
+                let prefixTabCount = currentLineStr.prefixedStringCount(needle: "\t")
+                let prefixBulletPointCount = currentLineStr.prefixedStringCount(needle: "•", ignoring: ["\t"])
+
+                // Remove the bullet point & tab count from our location, as we don't consider them actual characters
+                caretLocation = caretLocation - (prefixTabCount + prefixBulletPointCount)
+
+                // Remove the extra space that sits after the bullet point
+                caretLocation -= 1
+
+                // If our caret is at the start (barring any tabs and bullet point markers) of our line
+                if caretLocation == 0 {
+                    var bulletPointStr = String(currentLineStr)
+                    bulletPointStr.removeFirst(needle: "\t")
+
+                    self.textView.replaceCharacters(in: currentLineRange, with: bulletPointStr)
+
+                    // We've made the artificial changes to the string, don't let the literal change go through
+                    return false
+                }
+            }
+        }
+
+        // We have decided we don't want to make any artificial changes, let the literal changes go through// We have decided we don't want to make any artificial changes, let the literal changes go through
         return true
     }
 

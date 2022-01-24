@@ -15,6 +15,7 @@ public extension NSTextView {
         let lineNumber: Int
         let lineRange: NSRange
         let lineString: String
+        let caretLocation: Int
     }
     
     /// Determines if the user has selected (ie. highlighted) any text
@@ -45,6 +46,7 @@ public extension NSTextView {
         var selectedLineNumber = 0
         var selectedLineRange  = NSRange(location: 0, length: 0)
         var selectedLineOfText = ""
+        var caretLocationInLine = 0
         
         var foundSelectedLine = false
         
@@ -56,17 +58,18 @@ public extension NSTextView {
             //Calculate the start location of our line and the end location of our line, in context to our TextView.string as a whole
             let startOfLine = range.location
             let endOfLine   = range.location + range.length
-            
+
             //If the CaretLocation is between the start of this line, and the end of this line, we can assume that the caret is on this line
             if self.caretLocation >= startOfLine && self.caretLocation <= endOfLine {
                 // MARK the line number
                 selectedLineNumber = lineNumber
                 selectedLineOfText = substring ?? ""
                 selectedLineRange  = range
-                
+                caretLocationInLine = self.caretLocation - startOfLine
+
                 foundSelectedLine = true
             }
-            
+
             lineNumber += 1
         }
         
@@ -77,7 +80,7 @@ public extension NSTextView {
             selectedLineRange  = NSRange(location: self.caretLocation, length: 0)
         }
         
-        return LineInfo(lineNumber: selectedLineNumber, lineRange: selectedLineRange, lineString: selectedLineOfText)
+        return LineInfo(lineNumber: selectedLineNumber, lineRange: selectedLineRange, lineString: selectedLineOfText, caretLocation: caretLocationInLine)
     }
     
     /**
