@@ -19,7 +19,7 @@ public extension RichEditor {
     func insert(link: String, with name: String, at position: Int? = nil) {
         let attrString = NSMutableAttributedString(string: name)
         attrString.addAttribute(NSAttributedString.Key.link, value: link, range: name.fullRange)
-        
+
         let insertionPosition = position ?? self.textView.selectedRange().location
         self.textView.textStorage!.insert(attrString, at: insertionPosition)
     }

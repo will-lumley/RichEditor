@@ -174,7 +174,7 @@ public class RichEditor: NSView {
         ] as [NSAttributedString.DocumentAttributeKey: Any]
 
         let htmlData = try attrStr.data(from: attrStr.string.fullRange, documentAttributes: documentAttributes)
-        if var htmlString = String(data:htmlData, encoding:String.Encoding.utf8) {
+        if var htmlString = String(data: htmlData, encoding: .utf8) {
 
             // Iterate over each attachment, and replace each "file://" component with the image
             let allAttachments = self.textView.attributedString().allAttachments
@@ -186,7 +186,6 @@ public class RichEditor: NSView {
                  htmlString = htmlString.replacingOccurrences(of: "file:///\(imageID)", with: imageID)
             }
 
-            print("HTML: \(htmlString)")
             return htmlString
         }
 

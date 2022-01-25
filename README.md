@@ -19,7 +19,9 @@ However if you want to modify the UI or modify functionality at all, you'll soon
 
 Just drag `RichEditor` into your UI, and you can use RichEditors functionality to easily programatically control which parts of your text are formatted and how. From bolding and underlining to text alignment and text colour, you have control over your text view. You can create your own UI the way you want and connect your UI to the `RichEditor` functionality.
 
-However if you want to use a template UI, `RichEditor` has one last trick up its sleeve for you. Simply call the `configureToolbar()` from your instance of `RichEditor` and you will have our pre-made toolbar ready to go! 
+However if you want to use a template UI, RichEditor has one last trick up its sleeve for you. Simply call the `configureToolbar()` from your instance of `RichEditor` and you will have our pre-made toolbar ready to go! 
+
+RichEditor also handles the difficult logic of handling text formatting when a user has already highlighted a piece of text, or when you want to export the text with HTML formatting.
 
 RichEditor allows you to control:
 - [x] Bolding
@@ -41,6 +43,89 @@ To do:
 ## Usage
 
 RichEditor is a direct subclass of `NSTextView` and as such, you can drag `NSTextView` into your storyboard and subclass it there, or you can directly instantiate `RichEditor` directly in your code using the initialisers from `NSTextView`. 
+
+### Exporting
+
+RichEditor allows you to export the content of the `RichEditor` as a HTML. You can do this as follows.
+```swift
+let html = try richEditor.html()
+```
+
+`html()` returns an optional `String` type, and will `throw` in the event of an error.
+
+### Format Types
+
+Below is a walkthrough of formatting that RichEditor allows you to use. 
+
+----
+
+Bold:
+`richEditor.toggleBold()`
+
+----
+
+Italic:
+`richEditor.toggleItalic()`
+
+----
+
+----
+
+Underline:
+`richEditor.toggleUnderline(.single)`
+`toggleUnderline(_)` takes `NSUnderlineStyle` as an argument, so you can specify which underline style should be applied.
+
+----
+
+----
+
+Strikethrough:
+`richEditor.toggleStrikethrough(.single)`
+`toggleStrikethrough(_)` takes `NSUnderlineStyle` as an argument, so you can specify which underline style should be applied with your strikethrough.
+
+----
+
+----
+
+Text Colour:
+`richEditor.applyColour(textColour: .green)`
+`applyColour(textColour:)` takes `NSColor` as an argument, so you can specify which colour should be applied.
+
+----
+
+----
+
+Text Highlighy Colour:
+`richEditor.applyColour(highlightColour: .green)`
+`applyColour(highlightColour:)` takes `NSColor` as an argument, so you can specify which colour should be applied.
+
+----
+
+----
+
+Font:
+`richEditor.apply(font: .systemFont(ofSize: 12))`
+`applyColour(font:)` takes `NSFont` as an argument, so you can specify which font should be applied.
+
+----
+
+----
+
+Text Alignment:
+`richEditor.apply(alignment: .left)`
+`applyColour(alignment:)` takes `NSTextAlignment` as an argument, so you can specify which alignment should be applied.
+
+----
+
+----
+
+Links:
+`richEditor.insert(link: url, with: name)`
+`insert(link:, with:, at:)` takes a `URL` as an argument, so you can specify which alignment should be applied. 
+A `String` is also taken for how you want this link to appear to the user. 
+An optional `Int` argument can also be supplied which indicates what index of the `NSTextView`s string the link should be insert at. If nil, the link will be appended to the end of the string.
+
+----
 
 ## Example Project
 
