@@ -30,7 +30,7 @@ internal extension RichEditor {
         let textStyling = self.textStyling
         let textStylingTrait = textStyling.fontTraitFor(nsFontTraitMask: fontTrait)
 
-        print("\nOldFont: \(currentFont)")
+        //print("\nOldFont: \(currentFont)")
         switch (textStylingTrait) {
             //If we're ONLY bold at the moment, let's make it unbold
             case .isTrait:
@@ -44,7 +44,7 @@ internal extension RichEditor {
             case .both:
                 newFont = NSFontManager.shared.convert(currentFont, toHaveTrait: fontTrait)
         }
-        print("NewFont: \(newFont)\n")
+        //print("NewFont: \(newFont)\n")
 
         let updatedFontAttr = [NSAttributedString.Key.font: newFont]
         self.add(attributes: updatedFontAttr, textApplicationType: self.textView.hasSelectedText ? .selected : .future)
