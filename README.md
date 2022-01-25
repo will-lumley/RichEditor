@@ -40,10 +40,9 @@ RichEditor allows you to control:
 To do:
 - [ ] Implement better bullet point formatting
 
+<img width="1045" alt="Screen Shot 2022-01-25 at 4 00 14 pm" src="https://user-images.githubusercontent.com/14086082/150914017-0fa9ce77-8861-4bfe-be6c-079410481bb1.png">
+<img width="1047" alt="Screen Shot 2022-01-25 at 4 00 23 pm" src="https://user-images.githubusercontent.com/14086082/150914032-bae590e7-6586-4446-ae29-6ddfbb5e62f0.png">
 
-<img width="678" alt="RichEditor MainWindow" src="https://user-images.githubusercontent.com/14086082/150910745-2c6053f6-331a-4a09-94be-3e0636529fe3.png">
-<img width="677" alt="RichEditor HTML Window 1" src="https://user-images.githubusercontent.com/14086082/150910763-6c2764b1-8964-4a30-8a56-2f9ae8ede306.png">
-<img width="677" alt="RichEditor HTML Window 2" src="https://user-images.githubusercontent.com/14086082/150910768-2708064f-6cff-4999-b506-4ca83b744b28.png">
 
 ## Usage
 
