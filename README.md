@@ -40,6 +40,9 @@ RichEditor allows you to control:
 To do:
 - [ ] Implement better bullet point formatting
 
+You can see the provided `RichEditorToolbar` in action, as well as the export functionality in the screenshots below.
+These screenshots are taken from the Example project that you can use in the repository in the Example directory.
+
 <img width="1045" alt="Screen Shot 2022-01-25 at 4 00 14 pm" src="https://user-images.githubusercontent.com/14086082/150914017-0fa9ce77-8861-4bfe-be6c-079410481bb1.png">
 <img width="1047" alt="Screen Shot 2022-01-25 at 4 00 23 pm" src="https://user-images.githubusercontent.com/14086082/150914032-bae590e7-6586-4446-ae29-6ddfbb5e62f0.png">
 
