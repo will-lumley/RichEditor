@@ -23,6 +23,8 @@ class ViewController: NSViewController {
 
         self.openPreviewWindow()
         self.richEditor.richEditorDelegate = self
+
+        self.richEditor.configureToolbar()
     }
     
     override func viewDidAppear() {

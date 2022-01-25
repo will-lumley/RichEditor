@@ -153,7 +153,7 @@ RichEditor is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'RichEditor', '1.0.0'
+pod 'RichEditor', '1.0.1'
 ```
 
 ### Carthage
@@ -161,7 +161,7 @@ RichEditor is also available through [Carthage](https://github.com/Carthage/Cart
 it, simply add the following line to your RichEditor:
 
 ```ruby
-github "will-lumley/RichEditor" == 1.0.0
+github "will-lumley/RichEditor" == 1.0.1
 ```
 
 ### Swift Package Manager
@@ -171,7 +171,7 @@ To install it, simply add the dependency to your Package.Swift file:
 ```swift
 ...
 dependencies: [
-    .package(url: "https://github.com/will-lumley/RichEditor.git", from: "1.0.0"),
+    .package(url: "https://github.com/will-lumley/RichEditor.git", from: "1.0.1"),
 ],
 targets: [
     .target( name: "YourTarget", dependencies: ["RichEditor"]),

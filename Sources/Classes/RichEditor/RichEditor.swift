@@ -76,7 +76,7 @@ public class RichEditor: NSView {
             return fonts[0]
         }
         
-        //We have not highlighted text, so we'll just use the 'future' font
+        // We have not highlighted text, so we'll just use the 'future' font
         else {
             let typingAttributes = self.textView.typingAttributes
             
@@ -96,16 +96,21 @@ public class RichEditor: NSView {
         super.init(coder: decoder)
         self.setup()
     }
-    
+
+}
+
+// MARK: - Private Interface
+
+private extension RichEditor {
+
     /**
      Perform the initial setup operations to get a functional NSTextView running
     */
-    private func setup() {
+    func setup() {
         self.textView.delegate = self
-        
+
         self.configureTextView(isHorizontalScrollingEnabled: false)
 
-        self.configureToolbar()
         self.configureTextViewLayout()
 
         self.textView.textStorage?.delegate = self
@@ -114,28 +119,7 @@ public class RichEditor: NSView {
         self.selectedTextFontStyling = nil
     }
 
-    internal func configureToolbar() {
-        self.toolbar = RichEditorToolbar(richEditor: self)
-        self.toolbarRichEditorDelegate = self.toolbar
-
-        guard let toolbar = self.toolbar else {
-            return
-        }
-
-        toolbar.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(toolbar)
-
-        toolbar.wantsLayer = true
-        toolbar.layer?.backgroundColor = NSColor.clear.cgColor
-
-        NSLayoutConstraint.activate([
-            toolbar.topAnchor.constraint(equalTo: self.topAnchor),
-            toolbar.widthAnchor.constraint(equalTo: self.widthAnchor),
-            toolbar.heightAnchor.constraint(equalToConstant: 35)
-        ])
-    }
-
-    internal func configureTextViewLayout() {
+    func configureTextViewLayout() {
         self.scrollview.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.scrollview)
 
@@ -158,6 +142,44 @@ public class RichEditor: NSView {
         }
     }
 
+}
+
+// MARK: - Public Interface
+
+public extension RichEditor {
+
+    func configureToolbar() {
+        self.toolbar = RichEditorToolbar(richEditor: self)
+        self.toolbarRichEditorDelegate = self.toolbar
+
+        guard let toolbar = self.toolbar else {
+            return
+        }
+
+        toolbar.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(toolbar)
+
+        toolbar.wantsLayer = true
+        toolbar.layer?.backgroundColor = NSColor.clear.cgColor
+
+        NSLayoutConstraint.activate([
+            toolbar.topAnchor.constraint(equalTo: self.topAnchor),
+            toolbar.widthAnchor.constraint(equalTo: self.widthAnchor),
+            toolbar.heightAnchor.constraint(equalToConstant: 35)
+        ])
+
+        self.scrollview.removeFromSuperview()
+
+        self.scrollview.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(self.scrollview)
+
+        NSLayoutConstraint.activate([
+            self.scrollview.widthAnchor.constraint(equalTo: self.widthAnchor),
+            self.scrollview.topAnchor.constraint(equalTo: toolbar.bottomAnchor, constant: 5),
+            self.scrollview.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+        ])
+    }
+
     /**
      Uses the NSTextView's attributed string to create a HTML string that
      represents the content held within the NSTextView.
@@ -166,7 +188,7 @@ public class RichEditor: NSView {
      - throws: An error, if the NSAttribtedString -> HTML String conversion fails
      - returns: The string object that is the HTML
     */
-    public func html() throws -> String? {
+    func html() throws -> String? {
         let attrStr = self.textView.attributedString()
         let documentAttributes = [
             NSAttributedString.DocumentAttributeKey.documentType: NSAttributedString.DocumentType.html,

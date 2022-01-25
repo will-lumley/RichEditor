@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name         = "RichEditor"
-    s.version      = "1.0.0"
+    s.version      = "1.0.1"
     s.summary      = "Summary."
     s.homepage     = "https://github.com/will-lumley/RichEditor.git"
     s.license      = { :type => 'MIT', :file => 'LICENSE.txt' }
