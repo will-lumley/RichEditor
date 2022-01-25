@@ -48,6 +48,8 @@
 		BE6B1935279D840D00049D21 /* StringBulletPointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringBulletPointsTests.swift; sourceTree = "<group>"; };
 		BE6B1937279F941700049D21 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		BE6B1939279FA36700049D21 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
+		BED784AB279FB28300260E4A /* BuildTests.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = BuildTests.yml; path = ../.github/workflows/BuildTests.yml; sourceTree = "<group>"; };
+		BED784AE279FB2BB00260E4A /* DeployToCocoapods.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = DeployToCocoapods.yml; path = ../.github/workflows/DeployToCocoapods.yml; sourceTree = "<group>"; };
 		BEE67909269D59B00073CA71 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		BEEE9CA5264A937D00B8620C /* NSColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Hex.swift"; sourceTree = "<group>"; };
 		BEEE9CA7264A937D00B8620C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		BED784AC279FB28700260E4A /* Workflows */ = {
+			isa = PBXGroup;
+			children = (
+				BED784AB279FB28300260E4A /* BuildTests.yml */,
+				BED784AE279FB2BB00260E4A /* DeployToCocoapods.yml */,
+			);
+			name = Workflows;
+			sourceTree = "<group>";
+		};
 		ED83F66F20348A760038D96B = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +176,7 @@
 		ED83F69A20348B650038D96B /* Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				BED784AC279FB28700260E4A /* Workflows */,
 				6B6FA49305BE1C7285A73A80 /* RichEditor.podspec */,
 				BE6B1939279FA36700049D21 /* Cartfile */,
 				BE6B1937279F941700049D21 /* Package.swift */,
