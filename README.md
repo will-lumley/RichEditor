@@ -74,6 +74,7 @@ Below is a walkthrough of formatting that RichEditor allows you to use.
 **Underline**
 
 `richEditor.toggleUnderline(.single)`
+
 `toggleUnderline(_)` takes `NSUnderlineStyle` as an argument, so you can specify which underline style should be applied.
 
 ----
@@ -81,6 +82,7 @@ Below is a walkthrough of formatting that RichEditor allows you to use.
 **Strikethrough**
 
 `richEditor.toggleStrikethrough(.single)`
+
 `toggleStrikethrough(_)` takes `NSUnderlineStyle` as an argument, so you can specify which underline style should be applied with your strikethrough.
 
 ----
@@ -88,6 +90,7 @@ Below is a walkthrough of formatting that RichEditor allows you to use.
 **Text Colour**
 
 `richEditor.applyColour(textColour: .green)`
+
 `applyColour(textColour:)` takes `NSColor` as an argument, so you can specify which colour should be applied.
 
 ----
@@ -95,6 +98,7 @@ Below is a walkthrough of formatting that RichEditor allows you to use.
 **Text Highlighy Colour**
 
 `richEditor.applyColour(highlightColour: .green)`
+
 `applyColour(highlightColour:)` takes `NSColor` as an argument, so you can specify which colour should be applied.
 
 ----
@@ -102,6 +106,7 @@ Below is a walkthrough of formatting that RichEditor allows you to use.
 **Font**
 
 `richEditor.apply(font: .systemFont(ofSize: 12))`
+
 `applyColour(font:)` takes `NSFont` as an argument, so you can specify which font should be applied.
 
 ----
@@ -109,6 +114,7 @@ Below is a walkthrough of formatting that RichEditor allows you to use.
 **Text Alignment**
 
 `richEditor.apply(alignment: .left)`
+
 `applyColour(alignment:)` takes `NSTextAlignment` as an argument, so you can specify which alignment should be applied.
 
 ----
@@ -116,8 +122,11 @@ Below is a walkthrough of formatting that RichEditor allows you to use.
 **Links**
 
 `richEditor.insert(link: url, with: name)`
+
 `insert(link:, with:, at:)` takes a `URL` as an argument, so you can specify which alignment should be applied. 
+
 A `String` is also taken for how you want this link to appear to the user. 
+
 An optional `Int` argument can also be supplied which indicates what index of the `NSTextView`s string the link should be insert at. If nil, the link will be appended to the end of the string.
 
 ----
