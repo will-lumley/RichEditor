@@ -166,9 +166,9 @@
 			isa = PBXGroup;
 			children = (
 				6B6FA49305BE1C7285A73A80 /* RichEditor.podspec */,
-				8D8950587C61940BEAD9E33D /* README.md */,
 				BE6B1939279FA36700049D21 /* Cartfile */,
 				BE6B1937279F941700049D21 /* Package.swift */,
+				8D8950587C61940BEAD9E33D /* README.md */,
 				C92775AC108C55755EA0A03F /* LICENSE.txt */,
 			);
 			name = Metadata;
