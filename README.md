@@ -59,67 +59,62 @@ Below is a walkthrough of formatting that RichEditor allows you to use.
 
 ----
 
-Bold:
+**Bold**
+
 `richEditor.toggleBold()`
 
 ----
 
-Italic:
+**Italic**
+
 `richEditor.toggleItalic()`
 
 ----
 
-----
+**Underline**
 
-Underline:
 `richEditor.toggleUnderline(.single)`
 `toggleUnderline(_)` takes `NSUnderlineStyle` as an argument, so you can specify which underline style should be applied.
 
 ----
 
-----
+**Strikethrough**
 
-Strikethrough:
 `richEditor.toggleStrikethrough(.single)`
 `toggleStrikethrough(_)` takes `NSUnderlineStyle` as an argument, so you can specify which underline style should be applied with your strikethrough.
 
 ----
 
-----
+**Text Colour**
 
-Text Colour:
 `richEditor.applyColour(textColour: .green)`
 `applyColour(textColour:)` takes `NSColor` as an argument, so you can specify which colour should be applied.
 
 ----
 
-----
+**Text Highlighy Colour**
 
-Text Highlighy Colour:
 `richEditor.applyColour(highlightColour: .green)`
 `applyColour(highlightColour:)` takes `NSColor` as an argument, so you can specify which colour should be applied.
 
 ----
 
-----
+**Font**
 
-Font:
 `richEditor.apply(font: .systemFont(ofSize: 12))`
 `applyColour(font:)` takes `NSFont` as an argument, so you can specify which font should be applied.
 
 ----
 
-----
+**Text Alignment**
 
-Text Alignment:
 `richEditor.apply(alignment: .left)`
 `applyColour(alignment:)` takes `NSTextAlignment` as an argument, so you can specify which alignment should be applied.
 
 ----
 
-----
+**Links**
 
-Links:
 `richEditor.insert(link: url, with: name)`
 `insert(link:, with:, at:)` takes a `URL` as an argument, so you can specify which alignment should be applied. 
 A `String` is also taken for how you want this link to appear to the user. 
