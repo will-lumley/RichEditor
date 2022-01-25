@@ -40,6 +40,11 @@ RichEditor allows you to control:
 To do:
 - [ ] Implement better bullet point formatting
 
+
+<img width="678" alt="RichEditor MainWindow" src="https://user-images.githubusercontent.com/14086082/150910745-2c6053f6-331a-4a09-94be-3e0636529fe3.png">
+<img width="677" alt="RichEditor HTML Window 1" src="https://user-images.githubusercontent.com/14086082/150910763-6c2764b1-8964-4a30-8a56-2f9ae8ede306.png">
+<img width="677" alt="RichEditor HTML Window 2" src="https://user-images.githubusercontent.com/14086082/150910768-2708064f-6cff-4999-b506-4ca83b744b28.png">
+
 ## Usage
 
 RichEditor is a direct subclass of `NSTextView` and as such, you can drag `NSTextView` into your storyboard and subclass it there, or you can directly instantiate `RichEditor` directly in your code using the initialisers from `NSTextView`. 
