@@ -1,4 +1,0 @@
-module macColorPicker {
-    header "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/macColorPicker-Swift.h"
-    requires objc
-}
