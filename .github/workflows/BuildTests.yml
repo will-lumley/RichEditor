@@ -20,9 +20,5 @@ jobs:
         run: sudo xcode-select -switch /Applications/Xcode_13.2.1.app
 
       - name: Build Setup
-        run: >-
-          xcodebuild test
-          -workspace Example/RichEditor.xcworkspace
-          -scheme RichEditor-Example
-          -destination 'platform=macOS'
+        run: swift test
 

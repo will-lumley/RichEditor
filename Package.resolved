@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "macColorPicker",
+        "repositoryURL": "https://github.com/will-lumley/macColorPicker.git",
+        "state": {
+          "branch": null,
+          "revision": "5d8404511bd4e0cfd790739fc127a40890c06501",
+          "version": "1.2.4"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

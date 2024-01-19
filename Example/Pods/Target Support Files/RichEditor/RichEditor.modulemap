@@ -1,6 +1,0 @@
-framework module RichEditor {
-  umbrella header "RichEditor-umbrella.h"
-
-  export *
-  module * { export * }
-}
