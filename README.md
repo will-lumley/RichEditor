@@ -3,12 +3,8 @@
 # RichEditor
 
 ![CI Status](https://github.com/will-lumley/RichEditor/actions/workflows/BuildTests.yml/badge.svg?branch=main)
-[![Version](https://img.shields.io/cocoapods/v/RichEditor.svg?style=flat)](https://cocoapods.org/pods/RichEditor)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![SPM Compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift-package-manager)
 ![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg)
-[![Platform](https://img.shields.io/cocoapods/p/RichEditor.svg?style=flat)](https://cocoapods.org/pods/RichEditor)
-[![License](https://img.shields.io/cocoapods/l/RichEditor.svg?style=flat)](https://cocoapods.org/pods/RichEditor)
 [![Twitter](https://img.shields.io/badge/twitter-@wlumley95-blue.svg?style=flat)](https://twitter.com/wlumley95)
 
 RichEditor is a WYSIWYG editor written in pure Swift. RichEditor is a direct subclass of `NSTextView` so you'll feel perfectly comfortable using it.

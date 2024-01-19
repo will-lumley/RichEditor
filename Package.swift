@@ -26,6 +26,7 @@ let package = Package(
                 "macColorPicker"
             ],
             resources: [.process("Resources")]
-        )
+        ),
+        .testTarget(name: "RichEditorTests", dependencies: ["RichEditor"]),
     ]
 )

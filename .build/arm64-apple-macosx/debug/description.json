@@ -1,9 +1,571 @@
 {
   "builtTestProducts" : [
-
+    {
+      "binaryPath" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorPackageTests.xctest/Contents/MacOS/RichEditorPackageTests",
+      "productName" : "RichEditorPackageTests"
+    }
   ],
   "copyCommands" : {
-
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/Media.xcassets" : {
+      "inputs" : [
+        {
+          "kind" : "directory",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/Media.xcassets"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "directory",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/Media.xcassets"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-centre@1x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-align-centre@1x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-centre@1x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-centre@2x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-align-centre@2x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-centre@2x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-centre@3x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-align-centre@3x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-centre@3x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-justify@1x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-align-justify@1x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-justify@1x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-justify@2x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-align-justify@2x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-justify@2x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-justify@3x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-align-justify@3x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-justify@3x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-left@1x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-align-left@1x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-left@1x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-left@2x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-align-left@2x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-left@2x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-left@3x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-align-left@3x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-left@3x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-right@1x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-align-right@1x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-right@1x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-right@2x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-align-right@2x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-right@2x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-right@3x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-align-right@3x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-align-right@3x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-color@1x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-color@1x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-color@1x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-color@2x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-color@2x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-color@2x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-color@3x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-color@3x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-color@3x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-highlight@1x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-highlight@1x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-highlight@1x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-highlight@2x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-highlight@2x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-highlight@2x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-highlight@3x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-highlight@3x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-highlight@3x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-image@1x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-image@1x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-image@1x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-image@2x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-image@2x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-image@2x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-image@3x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-image@3x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-image@3x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-link@1x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-link@1x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-link@1x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-link@2x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-link@2x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-link@2x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-link@3x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-link@3x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-link@3x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-list@1x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-list@1x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-list@1x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-list@2x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-list@2x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-list@2x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-list@3x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-list@3x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-list@3x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-strikethrough@1x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-strikethrough@1x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-strikethrough@1x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-strikethrough@2x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-strikethrough@2x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-strikethrough@2x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-strikethrough@3x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-text-strikethrough@3x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-text-strikethrough@3x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-bold@1x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-weight-bold@1x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-bold@1x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-bold@2x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-weight-bold@2x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-bold@2x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-bold@3x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-weight-bold@3x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-bold@3x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-italic@1x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-weight-italic@1x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-italic@1x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-italic@2x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-weight-italic@2x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-italic@2x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-italic@3x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-weight-italic@3x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-italic@3x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-underline@1x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-weight-underline@1x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-underline@1x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-underline@2x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-weight-underline@2x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-underline@2x.png"
+        }
+      ]
+    },
+    "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-underline@3x.png" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Resources/white-weight-underline@3x.png"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor_RichEditor.bundle/white-weight-underline@3x.png"
+        }
+      ]
+    }
   },
   "explicitTargetDependencyImportCheckingMode" : {
     "none" : {
@@ -73,6 +635,7 @@
         "-emit-objc-header",
         "-emit-objc-header-path",
         "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/macColorPicker-Swift.h",
+        "-color-diagnostics",
         "-sdk",
         "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
         "-F",
@@ -251,6 +814,14 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/DerivedSources/resource_bundle_accessor.swift"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<RichEditor-debug.module-resources>"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.swiftmodule"
         }
       ],
@@ -286,7 +857,8 @@
         "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSView+DarkMode.swift.o",
         "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/String+BulletPoints.swift.o",
         "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/String+Convenience.swift.o",
-        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/URL+Images.swift.o"
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/URL+Images.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/resource_bundle_accessor.swift.o"
       ],
       "otherArguments" : [
         "-target",
@@ -309,6 +881,7 @@
         "-emit-objc-header",
         "-emit-objc-header-path",
         "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/RichEditor-Swift.h",
+        "-color-diagnostics",
         "-sdk",
         "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
         "-F",
@@ -326,7 +899,9 @@
         "-Xcc",
         "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
         "-Xcc",
-        "-fPIC"
+        "-fPIC",
+        "-package-name",
+        "richeditor"
       ],
       "outputs" : [
         {
@@ -447,6 +1022,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/resource_bundle_accessor.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.swiftmodule"
         }
       ],
@@ -479,9 +1058,135 @@
         "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSView+DarkMode.swift",
         "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/String+BulletPoints.swift",
         "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/String+Convenience.swift",
-        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/URL+Images.swift"
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/URL+Images.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/DerivedSources/resource_bundle_accessor.swift"
       ],
       "tempsPath" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.RichEditorTests-debug.module" : {
+      "executable" : "/Applications/Xcode-15.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/CGFloatFormattingTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/DictionaryMergeTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/DictionaryTypingAttributesTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/NSAttributedStringConvenienceTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/NSFontTraitsTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/StringBulletPointsTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.swiftmodule"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "RichEditorTests",
+      "moduleOutputPath" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorTests.swiftmodule",
+      "objects" : [
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorTests.build/CGFloatFormattingTests.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorTests.build/DictionaryMergeTests.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorTests.build/DictionaryTypingAttributesTests.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorTests.build/NSAttributedStringConvenienceTests.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorTests.build/NSFontTraitsTests.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorTests.build/StringBulletPointsTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
+        "-F",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-package-name",
+        "richeditor"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorTests.build/CGFloatFormattingTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorTests.build/DictionaryMergeTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorTests.build/DictionaryTypingAttributesTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorTests.build/NSAttributedStringConvenienceTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorTests.build/NSFontTraitsTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorTests.build/StringBulletPointsTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorTests.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/CGFloatFormattingTests.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/DictionaryMergeTests.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/DictionaryTypingAttributesTests.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/NSAttributedStringConvenienceTests.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/NSFontTraitsTests.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/StringBulletPointsTests.swift"
+      ],
+      "tempsPath" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditorTests.build",
       "wholeModuleOptimization" : false
     }
   },
@@ -522,6 +1227,7 @@
       "-emit-objc-header",
       "-emit-objc-header-path",
       "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/macColorPicker-Swift.h",
+      "-color-diagnostics",
       "-sdk",
       "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
       "-F",
@@ -548,6 +1254,8 @@
       "/Applications/Xcode-15.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
       "-module-name",
       "RichEditor",
+      "-package-name",
+      "richeditor",
       "-incremental",
       "-c",
       "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Attachments.swift",
@@ -579,6 +1287,7 @@
       "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/String+BulletPoints.swift",
       "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/String+Convenience.swift",
       "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/URL+Images.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/DerivedSources/resource_bundle_accessor.swift",
       "-I",
       "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug",
       "-target",
@@ -601,6 +1310,7 @@
       "-emit-objc-header",
       "-emit-objc-header-path",
       "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/RichEditor-Swift.h",
+      "-color-diagnostics",
       "-sdk",
       "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
       "-F",
@@ -619,6 +1329,65 @@
       "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
       "-Xcc",
       "-fPIC",
+      "-package-name",
+      "richeditor",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "RichEditorTests" : [
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "RichEditorTests",
+      "-package-name",
+      "richeditor",
+      "-incremental",
+      "-c",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/CGFloatFormattingTests.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/DictionaryMergeTests.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/DictionaryTypingAttributesTests.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/NSAttributedStringConvenienceTests.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/NSFontTraitsTests.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Tests/RichEditorTests/StringBulletPointsTests.swift",
+      "-I",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-swift-version",
+      "5",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-g",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-sdk",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
+      "-F",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-package-name",
+      "richeditor",
       "-driver-use-frontend-path",
       "/Applications/Xcode-15.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
     ]
@@ -628,6 +1397,10 @@
 
     ],
     "RichEditor" : [
+      "macColorPicker"
+    ],
+    "RichEditorTests" : [
+      "RichEditor",
       "macColorPicker"
     ]
   },

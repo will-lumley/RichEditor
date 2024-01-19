@@ -1,0 +1,35 @@
+{
+  "": {
+    "swift-dependencies": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/master.swiftdeps"
+  },
+  "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorButtonCell.swift": {
+    "dependencies": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorButtonCell.d",
+    "object": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorButtonCell.swift.o",
+    "swiftmodule": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorButtonCell~partial.swiftmodule",
+    "swift-dependencies": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorButtonCell.swiftdeps"
+  },
+  "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorCell.swift": {
+    "dependencies": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorCell.d",
+    "object": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorCell.swift.o",
+    "swiftmodule": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorCell~partial.swiftmodule",
+    "swift-dependencies": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorCell.swiftdeps"
+  },
+  "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorPicker.swift": {
+    "dependencies": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorPicker.d",
+    "object": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorPicker.swift.o",
+    "swiftmodule": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorPicker~partial.swiftmodule",
+    "swift-dependencies": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorPicker.swiftdeps"
+  },
+  "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorPickerViewController.swift": {
+    "dependencies": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorPickerViewController.d",
+    "object": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorPickerViewController.swift.o",
+    "swiftmodule": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorPickerViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorPickerViewController.swiftdeps"
+  },
+  "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Extensions/NSColor+Colors.swift": {
+    "dependencies": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Extensions/NSColor+Colors.d",
+    "object": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Extensions/NSColor+Colors.swift.o",
+    "swiftmodule": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Extensions/NSColor+Colors~partial.swiftmodule",
+    "swift-dependencies": "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Extensions/NSColor+Colors.swiftdeps"
+  }
+}
