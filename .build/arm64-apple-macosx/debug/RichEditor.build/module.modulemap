@@ -1,0 +1,4 @@
+module RichEditor {
+    header "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/RichEditor-Swift.h"
+    requires objc
+}

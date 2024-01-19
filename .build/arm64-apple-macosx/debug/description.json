@@ -1,0 +1,640 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.macColorPicker-debug.module" : {
+      "executable" : "/Applications/Xcode-15.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorButtonCell.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorCell.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorPicker.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorPickerViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Extensions/NSColor+Colors.swift"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "macColorPicker",
+      "moduleOutputPath" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.swiftmodule",
+      "objects" : [
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorButtonCell.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorCell.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorPicker.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorPickerViewController.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Extensions/NSColor+Colors.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/macColorPicker-Swift.h",
+        "-sdk",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
+        "-F",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-suppress-warnings"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorButtonCell.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorCell.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorPicker.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Classes/ColorPickerViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/Extensions/NSColor+Colors.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorButtonCell.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorCell.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorPicker.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorPickerViewController.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Extensions/NSColor+Colors.swift"
+      ],
+      "tempsPath" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.RichEditor-debug.module" : {
+      "executable" : "/Applications/Xcode-15.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Attachments.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+BulletPoints.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Core.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+KeyboardShortcuts.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Links.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Stack.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Styling.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditorDelegate.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditorToolbar/RichEditorToolbar+UI.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditorToolbar/RichEditorToolbar.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditorToolbar/RichEditorToolbarButton.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichTextView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/TextStyling.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/CGFloat+Formatting.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/CIImage+Conversion.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/Dictionary+Merge.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/Dictionary+TypingAttributes.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSAttributedString+Convenience.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSFont+Traits.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSImage+ColourOverlay.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSImage+Inversion.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSImage+Pods.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSMenu+Convenience.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSTextView+Convenience.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSView+DarkMode.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/String+BulletPoints.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/String+Convenience.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/URL+Images.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.swiftmodule"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "RichEditor",
+      "moduleOutputPath" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.swiftmodule",
+      "objects" : [
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor+Attachments.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor+BulletPoints.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor+Core.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor+KeyboardShortcuts.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor+Links.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor+Stack.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor+Styling.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditorDelegate.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditorToolbar/RichEditorToolbar+UI.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditorToolbar/RichEditorToolbar.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditorToolbar/RichEditorToolbarButton.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichTextView.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/TextStyling.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/CGFloat+Formatting.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/CIImage+Conversion.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/Dictionary+Merge.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/Dictionary+TypingAttributes.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSAttributedString+Convenience.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSFont+Traits.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSImage+ColourOverlay.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSImage+Inversion.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSImage+Pods.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSMenu+Convenience.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSTextView+Convenience.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSView+DarkMode.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/String+BulletPoints.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/String+Convenience.swift.o",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/URL+Images.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.15",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/RichEditor-Swift.h",
+        "-sdk",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
+        "-F",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor+Attachments.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor+BulletPoints.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor+Core.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor+KeyboardShortcuts.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor+Links.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor+Stack.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor+Styling.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditor/RichEditorDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditorToolbar/RichEditorToolbar+UI.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditorToolbar/RichEditorToolbar.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichEditorToolbar/RichEditorToolbarButton.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/RichTextView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Classes/TextStyling.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/CGFloat+Formatting.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/CIImage+Conversion.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/Dictionary+Merge.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/Dictionary+TypingAttributes.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSAttributedString+Convenience.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSFont+Traits.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSImage+ColourOverlay.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSImage+Inversion.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSImage+Pods.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSMenu+Convenience.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSTextView+Convenience.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/NSView+DarkMode.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/String+BulletPoints.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/String+Convenience.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/Extensions/URL+Images.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Attachments.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+BulletPoints.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Core.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+KeyboardShortcuts.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Links.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Stack.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Styling.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditorDelegate.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditorToolbar/RichEditorToolbar+UI.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditorToolbar/RichEditorToolbar.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditorToolbar/RichEditorToolbarButton.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichTextView.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/TextStyling.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/CGFloat+Formatting.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/CIImage+Conversion.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/Dictionary+Merge.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/Dictionary+TypingAttributes.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSAttributedString+Convenience.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSFont+Traits.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSImage+ColourOverlay.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSImage+Inversion.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSImage+Pods.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSMenu+Convenience.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSTextView+Convenience.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSView+DarkMode.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/String+BulletPoints.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/String+Convenience.swift",
+        "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/URL+Images.swift"
+      ],
+      "tempsPath" : "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "macColorPicker" : [
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "macColorPicker",
+      "-incremental",
+      "-c",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorButtonCell.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorCell.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorPicker.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Classes/ColorPickerViewController.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/checkouts/macColorPicker/Sources/macColorPicker/Extensions/NSColor+Colors.swift",
+      "-I",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-swift-version",
+      "5",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-g",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/macColorPicker.build/macColorPicker-Swift.h",
+      "-sdk",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
+      "-F",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-suppress-warnings",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "RichEditor" : [
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "RichEditor",
+      "-incremental",
+      "-c",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Attachments.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+BulletPoints.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Core.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+KeyboardShortcuts.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Links.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Stack.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor+Styling.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditor.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditor/RichEditorDelegate.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditorToolbar/RichEditorToolbar+UI.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditorToolbar/RichEditorToolbar.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichEditorToolbar/RichEditorToolbarButton.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/RichTextView.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Classes/TextStyling.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/CGFloat+Formatting.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/CIImage+Conversion.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/Dictionary+Merge.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/Dictionary+TypingAttributes.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSAttributedString+Convenience.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSFont+Traits.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSImage+ColourOverlay.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSImage+Inversion.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSImage+Pods.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSMenu+Convenience.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSTextView+Convenience.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/NSView+DarkMode.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/String+BulletPoints.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/String+Convenience.swift",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/Sources/RichEditor/Extensions/URL+Images.swift",
+      "-I",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug",
+      "-target",
+      "arm64-apple-macosx10.15",
+      "-swift-version",
+      "5",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-g",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/will/Documents/Dev/Projects/OpenSource/will-lumley/RichEditor/.build/arm64-apple-macosx/debug/RichEditor.build/RichEditor-Swift.h",
+      "-sdk",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
+      "-F",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode-15.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "macColorPicker" : [
+
+    ],
+    "RichEditor" : [
+      "macColorPicker"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  }
+}
