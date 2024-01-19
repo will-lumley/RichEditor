@@ -144,22 +144,6 @@ RichEditor supports iOS 10.0 and above & macOS 10.10 and above.
 
 ## Installation
 
-### Cocoapods
-RichEditor is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'RichEditor', '1.0.1'
-```
-
-### Carthage
-RichEditor is also available through [Carthage](https://github.com/Carthage/Carthage). To install
-it, simply add the following line to your RichEditor:
-
-```ruby
-github "will-lumley/RichEditor" == 1.0.1
-```
-
 ### Swift Package Manager
 RichEditor is also available through [Swift Package Manager](https://github.com/apple/swift-package-manager). 
 To install it, simply add the dependency to your Package.Swift file:
@@ -167,13 +151,19 @@ To install it, simply add the dependency to your Package.Swift file:
 ```swift
 ...
 dependencies: [
-    .package(url: "https://github.com/will-lumley/RichEditor.git", from: "1.0.1"),
+    .package(url: "https://github.com/will-lumley/RichEditor.git", from: "1.1.0"),
 ],
 targets: [
     .target( name: "YourTarget", dependencies: ["RichEditor"]),
 ]
 ...
 ```
+
+### Cocoapods and Carthage
+RichEditor was previously available through CocoaPods and Carthage, however making the library available to all three Cocoapods, 
+Carthage, and SPM (and functional to all three) was becoming troublesome. This, combined with the fact that SPM has seen a serious
+up-tick in adoption & functionality, has led me to remove support for CocoaPods and Carthage.
+
 ## Author
 
 [William Lumley](https://lumley.io/), will@lumley.io
