@@ -145,7 +145,7 @@ RichEditor supports iOS 10.0 and above & macOS 10.10 and above.
 ## Installation
 
 ### Swift Package Manager
-RichEditor is also available through [Swift Package Manager](https://github.com/apple/swift-package-manager). 
+RichEditor is available through [Swift Package Manager](https://github.com/apple/swift-package-manager). 
 To install it, simply add the dependency to your Package.Swift file:
 
 ```swift
