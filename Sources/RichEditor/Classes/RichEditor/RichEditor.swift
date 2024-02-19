@@ -107,6 +107,19 @@ private extension RichEditor {
      Perform the initial setup operations to get a functional NSTextView running
     */
     func setup() {
+        /// This line of code here is disgusting.
+        /// The only reason it's here is because of an NSTextView issue that only pops up
+        /// when launching this library from a iOS -> Catalyst application. A very edge case scenario
+        /// but one that we should account for.
+        ///
+        /// I'll be on the lookout for when Apple fixes this :)
+        ///
+        guard self.scrollview.contentSize != .zero else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(50)) {
+                self.setup()
+            }
+            return
+        }
         self.textView.delegate = self
 
         self.configureTextView(isHorizontalScrollingEnabled: false)

@@ -19,26 +19,39 @@ extension RichEditor {
      - parameter isHorizontalScrollingEnabled: If true, the NSTextView will allow horizontal scrolling
     */
     internal func configureTextView(isHorizontalScrollingEnabled: Bool) {
-        self.textStorage.addLayoutManager(self.layoutManager)
-        self.layoutManager.addTextContainer(self.textContainer)
-        
         let contentSize = self.scrollview.contentSize
         
+        self.textStorage.addLayoutManager(self.layoutManager)
+        self.layoutManager.addTextContainer(self.textContainer)
+                
         if isHorizontalScrollingEnabled {
-            self.textContainer.containerSize = CGSize(width: CGFloat.greatestFiniteMagnitude,
-                                                      height: CGFloat.greatestFiniteMagnitude)
+            self.textContainer.containerSize = CGSize(
+                width: CGFloat.greatestFiniteMagnitude,
+                height: CGFloat.greatestFiniteMagnitude
+            )
             self.textContainer.widthTracksTextView = false
         }
         else {
-            self.textContainer.containerSize = CGSize(width: contentSize.width, height: CGFloat.greatestFiniteMagnitude)
+            self.textContainer.containerSize = CGSize(
+                width: contentSize.width,
+                height: CGFloat.greatestFiniteMagnitude
+            )
             self.textContainer.widthTracksTextView = true
         }
         
         self.textView.minSize = CGSize(width: 0, height: 0)
-        self.textView.maxSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
+        self.textView.maxSize = CGSize(
+            width: CGFloat.greatestFiniteMagnitude,
+            height: CGFloat.greatestFiniteMagnitude
+        )
         self.textView.isVerticallyResizable = true
         self.textView.isHorizontallyResizable = isHorizontalScrollingEnabled
-        self.textView.frame = CGRect(x: 0, y: 0, width: contentSize.width, height: contentSize.height)
+        self.textView.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: contentSize.width,
+            height: contentSize.height
+        )
         
         if isHorizontalScrollingEnabled {
             textView.autoresizingMask = [.width, .height]
