@@ -142,7 +142,7 @@ An optional `Int` argument can also be supplied which indicates what index of th
 
 ## Example Project
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and open the example Xcode Project in RichEditorExample.
 
 ## Requirements
 
