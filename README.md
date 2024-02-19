@@ -157,7 +157,7 @@ To install it, simply add the dependency to your Package.Swift file:
 ```swift
 ...
 dependencies: [
-    .package(url: "https://github.com/will-lumley/RichEditor.git", from: "1.1.0"),
+    .package(url: "https://github.com/will-lumley/RichEditor.git", from: "1.2.0"),
 ],
 targets: [
     .target( name: "YourTarget", dependencies: ["RichEditor"]),
