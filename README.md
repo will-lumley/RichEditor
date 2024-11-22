@@ -8,8 +8,8 @@
 <p align="center">
   <a href="https://github.com/apple/swift-package-manager"><img src="https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat" alt="SPM Compatible"></a>
   <img src="https://img.shields.io/badge/Swift-5.5-orange.svg" alt="Swift 5.5">
-  <a href="https://twitter.com/wlumley95">
-    <img src="https://img.shields.io/badge/twitter-@wlumley95-blue.svg?style=flat" alt="Twitter">
+  <a href="https://bsky.app/profile/will-lumley.bsky.social">
+    <img src="https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff&label=will-lumley" alt="Bluesky">
   </a>
 </p>
 
